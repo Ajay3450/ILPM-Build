@@ -744,6 +744,118 @@ DoNotSaveASL:
 	add r23, r23, r22		# /
 	add r23, r23, r29		# Get the title address
 
+##########################
+# Stage-Specific Results #
+# [mawwk, ilikepizza107] #
+##########################
+# Load byte at given address
+.macro loadByte(<reg>, <val>)
+{
+    .alias  temp_Hi = <val> / 0x10000
+    .alias  temp_Lo = <val> & 0xFFFF
+    lis     <reg>, temp_Hi
+    ori     <reg>, <reg>, temp_Lo
+	lbz <reg>, 0(<reg>)
+}
+.macro lwi(<reg>, <val>)
+{
+    .alias  temp_Hi = <val> / 0x10000
+    .alias  temp_Lo = <val> & 0xFFFF
+    lis     <reg>, temp_Hi
+    ori     <reg>, <reg>, temp_Lo
+}
+
+# Random:
+#	lwz r11, -0x4364(r13)
+#	rlwinm. r11, r11, 0, 31, 31
+#	beq end
+
+.alias ConfigID = 0x26
+.alias ResultsID = 0x28	
+    
+    %loadByte(r6, 0x8053EF81)	# r6: ASL stage ID
+	mr r7, r23
+	cmpwi r6, ResultsID
+	bne notResults
+	addi r7, r7, 7			# "Results"
+
+StageResults:
+	%loadByte(r6, 0x9017F42D)	# Load previous stage ID
+	
+	cmpwi r6, 0x01; li r5, 0x4246; beq StoreString	# Battlefield
+	cmpwi r6, 0x02; li r5, 0x4644; beq StoreString	# Final Destination
+	cmpwi r6, 0x03; li r5, 0x4453; beq StoreString	# Delfino Secret
+	cmpwi r6, 0x04; li r5, 0x4C4D; beq StoreString	# Luigi's Mansion
+	cmpwi r6, 0x06; li r5, 0x4243; beq StoreString	# Bowser's Castle
+	cmpwi r6, 0x09; li r5, 0x5454; beq StoreString	# Temple of Time
+	cmpwi r6, 0x0C; beq Frigate_Results				# Frigate Husk
+	cmpwi r6, 0x0D; li r5, 0x5949; beq StoreString	# Yoshi's Island
+	cmpwi r6, 0x21; li r5, 0x5356; beq StoreString	# Smashville
+	cmpwi r6, 0x23; li r5, 0x4748; beq StoreString	# Green Hill Zone
+	cmpwi r6, 0x2D; li r5, 0x444C; beq StoreString	# Dream Land
+	cmpwi r6, 0x2E; beq PS2_Results					# Pokemon Stadium 2
+	cmpwi r6, 0x44; li r5, 0x4445; beq StoreString	# Dead Line
+    cmpwi r6, 0x47; li r5, 0x4754; beq StoreString  # Golden Temple
+	cmpwi r6, 0x37; bne Default						# Check for Training, if nothing found, go to Default
+
+Training_Results:
+	li r5, 0x5452			# Use "TR"
+	%lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	andi. r12, r12, 0x4001	# Check if Dark Mode version was selected
+	beq StoreString			#
+	li r5, 0x5444			# If so, use "TD"
+	b StoreString
+
+PS2_Results:
+    li r5, 0x5053           # Use "PS"
+    %lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	andi. r12, r12, 0x0020	# Check if R alt was used
+	beq StoreString			#
+	li r5, 0x5052			# If so, use "PR"
+	b StoreString
+
+Frigate_Results:
+	li r5, 0x4648			# Use "FH"
+    %lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	andi. r12, r12, 0x0040	# Check if L alt was used
+	beq StoreString			#
+	li r5, 0x484D			# If so, use "HM"
+	b StoreString
+
+Default:
+	li r5, 0x4446
+	b StoreString
+
+notResults:
+	cmpwi r6, ConfigID
+	beq end
+
+StartCompare:
+	lis r4, 0x5F44; ori r4, r4, 0x4600	# "_DF" followed by null terminator
+
+CheckParamFilename:
+	lwz r6, 0(r7)			# \ Compare param filename with "_DF."
+	cmpw r6, r4				# /
+	andi. r6, r6, 0xFF		# If terminator char (00) reached,
+	beq end 				# give up
+	
+	addi r7, r7, 1			# Otherwise, check the next character
+	b CheckParamFilename
+
+StoreString:
+	sth r5, 1(r7)			# Replace with new suffix
+
+end:
+##########################
+# End of StgSpec Results #
+##########################
+
+	lis r12, 0x8053			# Stage files write to 8053F000
+	ori r12, r12, 0xF000	
+
 	addi r3, r1, 0x90
 	lis r4, 0x8048			#
 	ori r4, r4, 0xEFF4		# %s%s%s%s	
@@ -1013,7 +1125,7 @@ forceSkip:
 }
 	
 .include source/Project+/MyMusic.asm		# Integrated heavily into the above!
-.include source/Project+/Random.asm			# Custom random code to load expansion and non-striked slots, properly
+.include source/Project+/Random.asm		# Custom random code to load expansion and non-striked slots, properly
 
 #####################################################################################################
 [Legacy TE] Hold Y on Smashville to Guarantee a Concert V2 (requires ASL Helper and SFSN) [DukeItOut]
