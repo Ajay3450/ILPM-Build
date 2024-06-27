@@ -11,11 +11,6 @@ Visit unofficialsmashlegacy.weebly.com for more details.
 Project+ would not be possible without the continued support of the competitive, casual, and modding communities.
 Thank you for playing!
 
-##################################################
-SG Build developed by Motobug
-Thank you for your continued support of MAPM!
-##################################################
-
 ##########################
 Project+ Development Team
 ##########################
@@ -1247,7 +1242,7 @@ Menus/UI/HUD
 ########################################
 
 Original CSS by ART+: Motobug, Ryztiq, tryptech, mawwwk, credit to davidvkimball, denz, Yohan1044, and Kirbeast
-New HUD "SD Card-style" by ART+: Motobug and QuickLava
+New HUD "SD Card-style" by ART+: Motobug, GRAND AZEL, and QuickLava
 New SSS previews, titles and images by Motobug and Bird
 Wide Preview Stage Selection Screen by Yohan1044 with custom preview images by davidvkimball, Puzzled, mawwwk
 Full size Random Stage Select previews by mawwwk, Motobug

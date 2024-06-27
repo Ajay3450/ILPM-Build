@@ -3770,7 +3770,7 @@ string "SHEIK" @ $80B51280
 string "POPO" @ $80B51290
 string "POPO" @ $80B512A0
 string "MARTH" @ $80B512B0
-string "GAMEANDWATCH" @ $80B512C0
+string "GAMEWATCH" @ $80B512C0
 string "FALCO" @ $80B512D0
 string "GANON" @ $80B512E0
 string "WARIO" @ $80B512F0
@@ -3786,7 +3786,7 @@ string "POKEZENIGAME" @ $80B51380
 string "POKEFUSHIGISOU" @ $80B51390
 string "DEDEDE" @ $80B513A0
 string "LUCARIO" @ $80B513B0
-string "IKE" @ $80B5123C0
+string "IKE" @ $80B513C0
 string "ROBOT" @ $80B513D0
 string "PURIN" @ $80B513F0
 string "MEWTWO" @ $80B51400

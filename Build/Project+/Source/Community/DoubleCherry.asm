@@ -356,7 +356,32 @@ HOOK @ $80820440    # ftEntry::setFinal
     li r5, 0
     li r6, -1
     %call(itManager__removeItemAll)
+    
+    %lwi(r11, g_HeapInfos)  # \
+    lwz r3, 0x1F4(r11)      # / g_HeapInfo[FighterTechqniq].memoryPool
+    %call(gfMemoryPool__getMaxFreeBlockSize)
+    %lwi(r11, g_HeapInfos)  # \
+    lwz r4, 0x1F8(r11)      # / g_HeapInfo[FighterTechqniq].size
+    sub r12, r4, r3     # \ check if there's free space for final smash
+    cmpwi r12, 0x100    # /
+    lwz r3, 0x28(r30)   # \ ftOwner->data
+    lwz r11, 0x0(r3)    # /
+    lbz r12, 0x1F(r11)  # 
+    blt+ isFree
+    andi. r12, r12, 0xEF    # \ set unused flag to signify waiting for Final Smash
+    stb r12, 0x1F(r11)      # /
+    %branch(0x808204c0)
+isFree:
+    ori r12, r12, 0x10  # \ set flag back to signify no longer waiting for Final Smash
+    stb r12, 0x1F(r11)  # /
     mr r3, r27  # Original operation
+}
+HOOK @ $8081c934    # ftOwner::getFinalContinue
+{
+    lbz    r0, 0x1F(r3)    # Original operation
+    rlwinm. r12,r0,28,31,31 # \
+    li r3, 0x1              # | return true if waiting for final smash
+    beqlr+                  # /
 }
 
 HOOK @ $80844378    # Fighter::touchItem

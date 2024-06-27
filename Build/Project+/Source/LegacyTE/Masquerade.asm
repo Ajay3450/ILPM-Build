@@ -84,7 +84,7 @@ byte 50 		    @ $80692507
 byte[4] 0x30, 0x34, 0x64, 0 @ $806A17D8
 
 ################################################################
-[Project+] Stage Select Screen Supports 50CC [QuickLava]
+[Brawl-Themed Project+] Stage Select Screen Supports 50CC [QuickLava]
 ################################################################
 # Stage Select Stock Icons 50CC Fix
 HOOK @ $806B2FFC
