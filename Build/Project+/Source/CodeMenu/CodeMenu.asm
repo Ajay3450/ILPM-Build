@@ -299,7 +299,7 @@ loc_0x0E6:
 loc_0x0F9:
 	bla 0x2e844
 	lis r31, 0x804e
-	lwz r31, 0xe90(r31)
+	lwz r31, 0xe94(r31)
 	cmpwi r31, 0x1
 	bne loc_0x14D
 	li r31, 0x0
@@ -462,7 +462,7 @@ loc_0x037:
 	li r3, 0x0
 	stb r3, 0x0(r31)
 	lis r3, 0x804e
-	ori r3, r3, 0x1398
+	ori r3, r3, 0x139c
 	subi r4, r25, 0x1
 	stw r4, 0x0(r3)
 	addi r25, r25, 0x18
@@ -509,7 +509,7 @@ loc_0x062:
 	li r3, 0x0
 	stb r3, 0x0(r31)
 	lis r3, 0x804e
-	ori r3, r3, 0x15fc
+	ori r3, r3, 0x1600
 	subi r4, r25, 0x1
 	stw r4, 0x0(r3)
 	addi r25, r25, 0x18
@@ -556,7 +556,7 @@ loc_0x08D:
 	li r3, 0x0
 	stb r3, 0x0(r31)
 	lis r3, 0x804e
-	ori r3, r3, 0x1860
+	ori r3, r3, 0x1864
 	subi r4, r25, 0x1
 	stw r4, 0x0(r3)
 	addi r25, r25, 0x18
@@ -603,7 +603,7 @@ loc_0x0B8:
 	li r3, 0x0
 	stb r3, 0x0(r31)
 	lis r3, 0x804e
-	ori r3, r3, 0x1ac4
+	ori r3, r3, 0x1ac8
 	subi r4, r25, 0x1
 	stw r4, 0x0(r3)
 	addi r25, r25, 0x18
@@ -613,7 +613,7 @@ loc_0x0B8:
 	cmplw r31, r28
 	bne loc_0x425
 	lis r28, 0x804e
-	lwz r28, 0xec0(r28)
+	lwz r28, 0xec4(r28)
 	cmpwi r28, 0x0
 	bne loc_0x0D2
 	lis r28, 0x804e
@@ -762,7 +762,7 @@ loc_0x145:
 	cmpwi r19, 0x2
 	bne loc_0x151
 	lis r30, 0x804e
-	lwz r30, 0xc2c(r30)
+	lwz r30, 0xc30(r30)
 	cmplwi cr1, r30, 0x1
 	blt cr1, loc_0x151
 	lis r30, 0x804e
@@ -1098,7 +1098,7 @@ loc_0x268:
 	cmpwi r30, 0x1
 	bne loc_0x275
 	lis r30, 0x804e
-	lwz r30, 0xc2c(r30)
+	lwz r30, 0xc30(r30)
 	cmpwi r30, 0x1
 	bne loc_0x275
 	lis r30, 0x804e
@@ -1164,27 +1164,27 @@ loc_0x29E:
 	bne+ loc_0x29E
 loc_0x2A4:
 	lis r31, 0x804e
-	lwz r31, 0xd30(r31)
+	lwz r31, 0xd34(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3fff
 	stb r31, 0x0(r30)
 	lis r31, 0x804e
-	lwz r31, 0xd5c(r31)
+	lwz r31, 0xd60(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3ffd
 	stb r31, 0x0(r30)
 	lis r31, 0x804e
-	lwz r31, 0xde0(r31)
+	lwz r31, 0xde4(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3ff9
 	stb r31, 0x0(r30)
 	lis r31, 0x804e
-	lwz r31, 0xdac(r31)
+	lwz r31, 0xdb0(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3ff7
 	stb r31, 0x0(r30)
 	lis r31, 0x804e
-	lwz r31, 0xe34(r31)
+	lwz r31, 0xe38(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3ffb
 	stb r31, 0x0(r30)
@@ -1338,7 +1338,7 @@ loc_0x342:
 	stw r29, 0x0(r30)
 loc_0x349:
 	lis r31, 0x804e
-	lwz r31, 0xa68(r31)
+	lwz r31, 0xa6c(r31)
 	cmpwi r31, 0x1
 	beq loc_0x34F
 	li r31, 0x0
@@ -1347,7 +1347,7 @@ loc_0x34F:
 	cmpwi r19, 0x3
 	bne loc_0x3F6
 	lis r30, 0x804e
-	ori r30, r30, 0xa94
+	ori r30, r30, 0xa98
 	lwz r31, 0x8(r30)
 	cmpwi r31, 0x1
 	bne loc_0x3F6
@@ -1684,7 +1684,7 @@ loc_0x47D:
 HOOK @ $809580B4                # Address = $(ba + 0x009580B4)
 {
 	lis r4, 0x804e
-	lwz r4, 0x904(r4)
+	lwz r4, 0x908(r4)
 	cmpwi r4, 0x2
 	blt loc_0x005
 	blr
@@ -1708,7 +1708,7 @@ HOOK @ $809489EC                # Address = $(ba + 0x009489EC)
 	lis r25, 0xffff
 	ori r25, r25, 0xffff
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x908(r31)
 	cmpwi r31, 0x2
 	blt loc_0x02E
 	lis r31, 0x804e
@@ -2221,35 +2221,35 @@ loc_0x09E:
 HOOK @ $80023D60                # Address = $(ba + 0x00023D60)
 {
 	lis r11, 0x804e
-	lwz r10, 0x1df0(r11)
+	lwz r10, 0x1df4(r11)
 	lis r12, 0x80b8
 	stw r10, 0x7aa8(r12)
-	lwz r10, 0x1e2c(r11)
+	lwz r10, 0x1e30(r11)
 	stw r10, 0x7aec(r12)
-	lwz r10, 0x1e68(r11)
+	lwz r10, 0x1e6c(r11)
 	stw r10, 0x7ae8(r12)
-	lwz r10, 0x1ea0(r11)
+	lwz r10, 0x1ea4(r11)
 	stw r10, 0x7b10(r12)
-	lwz r10, 0x1ee4(r11)
+	lwz r10, 0x1ee8(r11)
 	lis r12, 0x80b9
 	stw r10, -0x7cac(r12)
-	lwz r10, 0x1f18(r11)
+	lwz r10, 0x1f1c(r11)
 	stw r10, -0x7ca8(r12)
-	lwz r10, 0x1f50(r11)
+	lwz r10, 0x1f54(r11)
 	stw r10, -0x7be0(r12)
-	lwz r10, 0x1f98(r11)
+	lwz r10, 0x1f9c(r11)
 	stw r10, -0x7bbc(r12)
-	lwz r10, 0x1fdc(r11)
+	lwz r10, 0x1fe0(r11)
 	stw r10, -0x7ba4(r12)
-	lwz r10, 0x201c(r11)
+	lwz r10, 0x2020(r11)
 	stw r10, -0x7ba0(r12)
-	lwz r10, 0x2058(r11)
+	lwz r10, 0x205c(r11)
 	stw r10, -0x7b88(r12)
-	lwz r10, 0x2098(r11)
+	lwz r10, 0x209c(r11)
 	stw r10, -0x7b7c(r12)
-	lwz r10, 0x20d8(r11)
+	lwz r10, 0x20dc(r11)
 	stw r10, -0x7af0(r12)
-	lwz r10, 0x2120(r11)
+	lwz r10, 0x2124(r11)
 	stw r10, -0x7acc(r12)
 	lwz r12, 0x4(r11)
 	addi r10, r11, 0x7d8
@@ -2302,7 +2302,7 @@ HOOK @ $807C1A20                # Address = $(ba + 0x007C1A20)
 	stwu r1, -0x9c(r1)
 	stmw r3, 0x8(r1)
 	lis r31, 0x804e
-	lwz r31, 0x2384(r31)
+	lwz r31, 0x2388(r31)
 	cmpwi r31, 0x1
 	bne loc_0x038
 	lwz r27, 0xd8(r27)
@@ -2315,12 +2315,12 @@ HOOK @ $807C1A20                # Address = $(ba + 0x007C1A20)
 	lwz r31, 0x64(r26)
 	lfs f2, 0x8(r31)
 	lis r30, 0x804e
-	ori r30, r30, 0x2460
+	ori r30, r30, 0x2464
 	lfs f0, 0x8(r30)
 	fmuls f1, f1, f0
 	fadds f1, f1, f2
 	lis r30, 0x804e
-	ori r30, r30, 0x23ac
+	ori r30, r30, 0x23b0
 	lfs f2, 0x8(r30)
 	fneg f0, f2
 	fcmpu cr0, f1, f0
@@ -2336,12 +2336,12 @@ loc_0x024:
 	lwz r31, 0x58(r26)
 	lfs f2, 0xc(r31)
 	lis r30, 0x804e
-	ori r30, r30, 0x24a0
+	ori r30, r30, 0x24a4
 	lfs f0, 0x8(r30)
 	fmuls f1, f1, f0
 	fadds f1, f1, f2
 	lis r30, 0x804e
-	ori r30, r30, 0x23e8
+	ori r30, r30, 0x23ec
 	lfs f2, 0x8(r30)
 	fneg f0, f2
 	fcmpu cr0, f1, f0
@@ -2371,7 +2371,7 @@ loc_0x038:
 HOOK @ $8083ADE0                # Address = $(ba + 0x0083ADE0)
 {
 	lis r4, 0x804e
-	lwz r4, 0x2384(r4)
+	lwz r4, 0x2388(r4)
 	cmpwi r4, 0x1
 	bne loc_0x01C
 	cmpwi r3, -0x1
@@ -2416,7 +2416,7 @@ HOOK @ $8010F990                # Address = $(ba + 0x0010F990)
 	stwu r1, -0x84(r1)
 	stmw r3, 0x8(r1)
 	lis r3, 0x804e
-	lwz r3, 0x9d8(r3)
+	lwz r3, 0x9dc(r3)
 	cmpwi r3, 0x2
 	bne loc_0x013
 	li r3, 0x0
@@ -2498,7 +2498,7 @@ HOOK @ $8081AD54                # Address = $(ba + 0x0081AD54)
 	stwu r1, -0x84(r1)
 	stmw r3, 0x8(r1)
 	lis r31, 0x804e
-	lwz r31, 0xbfc(r31)
+	lwz r31, 0xc00(r31)
 	cmpwi r31, 0x0
 	bne loc_0x014
 	lmw r3, 0x8(r1)
@@ -2528,7 +2528,7 @@ loc_0x014:
 HOOK @ $808E00A4                # Address = $(ba + 0x008E00A4)
 {
 	lis r6, 0x804e
-	lwz r6, 0x215c(r6)
+	lwz r6, 0x2160(r6)
 	cmpwi r6, 0x1
 	bne loc_0x005
 	li r0, 0x8
@@ -2603,7 +2603,7 @@ loc_0x010:
 	b loc_0x051
 loc_0x019:
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x908(r31)
 	cmpwi r31, 0x1
 	blt loc_0x04D
 	lis r14, 0x9018
@@ -2690,7 +2690,7 @@ loc_0x051:
 	lwz r30, 0xe0(r30)
 	lwz r30, 0x8(r30)
 	lis r31, 0x804e
-	lwz r31, 0x980(r31)
+	lwz r31, 0x984(r31)
 	cmpwi r31, 0x0
 	bne loc_0x087
 	lis r26, 0x806b
@@ -2775,7 +2775,7 @@ loc_0x011:
 	cmpwi r31, 0xa
 	bne loc_0x092
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x908(r31)
 	cmpwi r31, 0x4
 	bne loc_0x02F
 	li r30, 0x0
@@ -2843,7 +2843,7 @@ loc_0x036:
 	bla 0x81c540
 	neg r16, r3
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x908(r31)
 	cmpwi r31, 0x2
 	bne loc_0x05B
 	stb r16, 0x0(r18)
@@ -3000,14 +3000,14 @@ loc_0x037:
 	lis r29, 0x8058
 	lwzu r28, 0x4084(r29)
 	lis r31, 0x804e
-	lwz r31, 0xa2c(r31)
+	lwz r31, 0xa30(r31)
 	cmpwi r31, 0x1
 	bne loc_0x042
 	li r28, 0x0
 	li r16, 0xd
 loc_0x042:
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x908(r31)
 	cmpwi r31, 0x0
 	ble loc_0x054
 	lwz r31, 0x24(r3)
@@ -3292,7 +3292,7 @@ HOOK @ $8000E588                # Address = $(ba + 0x0000E588)
 	cmpwi r31, 0x1
 	bne loc_0x09E
 	lis r31, 0x804e
-	lwz r31, 0xe64(r31)
+	lwz r31, 0xe68(r31)
 	cmpwi r31, 0x1
 	bne loc_0x09E
 	li r31, 0x14
@@ -4079,7 +4079,7 @@ HOOK @ $8084D0D4                # Address = $(ba + 0x0084D0D4)
 	stwu r1, -0x84(r1)
 	stmw r3, 0x8(r1)
 	lis r31, 0x804e
-	lwz r31, 0xad4(r31)
+	lwz r31, 0xad8(r31)
 	cmpwi r31, 0x2
 	beq loc_0x07A
 	cmpwi r31, 0x0
@@ -4285,7 +4285,7 @@ HOOK @ $8001735C                # Address = $(ba + 0x0001735C)
 	lis r28, 0x804e
 	lwz r28, 0x260(r28)
 	lis r27, 0x804e
-	lwz r27, 0xad4(r27)
+	lwz r27, 0xad8(r27)
 	cmpw r28, r27
 	beq loc_0x014
 	lis r30, 0x804e
@@ -4299,7 +4299,7 @@ loc_0x014:
 	lis r28, 0x804e
 	ori r28, r28, 0x260
 	lis r27, 0x804e
-	lwz r27, 0xad4(r27)
+	lwz r27, 0xad8(r27)
 	stw r27, 0x0(r28)
 	lmw r3, 0x8(r1)
 	addi r1, r1, 0x84
@@ -4312,7 +4312,7 @@ loc_0x014:
 }
 
 #######################################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Incr and Decr Slot Color with L/R, Reset with Z on Player Kind Button [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Incr and Decr Slot Color with L/R, Reset with Z on Player Kind Button [QuickLava]
 #######################################################################################################################
 HOOK @ $8068B168                # Address = $(ba + 0x0068B168)
 {
@@ -4409,7 +4409,7 @@ HOOK @ $806828CC                # Address = $(ba + 0x006828CC)
 }
 
 #############################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Results Screen Player Names are Transparent [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Results Screen Player Names are Transparent [QuickLava]
 #############################################################################################
 * 040EA724 3D60804E             # 32-Bit Write @ $(ba + 0x000EA724):  0x3D60804E
 
@@ -4434,7 +4434,7 @@ HOOK @ $800EA8C0                # Address = $(ba + 0x000EA8C0)
 }
 
 ##################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] CSS Player Names are Transparent [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] CSS Player Names are Transparent [QuickLava]
 ##################################################################################
 HOOK @ $8069B268                # Address = $(ba + 0x0069B268)
 {
@@ -4444,7 +4444,7 @@ HOOK @ $8069B268                # Address = $(ba + 0x0069B268)
 }
 
 ##################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Cache SelChar Team Battle Status [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Cache SelChar Team Battle Status [QuickLava]
 ##################################################################################
 HOOK @ $8068EDA8                # Address = $(ba + 0x0068EDA8)
 {
@@ -4456,7 +4456,7 @@ HOOK @ $8068EDA8                # Address = $(ba + 0x0068EDA8)
 }
 
 #######################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Cache In-game Mode Team Battle Status [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Cache In-game Mode Team Battle Status [QuickLava]
 #######################################################################################
 HOOK @ $800E0A44                # Address = $(ba + 0x000E0A44)
 {
@@ -4468,7 +4468,7 @@ HOOK @ $800E0A44                # Address = $(ba + 0x000E0A44)
 }
 
 ##########################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Only 2P Stadium Boss Battles Are Considered Team Battles [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Only 2P Stadium Boss Battles Are Considered Team Battles [QuickLava]
 ##########################################################################################################
 HOOK @ $806E5F08                # Address = $(ba + 0x006E5F08)
 {
@@ -4478,20 +4478,20 @@ HOOK @ $806E5F08                # Address = $(ba + 0x006E5F08)
 }
 
 ################################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Disable Franchise Icon Color 10-Frame Offset in Results Screen [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Disable Franchise Icon Color 10-Frame Offset in Results Screen [QuickLava]
 ################################################################################################################
 * C60EBB98 800EBBB8             # Create Branch @ $(ba + 0x000EBB98): b 0x800EBBB8
 * C60EBDE4 800EBE00             # Create Branch @ $(ba + 0x000EBDE4): b 0x800EBE00
 
 ###############################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Hand Color Fix [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Hand Color Fix [QuickLava]
 # Fixes a conflict with Eon's Roster-Size-Based Hand Resizing code, which could
 # in some cases cause CSS hands to wind up the wrong color.
 ###############################################################################
 * 0469CA2C C0031014             # 32-Bit Write @ $(ba + 0x0069CA2C):  0xC0031014
 
 #######################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Re-Enable Material Recalc on Certain In-Game Elements [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Re-Enable Material Recalc on Certain In-Game Elements [QuickLava]
 # Prevents skipping the material recalc on certain in-game HUD elements, specifically
 # including the blastzone magnifying glass (and accompanying arrow) and the nametag arrow elements.
 # Re-enabling the recalc ensures that their colors update every frame, allowing animated color support!
@@ -4499,14 +4499,14 @@ HOOK @ $806E5F08                # Address = $(ba + 0x006E5F08)
 * 040E083C 60000000             # 32-Bit Write @ $(ba + 0x000E083C):  0x60000000
 
 ##############################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Color Choice Resets on Controller Disconnect [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Color Choice Resets on Controller Disconnect [QuickLava]
 # Ensures that colors are reset when players unplug their controllers.
 ##############################################################################################
 HOOK @ $806971C0                # Address = $(ba + 0x006971C0)
 {
 	cmpwi r4, -0x1
 	bne loc_0x008
-	lwz r12, 0x1dc(r3)
+	lwz r12, 0x1b0(r3)
 	lis r11, 0x804e
 	rlwimi r11, r12, 2, 16, 29      # (Mask: 0x00003fff)
 	lwz r11, 0x2f4(r11)
@@ -4517,14 +4517,14 @@ loc_0x008:
 }
 
 ##########################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Port-Specific Stocks Set CLR0 Frame [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Port-Specific Stocks Set CLR0 Frame [QuickLava]
 # Has stock icons set their texture using the SetFrame function instead of SetFameTex, which ensures
 # the CLR0 frame is set properly in addition to the texture itself; to make sure CPUs don't activate PSCC.
 ##########################################################################################################
 * 040E2188 4BFD53B5             # 32-Bit Write @ $(ba + 0x000E2188):  0x4BFD53B5
 
 ###############################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] CSS Random Always Uses P1 CSP [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] CSS Random Always Uses P1 CSP [QuickLava]
 ###############################################################################
 HOOK @ $80697558                # Address = $(ba + 0x00697558)
 {
@@ -4534,7 +4534,7 @@ HOOK @ $80697558                # Address = $(ba + 0x00697558)
 }
 
 ############################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Random Franchise Icon uses Unique CLR0 Frame (setCharKind) [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Random Franchise Icon uses Unique CLR0 Frame (setCharKind) [QuickLava]
 ############################################################################################################
 HOOK @ $80697074                # Address = $(ba + 0x00697074)
 {
@@ -4564,7 +4564,7 @@ loc_0x00E:
 }
 
 #############################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Random Franchise Icon uses Unique CLR0 Frame (incTeamColor) [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Random Franchise Icon uses Unique CLR0 Frame (incTeamColor) [QuickLava]
 # Note: Serves as a subroutine for the following codes as well, to avoid redundancy.
 #############################################################################################################
 HOOK @ $80699A2C                # Address = $(ba + 0x00699A2C)
@@ -4583,7 +4583,7 @@ loc_0x007:
 }
 
 #############################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Random Franchise Icon uses Unique CLR0 Frame (decTeamColor) [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Random Franchise Icon uses Unique CLR0 Frame (decTeamColor) [QuickLava]
 #############################################################################################################
 HOOK @ $80699D70                # Address = $(ba + 0x00699D70)
 {
@@ -4593,7 +4593,7 @@ HOOK @ $80699D70                # Address = $(ba + 0x00699D70)
 }
 
 ##############################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Random Franchise Icon uses Unique CLR0 Frame (setPlayerKind) [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Random Franchise Icon uses Unique CLR0 Frame (setPlayerKind) [QuickLava]
 ##############################################################################################################
 HOOK @ $80698690                # Address = $(ba + 0x00698690)
 {
@@ -4603,7 +4603,7 @@ HOOK @ $80698690                # Address = $(ba + 0x00698690)
 }
 
 ################################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Random Franchise Icon uses Unique CLR0 Frame (updateMeleeKind) [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Random Franchise Icon uses Unique CLR0 Frame (updateMeleeKind) [QuickLava]
 ################################################################################################################
 HOOK @ $80698F18                # Address = $(ba + 0x00698F18)
 {
@@ -4613,7 +4613,7 @@ HOOK @ $80698F18                # Address = $(ba + 0x00698F18)
 }
 
 ###########################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Random Franchise Icon uses Unique CLR0 Frame (NOP Writes) [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Random Franchise Icon uses Unique CLR0 Frame (NOP Writes) [QuickLava]
 ###########################################################################################################
 * 04699A40 60000000             # 32-Bit Write @ $(ba + 0x00699A40):  0x60000000
 * 04699D84 60000000             # 32-Bit Write @ $(ba + 0x00699D84):  0x60000000
@@ -4623,7 +4623,7 @@ HOOK @ $80698F18                # Address = $(ba + 0x00698F18)
 * 04698F54 60000000             # 32-Bit Write @ $(ba + 0x00698F54):  0x60000000
 
 #####################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] SSS Random Stocks Use CLR0 Coloring [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] SSS Random Stocks Use CLR0 Coloring [QuickLava]
 #####################################################################################
 * 046B2FB0 7C18C040             # 32-Bit Write @ $(ba + 0x006B2FB0):  0x7C18C040
 
@@ -4651,7 +4651,7 @@ loc_0x00D:
 }
 
 #################################################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Bootleg CLR0 v4 Support Patch [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Bootleg CLR0 v4 Support Patch [QuickLava]
 # Fakes CLR0 v4 support by rearranging the contents of the v4 header such that they match the orientation
 # found in v3 files, just with the UserData pointer stuck to the end. This ensures that we maintain compatibility
 # with the game's assumptions about where the struct's fields should be, while keeping access to UserData!
@@ -4673,7 +4673,7 @@ loc_0x00A:
 }
 
 ###############################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Embed Color and Scheme Tables [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Embed Color and Scheme Tables [QuickLava]
 ###############################################################################
 * 46000008 00000000             # Put Next Code Loc in BA: ba = (Next Code Address) + 8
 * 66200018 00000000             # Goto: Jump to Next Line, then forward 24 more Line(s) Regardless of Execution Status
@@ -4705,7 +4705,7 @@ loc_0x00A:
 * E0000000 80008000             # Full Terminator: ba = 0x80000000, po = 0x80000000
 
 ############################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Embed Color Callback Table [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Embed Color Callback Table [QuickLava]
 # 8 Slots Long, First is Reserved for RGB Strobe!
 ############################################################################
 * 46000008 00000000             # Put Next Code Loc in BA: ba = (Next Code Address) + 8
@@ -4718,7 +4718,7 @@ loc_0x00A:
 * E0000000 80008000             # Full Terminator: ba = 0x80000000, po = 0x80000000
 
 #####################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] RGB Strobe Callback [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] RGB Strobe Callback [QuickLava]
 #####################################################################
 * 46000008 00000000             # Put Next Code Loc in BA: ba = (Next Code Address) + 8
 * 66200002 00000000             # Goto: Jump to Next Line, then forward 2 more Line(s) Regardless of Execution Status
@@ -4729,7 +4729,7 @@ loc_0x00A:
 * E0000000 80008000             # Full Terminator: ba = 0x80000000, po = 0x80000000
 
 #########################################################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Borrow Stack Space [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Borrow Stack Space [QuickLava]
 # Consolidates two stack locations the game uses for float conversions into just one,
 # allowing us to use the newly freed one as storage for some of the variables we'll need!
 #########################################################################################
@@ -4738,7 +4738,7 @@ loc_0x00A:
 * 0419349C C8010008             # 32-Bit Write @ $(ba + 0x0019349C):  0xC8010008
 
 ###########################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Prep Code [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Prep Code [QuickLava]
 ###########################################################
 HOOK @ $80193410                # Address = $(ba + 0x00193410)
 {
@@ -4796,7 +4796,7 @@ loc_0x02B:
 }
 
 ###########################################################
-[CM: _PlayerSlotColorChangers v3.1.1] Main Code [QuickLava]
+[CM: _PlayerSlotColorChangers v3.1.2] Main Code [QuickLava]
 ###########################################################
 HOOK @ $801934FC                # Address = $(ba + 0x001934FC)
 {
@@ -4944,7 +4944,7 @@ HOOK @ $808E0094                # Address = $(ba + 0x008E0094)
 	word 0x00000000                 # ....
 data_0x00D:
 	lis r30, 0x804e
-	lwz r30, 0x21a8(r30)
+	lwz r30, 0x21ac(r30)
 	cmplwi r30, 0x0
 	lis r11, 0x2
 	li r12, 0x0
@@ -4971,11 +4971,11 @@ loc_0x018:
 HOOK @ $808734F8                # Address = $(ba + 0x008734F8)
 {
 	lis r11, 0x804e
-	lwz r12, 0x21f0(r11)
+	lwz r12, 0x21f4(r11)
 	cmplwi r12, 0x0
 	beq loc_0x022
 	mtctr r12
-	lwz r11, 0x22a0(r11)
+	lwz r11, 0x22a4(r11)
 	mr r0, r11
 	bdz loc_0x018
 	add r0, r11, r3
@@ -4997,12 +4997,12 @@ loc_0x013:
 	subf r0, r0, r3
 loc_0x018:
 	lis r11, 0x804e
-	lwz r12, 0x22e0(r11)
+	lwz r12, 0x22e4(r11)
 	cmpw r0, r12
 	bge loc_0x01D
 	mr r0, r12
 loc_0x01D:
-	lwz r12, 0x2328(r11)
+	lwz r12, 0x232c(r11)
 	cmpw r0, r12
 	ble loc_0x021
 	mr r0, r12
