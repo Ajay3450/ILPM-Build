@@ -48,7 +48,7 @@ RSS Page Switch [DukeItOut, Kapedani]
 .alias MUSIC_SELECT_STEP			= 0x80002810
 
 .alias DEFAULT_RSS_INDEX			= 0x00	# Index of main .rss to load/save, Netplay - 0xFF
-.alias NUM_PRESETS					= 0x8	# Change for more presets
+.alias NUM_PRESETS					= 0x7	# Change for more presets
 
 .alias LAST_PRESET = NUM_PRESETS - 1
 
