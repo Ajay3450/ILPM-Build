@@ -1,7 +1,7 @@
 
-########################
-Cherry Double [Kapedani]
-########################
+#############################
+Cherry Double v1.1 [Kapedani]
+#############################
 .alias g_GameGlobal                         = 0x805a00E0
 .alias g_itManager                          = 0x80B8B7F4
 .alias itManager__removeItemAll             = 0x809b2750
@@ -10,6 +10,7 @@ Cherry Double [Kapedani]
 .alias ftManager__getFighter                = 0x80814f20
 .alias ftManager__getSubOwner               = 0x80815a0c
 .alias ftManager__getEntryIdFromTaskId      = 0x80815cb0
+.alias ftManager__getEntryId                = 0x80815c40
 .alias g_ftEntryManager                     = 0x80B87c48
 .alias ftEntryManager__isValid              = 0x80823ae4
 .alias ftEntryManager__getEntity            = 0x80823b24
@@ -85,35 +86,10 @@ Cherry Double [Kapedani]
     bctr
 }
 
-# op lis r12, 0x80B8 @ $8096f878
-# CODE @ $8096f894 
-# {
-#     mr r31, r3
-#     lwz	r3, 0x7C28(r12)
-# }
-# HOOK @ $8096f8b4    # grYakumono::isSubFighter
-# {
-#     cmpwi r31, 0x0  # \ Check if first parameter is null
-#     bne+ notDouble  # /
-#     mr r31, r4
-#     %lwd(r3, g_ftEntryManager)          
-#     %call(ftEntryManager__isValid)      
-#     cmpwi r3, 0 
-#     beq+ invalid     
-#     %lwd(r3, g_ftEntryManager)                      
-#     mr r4, r31
-#     %call(ftEntryManager__getEntity)
-#     lwz r3, 0x4c(r3)    # ftEntry->instances[3].fighter
-# invalid:
-#     %branch(0x8096f8bc) 
-# notDouble:
-#     %lwd (r3, g_ftManager)
-# }
-
 op li r0, 0x4 @ $80823ff0   # fighterCount always 4 in ftEntryManager::getEntryIdFromTaskId  (so that instance index can be retrieved from double)
-op li r0, 0x4 @ $8081e224   # \ fighterCount aways 4 in ftEntry::exit (so that double deloads)
+op li r0, 0x4 @ $8081e224   # \ fighterCount always 4 in ftEntry::exit (so that double deloads)
 op li r0, 0x4 @ $8081e280   # /
-op li r6, 0x4 @ $8081ebd8   # fighterCount aways 4 in ftEntry::isExistFighter (so that Final Smash can be given to primary fighter)
+op li r6, 0x4 @ $8081ebd8   # fighterCount always 4 in ftEntry::isExistFighter (so that Final Smash can be given to primary fighter)
 
 HOOK @ $8083ae24    # Fighter::getOwner
 {
@@ -122,12 +98,25 @@ HOOK @ $8083ae24    # Fighter::getOwner
     stw r0, 0x14(r1)
     stw r3, 0xc(r1)
 
+    lwz r4, 0x10c(r3)   # fighter->entryId
+    %lwd(r3, g_ftEntryManager) 
+    %call (ftEntryManager__getEntity)
+    lwz r12, 0x58(r3)
+    cmpwi r12, 6
+    blt+ notParasite
+    %lwd(r12, g_ftManager)
+    lbz r12, 0x91(r3)   # get entryId for parasite 
+    li r3, 3
+    cmpwi r12, 0xFF    # \ check if -1
+    bne- parasite       # / 
+notParasite:
+    lwz r3, 0xc(r1)
 	lwz r4, 0x28(r3)	# fighter->taskId
     %lwd(r3, g_ftManager) 			
 	addi r5, r1, 0x8	# outInstanceIndex
 	%call(ftManager__getEntryIdFromTaskId)    
     lwz r3, 0x8(r1)
-    
+parasite:    
     lwz r0, 0x14(r1)
     lwz r4, 0xc(r1)
     mtlr r0
@@ -154,6 +143,69 @@ HOOK @ $80838378    # Fighter::endFinal
 end:
     lwz	r12, 0x3C(r27)  # Original operation
 }
+
+op stwu r1, -0x20(r1) @ $8083cc8c
+op stw r0, 0x24(r1) @ $8083cc98
+HOOK @ $8083cca0    # Fighter::setNameCursor
+{
+    mr r31, r3      # Original operation
+    stw r4, 0x10(r1) # Temp store r4
+    lwz r4, 0x28(r31)	# fighter->taskId
+    %lwd(r3, g_ftManager) 			
+	addi r5, r1, 0x8	# outInstanceIndex
+	%call(ftManager__getEntryIdFromTaskId) 
+    lwz r3, 0x8(r1) # \
+    cmpwi r3, 3     # | check if outInstanceIndex == 3 (i.e. it is a double fighter)
+    bne+ end        # /
+    %branch(0x8083cd1c) # skip ending final
+end:
+    mr r3, r31
+    lwz r4, 0x10(r1)
+    cmplwi r4, 1
+}
+op lwz r0, 0x24(r1) @ $8083cd1c
+op addi	r1, r1, 0x20 @ $8083cd28
+
+op stwu r1, -0x20(r1) @ $8083cbe8
+op stw r0, 0x24(r1) @ $8083cbf4
+HOOK @ $8083cbfc    # Fighter::setCursor
+{
+    mr r31, r3      # Original operation
+    stw r4, 0x10(r1) # Temp store r4
+    lwz r4, 0x28(r31)	# fighter->taskId
+    %lwd(r3, g_ftManager) 			
+	addi r5, r1, 0x8	# outInstanceIndex
+	%call(ftManager__getEntryIdFromTaskId) 
+    lwz r3, 0x8(r1) # \
+    cmpwi r3, 3     # | check if outInstanceIndex == 3 (i.e. it is a double fighter)
+    bne+ end        # /
+    %branch(0x8083cc78) # skip ending final
+end:
+    mr r3, r31
+    lwz r4, 0x10(r1)
+    cmplwi r4, 1
+}
+op lwz r0, 0x24(r1) @ $8083cc78
+op addi	r1, r1, 0x20 @ $8083cc84
+
+HOOK @ $8087dce8    # ftStatusUniqProcessDead::decCoin
+{
+    lis	r31, 0x80B8  # Original operation
+    lwz	r3, 0x7C28(r31) # g_ftManager			
+    lwz r4, 0x8(r28)    # \ moduleAccesser->stageObject->taskId
+    lwz r4, 0x28(r4)	# / 
+	addi r5, r1, 0x8	# outInstanceIndex
+	%call(ftManager__getEntryIdFromTaskId) 
+}
+HOOK @ $8087dcf8    # ftStatusUniqProcessDead::decCoin
+{
+    li r6, 1    # Original operation
+    lwz r12, 0x8(r1) # \
+    cmpwi r12, 3     # | check if outInstanceIndex == 3 (i.e it is a double fighter)
+    bne+ %end%       # /
+    li r6, 0    # don't subtract coins
+}
+
 # Make original and double metal cuz both get the model effect cuz they share the same model
 HOOK @ $80843130    # Fighter::setMetal
 {
@@ -162,6 +214,17 @@ HOOK @ $80843130    # Fighter::setMetal
 }
 HOOK @ $80843210    # Fighter::setMetal
 {
+    lwz r4, 0x10c(r29)   # fighter->entryId
+    %lwd(r3, g_ftEntryManager) 
+    %call (ftEntryManager__getEntity)
+    lwz r12, 0x58(r3)
+    cmpwi r12, 6
+    blt+ notParasite
+    %lwd(r12, g_ftManager)
+    lbz r12, 0x91(r3)   # get playerNo for parasited player
+    cmpwi r12, 0xFF     # \ check if -1
+    bne- parasite       # / 
+notParasite:
     lwz r4, 0x28(r29)	# fighter->taskId
     %lwd(r3, g_ftManager) 			
 	addi r5, r1, 0x8	# outInstanceIndex
@@ -169,12 +232,23 @@ HOOK @ $80843210    # Fighter::setMetal
     lwz r3, 0x8(r1) # \
     cmpwi r3, 3     # | check if outInstanceIndex == 3 (i.e it is a double fighter)
     bne+ end        # /
+parasite:
     %branch(0x8084322c) # skip switching model envMap if not main fighter
 end:
     lwz	r3, 0xD8(r27)   # Original operation
 }
 HOOK @ $80843294    # Fighter::setMetal
 {
+    lwz r4, 0x10c(r29)   # fighter->entryId
+    %lwd(r3, g_ftEntryManager) 
+    %call (ftEntryManager__getEntity)
+    lwz r12, 0x58(r3)
+    cmpwi r12, 6
+    blt+ end
+    %lwd(r12, g_ftManager)
+    lbz r12, 0x91(r3)   # get playerNo for parasited player
+    cmpwi r12, 0xFF     # \ check if -1
+    bne- parasite       # / 
     lwz r4, 0x28(r29)	# fighter->taskId
     %lwd(r3, g_ftManager) 			
 	addi r5, r1, 0x8	# outInstanceIndex
@@ -182,6 +256,7 @@ HOOK @ $80843294    # Fighter::setMetal
     lwz r3, 0x8(r1) # \
     cmpwi r3, 3     # | check if outInstanceIndex == 3 (i.e it is a double fighter)
     bne+ end        # /
+parasite:
     %branch(0x808432b0) # skip switching model envMap if not main fighter
 end:
     lwz	r3, 0xD8(r27)   # Original operation
@@ -202,11 +277,33 @@ HOOK @ $808432ec    # Fighter:setMetal
     lwz r3, 0x8(r1) # \
     cmpwi r3, 3     # | check if outInstanceIndex == 3 (i.e it is a double fighter)
     beq+ double     # /
+    %lwd(r3, g_ftManager)
+    lbz r4, 0x91(r3)   # get playerNo for parasited fighter
+    cmpwi r4, -1       # \ check if parasite is active
+    beq+ notParasite    # /
+    lwz r12, 0x24(r27)  # \
+    cmpw r4, r12       # | check player is parasited
+    beq+ parasited     # /  
+    cmpwi r12, 6        # \ check if parasite
+    blt+ notParasite   # /
+    b getFighter       # get parasited fighter
+parasited:
+    li r4, 0x6                      # \
+getFighter:
+    %call(ftManager__getEntryId)    # | get parasite fighter 
+    cmpwi r3, -1                    # |
+    beq- end                        # |
+    mr r4, r3                       # /
+    %lwd(r3, g_ftManager)         
+    li r5, -1
+    %call(ftManager__getFighter)
+    b setMetal
+notParasite:
     lwz r3, 0x18(r27)   # \
     cmpwi r3, 0x0       # | check if instances[3].fighter == NULL
     beq+ end            # /
     b setMetal    
-double:  
+double: 
     lbz r12, -0x2a(r27) # \
     mulli r12, r12, 0x8 # | instance[ftEntry->activeInstanceIndex].fighter
     lwzx r3, r27, r12   # /
@@ -224,26 +321,15 @@ end:
 HOOK @ $8083b2d4    # Fighter::toDead
 {
     mr r31, r3  # Original operation
-    lwz r4, 0x10c(r26)  # fighter->entryId
-    %lwd(r3, g_ftEntryManager)
-    %call(ftEntryManager__getEntity)
-    mr r28, r3
-    lwz r3, 0x4c(r3)   # \ 
-    cmpwi r3, 0x0      # | check if ftEntry->instances[3].fighter == NULL (i.e. double does not exist)
-    beq+ noDouble      # /
-    lwz r11, 0x28(r26)  # \
-    lwz r12, 0x28(r3)   # | check if the fighter is a double fighter (by checking task id)
-    cmpw r11, r12       # |
-    bne+ notDouble      # /
+    lwz r4, 0x28(r26)  # fighter->taskId
+    %lwd(r3, g_ftManager) 			
+	addi r5, r1, 0x8	# outInstanceIndex
+	%call(ftManager__getEntryIdFromTaskId) 
+    lwz r3, 0x8(r1) # \
+    cmpwi r3, 3     # | check if outInstanceIndex == 3 (i.e it is a double fighter)
+    bne+ end        # /
     %branch(0x8083b310) # skip switching setting metal if not main fighter
-notDouble:
-    %call(Fighter__deactivate)
-    %lwi(r3, g_ftInstanceManager)
-    lwz r4, 0x4c(r28)
-    %call(ftInstanceManager__remove)
-    li r12, 0           # \ ftEntry->instances[3].fighter = NULL
-    stw r12, 0x4c(r28)  # /
-noDouble:
+end:
     lwz	r12, 0x3C(r26)  # Original operation
 }
 HOOK @ $80835490    # Fighter::deactivate
@@ -316,7 +402,6 @@ HOOK @ $8082374c    # ftEntry::process
 end:
     lbz	r0, 0x11(r29)   # Original operation
 }
-
 HOOK @ $808206f0    # ftEntry::startChange
 {
     lwz r3, 0x4c(r29)  # \
@@ -328,8 +413,21 @@ HOOK @ $808206f0    # ftEntry::startChange
     %call(ftInstanceManager__remove)
     li r12, 0           # \ ftEntry->instances[3].fighter = NULL
     stw r12, 0x4c(r29)  # /
-
     stw	r26, 0x10(r1)   # Original operation
+}
+HOOK @ $8081f7c0    # ftEntry::restart
+{
+    lwz r3, 0x4c(r30)  # \
+    cmpwi r3, 0x0      # | check if ftEntry->instances[3].fighter == NULL
+    beq+ end           # /
+    %call(Fighter__deactivate)
+    %lwi(r3, g_ftInstanceManager)
+    lwz r4, 0x4c(r30)
+    %call(ftInstanceManager__remove)
+    li r12, 0           # \ ftEntry->instances[3].fighter = NULL
+    stw r12, 0x4c(r30)  # /
+end:
+    lwz	r3, 0x28(r30)   # Original operation
 }
 
 HOOK @ $8082040c    # ftEntry::setFinal
@@ -378,7 +476,7 @@ isFree:
 }
 HOOK @ $8081c934    # ftOwner::getFinalContinue
 {
-    lbz    r0, 0x1F(r3)    # Original operation
+    lbz	r0, 0x1F(r3)    # Original operation
     rlwinm. r12,r0,28,31,31 # \
     li r3, 0x1              # | return true if waiting for final smash
     beqlr+                  # /
@@ -544,7 +642,7 @@ fighterNotCreated:
     bctrl               # /
 }
 
-op sth r31, 0x7C(r27) @ $80812da8  # Initialize field 0x7B for ftManager::__ct (use for keeping track number of doubles)
+op sth r31, 0x7C(r27) @ $80812da8  # Initialize field 0x7D for ftManager::__ct (use for keeping track number of doubles)
 
 HOOK @ $8082f384    # ftInstanceManager::create
 {
@@ -577,24 +675,6 @@ HOOK @ $8082f454    # ftInstanceManager::remove
 end:
     lwz r3, 0xC(r1)
     lwz	r12, 0x3C(r3)   # Original operation
-}
-
-HOOK @ $8087dce8    # ftStatusUniqProcessDead::decCoin
-{
-    lis    r31, 0x80B8  # Original operation
-    lwz    r3, 0x7C28(r31) # g_ftManager            
-    lwz r4, 0x8(r28)    # \ moduleAccesser->stageObject->taskId
-    lwz r4, 0x28(r4)    # / 
-    addi r5, r1, 0x8    # outInstanceIndex
-    %call(ftManager__getEntryIdFromTaskId) 
-}
-HOOK @ $8087dcf8    # ftStatusUniqProcessDead::decCoin
-{
-    li r6, 1    # Original operation
-    lwz r12, 0x8(r1) # \
-    cmpwi r12, 3     # | check if outInstanceIndex == 3 (i.e it is a double fighter)
-    bne+ %end%       # /
-    li r6, 0    # don't subtract coins
 }
 
 HOOK @ $809b0a38    # itManager::checkCreatableItem
@@ -634,6 +714,14 @@ end:
     cmpwi r27, 34   # Original operation
 }
 
+HOOK @ $80812db8    # ftManager::__ct
+{   
+    stb	r31, 0x90(r27)  # Original operation
+    stb r30, 0x91(r27)  # Initialize ftSlotId for parasite copy
+}
+
+## TODO: Get center position so that clone doesn't fall through stage?
+## TODO: Investigate magnifier making both fighters invisible to re-enable magnifier?
 ## TODO: All Star VS - prevent fighter switching if first fighter dies
 ## TODO: Check behaviour with Manaphy
 ## TODO: Check if Pokemon Trainer conflicts anywhere

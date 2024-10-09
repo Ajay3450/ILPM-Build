@@ -163,7 +163,7 @@ All .pacs have removed F.L.U.D.D. models and texture data for file size optimiza
 30 - Builder Mario 2.0 by SJ
 31 - Green Builder Mario 2.0 by SJ
 32 - Blue Builder Mario 2.0 by SJ
-AltR - Vacation Mario by SJS, ART+
+AltR - Vacation Mario by SJS, ART+, rigging adjustments by RapM
 AltZ - Brawlified: Cowboy Mario V2 by Sub, AlGeorgeRomo, Mach 7, Puzzled and Xenthos
 
 
@@ -743,6 +743,7 @@ AltZ - Adventure Wario by Angelglory [with edits by Moblin]
 
 ROY 
 Pose by Nanobuds, model polish by tryptech, rendered by CSProject Backroom
+Model optimzations by Layell with credit to ilikepizza107 for base work
 06 - Pink Roy by Layell, credit to PMDT
 07 - Purple SSB4 Roy by Moe, additional edits by Layell, credit to PMDT
 08 - White Roy by Layell, credit to PMDT
@@ -896,13 +897,14 @@ Base - Battlefield by PMDT with lighting fixes by DukeItOut and Mawwwk
 L - Battlefield (Melee) by the PMDT, with texture fixes by sporksparks and DukeItOut
 R - Lunar Battlefield by Nezha the Scout, Kapedani, GRAND AZEL, Puzzled, soopercool101, Layell, and DukeItOut
 Z - Torn Sky Battlefield by Dranakar, Scout, WorseDoughnut, MarioDox, davidvkimball, soopercool101
-Y - Battlefield (N64) by Mewtwo2000, Yohan1044, mawwwk
+L+Start - Battlefield (N64) by Mewtwo2000, Yohan1044, mawwwk
 
 FINAL DESTINATION
 L   - Melee-Brawl FD by MarioDox, Xerom, Mewtwo2000, PMDT
-L+R - 20XX Rainbow FD by Ryztiq with credit to the PMDT for original FD stage.
 Z   - Legacy Final Destination by WorseDoughnut, Scout, davidvkimball, Moblin, DukeItOut with credit to soopercool101
 R   - Project M Final Destination by Ryztiq, WorseDoughnut, Dranakar, Scout, davidvkimball with credit to Diego Leal for the concept
+R+Start - 20XX Rainbow FD by Ryztiq with credit to the PMDT for original FD stage.
+L+Start - 64 Destination by Mewtwo2000
 
 DELFINO'S SECRET [DELFINO PLAZA]
 R - Delfino's Secret Plaza by davidvkimball, WorseDoughnut, MarioDox with credit to SOJ and DukeItOut for the idea
@@ -1040,8 +1042,9 @@ Base  - Green Hill Zone Revamp by The Project+ Art team, nnebf, Kirbeast, GRAND 
 R     - Marble Hill Zone by davidvkimball, WorseDoughnut, TheGag96, Yohan1044, DukeItOut, Layell, mawwwk, Kirbeast, soopercool101 with credit to Szasz, Katakiri, pharoahfawcett, and the PMDT
 L     - Green Hill Zone vBrawl Revamp by The Project+ Art team, nnebf, Kirbeast, GRAND AZEL, mawwwk, and tyleto, boundary updates by PMDT
 Z     - Radical Highway Zone by nnebf, snoe with credit to PMDT
-X     - Green Hill Zone PM by the PMDT, with texture fixes by DukeItOut and mawwwk, shadow fixes by mawwwk and WorseDoughnut, and redirect improvements by soopercool101, optimization by Snoe
-X+L   - Green Hill Zone Brawl, boundary updates by PMDT, additional updates by Kirbeast, GRAND AZEL, tyleto, and Layell
+L+Start   - Green Hill Zone Brawl, boundary updates by PMDT, additional updates by Kirbeast, GRAND AZEL, tyleto, and Layell
+R+Start    - Green Hill Zone PM by the PMDT, with texture fixes by DukeItOut and mawwwk, shadow fixes by mawwwk and WorseDoughnut, and redirect improvements by soopercool101, optimization by Snoe
+
 
 PICTOCHAT
 Base stage displays "Zero Suit Samus" using module edit by DukeItOut. 
@@ -1076,7 +1079,7 @@ DREAM LAND
 L - Winter Dreamland by Kirbeast with credit to Ryztiq, AZPM, t_Místico_t
 R - Dreamland V2 by Ryztiq
 Z - Autumn Dreamland V2.1 by DukeItOut, MetalLegacy, Ryztiq, mawwwk with credit to XtremeDragon and Yohan1044
-Y - Dream Land 64 by PMDT, optimizations by mawwwk
+R+Start - Dream Land 64 by PMDT, optimizations by mawwwk
 
 PEACH'S CASTLE [RAINBOW CRUISE]
 Base - Texture optimizations by Cahalan. 
@@ -1118,10 +1121,10 @@ R+Start - Config Training Room by mawwwk with credit to PMDT, soopercool101
 MUSHROOM KINGDOM
 Base - Mushroom Kingdom 64 Upgrades + Plant by MarioDox with credit to Mewtwo2000, DukeItOut
 L    - Mushroomy Kingdom with Stamina Wraparound fixes by MarioDox
-L+R  - Mushroomy Underground with Stamina Wraparound fixes by MarioDox
 R    - Mushroomy Kingdom Metal Cavern by Yorch
 Z    - Mushroom Kingdom II Improvements by MarioDox with credit to AlGeorgeRomo, Smash 2 Dev Team
-Y	 - Mushroom Kingdom Melee by the Smash 2 dev team
+L+Start  - Mushroomy Underground with Stamina Wraparound fixes by MarioDox
+L+Start	 - Mushroom Kingdom Melee by the Smash 2 dev team
 
 MARIO CIRCUIT
 L - Mario Circuit Light by Cahalan, CaliburZx, MarioDox
@@ -1144,7 +1147,7 @@ Base - Clock Town by davidvkimball, Scout, Dranakar, DukeItOut, mawwwk, Layell w
 L    - Majora's Room by Electropolitan with credit to DSX8, LlamaJuice, Mewtwo2000, Ryztiq, soopercool101
 R    - Clock Town by davidvkimball, Scout, Dranakar, DukeItOut, mawwwk, Layell with credit to KTH for the Clock Town import, Lunoz for the Skull Kid model import, and the PMDT for the Mewtwo animations used for Skull Kid
 Z - Great Bay by Ryan, Mewtwo2000 with fixes by Nezha, Eon and MarioDox
-ZY - Great Bay (no swimming) by Ryan, Mewtwo2000 with fixes by Nezha, Eon and MarioDox
+L+Start - Great Bay (no swimming) by Ryan, Mewtwo2000 with fixes by Nezha, Eon and MarioDox
 
 WARIOWARE, INC
 Base  - WarioWare Inc. with Turbo Mode rewards by DukeItOut
@@ -1213,7 +1216,7 @@ RAINBOW CRUISE
 L - Bob-Omb Battlefield by Nezha the Scout, Flambo237, MarioDox, Puzzled, Survivian, Electropolitan with credit to Flambo, KingJigglypuff, Kirbeast, Layell, CBM Discord server
 R - Rainbow Cruiseware by MarioDox with credit to GBC, Nezha the Scout, PMDT
 Z - Mushroom Gorge by MarioDox
-Y - Dr. Mario's Office by ALM5252, TroyAnthony
+L+Start - Dr. Mario's Office by ALM5252, TroyAnthony
 
 POKE FLOATS
 Port done by Soopercool101 and the Smash 2 dev team

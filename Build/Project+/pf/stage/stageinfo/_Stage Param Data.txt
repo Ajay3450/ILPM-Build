@@ -13,18 +13,18 @@ Battlefield_L.param
 	Battlefield_Melee.tlst
 
 ################
+Battlefield_ML_00.param
+
+	STGBATTLEFIELD_ML_DUEL.pac
+	st_battle_NoShadowRotate.rel
+	Battlefield_64.tlst
+
+################
 Battlefield_R.param
 
 	STGBATTLEFIELD_R_BF_LUNAR.pac
 	st_battle_NoShadowRotate.rel
 	Battlefield.tlst
-
-################
-Battlefield_Y.param
-
-	STGBATTLEFIELD_Y_64.pac
-	st_battle_NoShadowRotate.rel
-	Battlefield_64.tlst
 
 ################
 Battlefield_Z.param
@@ -126,11 +126,11 @@ Bowser_Castle_Z.param
 Break_The_Targets.param
 
 	[Substages / Normal]
-	- STGTARGETLV1.PAC
-	- STGTARGETLV2.PAC
-	- STGTARGETLV3.PAC
-	- STGTARGETLV4.PAC
-	- STGTARGETLV5.PAC
+	- STGTARGETLV1.pac
+	- STGTARGETLV2.pac
+	- STGTARGETLV3.pac
+	- STGTARGETLV4.pac
+	- STGTARGETLV5.pac
 
 	st_tbreak.rel
 	Break_The_Targets.tlst
@@ -141,8 +141,8 @@ Break_The_Targets.param
 Castle_Siege.param
 
 	[Substages / DualLoad]
-	- STGCASTLESIEGE.PAC
-	- STGCASTLESIEGE_SBG.PAC
+	- STGCASTLESIEGE.pac
+	- STGCASTLESIEGE_SBG.pac
 
 	st_castlesiege_notransform.rel
 	Castle_Siege.tlst
@@ -163,8 +163,8 @@ Castle_Siege_L.param
 Castle_Siege_ML_00.param
 
 	[Substages / DualLoad]
-	- STGCASTLESIEGE.PAC
-	- STGEMBLEM_02.PAC
+	- STGCASTLESIEGE.pac
+	- STGEMBLEM_02.pac
 
 	st_castlesiege_02.rel
 	Castle_Siege.tlst
@@ -173,11 +173,26 @@ Castle_Siege_ML_00.param
 	Flags: DualLoad
 
 ################
+Castle_Siege_ML_01.param
+
+	[Substages / DualLoad]
+	- STGEMBLEM.pac
+	- STGEMBLEM_00.pac
+	- STGEMBLEM_01.pac
+	- STGEMBLEM_02.pac
+
+	st_castlesiege.rel
+	Castle_Siege_Brawl.tlst
+	SFX / GFX: 0x005E / 0x004A
+	MemoryAllocation: 0x483300 (4731648 bytes)
+	Flags: DualLoad
+
+################
 Castle_Siege_MR_00.param
 
 	[Substages / DualLoad]
-	- STGCASTLESIEGE.PAC
-	- STGEMBLEM_00.PAC
+	- STGCASTLESIEGE.pac
+	- STGEMBLEM_00.pac
 
 	st_castlesiege_notransform.rel
 	Castle_Siege.tlst
@@ -189,8 +204,8 @@ Castle_Siege_MR_00.param
 Castle_Siege_R.param
 
 	[Substages / DualLoad]
-	- STGCASTLESIEGE_R_TOT_SIEGE.PAC
-	- STGCASTLESIEGE_R_SBG.PAC
+	- STGCASTLESIEGE_R_TOT_SIEGE.pac
+	- STGCASTLESIEGE_R_SBG.pac
 
 	st_castlesiege_notransform.rel
 	Castle_Siege.tlst
@@ -202,10 +217,10 @@ Castle_Siege_R.param
 Castle_Siege_X.param
 
 	[Substages / DualLoad]
-	- STGEMBLEM.PAC
-	- STGEMBLEM_00.PAC
-	- STGEMBLEM_01.PAC
-	- STGEMBLEM_02.PAC
+	- STGEMBLEM.pac
+	- STGEMBLEM_00.pac
+	- STGEMBLEM_01.pac
+	- STGEMBLEM_02.pac
 
 	st_castlesiege.rel
 	Castle_Siege_Brawl.tlst
@@ -217,8 +232,8 @@ Castle_Siege_X.param
 Castle_Siege_Z.param
 
 	[Substages / DualLoad]
-	- STGCASTLESIEGE_Z_BF_SIEGE.PAC
-	- STGCASTLESIEGE_Z_SBG.PAC
+	- STGCASTLESIEGE_Z_BF_SIEGE.pac
+	- STGCASTLESIEGE_Z_SBG.pac
 
 	st_castlesiege_notransform.rel
 	Castle_Siege.tlst
@@ -271,6 +286,13 @@ Clock_Town_L.param
 	SFX / GFX: 0x0054 / 0x0064
 
 ################
+Clock_Town_ML_00.param
+
+	STGCLOCKTOWN_Z_GREATBAY.pac
+	st_junglejapes_noswim.rel
+	Great_Bay.tlst
+
+################
 Clock_Town_R.param
 
 	STGCLOCKTOWN_R_SV_CLOCKTOWN.pac
@@ -283,13 +305,6 @@ Clock_Town_Z.param
 
 	STGCLOCKTOWN_Z_GREATBAY.pac
 	st_dxgarden.rel
-	Great_Bay.tlst
-
-################
-Clock_Town_ZY.param
-
-	STGCLOCKTOWN_Z_GREATBAY.pac
-	st_junglejapes_noswim.rel
 	Great_Bay.tlst
 
 ################
@@ -345,19 +360,19 @@ Corneria_L.param
 	SFX / GFX: 0x006D / 0x0061
 
 ################
+Corneria_ML_00.param
+
+	STGCORNERIA_ML_SECTOR_Z_64.pac
+	st_dxcorneria.rel
+	Sector_Z.tlst
+	SFX / GFX: 0x006D / 0x0061
+
+################
 Corneria_R.param
 
 	STGCORNERIA_R_FOD_SAURIA.pac
 	st_final.rel
 	Sauria.tlst
-	SFX / GFX: 0x006D / 0x0061
-
-################
-Corneria_Y.param
-
-	STGCORNERIA_Y_SECTOR_Z_64.pac
-	st_dxcorneria.rel
-	Sector_Z.tlst
 	SFX / GFX: 0x006D / 0x0061
 
 ################
@@ -530,19 +545,19 @@ Dream_Land_L.param
 	SFX / GFX: 0x006C / 0x005E
 
 ################
+Dream_Land_MR_00.param
+
+	STGDREAMLAND_MR_64.pac
+	st_dreamland64_ht.rel
+	Dream_Land_64.tlst
+	SFX / GFX: 0x006C / 0x005E
+
+################
 Dream_Land_R.param
 
 	STGDREAMLAND_R_DL_NIGHT.pac
 	st_dreamland64_ht.rel
 	Dream_Land.tlst
-	SFX / GFX: 0x006C / 0x005E
-
-################
-Dream_Land_Y.param
-
-	STGDREAMLAND_Y_DL_64.pac
-	st_dreamland64_ht.rel
-	Dream_Land_64.tlst
 	SFX / GFX: 0x006C / 0x005E
 
 ################
@@ -557,9 +572,9 @@ Dream_Land_Z.param
 Edit_Stage.param
 
 	[Substages / Normal]
-	- STGEDIT_0.PAC
-	- STGEDIT_1.PAC
-	- STGEDIT_2.PAC
+	- STGEDIT_0.pac
+	- STGEDIT_1.pac
+	- STGEDIT_2.pac
 
 	st_stageedit.rel
 	
@@ -600,9 +615,25 @@ Final_Destination_L.param
 	SFX / GFX: 0xFFFF / 0x0033
 
 ################
-Final_Destination_LR.param
+Final_Destination_ML_00.param
 
-	STGFINALDESTINATION_LR_FD_MELEE_COLOR.pac
+	STGFINALDESTINATION_ML_64.pac
+	st_final.rel
+	Final_Destination_64.tlst
+	SFX / GFX: 0xFFFF / 0x0033
+
+################
+Final_Destination_ML_01.param
+
+	STGFINAL.pac
+	st_final.rel
+	Final_Destination_Brawl.tlst
+	SFX / GFX: 0xFFFF / 0x0033
+
+################
+Final_Destination_MR_00.param
+
+	STGFINALDESTINATION_MR_RAINBOW.pac
 	st_final.rel
 	Final_Destination.tlst
 	SFX / GFX: 0xFFFF / 0x0033
@@ -613,22 +644,6 @@ Final_Destination_R.param
 	STGFINALDESTINATION_R_FD_PROJECTM.pac
 	st_final.rel
 	Final_Destination.tlst
-	SFX / GFX: 0xFFFF / 0x0033
-
-################
-Final_Destination_X.param
-
-	STGFINAL.pac
-	st_final.rel
-	Final_Destination_Brawl.tlst
-	SFX / GFX: 0xFFFF / 0x0033
-
-################
-Final_Destination_Y.param
-
-	STGFINALDESTINATION_Y_64.pac
-	st_final.rel
-	Final_Destination_64.tlst
 	SFX / GFX: 0xFFFF / 0x0033
 
 ################
@@ -692,7 +707,7 @@ Fountain_of_Dreams_L.param
 Fountain_of_Dreams_R.param
 
 	STGFOUNTAINOFDREAMS_R_FOD_CAVE.pac
-	st_final.rel
+	st_dxfountain_ht.rel
 	Fountain_of_Dreams.tlst
 
 ################
@@ -719,7 +734,7 @@ Fourside_L.param
 	SFX / GFX: 0x0063 / 0x0051
 
 ################
-Fourside_LX.param
+Fourside_ML_00.param
 
 	STGNEWPORK.pac
 	st_newpork.rel
@@ -757,20 +772,20 @@ Frigate_Husk_L.param
 	SFX / GFX: 0x0056 / 0x0032
 
 ################
+Frigate_Husk_ML_00.param
+
+	STGORPHEON.pac
+	st_orpheon.rel
+	Frigate_Orpheon_Brawl.tlst
+	SFX / GFX: 0x0056 / 0x0032
+
+################
 Frigate_Husk_R.param
 
 	STGFRIGATEHUSK_R_FH_DROWNED.pac
 	st_final.rel
 	Frigate_Orpheon.tlst
 	SFX / GFX: 0x013D / 0x005E
-
-################
-Frigate_Husk_X.param
-
-	STGORPHEON.pac
-	st_orpheon.rel
-	Frigate_Orpheon_Brawl.tlst
-	SFX / GFX: 0x0056 / 0x0032
 
 ################
 Frigate_Husk_Z.param
@@ -826,11 +841,19 @@ Green_Hill_Zone_L.param
 	SFX / GFX: 0x0066 / 0x0054
 
 ################
-Green_Hill_Zone_LX.param
+Green_Hill_Zone_ML_00.param
 
-	STGGREENHILLZONE_LX_ORIGINAL.pac
+	STGGREENHILLZONE_ML_ORIGINAL.pac
 	st_greenhill.rel
 	Green_Hill_Zone_Brawl.tlst
+	SFX / GFX: 0x0066 / 0x0054
+
+################
+Green_Hill_Zone_MR_00.param
+
+	STGGREENHILLZONE_MR_PROJECTM.pac
+	st_greenhill_ht.rel
+	Green_Hill_Zone.tlst
 	SFX / GFX: 0x0066 / 0x0054
 
 ################
@@ -839,14 +862,6 @@ Green_Hill_Zone_R.param
 	STGGREENHILLZONE_R_GHZ_MARBLEZONE.pac
 	st_greenhill_ht.rel
 	Marble_Zone.tlst
-	SFX / GFX: 0x0066 / 0x0054
-
-################
-Green_Hill_Zone_X.param
-
-	STGGREENHILLZONE_X_GHZ_PROJECTM.pac
-	st_greenhill_ht.rel
-	Green_Hill_Zone.tlst
 	SFX / GFX: 0x0066 / 0x0054
 
 ################
@@ -874,21 +889,21 @@ Halberd_L.param
 	Halberd.tlst
 
 ################
-Halberd_R.param
-
-	STGHALBERD_R_DL_HALBERD.pac
-	st_dreamland64.rel
-	Halberd.tlst
-	SFX / GFX: 0x006C / 0x005E
-
-################
-Halberd_X.param
+Halberd_ML_00.param
 
 	STGHALBERD.pac
 	st_halberd.rel
 	Halberd.tlst
 	SFX / GFX: 0x0057 / 0x003F
 	Flags: SlowStart
+
+################
+Halberd_R.param
+
+	STGHALBERD_R_DL_HALBERD.pac
+	st_dreamland64.rel
+	Halberd.tlst
+	SFX / GFX: 0x006C / 0x005E
 
 ################
 Halberd_Z.param
@@ -956,18 +971,18 @@ Hyrule_Castle_L.param
 	Ganon_Castle.tlst
 
 ################
+Hyrule_Castle_ML_00.param
+
+	STGHYRULECASTLE_ML_64.pac
+	st_hyrulecastle64.rel
+	Hyrule_Castle_64.tlst
+
+################
 Hyrule_Castle_R.param
 
 	STGHYRULECASTLE_R_WL_HYRULE.pac
 	st_greenhill_act2.rel
 	Hyrule_Castle.tlst
-
-################
-Hyrule_Castle_Y.param
-
-	STGHYRULECASTLE_Y_64.pac
-	st_hyrulecastle64.rel
-	Hyrule_Castle_64.tlst
 
 ################
 Hyrule_Castle_Z.param
@@ -1054,18 +1069,18 @@ Kongo_Jungle_L.param
 	Hornet_Hole.tlst
 
 ################
+Kongo_Jungle_MR_00.param
+
+	STGKONGOJUNGLE_MR_64.pac
+	st_kongojungle64.rel
+	Kongo_Jungle_64.tlst
+
+################
 Kongo_Jungle_R.param
 
 	STGKONGOJUNGLE_R_GHZ_HORNETHOLE.pac
 	st_greenhill_act2.rel
 	Hornet_Hole.tlst
-
-################
-Kongo_Jungle_Y.param
-
-	STGKONGOJUNGLE_Y_64.pac
-	st_kongojungle64.rel
-	Kongo_Jungle_64.tlst
 
 ################
 Kongo_Jungle_Z.param
@@ -1111,11 +1126,11 @@ Luigis_Mansion_Z.param
 Lylat_Cruise.param
 
 	[Substages / DualLoad]
-	- STGLYLATCRUISE.PAC
-	- STGSTARFOX_ASTEROID.PAC
-	- STGSTARFOX_BATTLESHIP.PAC
-	- STGSTARFOX_CORNERIA.PAC
-	- STGSTARFOX_SPACE.PAC
+	- STGLYLATCRUISE.pac
+	- STGSTARFOX_ASTEROID.pac
+	- STGSTARFOX_BATTLESHIP.pac
+	- STGSTARFOX_CORNERIA.pac
+	- STGSTARFOX_SPACE.pac
 
 	st_starfox_norotate.rel
 	Lylat_Cruise.tlst
@@ -1132,27 +1147,27 @@ Lylat_Cruise_L.param
 	SFX / GFX: 0x0058 / 0x0044
 
 ################
-Lylat_Cruise_R.param
-
-	STGLYLATCRUISE_R_FD_SPACE.pac
-	st_final.rel
-	Lylat_Cruise.tlst
-
-################
-Lylat_Cruise_X.param
+Lylat_Cruise_ML_00.param
 
 	[Substages / DualLoad]
-	- STGLYLATCRUISE.PAC
-	- STGSTARFOX_ASTEROID.PAC
-	- STGSTARFOX_BATTLESHIP.PAC
-	- STGSTARFOX_CORNERIA.PAC
-	- STGSTARFOX_SPACE.PAC
+	- STGLYLATCRUISE.pac
+	- STGSTARFOX_ASTEROID.pac
+	- STGSTARFOX_BATTLESHIP.pac
+	- STGSTARFOX_CORNERIA.pac
+	- STGSTARFOX_SPACE.pac
 
 	st_starfox.rel
 	Lylat_Cruise.tlst
 	SFX / GFX: 0x0058 / 0x0044
 	MemoryAllocation: 0x334000 (3358720 bytes)
 	Flags: DualLoad, DualShuffle
+
+################
+Lylat_Cruise_R.param
+
+	STGLYLATCRUISE_R_FD_SPACE.pac
+	st_final.rel
+	Lylat_Cruise.tlst
 
 ################
 Lylat_Cruise_Z.param
@@ -1195,8 +1210,8 @@ Mario_Circuit_Z.param
 Metal_Cavern.param
 
 	[Substages / RandomVariance]
-	- STGMETALCAVERN_00.PAC
-	- STGMETALCAVERN_01.PAC
+	- STGMETALCAVERN_00.pac
+	- STGMETALCAVERN_01.pac
 
 	st_final.rel
 	Metal_Cavern.tlst
@@ -1212,6 +1227,20 @@ Metal_Cavern_L.param
 	Flags: Flat, FixedCamera
 
 ################
+Metal_Cavern_ML_00.param
+
+	STGMETALCAVERN_ML_N64.pac
+	st_final.rel
+	Metal_Cavern_64.tlst
+
+################
+Metal_Cavern_MR_00.param
+
+	STGMETALCAVERN_MR_N64.pac
+	st_final.rel
+	Metal_Cavern_64.tlst
+
+################
 Metal_Cavern_R.param
 
 	STGMETALCAVERN_R_MC_UNDERGROUND.pac
@@ -1219,25 +1248,11 @@ Metal_Cavern_R.param
 	Metal_Cavern.tlst
 
 ################
-Metal_Cavern_Y.param
-
-	STGMETALCAVERN_Y_64.pac
-	st_final.rel
-	Metal_Cavern_64.tlst
-
-################
-Metal_Cavern_YZ.param
-
-	STGMETALCAVERN_YZ_64_SYMMETRICAL.pac
-	st_final.rel
-	Metal_Cavern_64.tlst
-
-################
 Metal_Cavern_Z.param
 
 	[Substages / RandomVariance]
-	- STGMETALCAVERN_Z_00_64_REMAKE.PAC
-	- STGMETALCAVERN_Z_01_64_REMAKE.PAC
+	- STGMETALCAVERN_Z_00_64_REMAKE.pac
+	- STGMETALCAVERN_Z_01_64_REMAKE.pac
 
 	st_final.rel
 	Metal_Cavern.tlst
@@ -1282,7 +1297,7 @@ Mushroom_Kingdom.param
 Mushroom_Kingdom_L.param
 
 	[Substages / Normal]
-	- STGMUSHROOMKINGDOM_L_1-1.PAC
+	- STGMUSHROOMKINGDOM_L_1-1.pac
 
 	st_mariopast.rel
 	Mushroomy_Kingdom.tlst
@@ -1290,11 +1305,11 @@ Mushroom_Kingdom_L.param
 	Flags: SlowStart
 
 ################
-Mushroom_Kingdom_LR.param
+Mushroom_Kingdom_ML_00.param
 
 	[Substages / Normal]
-	- STGMUSHROOMKINGDOM_LR_1-1.PAC
-	- STGMUSHROOMKINGDOM_LR_1-2.PAC
+	- STGMUSHROOMKINGDOM_ML_1-2.pac
+	- STGMUSHROOMKINGDOM_ML_1-2.pac
 
 	st_mariopast.rel
 	Mushroomy_Underground.tlst
@@ -1302,19 +1317,19 @@ Mushroom_Kingdom_LR.param
 	Flags: SlowStart
 
 ################
+Mushroom_Kingdom_ML_01.param
+
+	STGMUSHROOMKINGDOM_ML_MELEE.pac
+	st_mushroomkingdom.rel
+	Mushroom_Kingdom_64.tlst
+	SFX / GFX: 0x004F / 0x0036
+
+################
 Mushroom_Kingdom_R.param
 
 	STGMUSHROOMKINGDOM_R_MC_GROUND.pac
 	st_final.rel
 	Mushroom_Kingdom_Mix.tlst
-
-################
-Mushroom_Kingdom_Y.param
-
-	STGMUSHROOMKINGDOM_Y_MELEE.pac
-	st_mushroomkingdom.rel
-	Mushroom_Kingdom_64.tlst
-	SFX / GFX: 0x004F / 0x0036
 
 ################
 Mushroom_Kingdom_Z.param
@@ -1399,18 +1414,18 @@ Peach_Castle_L.param
 	Peachs_Castle_Melee.tlst
 
 ################
+Peach_Castle_ML_00.param
+
+	STGPEACHCASTLE_ML_N64.pac
+	st_peachscastle64.rel
+	Peachs_Castle_64.tlst
+
+################
 Peach_Castle_R.param
 
 	STGPEACHCASTLE_R_BF_PEACH.pac
 	st_battle_noshadowrotate.rel
 	Peachs_Castle.tlst
-
-################
-Peach_Castle_Y.param
-
-	STGPEACHCASTLE_Y_64.pac
-	st_peachscastle64.rel
-	Peachs_Castle_64.tlst
 
 ################
 Peach_Castle_Z.param
@@ -1438,18 +1453,18 @@ PictoChat_L.param
 	Flags: Flat
 
 ################
-PictoChat_R.param
+PictoChat_ML_00.param
 
-	STGPICTOCHAT_R_TOT_PICTOCHAT.pac
-	st_pictsimple.rel
+	STGPICTCHAT.pac
+	st_pictochat.rel
 	PictoChat.tlst
 	SFX / GFX: 0x0067 / 0x0032
 
 ################
-PictoChat_X.param
+PictoChat_R.param
 
-	STGPICTCHAT.pac
-	st_pictochat.rel
+	STGPICTOCHAT_R_TOT_PICTOCHAT.pac
+	st_pictsimple.rel
 	PictoChat.tlst
 	SFX / GFX: 0x0067 / 0x0032
 
@@ -1506,14 +1521,14 @@ Planet_Zebes_L.param
 	Brinstar_Depths.tlst
 
 ################
-Planet_Zebes_R.param
+Planet_Zebes_ML_00.param
 
-	STGPLANETZEBES_R_BF_BRINSTAR.pac
-	st_battle_noshadowrotate.rel
-	Brinstar.tlst
+	STGPLANETZEBES_ML_N64.pac
+	st_planetzebes64.rel
+	Planet_Zebes_64.tlst
 
 ################
-Planet_Zebes_X.param
+Planet_Zebes_ML_01.param
 
 	STGDXZEBES.pac
 	st_brinstar.rel
@@ -1521,11 +1536,11 @@ Planet_Zebes_X.param
 	SFX / GFX: 0x006B / 0x0063
 
 ################
-Planet_Zebes_Y.param
+Planet_Zebes_R.param
 
-	STGPLANETZEBES_Y_64.pac
-	st_planetzebes64.rel
-	Planet_Zebes_64.tlst
+	STGPLANETZEBES_R_BF_BRINSTAR.pac
+	st_battle_noshadowrotate.rel
+	Brinstar.tlst
 
 ################
 Planet_Zebes_Z.param
@@ -1542,6 +1557,7 @@ Pokemon_Stadium_2.param
 	st_stadium_static.rel
 	Pokemon_Stadium_2.tlst
 	SFX / GFX: 0x0059 / 0x0045
+	MemoryAllocation: 0x209767 (2135911 bytes)
 
 ################
 Pokemon_Stadium_2_L.param
@@ -1552,19 +1568,19 @@ Pokemon_Stadium_2_L.param
 	SFX / GFX: 0x0059 / 0x0045
 
 ################
+Pokemon_Stadium_2_ML_00.param
+
+	STGSTADIUM.pac
+	st_stadium.rel
+	Pokemon_Stadium_2_Brawl.tlst
+	SFX / GFX: 0x0059 / 0x0045
+
+################
 Pokemon_Stadium_2_R.param
 
 	STGPOKEMONSTADIUM_R_RADIANT.pac
 	st_stadium_static.rel
 	Pokemon_Stadium_2.tlst
-	SFX / GFX: 0x0059 / 0x0045
-
-################
-Pokemon_Stadium_2_X.param
-
-	STGSTADIUM.pac
-	st_stadium.rel
-	Pokemon_Stadium_2_Brawl.tlst
 	SFX / GFX: 0x0059 / 0x0045
 
 ################
@@ -1620,19 +1636,19 @@ Port_Town_L.param
 	SFX / GFX: 0x005B / 0x0047
 
 ################
+Port_Town_ML_00.param
+
+	STGFZERO.pac
+	st_fzero.rel
+	Port_Town_Brawl.tlst
+	SFX / GFX: 0x005B / 0x0047
+
+################
 Port_Town_R.param
 
 	STGPORTTOWN_R_PS2_DEATHRACE.pac
 	st_final.rel
 	Death_Race.tlst
-	SFX / GFX: 0x005B / 0x0047
-
-################
-Port_Town_X.param
-
-	STGFZERO.pac
-	st_fzero.rel
-	Port_Town_Brawl.tlst
 	SFX / GFX: 0x005B / 0x0047
 
 ################
@@ -1659,18 +1675,18 @@ Rainbow_Cruise_L.param
 	SFX / GFX: 0x006C / 0x0032
 
 ################
+Rainbow_Cruise_ML_00.param
+
+	STGRAINBOWCRUISE_ML_DRMARIO.pac
+	st_palutena.rel
+	Dr_Mario.tlst
+
+################
 Rainbow_Cruise_R.param
 
 	STGRAINBOWCRUISE_R_WL_CRUISE.pac
 	st_final.rel
 	Rainbow_Cruise.tlst
-
-################
-Rainbow_Cruise_Y.param
-
-	STGRAINBOWCRUISE_Y_DRMARIO.pac
-	st_palutena.rel
-	Dr_Mario.tlst
 
 ################
 Rainbow_Cruise_Z.param
@@ -1709,7 +1725,7 @@ Rumble_Falls_L.param
 	Donkey_Kong.tlst
 
 ################
-Rumble_Falls_LX.param
+Rumble_Falls_ML_00.param
 
 	STGDONKEY.pac
 	st_donkey.rel
@@ -1717,20 +1733,20 @@ Rumble_Falls_LX.param
 	SFX / GFX: 0x0051 / 0x0032
 
 ################
-Rumble_Falls_R.param
-
-	STGRUMBLEFALLS_R_WL_RUMBLE.pac
-	st_final.rel
-	Rumble_Falls.tlst
-
-################
-Rumble_Falls_X.param
+Rumble_Falls_ML_01.param
 
 	STGJUNGLE.pac
 	st_jungle.rel
 	Rumble_Falls.tlst
 	SFX / GFX: 0x0052 / 0x0039
 	Flags: SlowStart
+
+################
+Rumble_Falls_R.param
+
+	STGRUMBLEFALLS_R_BC_RUMBLE.pac
+	st_final.rel
+	Rumble_Falls.tlst
 
 ################
 Rumble_Falls_Z.param
@@ -1756,18 +1772,18 @@ Saffron_City_L.param
 	SFX / GFX: 0x006E / 0x005F
 
 ################
+Saffron_City_MR_00.param
+
+	STGSAFFRONCITY_MR_N64.pac
+	st_final.rel
+	Saffron_City_64.tlst
+
+################
 Saffron_City_R.param
 
 	STGSAFFRONCITY_R_TOT_SAFFRON.pac
 	st_final.rel
 	Saffron_City.tlst
-
-################
-Saffron_City_Y.param
-
-	STGSAFFRONCITY_Y_64.pac
-	st_final.rel
-	Saffron_City_64.tlst
 
 ################
 Saffron_City_Z.param
@@ -1780,9 +1796,9 @@ Saffron_City_Z.param
 Shadow_Moses.param
 
 	[Substages / RandomVariance]
-	- STGSHADOWMOSES_00_GEKKO.PAC
-	- STGSHADOWMOSES_01_RAY.PAC
-	- STGSHADOWMOSES_02_REX.PAC
+	- STGSHADOWMOSES_00_GEKKO.pac
+	- STGSHADOWMOSES_01_RAY.pac
+	- STGSHADOWMOSES_02_REX.pac
 
 	st_metalgear.rel
 	Shadow_Moses_Island.tlst
@@ -1855,18 +1871,18 @@ Sky_Sanctuary_L.param
 	Pumpkin_Hill.tlst
 
 ################
+Sky_Sanctuary_MR_00.param
+
+	STGSKYSANCTUARY_MR_ORIGINAL.pac
+	st_palutena.rel
+	Sky_Sanctuary.tlst
+
+################
 Sky_Sanctuary_R.param
 
 	STGSKYSANCTUARY_R_SSZ_CHAOSANGEL.pac
 	st_palutena.rel
 	Chaos_Angel.tlst
-
-################
-Sky_Sanctuary_X.param
-
-	STGSKYSANCTUARY_X_SSZ_ORIGINAL.pac
-	st_palutena.rel
-	Sky_Sanctuary.tlst
 
 ################
 Sky_Sanctuary_Z.param
@@ -1879,14 +1895,14 @@ Sky_Sanctuary_Z.param
 Smashville.param
 
 	[Substages / Normal]
-	- STGSMASHVILLE_00_MORNING.PAC
-	- STGSMASHVILLE_01_NOON.PAC
-	- STGSMASHVILLE_02_DUSK.PAC
-	- STGSMASHVILLE_03_NIGHT.PAC
-	- STGSMASHVILLE_03_NIGHT.PAC
-	- STGSMASHVILLE_03_NIGHT.PAC
-	- STGSMASHVILLE_04_MIDNIGHT.PAC
-	- STGSMASHVILLE_04_MIDNIGHT.PAC
+	- STGSMASHVILLE_00_MORNING.pac
+	- STGSMASHVILLE_01_NOON.pac
+	- STGSMASHVILLE_02_DUSK.pac
+	- STGSMASHVILLE_03_NIGHT.pac
+	- STGSMASHVILLE_03_NIGHT.pac
+	- STGSMASHVILLE_03_NIGHT.pac
+	- STGSMASHVILLE_04_MIDNIGHT.pac
+	- STGSMASHVILLE_04_MIDNIGHT.pac
 
 	st_smashville_ht.rel
 	Smashville.tlst
@@ -1913,14 +1929,14 @@ Smashville_R.param
 Smashville_Y.param
 
 	[Substages / Normal]
-	- STGSMASHVILLE_00_MORNING.PAC
-	- STGSMASHVILLE_01_NOON.PAC
-	- STGSMASHVILLE_02_DUSK.PAC
-	- STGSMASHVILLE_03_NIGHT.PAC
-	- STGSMASHVILLE_03_NIGHT.PAC
-	- STGSMASHVILLE_03_NIGHT.PAC
-	- STGSMASHVILLE_04_MIDNIGHT.PAC
-	- STGSMASHVILLE_04_MIDNIGHT.PAC
+	- STGSMASHVILLE_00_MORNING.pac
+	- STGSMASHVILLE_01_NOON.pac
+	- STGSMASHVILLE_02_DUSK.pac
+	- STGSMASHVILLE_03_NIGHT.pac
+	- STGSMASHVILLE_03_NIGHT.pac
+	- STGSMASHVILLE_03_NIGHT.pac
+	- STGSMASHVILLE_04_MIDNIGHT.pac
+	- STGSMASHVILLE_04_MIDNIGHT.pac
 
 	st_smashville_ht.rel
 	Smashville_Concert.tlst
@@ -1966,9 +1982,9 @@ Smashville_Z.param
 Spear_Pillar.param
 
 	[Substages / RandomVariance]
-	- STGSPEARPILLAR_00_DIALGA.PAC
-	- STGSPEARPILLAR_01_PALKIA.PAC
-	- STGSPEARPILLAR_02_CRESSELIA.PAC
+	- STGSPEARPILLAR_00_DIALGA.pac
+	- STGSPEARPILLAR_01_PALKIA.pac
+	- STGSPEARPILLAR_02_CRESSELIA.pac
 
 	st_tengan.rel
 	Spear_Pillar.tlst
@@ -1985,9 +2001,9 @@ Spear_Pillar_L.param
 Spear_Pillar_R.param
 
 	[Substages / RandomVariance]
-	- STGSPEARPILLAR_R_BF_00_DIALGA.PAC
-	- STGSPEARPILLAR_R_BF_01_PALKIA.PAC
-	- STGSPEARPILLAR_R_BF_02_GIRATINA.PAC
+	- STGSPEARPILLAR_R_BF_00_DIALGA.pac
+	- STGSPEARPILLAR_R_BF_01_PALKIA.pac
+	- STGSPEARPILLAR_R_BF_02_GIRATINA.pac
 
 	st_battle_noshadowrotate.rel
 	Spear_Pillar.tlst
@@ -2118,23 +2134,30 @@ Training_L.param
 	Training_Room.tlst
 
 ################
-Training_LR.param
+Training_ML_00.param
 
-	STGTRAININGROOM_LR_GREENSCREEN.pac
+	STGTRAININGROOM_ML_GREENSCREEN.pac
 	st_final.rel
+	Training_Room.tlst
+
+################
+Training_ML_01.param
+
+	STGTRAININGROOM_ML_BRAWL.pac
+	st_otrain.rel
 	Training_Room.tlst
 
 ################
 Training_MR_00.param
 
-	STGTRAININGROOM_MR_DARK.pac
+	STGTRAININGROOM_MR_CONFIG.pac
 	st_mansion.rel
 	Training_Room.tlst
 
 ################
 Training_MR_01.param
 
-	STGTRAININGROOM_MR_CONFIG.pac
+	STGTRAININGROOM_MR_DARK.pac
 	st_mansion.rel
 	Training_Room.tlst
 
@@ -2145,13 +2168,6 @@ Training_R.param
 	st_final.rel
 	P+_Stadium.tlst
 	SFX / GFX: 0xFFFF / 0x0033
-
-################
-Training_X.param
-
-	STGTRAININGROOM_X_BRAWL.pac
-	st_otrain.rel
-	Training_Room.tlst
 
 ################
 Training_Z.param
@@ -2237,14 +2253,7 @@ WarioWare_L.param
 	WarioWare_Disco.tlst
 
 ################
-WarioWare_R.param
-
-	STGWARIOWARE_R_WL_ASHLEY.pac
-	st_final.rel
-	WarioWare.tlst
-
-################
-WarioWare_X.param
+WarioWare_ML_00.param
 
 	STGWARIOWARE.pac
 	st_madein.rel
@@ -2252,7 +2261,7 @@ WarioWare_X.param
 	SFX / GFX: 0x005F / 0x004D
 
 ################
-WarioWare_Y.param
+WarioWare_ML_01.param
 
 	STGWARIOWARE.pac
 	st_wariowarehyper.rel
@@ -2260,20 +2269,27 @@ WarioWare_Y.param
 	SFX / GFX: 0x005F / 0x004D
 
 ################
+WarioWare_ML_02.param
+
+	STGWARIOWARE_Z_GBA.pac
+	st_wariowarehyper.rel
+	WarioWare_Wild.tlst
+	SFX / GFX: 0x005F / 0x004D
+	Flags: Flat, FixedCamera
+
+################
+WarioWare_R.param
+
+	STGWARIOWARE_R_WL_ASHLEY.pac
+	st_final.rel
+	WarioWare.tlst
+
+################
 WarioWare_Z.param
 
 	STGWARIOWARE_Z_GBA.pac
 	st_wariowareturbo.rel
 	WarioWare.tlst
-	SFX / GFX: 0x005F / 0x004D
-	Flags: Flat, FixedCamera
-
-################
-WarioWare_ZY.param
-
-	STGWARIOWARE_Z_GBA.pac
-	st_wariowarehyper.rel
-	WarioWare_Wild.tlst
 	SFX / GFX: 0x005F / 0x004D
 	Flags: Flat, FixedCamera
 
@@ -2322,19 +2338,19 @@ Yoshis_Island_L.param
 	SFX / GFX: 0x004C / 0x0032
 
 ################
-Yoshis_Island_R.param
-
-	STGYOSHISISLAND_R_YI_TROPICAL.pac
-	st_final.rel
-	Yoshis_Tropical_Island.tlst
-
-################
-Yoshis_Island_X.param
+Yoshis_Island_ML_00.param
 
 	STGCRAYON.pac
 	st_crayon.rel
 	Yoshis_Island.tlst
 	SFX / GFX: 0x004C / 0x0032
+
+################
+Yoshis_Island_R.param
+
+	STGYOSHISISLAND_R_YI_TROPICAL.pac
+	st_final.rel
+	Yoshis_Tropical_Island.tlst
 
 ################
 Yoshis_Island_Z.param

@@ -60,13 +60,17 @@ HOOK @ $806A3F60
 	lwz r3, 0xC4(r20)	# Original operation
 }
 
-HOOK @ $80952128
+HOOK @ $80952120    # stOperatorDropItem::processBegin
 {
-    lis r12, 0x80AE          # \ Access pointer at 80ADAD5C
-    lwz r12, -0x52A4(r12)    # /
-    lfsx f2, r12, r29        #
-    addi r29, r29, 4         # Access to max of range
-    lfsx f0, r12, r29        #
+    lis r31, 0x80AE          # \ Access pointer at 80ADAD5C
+    lwz r31, -0x52A4(r31)    # /
+    addi r3, r31, 0x4   # Access to max of range
+}
+HOOK @ $80952298    # stOperatorDropItem::startOperator
+{
+    lis r30, 0x80AE          # \ Access pointer at 80ADAD5C
+    lwz r30, -0x52A4(r30)    # /
+    addi r3, r30, 0x4   # Access to max of range
 }
 HOOK @ $806AB200 # Handles item frequency text
 {

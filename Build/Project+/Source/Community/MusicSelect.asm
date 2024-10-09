@@ -989,25 +989,6 @@ HOOK @ $806be64c # runs every frame on process/[scMemoryChange]
     li r0, 0 # original line
 }
 
-# this hook retrieves hidden alts
-HOOK @ $806b58c8 # every frame, if we pressed a button, check that we were pressing page button on SSS
-{
-    lis r5, 0x8000      # \
-    ori r5, r5, 0x2810  # |
-    lwz r10, 0 (r5)
-    cmpwi r10, 7        # if flag is not 7, go to end
-    bne done
-
-    # if any hidden alts were selected, retrieve them
-    %retrieveHiddenAlt(0x0b40, 0x2830)
-    %retrieveHiddenAlt(0x0b9C, 0x2834)
-    %retrieveHiddenAlt(0x0bf8, 0x2838)
-    %retrieveHiddenAlt(0x0c54, 0x283C)
-    
-    done:
-    cmplwi r0, 7 # original code line
-}
-
 # this hook checks if we are changing pages, and if so, doesn't set the flag to go to music select
 HOOK @ $806b58d0 # just after checking if we are changing pages
 {
@@ -1041,7 +1022,7 @@ HOOK @ $8010f9e4 # hook just before calling setBgmId when loading stage
     mr r4, r28 # original line
 }
 
-# this hook forces the match to start when returning from My Music
+# this hook forces the match to start when returning from My Music and also retrieves hidden alts
 HOOK @ $806b42d4 # muSelectStageTask:selectingProc - when we check if a button is pressed
 {
     lis r8, 0x8000          # \
@@ -1049,6 +1030,12 @@ HOOK @ $806b42d4 # muSelectStageTask:selectingProc - when we check if a button i
     lwz r9, 0x0 (r8)        # | get flag
     cmpwi r9, 7             # |
     bne done                # / if flag is not 7, jump to original line
+
+    # Retrieve hidden alts
+    %retrieveHiddenAlt(0x0b40, 0x2830)
+    %retrieveHiddenAlt(0x0b9C, 0x2834)
+    %retrieveHiddenAlt(0x0bf8, 0x2838)
+    %retrieveHiddenAlt(0x0c54, 0x283C)
 
     li r3, 3    # setting to 3 forces us to random
 

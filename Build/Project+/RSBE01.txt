@@ -588,33 +588,13 @@ HOOK @ $801f3058
   bctr
 }
 
-###################################################################
-[Project+] Pitfall effect can have no-bury with trip rate 2.0 [Eon]
-###################################################################
-HOOK @ $8076CE84
-{
-	lwz r24, 0x60(r19) #load hitbox trip rate
-	lis r25, 0x4000    #2.0 float
-	cmpw r24, r25 	   #if trip rate = 2.0, dont burry.
-	bne buryNormal
-dontBury:
-#pretends to be angle 0, keeps them grounded no matter the attack strength.
-	li r24, 0
-	li r25, 0
-	lis r12, 0x8076
-	ori r12, r12, 0xd0b0 
-	mtctr r12
-	bctr
-buryNormal:
-	li 24, 6
-}
-
 .include Source/ProjectM/CloneEngine.asm
 
 .include Source/CodeMenu/CodeMenu.asm
 .include Source/CodeMenu/BigHeadMode.asm
 .include Source/CodeMenu/RandomAngleMode.asm
 
+.include Source/Project+/TripRate.asm
 .include Source/Project+/CompressPAC.asm
 .include Source/Project+/FilePatchCode.asm
 .include Source/Project+/Memory.asm
@@ -1164,7 +1144,7 @@ setLedgeGrab:
   mtctr r12 
   bctrl #set LA-Basic[79] = 0, ledgegrab count
 end:
-  stw r28, 0x38(r30)
+  stw r28, 0x38(r30) # Set Action
   li r29, 1
   lwz r3, 0x44(r30)
 }
@@ -1192,13 +1172,6 @@ Melee 361 Angle [Magus]
 float 44.0 @ $80B87ABC
 float 32.0 @ $80B87AC0
 float 32.1 @ $80B87AC4
-
-############################################
-Only Trip Rate 1.0 Can Trip Foes [DukeItOut]
-############################################
-op nop @ $8076D120
-op lfs f1, 0x18(r13) @ $8076D124
-op bne+ 0x40 @ $8076D130
 
 ##################################################################
 Weight Independent Knockback and Forced Tumble on Throws [Magus]
@@ -3120,6 +3093,6 @@ op b 0x38	@ $808A087C
 .include Source/Project+/CStick.asm		# Don't move this to BOOST, it will cause aerial drift for some reason
 .include Source/Project+/Items.asm
 .include Source/Community/ItemEx.asm
-.include Source/Community/Syringe.asm
+.include Source/Community/Syringe.asm		
 
 .include Source/Project+/MultiGCT.asm		# MAKE SURE THIS IS AT THE VERY BOTTOM OF THIS CODESET!!!

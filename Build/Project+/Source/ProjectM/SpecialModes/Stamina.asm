@@ -1,5 +1,5 @@
 ####################################################
-P+ Stamina REDUX v1.2 [wiiztec, DukeItOut, Kapedani]
+P+ Stamina REDUX v1.3 [wiiztec, DukeItOut, Kapedani]
 ####################################################
 
 .alias g_ftDataCommon							= 0x80B88268
@@ -442,7 +442,7 @@ keepBody:
 	li r5, -1			# |
 	lwz r3, 0xd8(r28)	# |
 	lwz r3, 0x60(r3)	# |	
-	lwz r12, 0x0(r3)	# | moduleAccesser->moduleEnumeration->cameraModule->setEnableCamera(-1, 0)
+	lwz r12, 0x0(r3)	# | moduleAccesser->moduleEnumeration->cameraModule->setEnableCamera(0, -1)
 	lwz r12, 0x38(r12)	# |
 	mtctr r12			# |
 	bctrl				# /
@@ -451,14 +451,6 @@ end:
 }
 HOOK @ $8083b310	# Fighter::toDead
 {
-	lwz r3, 0xd8(r29)		# \
-	lwz r3, 0x64(r3)		# |
-	%lwi (r4, 0x12000018)	# |
-	lwz r12, 0x0(r3)		# | moduleAccesser->moduleEnumeration->workManageModule->offFlag(0x12000018)
-	lwz r12, 0x54(r12)		# | 
-	mtctr r12				# |
-	bctrl					# /
-
 	li r4, 0x28				# \
 	lwz r3, 0xd8(r29)		# |
 	lwz r3, 0x88(r3)		# |
@@ -509,6 +501,52 @@ HOOK @ $807c976c	# soColorBlendModuleImpl::setSubColor
 	stb	r30, 0x150(r26)	# Original operation
 	sth r30, 0x14a(r26)	# \ initialize subcolor to 0
 	sth r30, 0x14c(r26)	# /
+}
+
+HOOK @ $8087c464	# ftStatusUniqProcessDead::initStatus
+{
+	lwz r12, 0xd0(r12)	# \
+	mtctr r12			# | cameraModule->getSubject(0)
+	bctrl 				# /
+	cmpwi r3, 0x0		# \
+	beq+ noSubject		# |
+	lbz r3, 0x0(r3)		# | store whether camera is enabled on stack
+noSubject:				# |
+	stb r3, 0x78(r1)	# /
+	lwz r3, 0xD8(r27)	# \
+	li r4, 0			# |
+	lwz r3, 0x60(r3)	# | Original operation
+	lwz r12, 0x0(r3)	# |
+	lwz r12, 0x34(r12)	# /
+}
+HOOK @ $8087c7f4	# ftStatusUniqProcessDead::initStatus
+{
+	lbz r12, 0x78(r1)		# \
+	andi. r12, r12, 0x80	# | check if camera is enabled from storage on stack
+	bne+ end				# /
+	%lwi(r4, 0x12000018)	# \
+	lwz r3, 0xd8(r27)		# |
+	lwz r3, 0x64(r3)		# | moduleAccesser->moduleEnumeration->workModule->isFlag(0x12000018)
+	lwz r12, 0x0(r3)		# |
+	lwz r12, 0x4C(r12)		# |
+	mtctr r12				# |
+	bctrl					# /
+	cmpwi r3, 0x0	# \ check if knocked out
+	beq+ end 		# /
+	%branch(0x8087c810)	# skip setting temporary camera upon blastzone death
+end:
+	fmr	f1, f31		# Original operation
+}
+HOOK @ $8087dbe4	# ftStatusUniqProcessDead::exitStatus
+{
+	lwz r3, 0xd8(r30)		# \
+	lwz r3, 0x64(r3)		# |
+	%lwi (r4, 0x12000018)	# |
+	lwz r12, 0x0(r3)		# | moduleAccesser->moduleEnumeration->workManageModule->offFlag(0x12000018)
+	lwz r12, 0x54(r12)		# | 
+	mtctr r12				# |
+	bctrl					# /
+	lwz r3, 0xd8(r30)	# Original operation
 }
 
 HOOK @ $80948494	# stLoaderPlayer::entryEntityRebirth
@@ -892,7 +930,7 @@ noStageOverlay:
 	li r4, 1			# \
 	li r5, -1			# |
 	lwz r3, 0x60(r30)	# |	
-	lwz r12, 0x0(r3)	# | moduleEnumeration->cameraModule->setEnableCamera(-1, 1)
+	lwz r12, 0x0(r3)	# | moduleEnumeration->cameraModule->setEnableCamera(1, -1)
 	lwz r12, 0x38(r12)	# |
 	mtctr r12			# |
 	bctrl				# /

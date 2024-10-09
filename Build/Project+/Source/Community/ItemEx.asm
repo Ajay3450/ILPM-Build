@@ -1,7 +1,7 @@
 
-################################################
-ItemEx Clone Engine v2.4 [Sammi Husky, Kapedani]
-################################################
+#################################################
+ItemEx Clone Engine v2.5 [Sammi Husky, Kapedani]
+#################################################
 # Stages can override items
 # Character specific items
 # Variants setup for Pokemon/Assist Trophies
@@ -185,6 +185,10 @@ HOOK @ $809bca84    # itArchive::__ct
 notFighterItem:
     cmpwi r31, 8                # \ Check if stage item group
     beq+ dontUseGlobalItmParam  # /
+    cmpwi r31, 0                # \ Check if Subspace item group
+    beq+ dontUseGlobalItmParam  # /
+    cmpwi r31, 5                # \ Check if Enemy item group
+    beq+ dontUseGlobalItmParam  # /
     cmpwi r12, 0x0      # \ Check if itVariation == 0
     beq+ end            # /
     cmpwi r31, 2                # \ Check if Assist
@@ -278,8 +282,8 @@ noItov:
     %lwd (r12, g_stLoaderManager)       
     li r10, 5   
     lwz r11, 0x28(r12)              # Get g_stLoaderManager->stLoaderPokemonSe
-    lwz r12, 0xc(r1)
-    cmpwi r12, 0x3d
+    lwz r9, 0xc(r1)
+    cmpwi r9, 0x3d
     bne+ notSubspace
     lwz r11, 0x24(r12)              # Get g_stLoaderManager->stLoaderCommonSeAdventure
 notSubspace:
@@ -2358,6 +2362,21 @@ HOOK @ $809521d0    # stOperatorDropItemMelee::processBegin
 }
 op beq+ 0x10 @ $809521d4 # Skip effect if item wasn't created 
 
+HOOK @ $8095217c    # stOperatorDropItemMelee::processBegin
+{
+    lis	r3, 0x80B9      # \
+    lwz	r3, -0x5BD8(r3) # |
+    lwz	r12, 0x3C(r3)   # | g_Stage->getIteamDropStatus()
+    lwz r12, 0x1f0(r12) # |
+    mtctr r12           # |
+    bctrl               # /
+    cmpwi r3, 0x0
+    bne+ end
+    %branch(0x80952208)
+end:
+    lis	r3, 0x80B9  # Original operation
+}
+
 ####################
 # Item Switch Menu #
 ####################
@@ -3221,6 +3240,43 @@ CODE @ $80056074
     subi r4, r4, 0x3b48  # /
 }
 op andis. r5,r0,0xffe7 @ $806f1a50 # Set mayhem and passive aggression to false in Training
+op andis. r5,r4,0xffe1 @ $806dddc8 # Set mayhem and passive aggression to false in demo
+
+######################
+# Training Mode Menu #
+######################
+## TODO: Pokemon and Assist, preload ahead of time when on cursor, use R/L to cycle between lists?
+
+CODE @ $80104af4    # IfMinigameTraining::createModel
+{
+    stw r30, 0xEC(r27)  # Store pointer to table of items
+    li r12, 4           # \
+    divw r12, r31, r12  # | store number of items
+    stw r12, 0x2EC(r27) # /
+    b 0x4C
+}
+
+op b 0x2C @ $80105110   # IfMinigameTraining::startMelee   
+CODE @ $801059fc    # IfMinigameTraining::curPosProcItem
+{
+    mr r5, r31
+    b 0x28
+}
+CODE @ $80105a44    # IfMinigameTraining::curPosProcItem
+{
+    lwz r12, 0xEC(r29)  # \
+    mulli r11, r3, 0x4  # | get this->items[index]
+    lwzx r3, r12, r11   # /
+    b 0x20
+}
+
+op lhz r4, 0x132(r20) @ $80962248   # stOperatorInfoTraining::processBegin
+CODE @ $809622d8    # stOperatorInfoTraining::processBegin
+{
+    lhz	r21, 0x132(r20) # get itKind
+    lhz r22, 0x130(r20) # get itVariation
+    b 0x38
+}
 
 ## TODO: Infinite health and infinite bullets toggle part of more options
 # HOOK @ $80999fd8  # Infinite bullets
@@ -3251,20 +3307,37 @@ op andis. r5,r0,0xffe7 @ $806f1a50 # Set mayhem and passive aggression to false 
 
 .include Source/Community/DoubleCherry.asm
 
-###########################################################
-Skip Dragoon RNG Except for All-Star and Classic [Kapedani] 
-###########################################################
-HOOK @ $809ae498    # itManager::processBegin
+#######################################################################################
+Dragoon Parts Drops like a Normal Item With Multiplier If Parts Have Dropped [Kapedani] 
+#######################################################################################
+op li r4, 1 @ $809ae498 # Always have Dragoon on
+op b 0xac @ $809b4ac0   # Skip checking if Dragoon is available and just have it be a regular item pull
+
+HOOK @ $809b60c8    # itManager::getLotValue
 {
-    li r4, 1
-    lwz	r12, -0x43C0(r13)   # \
-    lwz r12, 0x10(r12)      # | gfSceneManager->currentSequence->sequenceName
-    lwz r12, 0x0(r12)       # /    
-    lis r11, 0x8070	
-    ori r0, r11, 0x24D0; cmpw r0, r12; beq- rngDragoon   # "sqSingleSimple"
-    ori r0, r11, 0x27E0; cmpw r0, r12; bne+ %end%		# "sqSingleAllStar"
-rngDragoon:
-    li r4, 0
+    cmpwi r4, 0x14  # \ check if Dragoon
+    bne+ end        # /
+    lwz r12, 0x1494(r3)     # \
+    rlwinm r11,r12,30,31,31 # |
+    rlwinm r10,r12,31,31,31 # | ((flags & 2) >> 1) + ((flags & 4) >> 2) + ((flags & 8) >> 3)
+    add r11,r11,r10         # |
+    rlwinm r10,r12,29,31,31 # |
+    add r12,r11,r10         # /
+    lbz r11, 0x101D(r3)         # this->itemNums[0x14]
+    cmpw r11, r12
+    ble+ notLessThanItemNum
+    mr r12, r11
+notLessThanItemNum:
+    cmpwi r12, 0x3      # \ check if all Dragoons out
+    blt- notMaxDragoons # /
+    fsubs f2, f2, f2    # set to 0
+notMaxDragoons:
+    addi r10, r3, 0x74  # \
+    mulli r11, r12, 0x4 # | get multiplier based on number of dragoons out
+    lfsx f1, r10, r11   # |
+    fmuls f2, f1, f2    # /
+end: 
+    fmr	f1, f2  # Original operation
 }
 
 #############################################
@@ -3412,11 +3485,14 @@ drop:
 
 HOOK @ $80841160    # Fighter::dropItemCheck
 {
+    cmpwi r22, 2    # \ check if third parameter is 2 (i.e. dead)
+    beq+ dropItem   # /
     %lwd (r11, g_GameGlobal)    # \
     lwz r11, 0x8(r11)           # |
     lbz r11, 0x31(r11)          # | Check if Item Mayhem mode is on
     andi. r11, r11, 0x8         # |
     beq+ end                    # /
+dropItem:
     li r3, 0x0  # guarantee drop item
 end:
     xoris r3, r3, 0x8000    # Original operation

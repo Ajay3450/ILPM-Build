@@ -186,7 +186,7 @@ HOOK @ $80029E48
 }
 
 ######################################################################################
-Analog C-Stick, L R, & Light-Shield Button Stored as Variables v2.7 [Magus, DukeItOut]
+Analog C-Stick, L R, & Light-Shield Button Stored as Variables v2.8 [Magus, DukeItOut]
 ######################################################################################
 #
 # 2.4: fixes issue where controllers could influence AI shielding or C-Stick behavior
@@ -196,6 +196,7 @@ Analog C-Stick, L R, & Light-Shield Button Stored as Variables v2.7 [Magus, Duke
 #		to throw someone
 # 2.7: made it so heart swaps don't cause the wrong controller to receive analog 
 #		inputs
+# 2.8: addressed issue where Nana could receive inputs at distances not intended
 #
 # goes in ButtonPresses.asm
 ######################################################################################
@@ -226,8 +227,8 @@ HOOK @ $80913190
   stfd f0, 0(r2)
   stfd f1, 8(r2)
   stfd f2, 0x20(r2)
-  lwz r29, 0x70(r21);  lwz r29, 0x20(r29)
-  lwz r4, 0x1C(r29)		# LA
+  lwz r29, 0x70(r21);  lwz r29, 0x20(r29) # LA
+  lwz r4, 0x1C(r29)		# Bit
   lwz r3, 0x2D0(r29)	# AIS
   lwz r28, 0xC(r29)		# Basic
   lwz r29, 0x14(r29)	# Float
@@ -250,6 +251,20 @@ notNana:
   li r26, 0x0;  b loc_0xD8
 
 Nana:
+  lwz r12, 0x0C(r4) 	# Trying to access LA-Bit 113 - Secondary Ice Climber proximity
+  andis. r12, r12, 2	# Try to filter for Bit 113 (0x20000)
+  bne+ closeEnough
+  
+  li r12, 0				# Don't receive inputs
+  stw r12, 0x88(r29)	# LA-Float[34]
+  stw r12, 0x8C(r29)	# LA-Float[35]
+  stw r12, 0x90(r29)	# LA-Float[36]
+  stw r12, 0x94(r29)	# LA-Float[37]
+  b finishNanaCheck
+  
+closeEnough:
+
+
   lwz r12, 0x110(r29);  stw r12, 0x88(r29)	# Set C-Stick Relative X
   lwz r12, 0x114(r29);  stw r12, 0x8C(r29)	# Set C-Stick Y
   lwz r12, 0x118(r29);  stw r12, 0x90(r29)	# Set Analog L
