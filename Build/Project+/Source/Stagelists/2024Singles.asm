@@ -20,8 +20,8 @@
 TABLE_1:
 	byte[11] |
 0x1C,	| # Green_Hill_Zone
-0x05,	| # Molgeras_Lair
-0x0B,	| # Hyrule_Meadows
+0x05,	| # Bowser_Castle
+0x0B,	| # Frigate_Husk
 0x23,	| # Dream_Land
 0x08,	| # Temple_of_Time
 0x1A,	| # Smashville
