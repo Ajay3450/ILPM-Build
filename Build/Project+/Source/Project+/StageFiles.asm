@@ -808,21 +808,29 @@ StageResults:
 	bne Default										# If nothing found, go to Default	
 
 Bowser_Results:
-	li r5, 0x4243			# Use "BC"
+	li r5, 0x4442			# Use "DB"
 	%lwi(r12, 0x8053EFBA)   # Get ASL ID
 	lhz r12, 0(r12)
-	andi. r12, r12, 0x4000	# Check if Dry Bowser's Castle was selected
+	andi. r12, r12, 0x0020	# Check if R alt was selected
 	beq StoreString			#
-	li r5, 0x4442			# If so, use "DB"
+	li r5, 0x4243			# If so, use "BC"
 	b StoreString
 
 Frigate_Results:
-	li r5, 0x4648			# Use "FH"
+	li r5, 0x484D			# Use "HM"
 	%lwi(r12, 0x8053EFBA)   # Get ASL ID
 	lhz r12, 0(r12)
+	mr r11, r12				# preserve r12 in case a different alt was used
 	andi. r12, r12, 0x0020	# Check if R alt was used
-	beq StoreString			#
+	beq Frigate_L_Alt		#
 	li r5, 0x4652			# If so, use "FR"
+	b StoreString
+
+Frigate_L_Alt:
+	mr r12, r11				# restore what r12 was
+	andi. r12, r12, 0x0040	# Check if L alt was used
+	beq StoreString			#
+	li r5, 0x4648			# If so, use "FH"
 	b StoreString
 
 Dream_Land_Results:
