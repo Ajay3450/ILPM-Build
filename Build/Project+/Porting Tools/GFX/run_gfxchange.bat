@@ -1,0 +1,1 @@
+gfxchange.exe moveset.dat 186 196

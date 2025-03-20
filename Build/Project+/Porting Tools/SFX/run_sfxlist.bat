@@ -1,0 +1,1 @@
+sfxlist.exe moveset.dat > soundextract.txt

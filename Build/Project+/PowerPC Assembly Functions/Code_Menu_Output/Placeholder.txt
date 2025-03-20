@@ -1,0 +1,1 @@
+This file is here to prevent this folder from getting skipped when committing if you use a Git repository for your build.
