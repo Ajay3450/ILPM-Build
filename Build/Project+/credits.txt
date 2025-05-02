@@ -64,6 +64,7 @@ Project+ Testers
 - Malachi
 - Pikmon
 - Sosa
+- Stude
 - Switch
 
 ######################
@@ -295,7 +296,7 @@ Iron Tail effects by KingJigglypuff
 24 - Purple Team Rocket Pikachu by Art+, Xenthos, tryptech, Layell
 25 - White Team Rocket Pikachu by Art+, Xenthos, tryptech, Layell
 AltR - Detective Pikachu Revamp by Xenthos, Art+, Layell, SJ
-AltZ - Pikachu Libre by MarioDox, SJ, tyle, Layell
+AltZ - Pikachu Libre by MarioDox, SJ, tyle, Layell, KingDraco
 
 LUIGI
 Pose by davidvkimball, model polish by tryptech, and Xenthos, rendered by CSProject Backroom
@@ -309,7 +310,7 @@ Pose by davidvkimball, model polish by tryptech, and Xenthos, rendered by CSProj
 32 - Blue Casino Luigi 2.0 by Sub, Layell, Kazoomageddon, MetalLegacy, Snoe, credit to Ryztiq for fixing the lighting, KTH for the original model, Wumb0, Pyro, MetalLegacy; revamp by SJ, Xenthos, and ART+
 33 - Purple Casino Luigi 2.0 by Sub, Layell, Kazoomageddon, MetalLegacy, Snoe, credit to Ryztiq for fixing the lighting, KTH for the original model, Wumb0, Pyro, MetalLegacy; revamp by SJ, Xenthos, and ART+
 AltR - Space Land Luigi V2 by Ubergruvin, tyleto with credit to KorytheMaril, Mansta8, Kuro, Bent 00, Pyro, Draco
-AltZ - Princess Peach Dress Luigi by AlGeorgeRomo, ShinF 
+AltZ - Princess Peach Dress Luigi by AlGeorgeRomo, ShinF, optimizations by Layell
 
 
 CAPTAIN FALCON
@@ -911,6 +912,7 @@ L+Start - 64 Destination by Mewtwo2000
 DELFINO'S SECRET
 R - Delfino's Secret Plaza by davidvkimball, WorseDoughnut, MarioDox with credit to SOJ and DukeItOut for the idea
 Z - Toy Time Galaxy by Nezha the Scout, Taiko, iwantgames with credit to LegacyWolf, Peardian, SpaceCats, ThatStruggleThough, PMDT for camera, lighting changes by DukeItOut, MarioDox
+R+Start - World 2-3 by Ryztiq with additional edits by TEITO
 
 LUIGI'S MANSION
 Base - Luigi's Mansion '23 by Motobug, ilikepizza107, Yorch, mawwwk with credit to WorseDoughnut, Edwguard Flows, MetalLegacy, tyleto and Survivian
