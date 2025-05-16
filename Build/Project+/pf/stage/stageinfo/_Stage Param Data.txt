@@ -440,6 +440,14 @@ Delfino_Secret_L.param
 	SFX / GFX: 0x004D / 0x0034
 
 ################
+Delfino_Secret_MR_00.param
+
+	STGDELFINOSECRET_MR_DS_WORLD2-3.pac
+	st_final.rel
+	World_2-3.tlst
+	SFX / GFX: 0x004D / 0x0034
+
+################
 Delfino_Secret_R.param
 
 	STGDELFINOSECRET_R_DS_PLAZA.pac
@@ -1590,7 +1598,7 @@ Pokemon_Stadium_2_ML_00.param
 Pokemon_Stadium_2_R.param
 
 	STGPOKEMONSTADIUM_R_PS2_RADIANT.pac
-	st_stadium_static.rel
+	st_final.rel
 	Pokemon_Stadium_2.tlst
 	SFX / GFX: 0x0059 / 0x0045
 

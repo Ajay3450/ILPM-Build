@@ -22,12 +22,13 @@ Z: Final_Destination_Z.param
 
 
 ################
-03.asl - 4 entries
+03.asl - 5 entries
 
 Base: Delfino_Secret.param
 R: Delfino_Secret_R.param
 L: Delfino_Secret_L.param
 Z: Delfino_Secret_Z.param
+0x4000: Delfino_Secret_MR_00.param
 
 
 ################

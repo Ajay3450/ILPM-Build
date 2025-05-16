@@ -1596,12 +1596,13 @@ _end:
 }
 
 ###############################################################################################################
-[Project+] Customizable Attacker Hitlag Modifier [DukeItOut]
+[Project+] Customizable Attacker Hitlag Modifier 1.1 [DukeItOut]
 #
 # Place value 48495421 into RA-Basic[10] to eliminate hitlag for the attacker
 # Place value 48495478 into RA-Basic[10] to make the scalar in RA-Basic[12] be an additional multiplier
 # 	for the attacker's hitlag
 # Place value 6869743A into RA-Basic[10] to make the value in RA-Basic[12] be the attacker's hitlag
+#	If this is negative, instead subtracts that frame amount from the existing lag.
 ###############################################################################################################
 HOOK @ $8083FFBC
 {
@@ -1611,24 +1612,29 @@ HOOK @ $8083FFBC
 	lwz r6, 0xC(r6)			# / 
 	lwz r5, 40(r6)			# We want RA-Basic[10] 	(10*4 = 40)
 	lis r12, 0x4849			# \ "HIT!" (48495421)
-	ori r12, r12, 0x5421		# /
+	ori r12, r12, 0x5421	# /
 	cmpw r5, r12			# If that's what the ASCII in RA-Basic[10] says . . . .
 	beq- NoHitlag			# Then there will be no hitlag!
 	lis r12, 0x4849			# \ "HITx" (48495478)
-	ori r12, r12, 0x5478		# /
+	ori r12, r12, 0x5478	# /
 	cmpw r5, r12
 	beq- MultiplyHitlag
 	lis r12, 0x6869			# \ "hit:" (6869743A)
-	ori r12, r12, 0x743A		# /
+	ori r12, r12, 0x743A	# /
 	cmpw r5, r12
 	bne+ %END%
 SetHitlag:
-	lwz r4, 48(r6)			# Access RA-Basic[12] (12*4 = 48)
+	lwz r5, 48(r6)			# Access RA-Basic[12] (12*4 = 48)
+	cmpwi r5, 0
+	bge+ setFrames
+	add r5, r4, r5			# Frames of hitlag + RA-Basic[12] if RA-Basic[12] < 0, else hitlag = RA-Basic[12]
+setFrames:
+	mr r4, r5
 	b ModifiedHitlag
 MultiplyHitlag:
 	lwz r5, 48(r6)			# \ Access RA-Basic[12] (12*4 = 48)
 	mullw r4, r4, r5		# / and multiply the current hitlag by it
-	li r5, 0			# \
+	li r5, 0				# \
 	ori r5, r5, 60000		# | Scalars are really just ints * 60000			
 	divw r4, r4, r5			# / Convert back into an int!
 ModifiedHitlag:
