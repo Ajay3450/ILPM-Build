@@ -760,6 +760,168 @@ DoNotSaveASL:
 	lhz r23, 6(r22)			# \ Get offset to param file names
 	add r23, r23, r22		# /
 	add r23, r23, r29		# Get the title address
+	
+##########################
+# Stage-Specific Results #
+# [mawwk, ilikepizza107] #
+##########################
+# Load byte at given address
+.macro loadByte(<reg>, <val>)
+{
+    .alias  temp_Hi = <val> / 0x10000
+    .alias  temp_Lo = <val> & 0xFFFF
+    lis     <reg>, temp_Hi
+    ori     <reg>, <reg>, temp_Lo
+	lbz <reg>, 0(<reg>)
+}
+.macro lwi(<reg>, <val>)
+{
+    .alias  temp_Hi = <val> / 0x10000
+    .alias  temp_Lo = <val> & 0xFFFF
+    lis     <reg>, temp_Hi
+    ori     <reg>, <reg>, temp_Lo
+}
+
+# Random:							# \
+#	lwz r11, -0x4364(r13)			# |
+#	rlwinm. r11, r11, 0, 31, 31		# | Uncomment these lines to enable randomly using the default results screen or the stage-specific one
+#	beq end							# /
+
+.alias ConfigID = 0x26
+.alias ResultsID = 0x28	
+    
+    %loadByte(r6, 0x8053EF81)	# r6: ASL stage ID
+	mr r7, r23
+	cmpwi r6, ResultsID
+	bne notResults
+	addi r7, r7, 7			# "Results"
+
+StageResults:
+	%loadByte(r6, 0x9017F42D)	# Load previous stage ID
+	
+	cmpwi r6, 0x01; li r5, 0x4246; beq StoreString	# Battlefield (BF)
+	cmpwi r6, 0x02; li r5, 0x4644; beq StoreString	# Final Destination (FD)
+	cmpwi r6, 0x03; li r5, 0x4453; beq StoreString	# Delfino Secret (DS)
+	cmpwi r6, 0x04; li r5, 0x4C4D; beq StoreString	# Luigi's Mansion (LM)
+	cmpwi r6, 0x05; li r5, 0x4D43; beq StoreString	# Metal Cavern (MC)
+	cmpwi r6, 0x06; beq Bowser_Results				# Bowser's Castle (BC)
+	cmpwi r6, 0x09; beq Temple_of_Time_Results		# Temple of Time (TT)
+	cmpwi r6, 0x0C; beq Frigate_Results				# Frigate Husk (FH)
+	cmpwi r6, 0x0D; li r5, 0x5949; beq StoreString	# Yoshi's Island (YI)
+	cmpwi r6, 0x1C; li r5, 0x574C; beq StoreString	# Wario Land (WL)
+	cmpwi r6, 0x1D; li r5, 0x4450; beq StoreString	# Distant Planet (DP)
+	cmpwi r6, 0x1F; li r5, 0x464F; beq StoreString	# Fountain of Dreams (FO)
+	cmpwi r6, 0x21; li r5, 0x5356; beq StoreString	# Smashville (SV)
+	cmpwi r6, 0x23; li r5, 0x4748; beq StoreString	# Green Hill Zone (GH)
+	cmpwi r6, 0x2D; beq Dream_Land_Results			# Dream Land (DL)
+	cmpwi r6, 0x2E; beq PS2_Results					# Pokemon Stadium 2 (PS)
+	cmpwi r6, 0x37; beq Training_Results			# Training Room (TR)
+	cmpwi r6, 0x43; li r5, 0x535A; beq StoreString	# Sky Sanctuary Zone (SZ)
+	cmpwi r6, 0x44; li r5, 0x4445; beq StoreString	# Dead Line (DE)
+    cmpwi r6, 0x47; li r5, 0x4754; beq StoreString  # Golden Temple (GT)
+	cmpwi r6, 0x49; li r5, 0x4343; beq StoreString	# Ceres Space Colony (CC)
+	bne Default										# If nothing found, go to Default	
+
+Bowser_Results:
+	li r5, 0x4243			# Use "BC"
+	%lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	andi. r12, r12, 0x4000	# Check if Dry Bowser's Castle was selected
+	beq StoreString			#
+	li r5, 0x4442			# If so, use "DB"
+	b StoreString
+
+Temple_of_Time_Results:
+	li r5, 0x5454			# Use "TT"
+	%lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	andi. r12, r12, 0x0020	# Check if R alt was used
+	beq StoreString			#
+	li r5, 0x544F			# If so, use "TO"
+	b StoreString
+
+Frigate_Results:
+	li r5, 0x4648			# Use "FH"
+	%lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	mr r11, r12				# preserve r12 in case a different alt was used
+	andi. r12, r12, 0x0020	# Check if R alt was used
+	beq Frigate_Z_Alt		#
+	li r5, 0x4652			# If so, use "FR"
+	b StoreString
+
+Frigate_Z_Alt:
+	mr r12, r11				# restore what r12 was
+	andi. r12, r12, 0x0010	# Check if Z alt was used
+	beq StoreString			#
+	li r5, 0x465A			# If so, use "FZ"
+	b StoreString
+
+Dream_Land_Results:
+	li r5, 0x444C			# Use "DL"
+	%lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	andi. r12, r12, 0x0020	# Check if R alt was used
+	beq StoreString			#
+	li r5, 0x4452			# If so, use "DR"
+	b StoreString
+
+PS2_Results:
+    li r5, 0x5053           # Use "PS"
+    %lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	mr r11, r12				# preserve r12 in case a different alt was used
+	andi. r12, r12, 0x0020	# Check if R alt was used
+	beq PS2_Z_Alt			#
+	li r5, 0x5052			# If so, use "PR"
+	b StoreString
+
+PS2_Z_Alt:
+	mr r12, r11				# restore what r12 was
+	andi. r12, r12, 0x0010	# Check if Z alt was used
+	beq StoreString			#
+	li r5, 0x505A			# If so, use "PZ"
+	b StoreString
+
+Training_Results:
+	li r5, 0x5452			# Use "TR"
+	%lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	andi. r12, r12, 0x0001	# Check if Dark Mode version was selected (4001)
+	beq StoreString			#
+	li r5, 0x5444			# If so, use "TD"
+	b StoreString
+	
+Default:
+	li r5, 0x4446
+	b StoreString
+
+notResults:
+	cmpwi r6, ConfigID
+	beq end
+
+StartCompare:
+	lis r4, 0x5F44; ori r4, r4, 0x4600	# "_DF" followed by null terminator
+
+CheckParamFilename:
+	lwz r6, 0(r7)			# \ Compare param filename with "_DF."
+	cmpw r6, r4				# /
+	andi. r6, r6, 0xFF		# If terminator char (00) reached,
+	beq end 				# give up
+	
+	addi r7, r7, 1			# Otherwise, check the next character
+	b CheckParamFilename
+
+StoreString:
+	sth r5, 1(r7)			# Replace with new suffix
+
+end:
+##########################
+# End of StgSpec Results #
+##########################
+
+	lis r12, 0x8053			# Stage files write to 8053F000
+	ori r12, r12, 0xF000	
 
 	addi r3, r1, 0x90
 	lis r4, 0x8048			#

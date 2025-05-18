@@ -79,7 +79,7 @@ op blt- 0x34	   @ $8018CFC8
 .include Source/ProjectM/Handicap.asm
 
 .include Source/Community/MusicSelect.asm
-.include Source/Community/Subspace.asm
+#.include Source/Community/Subspace.asm
 .include Source/Community/SubspaceSwap.asm
 .include Source/Community/WallAttach.asm
 
