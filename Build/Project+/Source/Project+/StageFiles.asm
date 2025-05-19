@@ -861,8 +861,15 @@ Frigate_Results:
 Frigate_Z_Alt:
 	mr r12, r11				# restore what r12 was
 	andi. r12, r12, 0x0010	# Check if Z alt was used
-	beq StoreString			#
+	beq Meadows_Alt			#
 	li r5, 0x465A			# If so, use "FZ"
+	b StoreString
+
+Meadows_Alt:
+	mr r12, r11				# restore what r12 was
+	andi. r12, r12, 0x4000	# Check if Meadows alt was used
+	beq StoreString			#
+	li r5, 0x484D			# If so, use "HM"
 	b StoreString
 
 Dream_Land_Results:
