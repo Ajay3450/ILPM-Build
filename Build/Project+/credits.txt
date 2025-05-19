@@ -25,6 +25,7 @@ DONKEY KONG
 
 LINK
 27 - Maofever Link by SOULLY
+28 - SgtPingwen Link by ilikepizza107
 
 SAMUS
 40 - GooSluj Samus by ilikepizza107
@@ -138,6 +139,7 @@ R.O.B.
 07 - Comb ROB by Wyld
 
 JIGGLYPUFF
+20 - SgtPingwen Jigglypuff by ilikepizza107
 
 WARIO
 
