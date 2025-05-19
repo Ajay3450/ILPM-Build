@@ -826,9 +826,17 @@ Bowser_Results:
 	li r5, 0x4243			# Use "BC"
 	%lwi(r12, 0x8053EFBA)   # Get ASL ID
 	lhz r12, 0(r12)
+	mr r11, r12				# preserve r12 in case a different alt was used
 	andi. r12, r12, 0x4000	# Check if Dry Bowser's Castle was selected
-	beq StoreString			#
+	beq Bowser_Z_Alt		#
 	li r5, 0x4442			# If so, use "DB"
+	b StoreString
+
+Bowser_Z_Alt:
+	mr r12, r11				# restore what r12 was
+	andi. r12, r12, 0x0010	# Check if Z alt was used
+	beq StoreString			#
+	li r5, 0x425A			# If so, use "FZ"
 	b StoreString
 
 Temple_of_Time_Results:
