@@ -177,6 +177,10 @@ STAGES
 BATTLEFIELD
 Base - Daytime BF by ilikepizza107
 
+FRIGATE HUSK
+R+Start - Pirate Husk by Legacy MP
+R+Start - Hyrule Meadows FH by Motobug, mawwwk, with credit to Dranakar, Scout, davidvkimball, DukeItOut, soopercool101, PMDT
+
 POKEMON STADIUM 2
 Base - Super TPS PS2 by ilikepizza107
 
