@@ -849,13 +849,13 @@ Temple_of_Time_Results:
 	b StoreString
 
 Frigate_Results:
-	li r5, 0x4648			# Use "FH"
+	li r5, 0x4652			# Use "FR"
 	%lwi(r12, 0x8053EFBA)   # Get ASL ID
 	lhz r12, 0(r12)
 	mr r11, r12				# preserve r12 in case a different alt was used
 	andi. r12, r12, 0x0020	# Check if R alt was used
 	beq Frigate_Z_Alt		#
-	li r5, 0x4652			# If so, use "FR"
+	li r5, 0x4648			# If so, use "FH"
 	b StoreString
 
 Frigate_Z_Alt:
