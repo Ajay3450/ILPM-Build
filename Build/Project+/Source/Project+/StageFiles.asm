@@ -811,7 +811,7 @@ StageResults:
 	cmpwi r6, 0x1C; li r5, 0x574C; beq StoreString	# Wario Land (WL)
 	cmpwi r6, 0x1D; li r5, 0x4450; beq StoreString	# Distant Planet (DP)
 	cmpwi r6, 0x1F; li r5, 0x464F; beq StoreString	# Fountain of Dreams (FO)
-	cmpwi r6, 0x21; li r5, 0x5356; beq StoreString	# Smashville (SV)
+	cmpwi r6, 0x21; beq Smashville_Results			# Smashville (SV)
 	cmpwi r6, 0x23; li r5, 0x4748; beq StoreString	# Green Hill Zone (GH)
 	cmpwi r6, 0x2D; beq Dream_Land_Results			# Dream Land (DL)
 	cmpwi r6, 0x2E; beq PS2_Results					# Pokemon Stadium 2 (PS)
@@ -870,6 +870,15 @@ Meadows_Alt:
 	andi. r12, r12, 0x4000	# Check if Meadows alt was used
 	beq StoreString			#
 	li r5, 0x484D			# If so, use "HM"
+	b StoreString
+
+Smashville_Results:
+	li r5, 0x5352			# Use "SR"
+	%lwi(r12, 0x8053EFBA)   # Get ASL ID
+	lhz r12, 0(r12)
+	andi. r12, r12, 0x0020	# Check if R alt was selected
+	beq StoreString			#
+	li r5, 0x5356			# If so, use "SV"
 	b StoreString
 
 Dream_Land_Results:
