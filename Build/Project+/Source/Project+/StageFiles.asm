@@ -840,12 +840,12 @@ Bowser_Z_Alt:
 	b StoreString
 
 Temple_of_Time_Results:
-	li r5, 0x5454			# Use "TT"
+	li r5, 0x544F			# Use "TO"
 	%lwi(r12, 0x8053EFBA)   # Get ASL ID
 	lhz r12, 0(r12)
 	andi. r12, r12, 0x0020	# Check if R alt was used
 	beq StoreString			#
-	li r5, 0x544F			# If so, use "TO"
+	li r5, 0x5454			# If so, use "TT"
 	b StoreString
 
 Frigate_Results:
