@@ -1924,7 +1924,7 @@
       "FileType": 1,
       "AlwaysInheritStyle": false,
       "Required": false,
-      "Enabled": true,
+      "Enabled": false,
       "Selectable": false,
       "AlwaysCreateArchive": true,
       "PaletteCount": 256,
