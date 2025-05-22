@@ -20,6 +20,24 @@ uint32_t[46] |
 # Unique IDs:
 # FF0B: Victory!/Bowser
 
+################################################
+Results Random Music Selector [mawwwk, DukeItOut]
+################################################
+.alias VSResultsID = 0xF400        # Base ID to play
+.alias ResultsTrackCount = 3
+
+HOOK @ $800EB14C
+{
+    mr r29, r3
+    li r3, ResultsTrackCount
+    lis r12, 0x8003                # randi(0, songCount)
+    ori r12, r12, 0xfc7c
+    mtctr r12
+    bctrl
+    ori r4, r3, VSResultsID        # Add to base ID to get final song ID
+    
+    mr r3, r29                    # Restore register
+}
 
 ## TODO: Make victory themes just use 0xFF00 + Fighter id instead of table for new version of BrawlEx
 # Handled in ifVsResultTask::processAnim
