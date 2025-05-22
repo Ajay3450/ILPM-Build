@@ -1,5 +1,5 @@
 ################
-01.asl - 6 entries
+01.asl - 7 entries
 
 Base: Battlefield.param
 R: Battlefield_R.param
@@ -7,10 +7,11 @@ L: Battlefield_L.param
 Z: Battlefield_Z.param
 0x4000: Battlefield_MR_00.param
 0xC000: Battlefield_MR_00.param
+Up+Down+Right+Left: Battlefield_DPAD.param
 
 
 ################
-02.asl - 7 entries
+02.asl - 8 entries
 
 Base: Final_Destination.param
 R: Final_Destination_R.param
@@ -19,6 +20,7 @@ Z: Final_Destination_Z.param
 0x8000: Final_Destination_ML_00.param
 0x8001: Final_Destination_ML_01.param
 0x4000: Final_Destination_MR_00.param
+Up+Down+Right+Left: Final_Destination_DPAD.param
 
 
 ################
@@ -32,12 +34,13 @@ Z: Delfino_Secret_Z.param
 
 
 ################
-04.asl - 4 entries
+04.asl - 5 entries
 
 Base: Luigis_Mansion.param
 R: Luigis_Mansion_R.param
 L: Luigis_Mansion_L.param
 Z: Luigis_Mansion_Z.param
+Up+Down+Right+Left: Luigis_Mansion_DPAD.param
 
 
 ################
@@ -83,7 +86,7 @@ Z: Rumble_Falls_Z.param
 
 
 ################
-09.asl - 6 entries
+09.asl - 8 entries
 
 Base: Temple_of_Time.param
 R: Temple_of_Time_R.param
@@ -91,6 +94,8 @@ L: Temple_of_Time_L.param
 Z: Temple_of_Time_Z.param
 0x8000: Temple_of_Time_ML_00.param
 0xC000: Event_31.param
+Up+Down+Right+Left: Temple_of_Time_DPAD.param
+R+Up+Down+Right+Left: Temple_of_Time_RDPAD.param
 
 
 ################
@@ -103,13 +108,17 @@ Z: Norfair_Z.param
 
 
 ################
-0C.asl - 5 entries
+0C.asl - 9 entries
 
 Base: Frigate_Husk.param
 R: Frigate_Husk_R.param
 L: Frigate_Husk_L.param
 Z: Frigate_Husk_Z.param
 0x8000: Frigate_Husk_ML_00.param
+0x4000: Frigate_Husk_MR_00.param
+0x4001: Frigate_Husk_MR_01.param
+Up+Down+Right+Left: Frigate_Husk_DPAD.param
+R+Up+Down+Right+Left: Frigate_Husk_RDPAD.param
 
 
 ################
@@ -230,12 +239,13 @@ Z: Skyworld_Z.param
 
 
 ################
-1F.asl - 4 entries
+1F.asl - 5 entries
 
 Base: Fountain_of_Dreams.param
 R: Fountain_of_Dreams_R.param
 L: Fountain_of_Dreams_L.param
 Z: Fountain_of_Dreams_Z.param
+Up+Down+Right+Left: Fountain_of_Dreams_DPAD.param
 
 
 ################
@@ -249,7 +259,7 @@ Z: Fourside_Z.param
 
 
 ################
-21.asl - 8 entries
+21.asl - 10 entries
 
 Base: Smashville.param
 Y: Smashville_Y.param
@@ -259,6 +269,8 @@ L: Smashville_L.param
 Y+L: Smashville_YL.param
 Z: Smashville_Z.param
 Y+Z: Smashville_YZ.param
+Up+Down+Right+Left: Smashville_DPAD.param
+R+Up+Down+Right+Left: Smashville_RDPAD.param
 
 
 ################
@@ -271,7 +283,7 @@ Z: Shadow_Moses_Z.param
 
 
 ################
-23.asl - 6 entries
+23.asl - 7 entries
 
 Base: Green_Hill_Zone.param
 R: Green_Hill_Zone_R.param
@@ -279,6 +291,7 @@ L: Green_Hill_Zone_L.param
 Z: Green_Hill_Zone_Z.param
 0x4000: Green_Hill_Zone_MR_00.param
 0x8000: Green_Hill_Zone_ML_00.param
+Up+Down+Right+Left: Green_Hill_Zone_DPAD.param
 
 
 ################
@@ -309,7 +322,7 @@ Base: Config.param
 ################
 28.asl - 1 alt stage
 
-Base: Results.param
+Base: Results_DF.param
 
 
 ################
@@ -349,7 +362,7 @@ Z: Onett_Z.param
 
 
 ################
-2D.asl - 6 entries
+2D.asl - 8 entries
 
 Base: Dream_Land.param
 R: Dream_Land_R.param
@@ -357,16 +370,20 @@ L: Dream_Land_L.param
 Z: Dream_Land_Z.param
 0x4000: Dream_Land_MR_00.param
 0xC000: Dream_Land_MR_00.param
+Down+Right+Left: Dream_Land_DPAD.param
+Up: Dream_Land_DPADUP.param
 
 
 ################
-2E.asl - 5 entries
+2E.asl - 7 entries
 
 Base: Pokemon_Stadium_2.param
 R: Pokemon_Stadium_2_R.param
 L: Pokemon_Stadium_2_L.param
 Z: Pokemon_Stadium_2_Z.param
 0x8000: Pokemon_Stadium_2_ML_00.param
+Up+Down+Right+Left: Pokemon_Stadium_2_DPAD.param
+R+Up+Down+Right+Left: Pokemon_Stadium_2_RDPAD.param
 
 
 ################
@@ -502,12 +519,13 @@ Z: Sky_Sanctuary_Z.param
 
 
 ################
-44.asl - 4 entries
+44.asl - 5 entries
 
 Base: Dead_Line.param
 R: Dead_Line_R.param
 L: Dead_Line_L.param
 Z: Dead_Line_Z.param
+Up+Down+Right+Left: Dead_Line_DPAD.param
 
 
 ################
