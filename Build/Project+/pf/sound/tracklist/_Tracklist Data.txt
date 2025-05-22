@@ -1,53 +1,30 @@
 ################
-Battlefield.tlst - 11 tracks
+Battlefield.tlst - 5 tracks
 
-	Battlefield (Brawl)
-	X04.brstm (0x26FC)
+	Blue Water Blue Sky (GGX2)
+	Guilty Gear/Blue Water Blue Sky (Guilty Gear X2).brstm
+	Volume: 75
 	Frequency: 40
 
-	Battlefield (Brawl) Ver. 2
-	X25.brstm (0x2711)
+	Gogeta (SSJ4) Theme (DBFZ)
+	Dragon Ball FighterZ/Gogeta (SSJ4) Theme (Dragon Ball FighterZ).brstm
+	Volume: 80
+	Frequency: 40
+	Song delay: 80
+
+	Golden Spirit (JJBA ASB)
+	JoJo's Bizzare Adventure All Star Battle/Golden Spirit (JoJo's Bizzare Adventure All Star Battle).brstm
+	Volume: 110
 	Frequency: 40
 
-	Menu (Super Smash Bros. Melee)
-	T02.brstm (0x27EE)
+	Rebellion (BlazBlue Calamity Trigger)
+	BlazBlue/Rebellion (BlazBlue Calamity Trigger).brstm
+	Volume: 80
 	Frequency: 40
 
-	Menu (Super Smash Bros. Melee) Ver. 2
-	X18.brstm (0x270A)
-	Frequency: 40
-
-	Battlefield (Melee)
-	W21.brstm (0x2813)
-	Frequency: 40
-
-	Multi-Man Melee 1
-	W23.brstm (0x2815)
-	Frequency: 40
-
-	Multi-Man Melee 2
-	Melee/Multi-Man Melee 2.brstm
-	Volume: 60
-	Frequency: 40
-
-	Break the Targets (Melee)
-	Melee/Break the Targets.brstm
-	Volume: 100
-	Frequency: 40
-
-	Marionation Gear (Chousoujuu Mecha MG)
-	R07.brstm (0x27D7)
-	Frequency: 40
-	Song delay: 18
-
-	You Will Know Our Names (Xenoblade Chronicles)
-	Modern/You Will Know Our Names.brstm
-	Volume: 90
-	Frequency: 40
-	Song delay: -1
-
-	Shin Onigashima
-	Q08.brstm (0x27CA)
+	Rushing Heart II (UNI2)
+	Under Night In-Birth/Rushing Heart II (Under Night In-Birth II SysCeles).brstm
+	Volume: 78
 	Frequency: 40
 
 ################
@@ -615,7 +592,7 @@ Crateria.tlst - 4 tracks
 	Frequency: 40
 
 ################
-Credits.tlst - 2 tracks
+Credits.tlst - 4 tracks
 
 	<null>
 	Pokemon/Battle! Mewtwo [Stadium].brstm
@@ -627,59 +604,34 @@ Credits.tlst - 2 tracks
 	Volume: 75
 	Frequency: 40
 
+	<null>
+	None.brstm
+	Frequency: 40
+
+	<null>
+	None.brstm
+	Frequency: 40
+
 ################
-Dead_Line.tlst - 10 tracks
+Dead_Line.tlst - 3 tracks
 
-	What U Need
-	Sonic/What U Need.brstm
-	Volume: 60
-	Frequency: 40
-
-	Vela-Nova
-	Sonic/Vela-Nova.brstm
-	Volume: 60
-	Frequency: 40
-
-	Right There, Ride On
-	U11.brstm (0x27FC)
+	Luck & Pluck (JJBA ASB)
+	JoJo's Bizzare Adventure All Star Battle/Luck & Pluck (JoJo's Bizzare Adventure All Star Battle).brstm
+	Volume: 110
 	Frequency: 40
 	Song delay: -1
 
-	Haunted Ship
-	Sonic/Haunted Ship.brstm
-	Volume: 65
-	Frequency: 40
-
-	Open Your Heart
-	U08.brstm (0x27F9)
-	Frequency: 40
-
-	Seven Rings in Hand
-	U13.brstm (0x27FE)
+	Surpass My Older Brother (JJBA ASB)
+	JoJo's Bizzare Adventure All Star Battle/Surpass My Older Brother (JoJo's Bizzare Adventure All Star Battle).brstm
+	Volume: 110
 	Frequency: 40
 	Song delay: -1
 
-	Vs. Knuckles (Sonic Advance 2)
-	Sonic/Vs. Knuckles.brstm
-	Volume: 85
-	[PINCH MODE TRACK: 3600 frames]
-	Sonic/Vs. Knuckles_b.brstm
+	Theme of Megaman Volnutt (TvC)
+	Tatsunoko Vs Capcom/Theme of Megaman Volnutt (Tatsunoko Vs Capcom).brstm
+	Volume: 82
 	Frequency: 40
-
-	Ocean Base
-	Sonic/Ocean Base.brstm
-	Volume: 95
-	Frequency: 40
-
-	Go Straight (Streets of Rage 2)
-	SEGA/Go Straight (PXZ2).brstm
-	Volume: 115
-	Frequency: 40
-
-	Fly Like a Butterfly (Jet Set Radio Future)
-	SEGA/Fly Like a Butterfly.brstm
-	Volume: 46
-	Frequency: 40
+	Song delay: 115
 
 ################
 Dead_Line_DPAD.tlst - 10 tracks
@@ -891,71 +843,27 @@ Draculas_Castle.tlst - 1 track
 	Frequency: 40
 
 ################
-Dream_Land.tlst - 14 tracks
+Dream_Land.tlst - 4 tracks
 
-	Gourmet Race
-	Kirby/Gourmet Race (SSB).brstm
-	Volume: 65
+	Hierophant Green (JJBA ASB)
+	JoJo's Bizzare Adventure All Star Battle/Hierophant Green (JoJo's Bizzare Adventure All Star Battle).brstm
+	Volume: 107
+	Frequency: 40
+	Song delay: 130
+
+	Precious Heart (SFEX3)
+	Street Fighter/Precious Heart (Street Fighter EX3).brstm
+	Volume: 75
 	Frequency: 40
 
-	King Dedede's Theme
-	F02.brstm (0x2758)
+	Strange Dreamer (MBAACC)
+	Melty Blood/Strange Dreamer (Melty Blood Actress Again Current Code).brstm
+	Volume: 87
 	Frequency: 40
 
-	Sand Canyon
-	Kirby/Sand Canyon.brstm
-	Volume: 90
-	Frequency: 40
-
-	Masked Dedede
-	Kirby/Masked Dedede (KTD).brstm
-	Volume: 60
-	Frequency: 40
-
-	Boss Theme Medley
-	F03.brstm (0x2759)
-	Frequency: 40
-
-	Butter Building
-	F04.brstm (0x275A)
-	Frequency: 40
-	Song delay: 84
-
-	Checker Knights
-	F10.brstm (0x2760)
-	Frequency: 40
-
-	Vs. The Wicked Company
-	Kirby/Vs. The Wicked Company.brstm
-	Volume: 85
-	Frequency: 40
-
-	Rainbow Route
-	F09.brstm (0x275F)
-	Frequency: 40
-
-	Pop Star
-	Kirby/Pop Star.brstm
-	Volume: 80
-	Frequency: 40
-
-	Ripple Star Map
-	Kirby/Ripple Star Map.brstm
-	Volume: 62
-	Frequency: 40
-
-	Boss Battle (Kirby 64)
-	Kirby/Boss Battle [K64].brstm
+	Zeppeli The Eccentric (JJBA ASB)
+	JoJo's Bizzare Adventure All Star Battle/Zeppeli The Eccentric (JoJo's Bizzare Adventure All Star Battle).brstm
 	Volume: 100
-	Frequency: 40
-
-	Meadow Breeze
-	Kirby/Meadow Breeze.brstm
-	Volume: 80
-	Frequency: 40
-
-	Meta Knight's Revenge
-	F06.brstm (0x275C)
 	Frequency: 40
 
 ################
@@ -1084,48 +992,21 @@ Electroplankton.tlst - 1 track
 	Frequency: 40
 
 ################
-Final_Destination.tlst - 9 tracks
+Final_Destination.tlst - 3 tracks
 
-	Final Destination (Super Smash Bros. Melee)
-	W25.brstm (0x2817)
+	Calamity Is Coming (JJBA ASBR)
+	JoJo's Bizzare Adventure All Star Battle/Calamity Is Coming (JoJo's Bizzare Adventure All Star Battle R).brstm
+	Volume: 72
 	Frequency: 40
 
-	Final Destination (Super Smash Bros. Melee) Ver. 2
-	Melee/Final Destination.brstm
-	Volume: 60
+	Cell's Theme (DBFZ)
+	Dragon Ball FighterZ/Cell's Theme (Dragon Ball FighterZ).brstm
+	Volume: 90
 	Frequency: 40
 
-	Giga Bowser
-	W31.brstm (0x281D)
-	Frequency: 40
-
-	Credits (Super Smash Bros.)
-	T01.brstm (0x27ED)
-	Frequency: 40
-
-	Opening (Super Smash Bros. Melee)
-	T03.brstm (0x27EF)
-	Frequency: 40
-
-	Vs. Master Hand (Super Smash Bros.)
-	SSB64/Vs. Master Hand.brstm
-	Volume: 95
-	Frequency: 40
-
-	Vs. Master Hand (Super Smash Bros.) Ver. 2
-	SSB64/Vs. Master Hand (Remix).brstm
-	Volume: 68
-	Frequency: 40
-	Song delay: 45
-
-	Main Theme (Project M)
-	Project M/Main Theme.brstm
-	Volume: 55
-	Frequency: 40
-
-	The One Who Rules All (The Last Story)
-	Modern/The One Who Rules All.brstm
-	Volume: 60
+	Zappa Theme (GGXX #Reload)
+	Guilty Gear/Zappa Theme (Guilty Gear XX #Reload).brstm
+	Volume: 85
 	Frequency: 40
 
 ################
@@ -1215,65 +1096,26 @@ Flat_Zone.tlst - 2 tracks
 	Frequency: 40
 
 ################
-Fountain_Of_Dreams.tlst - 12 tracks
+Fountain_Of_Dreams.tlst - 4 tracks
 
-	Gourmet Race (Melee)
-	W06.brstm (0x2804)
+	Theme of Chun-Li (MvC3)
+	Marvel vs Capcom/Theme of Chun-Li (Marvel Vs Capcom 3).brstm
+	Volume: 95
 	Frequency: 40
 
-	The Legendary Air Ride Machine
-	F01.brstm (0x2757)
-	Frequency: 40
-	Song delay: -1
-
-	Moonstruck Blossom
-	Kirby/Moonstruck Blossom.brstm
-	Volume: 65
+	Theme of Magneto (MvC3)
+	Marvel Vs Capcom/Theme of Magneto (Marvel Vs Capcom 3).brstm
+	Volume: 90
 	Frequency: 40
 
-	Another Dimension
-	Kirby/Another Dimension.brstm
-	Volume: 60
+	Theme of Spider-Man (MvSF)
+	Marvel Super Heroes Vs Street Fighter/Theme of Spider-Man (Marvel Super Heroes Vs Street Fighter).brstm
+	Volume: 75
 	Frequency: 40
 
-	Magma Flows
-	Kirby/Magma Flows.brstm
-	Volume: 70
-	Frequency: 40
-
-	Vs. Marx
-	Kirby/Vs. Marx.brstm
-	Volume: 125
-	Frequency: 40
-
-	Sand Canyon Pyramid
-	Kirby/Sand Canyon Pyramid (KPR).brstm
-	Volume: 65
-	Frequency: 40
-
-	Heavy Lobster
-	Kirby/Heavy Lobster (KRC).brstm
-	Volume: 65
-	Frequency: 40
-
-	The Final Battle
-	Kirby/The Final Battle.brstm
-	Volume: 60
-	Frequency: 40
-
-	Candy Constellation
-	Kirby/Candy Constellation.brstm
-	Volume: 80
-	Frequency: 40
-
-	City Trial
-	Kirby/City Trial.brstm
-	Volume: 74
-	Frequency: 40
-
-	Victory Road
-	H06.brstm
-	Volume: 80
+	Theme of Zero (MvC3)
+	Marvel Vs Capcom/Theme of Zero (Marvel Vs Capcom 3).brstm
+	Volume: 90
 	Frequency: 40
 
 ################
@@ -1350,46 +1192,27 @@ Fourside.tlst - 2 tracks
 	Frequency: 40
 
 ################
-Frigate_Orpheon.tlst - 9 tracks
+Frigate_Orpheon.tlst - 4 tracks
 
-	Vs. Ridley
-	D04.brstm (0x2749)
+	Aensland Castle (TvC UAS)
+	Tatsunoko Vs Capcom/Aensland Castle (Tatsunoko Vs Capcom Ultimate All-Stars).brstm
+	Volume: 50
+	Frequency: 40
+	Song delay: 110
+
+	Icefield White Knight II (UNI2)
+	Under Night In-Birth/Icefield White Knight II (Under Night In-Birth II SysCeles).brstm
+	Volume: 83
 	Frequency: 40
 
-	Data Selection Screen
-	Y11.brstm (0x2829)
+	Purity and Strictly II (UNI2)
+	Under Night In-Birth/Purity and Strictly II (Under Night In-Birth II SysCeles).brstm
+	Volume: 78
 	Frequency: 40
 
-	Vs. Parasite Queen
-	D08.brstm (0x274D)
-	Frequency: 40
-	Song delay: -1
-
-	Vs. Meta Ridley
-	D09.brstm (0x274E)
-	Frequency: 40
-
-	Sector 1
-	D06.brstm (0x274B)
-	Frequency: 40
-
-	Metroid Prime Essence
-	Metroid/Metroid Prime Essence.brstm
-	Volume: 60
-	Frequency: 40
-
-	Mother Brain
-	Metroid/Mother Brain.brstm
-	Volume: 80
-	Frequency: 40
-
-	Vs. Dark Samus (Metroid Prime 2: Echoes)
-	Metroid/Vs. Dark Samus [MP2].brstm
-	Volume: 80
-	Frequency: 40
-
-	Hunters
-	D10.brstm (0x274F)
+	Theme of Dr. Doom (MvC3)
+	Marvel Vs Capcom/Theme of Dr. Doom (Marvel Vs Capcom 3).brstm
+	Volume: 90
 	Frequency: 40
 
 ################
@@ -1545,106 +1368,29 @@ Green_Greens.tlst - 4 tracks
 	Song delay: -1
 
 ################
-Green_Hill_Zone.tlst - 20 tracks
+Green_Hill_Zone.tlst - 4 tracks
 
-	Green Hill Zone
-	U01.brstm (0x27F2)
+	Death Egg's Hangar (Sonic the Fighters)
+	Sonic/Death Egg's Hangar (Sonic the Fighters).brstm
+	Volume: 120
 	Frequency: 40
-	Song delay: 84
+	Song delay: 30
 
-	Green Hill Zone (Generations ver.)
-	Sonic/Green Hill Zone (SG).brstm
-	Volume: 65
-	Frequency: 40
-	Song delay: 84
-
-	Open Your Heart
-	U08.brstm (0x27F9)
+	Fighting In The Street (Streets of Rage)
+	Streets of Rage/Fighting In The Street (Streets of Rage).brstm
+	Volume: 85
 	Frequency: 40
 
-	Live and Learn
-	U09.brstm (0x27FA)
+	Stimulation (CvS2)
+	Capcom Vs SNK/Stimulation (Capcom vs SNK 2).brstm
+	Volume: 77
 	Frequency: 40
 
-	Be Cool, Be Wild and Be Groovy
-	Sonic/Be Cool, Be Wild and Be Groovy.brstm
-	Volume: 75
+	Theme of Gambit (MvC)
+	Marvel Vs Capcom/Theme of Gambit (Marvel Vs Capcom).brstm
+	Volume: 84
 	Frequency: 40
-
-	Escape from the City
-	Sonic/City Escape.brstm
-	Volume: 75
-	Frequency: 40
-
-	That's the Way I Like It
-	Sonic/Metal Harbor.brstm
-	Volume: 70
-	Frequency: 40
-
-	Sonic Heroes
-	U10.brstm (0x27FB)
-	Frequency: 40
-
-	Seaside Hill
-	Sonic/Seaside Hill.brstm
-	Volume: 70
-	Frequency: 40
-
-	Right There, Ride On
-	U11.brstm (0x27FC)
-	Frequency: 40
-	Song delay: -1
-
-	Lights, Camera, Action!
-	Sonic/Lights, Camera, Action!.brstm
-	Volume: 70
-	Frequency: 40
-
-	Haunted Ship
-	Sonic/Haunted Ship.brstm
-	Volume: 65
-	Frequency: 40
-
-	Planet Wisp
-	Sonic/Planet Wisp (SG).brstm
-	Volume: 60
-	Frequency: 40
-
-	Flying Battery Zone
-	Sonic/Flying Battery Zone.brstm
-	Volume: 50
-	Frequency: 40
-	Song delay: 80
-
-	What U Need
-	Sonic/What U Need.brstm
-	Volume: 60
-	Frequency: 40
-
-	Super Sonic Racing
-	U07.brstm (0x27F8)
-	Frequency: 40
-
-	Sonic Boom
-	U06.brstm (0x27F7)
-	Frequency: 40
-
-	Turquoise Hill Zone
-	Sonic/Turquoise Hill Zone.brstm
-	Volume: 105
-	Frequency: 40
-	Song delay: -1
-
-	Theme of Knuckles (S3&K)
-	Sonic/Theme of Knuckles.brstm
-	Volume: 65
-	Frequency: 40
-
-	Teknopathetic (Jet Set Radio Future)
-	SEGA/Teknopathetic.brstm
-	Volume: 75
-	Frequency: 40
-	Song delay: 200
+	Song delay: 155
 
 ################
 Green_Hill_Zone_Brawl.tlst - 4 tracks
@@ -1931,40 +1677,26 @@ Kongo_Jungle_64.tlst - 1 track
 	Frequency: 40
 
 ################
-Luigis_Mansion.tlst - 7 tracks
+Luigis_Mansion.tlst - 4 tracks
 
-	Luigi's Mansion Theme
-	A09.brstm (0x271C)
-	Frequency: 40
-	Song delay: 190
-
-	Airship Theme (Super Mario Bros. 3)
-	A05.brstm (0x2718)
+	Haunted House (Pokken Tournament)
+	Pokken Tournament/Haunted House (Pokken Tournament).brstm
+	Volume: 85
 	Frequency: 40
 
-	Luigi's Mansion (Mario Kart DS)
-	Mario Kart/Luigi's Mansion.brstm
+	Theme of Dr. Strange (UMvC3)
+	Marvel Vs Capcom/Theme of Dr. Strange (Ultimate Marvel Vs Capcom 3).brstm
 	Volume: 90
 	Frequency: 40
 
-	Mr. L, Green Thunder!
-	Mario/Mr. L, Green Thunder!.brstm
-	Volume: 35
+	Theme of Ghost Rider (UMvC3)
+	Marvel Vs Capcom/Theme of Ghost Rider (Ultimate Marvel Vs Capcom 3).brstm
+	Volume: 100
 	Frequency: 40
 
-	Horror Land
-	Mario/Horror Land.brstm
-	Volume: 80
-	Frequency: 40
-
-	Boss (New Super Mario Bros. Wii)
-	Mario/Boss (M&S 2016).brstm
-	Volume: 60
-	Frequency: 40
-
-	Bowser's Castle (Mario Kart Double Dash!!)
-	Mario Kart/Bowser's Castle [MKDD].brstm
-	Volume: 80
+	Theme of Juri (SSF4)
+	Street Fighter/Theme of Juri (Super Street Fighter IV).brstm
+	Volume: 90
 	Frequency: 40
 
 ################
@@ -2131,42 +1863,36 @@ Mario_Paint.tlst - 1 track
 	Frequency: 40
 
 ################
-Menu.tlst - 8 tracks
+Menu.tlst - 6 tracks
 
-	Menu 1
-	X02.brstm (0x26FA)
+	Clock Tower (MvC2)
+	Marvel Vs Capcom/Clock Tower (Marvel Vs Capcom 2).brstm
+	Volume: 75
 	Frequency: 40
 
-	Menu 2
-	X03.brstm (0x26FB)
+	Character Select (Naruto UNS2)
+	Naruto/Character Select (Naruto Ultimate Ninja Storm 2).brstm
+	Volume: 76
 	Frequency: 40
 
-	Menu (Super Smash Bros. Melee)
-	W30.brstm (0x281C)
+	Character Select Theme (MvC3)
+	Marvel Vs Capcom/Character Select Theme (Marvel Vs Capcom 3).brstm
+	Volume: 100
 	Frequency: 40
 
-	Main Theme (Super Smash Bros. Brawl)
-	X01.brstm (0x26F9)
+	Get Into the Wave (Sonic the Fighters)
+	Sonic/Get Into the Wave (Sonic the Fighters).brstm
+	Volume: 75
 	Frequency: 40
 
-	Menu (Project M)
-	Project M/Menu.brstm
-	Volume: 60
+	Redemption (GGXX #Reload)
+	Guilty Gear/Redemption (Guilty Gear XX #Reload).brstm
+	Volume: 72
 	Frequency: 40
 
-	Trophy Tussle
-	Melee/Trophy.brstm
-	Volume: 50
-	Frequency: 40
-
-	Wii Shop Channel
-	Modern/Wii Shop Channel.brstm
-	Volume: 50
-	Frequency: 40
-
-	All-Star Rest Area
-	Project M/Rest Area.brstm
-	Volume: 91
+	Swamp Stage (MvC2)
+	Marvel Vs Capcom/Swamp Stage (Marvel Vs Capcom 2).brstm
+	Volume: 72
 	Frequency: 40
 
 ################
@@ -2625,96 +2351,38 @@ Pokemon_Stadium.tlst - 3 tracks
 	Song delay: -1
 
 ################
-Pokemon_Stadium_2.tlst - 18 tracks
+Pokemon_Stadium_2.tlst - 6 tracks
 
-	Battle! Champion Blue
-	Pokemon/Battle! Champion Blue (Origins).brstm
-	Volume: 60
+	Baile de Batalla (TTT2)
+	Tekken/Baile de Batalla (Tekken Tag Tournament 2).brstm
+	Volume: 80
 	Frequency: 40
 
-	Battle! Team Rocket
-	Pokemon/Battle! Team Rocket.brstm
+	Gold Experience (JJBA ASB)
+	JoJo's Bizzare Adventure All Star Battle/Gold Experience (JoJo's Bizzare Adventure All Star Battle).brstm
+	Volume: 110
+	Frequency: 40
+
+	Soy Sauce for Geese (Tekken 7)
+	Tekken/Soy Sauce for Geese (Tekken 7).brstm
 	Volume: 55
+	[PINCH MODE TRACK: 3600 frames]
+	Tekken/Soy Sauce for Geese (Tekken 7)_b.brstm
 	Frequency: 40
 
-	Battle! Rival (Pokémon Omega Ruby & Alpha Sapphire)
-	Pokemon/Battle! Rival (ORAS).brstm
-	Volume: 55
+	Theme of Captain America (MvC3)
+	Marvel Vs Capcom/Theme of Captain America (Marvel Vs Capcom 3).brstm
+	Volume: 90
 	Frequency: 40
 
-	Battle! Team Aqua / Team Magma
-	Pokemon/Battle! Team Aqua - Team Magma (ORAS).brstm
-	Volume: 55
+	Theme of Hulk (MvC3)
+	Marvel Vs Capcom/Theme of Hulk (Marvel Vs Capcom 3).brstm
+	Volume: 107
 	Frequency: 40
 
-	Battle! Lorekeeper Zinnia
-	Pokemon/Battle! Lorekeeper Zinnia.brstm
-	Volume: 60
-	Frequency: 40
-
-	Battle! Champion Diantha
-	Pokemon/Battle! Champion Diantha.brstm
-	Volume: 105
-	Frequency: 40
-
-	Phos Volcano
-	Pokemon/Phos Volcano.brstm
-	Volume: 55
-	Frequency: 40
-
-	Rival Encounter! (Pokémon Gold & Silver)
-	Pokemon/Rival Encounter! [GS].brstm
-	Volume: 96
-	Frequency: 40
-	Song delay: -1
-
-	First Battle (Pokémon Colosseum)
-	Pokemon/First Battle.brstm
-	Volume: 60
-	Frequency: 40
-
-	Super Training!
-	Pokemon/Super Training!.brstm
-	Volume: 65
-	Frequency: 40
-
-	Ranger Wild Battle Medley
-	Pokemon/Ranger Wild Battle Medley.brstm
-	Volume: 75
-	Frequency: 40
-
-	Pokémon Red & Blue Medley
-	W10.brstm (0x2808)
-	Frequency: 40
-
-	Pokémon Gold & Silver Medley
-	W16.brstm (0x280E)
-	Frequency: 40
-	Song delay: -1
-
-	Victory Road (Pokémon Ruby & Sapphire)
-	H06.brstm (0x2773)
-	Frequency: 40
-	Song delay: 84
-
-	Battle! Team Galactic
-	H09.brstm (0x2776)
-	Frequency: 40
-	Song delay: 30
-
-	Battle! Wild Pokémon (Black 2 & White 2)
-	Pokemon/Battle! Wild Pokemon (B2W2).brstm
-	Volume: 85
-	Frequency: 40
-
-	Battle! Colress
-	Pokemon/Battle! Colress.brstm
-	Volume: 85
-	Frequency: 40
-
-	It's a Monster House!
-	Pokemon/It's a Monster House!.brstm
-	Volume: 70
+	Theme of K' Team (KoF XIII)
+	King of Fighters/Theme of K' Team (King of Fighters XIII).brstm
+	Volume: 72
 	Frequency: 40
 
 ################
@@ -2960,7 +2628,22 @@ Rest_Area.tlst - 1 track
 	Frequency: 40
 
 ################
-Results.tlst - 51 tracks
+Results.tlst - 53 tracks
+
+	Results Screen (Street Fighter IV)
+	Street Fighter/Results Screen (Street Fighter IV).brstm
+	Volume: 65
+	Frequency: 40
+
+	Results Theme (Street Fighter V)
+	Street Fighter/Results Theme (Street Fighter V).brstm
+	Volume: 72
+	Frequency: 40
+
+	The Fire's Respite (Capcom Fighting Collection 2)
+	Capcom vs SNK/The Fire's Respite (Capcom Fighting Collection 2).brstm
+	Volume: 88
+	Frequency: 40
 
 	Mario
 	Z01.brstm
@@ -3212,11 +2895,6 @@ Results.tlst - 51 tracks
 	Volume: 80
 	Frequency: 40
 
-	<null>
-	SSB64/Bonus.brstm
-	Volume: 80
-	Frequency: 40
-
 ################
 Rocket_Hideout.tlst - 1 track
 
@@ -3402,79 +3080,32 @@ Sky_Sanctuary.tlst - 1 track
 	Frequency: 40
 
 ################
-Smashville.tlst - 16 tracks
+Smashville.tlst - 5 tracks
 
-	Title (Animal Crossing)
-	Animal Crossing/Title.brstm
-	Volume: 90
+	Actions in the Lower World (MBTL)
+	Melty Blood/Actions in the Lower World (Melty Blood Type Lumina).brstm
+	Volume: 82
 	Frequency: 40
 
-	K.K. Cruisin'
-	Animal Crossing/K.K. Cruisin'.brstm
+	Jazzy NYC '99 (SF3III:3S)
+	Street Fighter/Jazzy NYC '99 (Street Fighter III Third Strike).brstm
+	Volume: 74
+	[PINCH MODE TRACK: 3600 frames]
+	Street Fighter/Jazzy NYC '99 (Street Fighter III Third Strike)_b.brstm
+	Frequency: 40
+
+	Rhythmical Bustle (MBAA)
+	Melty Blood/Rhythmical Bustle (Melty Blood Actress Again).brstm
 	Volume: 80
 	Frequency: 40
 
-	2:00 a.m. (AC: Wild World)
-	Animal Crossing/2.00 a.m..brstm
-	Volume: 85
+	Theme of Vega (SSF4)
+	Street Fighter/Theme of Vega (Super Street Fighter IV).brstm
+	Volume: 90
 	Frequency: 40
 
-	Go K.K. Rider!
-	N02.brstm (0x27B4)
-	Frequency: 40
-
-	Lip's Theme (Panel de Pon)
-	R06.brstm (0x27D6)
-	Frequency: 40
-
-	Personal Trainer: Cooking
-	R13.brstm (0x27DD)
-	Frequency: 40
-
-	Title (Big Brain Academy)
-	R08.brstm (0x27D8)
-	Frequency: 40
-
-	Opening Theme (Wii Sports)
-	R16.brstm (0x27E0)
-	Frequency: 40
-
-	Gyromite
-	Q02.brstm (0x27C4)
-	Frequency: 40
-	Song delay: 168
-
-	Remix 10 (Rhythm Heaven)
-	Modern/Remix 10.brstm
-	Volume: 64
-	Frequency: 40
-
-	Minor Circuit (Punch Out!!)
-	Retro/Minor Circuit.brstm
-	Volume: 70
-	Frequency: 40
-
-	V Commander Aim (Custom Robo V2)
-	Retro/V Commander Aim.brstm
-	Volume: 95
-	Frequency: 40
-
-	Title (3D Hot Rally)
-	Q09.brstm (0x27CB)
-	Frequency: 40
-
-	Title (Stunt Race FX)
-	Retro/Title [SRFX].brstm
-	Volume: 125
-	Frequency: 40
-
-	Staff Roll (Famicom Detective Club)
-	Retro/Staff Roll [FDC].brstm
-	Volume: 60
-	Frequency: 40
-
-	King Dedede's Theme
-	F02.brstm
+	This is True Love Makin (CvS2)
+	Capcom Vs SNK/This is True Love Makin (Capcom vs SNK 2).brstm
 	Volume: 80
 	Frequency: 40
 
@@ -3710,54 +3341,29 @@ Temple.tlst - 5 tracks
 	Frequency: 40
 
 ################
-Temple_of_Time.tlst - 11 tracks
+Temple_of_Time.tlst - 4 tracks
 
-	Ganondorf Battle (Twilight Princess)
-	Zelda/Ganondorf Battle.brstm
-	Volume: 105
-	Frequency: 40
-
-	Main Theme (Twilight Princess ver.)
-	C17.brstm (0x2743)
-	Frequency: 40
-
-	The Hidden Village
-	C18.brstm (0x2744)
-	Frequency: 40
-
-	The Dark World
-	C04.brstm (0x2736)
-	Frequency: 40
-
-	Black Mist
-	C05.brstm (0x2737)
-	Frequency: 40
-
-	Ballad of the Goddess
-	Zelda/Ballad of the Goddess.brstm
-	Volume: 95
-	Frequency: 40
-
-	Temple
-	W24.brstm (0x2816)
-	Frequency: 40
-
-	Great Temple / Temple
-	C03.brstm (0x2735)
-	Frequency: 40
-
-	Hyrule Castle
-	Zelda/Hyrule Castle.brstm
+	Eternal Struggle (SC2)
+	Soulcalibur/Eternal Struggle (Soulcalibur II).brstm
 	Volume: 80
 	Frequency: 40
+	Song delay: 35
 
-	Title (The Legend of Zelda)
-	C01.brstm (0x2733)
-	Frequency: 10
+	Regi Ruins (Pokken Tournament)
+	Pokken Tournament/Regi Ruins (Pokken Tournament).brstm
+	Volume: 95
+	Frequency: 40
+	Song delay: 120
 
-	Main Theme (The Legend of Zelda)
-	C02.brstm (0x2734)
-	Frequency: 10
+	Smoking Hot (SAMURAI SHODOWN)
+	SAMURAI SHODOWN/Smoking Hot (SAMURAI SHODOWN).brstm
+	Volume: 110
+	Frequency: 40
+
+	Theme of Akuma (CvS2)
+	Capcom Vs SNK/Theme of Akuma (Capcom vs SNK 2).brstm
+	Volume: 82
+	Frequency: 40
 
 ################
 Temple_of_Time_DPAD.tlst - 8 tracks

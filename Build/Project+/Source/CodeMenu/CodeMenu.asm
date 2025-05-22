@@ -37,7 +37,7 @@ HOOK @ $80017928                # Address = $(ba + 0x00017928)
 	mflr r0
 	stw r0, 0x104(r1)
 	stmw r3, 0x8(r1)
-	bl 0x3744
+	bl 0x376c
 	lis r31, 0x804e
 	lwz r31, 0x34(r31)
 	lis r28, 0x804e
@@ -112,7 +112,7 @@ loc_0x01E:
 	stw r7, -0x8000(r3)
 loc_0x04F:
 	cmpwi r31, 0x4
-	bne loc_0x0E0
+	bne loc_0x0E3
 	lis r30, 0x805b
 	ori r30, r30, 0x6df8
 	lis r31, 0x3eb2
@@ -191,14 +191,18 @@ loc_0x092:
 	addi r28, r31, 0x14
 	li r3, 0x1
 	cmpwi r3, 0x0
-	beq loc_0x0DF
+	beq loc_0x0E2
 loc_0x09B:
 	lbz r26, 0x3(r28)
-	andi. r26, r26, 0x2
-	bne loc_0x0DB
-	lbz r26, 0x2(r28)
+	andi. r27, r26, 0x2
+	bne loc_0x0DE
+	andi. r27, r26, 0x4
 	lbz r27, 0x4(r28)
+	beq loc_0x0A2
+	addi r27, r27, 0x10
+loc_0x0A2:
 	lwzx r27, r25, r27
+	lbz r26, 0x2(r28)
 	stw r27, 0x8(r30)
 	stw r27, 0xc(r30)
 	stw r27, 0x10(r30)
@@ -206,7 +210,7 @@ loc_0x09B:
 	lhz r4, 0x5(r28)
 	add r4, r4, r28
 	cmpwi r26, 0x5
-	bne loc_0x0B4
+	bne loc_0x0B7
 	lwz r27, 0xc(r28)
 	lhz r26, 0x0(r28)
 	mulli r27, r27, 0x4
@@ -217,44 +221,44 @@ loc_0x09B:
 	ori r3, r3, 0x648
 	crxor 6, 6, 6
 	bla 0x3f89fc
-	b loc_0x0C8
-loc_0x0B4:
+	b loc_0x0CB
+loc_0x0B7:
 	cmpwi r26, 0x2
-	bne loc_0x0BC
+	bne loc_0x0BF
 	lfs f1, 0x8(r28)
 	lis r3, 0x804e
 	ori r3, r3, 0x648
 	cmpw cr1, r1, r1
 	bla 0x3f89fc
-	b loc_0x0C8
-loc_0x0BC:
+	b loc_0x0CB
+loc_0x0BF:
 	lwz r5, 0x8(r28)
 	cmpwi r26, 0x0
-	bne loc_0x0C4
+	bne loc_0x0C7
 	lwz r26, 0x18(r28)
 	addi r27, r26, 0x1c
 	rlwinm r5, r5, 2, 0, 31         # (Mask: 0xffffffff)
 	lhzx r5, r27, r5
 	add r5, r5, r26
-loc_0x0C4:
+loc_0x0C7:
 	lis r3, 0x804e
 	ori r3, r3, 0x648
 	crxor 6, 6, 6
 	bla 0x3f89fc
-loc_0x0C8:
+loc_0x0CB:
 	mr r26, r3
 	lis r27, 0x804e
 	ori r27, r27, 0x647
 	cmpwi r26, 0x0
-	ble loc_0x0D3
-loc_0x0CD:
+	ble loc_0x0D6
+loc_0x0D0:
 	lbzu r4, 0x1(r27)
 	addi r3, r30, 0x0
 	bla 0x6fe50
 	subi r26, r26, 0x1
 	cmpwi r26, 0x0
-	bgt+ loc_0x0CD
-loc_0x0D3:
+	bgt+ loc_0x0D0
+loc_0x0D6:
 	lis r3, 0xc348
 	lfs f0, 0x30(r30)
 	lis r4, 0x4190
@@ -263,16 +267,16 @@ loc_0x0D3:
 	fadd f0, f0, f1
 	stw r3, 0x2c(r30)
 	stfs f0, 0x30(r30)
-loc_0x0DB:
+loc_0x0DE:
 	lhz r3, 0x0(r28)
 	lhzux r3, r28, r3
 	cmpwi r3, 0x0
 	bne+ loc_0x09B
-loc_0x0DF:
-	b loc_0x147
-loc_0x0E0:
+loc_0x0E2:
+	b loc_0x14A
+loc_0x0E3:
 	cmpwi r30, 0x0
-	beq loc_0x0F3
+	beq loc_0x0F6
 	lis r29, 0x805b
 	ori r29, r29, 0x6df8
 	li r31, 0x0
@@ -289,13 +293,13 @@ loc_0x0E0:
 	lis r4, 0x804e
 	ori r4, r4, 0x298
 	stw r3, 0x0(r4)
-	b loc_0x147
-loc_0x0F3:
+	b loc_0x14A
+loc_0x0F6:
 	bla 0x2e844
 	lis r31, 0x804e
-	lwz r31, 0xe90(r31)
+	lwz r31, 0xea0(r31)
 	cmpwi r31, 0x1
-	bne loc_0x147
+	bne loc_0x14A
 	li r31, 0x0
 	lwz r23, -0x42ac(r13)
 	lwz r22, -0x42a8(r13)
@@ -355,14 +359,14 @@ loc_0x0F3:
 	lis r28, 0x805a
 	lhz r28, 0x856(r28)
 	cmpwi r30, 0x3c
-	bge loc_0x137
+	bge loc_0x13A
 	lis r30, 0xff00
 	ori r30, r30, 0xff
-	b loc_0x139
-loc_0x137:
+	b loc_0x13C
+loc_0x13A:
 	lis r30, 0x66
 	ori r30, r30, 0xffff
-loc_0x139:
+loc_0x13C:
 	stw r30, 0x8(r29)
 	stw r30, 0xc(r29)
 	stw r30, 0x10(r29)
@@ -370,16 +374,16 @@ loc_0x139:
 	stw r23, -0x42ac(r13)
 	stw r22, -0x42a8(r13)
 	cmpwi r26, 0x0
-	ble loc_0x147
-loc_0x141:
+	ble loc_0x14A
+loc_0x144:
 	lbzu r4, 0x1(r31)
 	addi r3, r29, 0x0
 	bla 0x6fe50
 	subi r26, r26, 0x1
 	cmpwi r26, 0x0
-	bgt+ loc_0x141
-loc_0x147:
-	bl 0x32c0
+	bgt+ loc_0x144
+loc_0x14A:
+	bl 0x32dc
 	lmw r3, 0x8(r1)
 	lwz r0, 0x104(r1)
 	mtlr r0
@@ -387,6 +391,7 @@ loc_0x147:
 	mtctr r0
 	lwz r0, 0x7c(r1)
 	addi r1, r1, 0x100
+	nop
 }
 
 #################################
@@ -401,7 +406,7 @@ HOOK @ $80029574                # Address = $(ba + 0x00029574)
 	mflr r0
 	stw r0, 0x104(r1)
 	stmw r3, 0x8(r1)
-	bl 0x31fc
+	bl 0x3214
 	lis r3, 0x2530
 	ori r3, r3, 0x3258
 	lis r28, 0x804e
@@ -456,7 +461,7 @@ loc_0x037:
 	li r3, 0x0
 	stb r3, 0x0(r31)
 	lis r3, 0x804e
-	ori r3, r3, 0x1398
+	ori r3, r3, 0x13a8
 	subi r4, r25, 0x1
 	stw r4, 0x0(r3)
 	addi r25, r25, 0x18
@@ -503,7 +508,7 @@ loc_0x062:
 	li r3, 0x0
 	stb r3, 0x0(r31)
 	lis r3, 0x804e
-	ori r3, r3, 0x15fc
+	ori r3, r3, 0x160c
 	subi r4, r25, 0x1
 	stw r4, 0x0(r3)
 	addi r25, r25, 0x18
@@ -550,7 +555,7 @@ loc_0x08D:
 	li r3, 0x0
 	stb r3, 0x0(r31)
 	lis r3, 0x804e
-	ori r3, r3, 0x1860
+	ori r3, r3, 0x1870
 	subi r4, r25, 0x1
 	stw r4, 0x0(r3)
 	addi r25, r25, 0x18
@@ -597,17 +602,17 @@ loc_0x0B8:
 	li r3, 0x0
 	stb r3, 0x0(r31)
 	lis r3, 0x804e
-	ori r3, r3, 0x1ac4
+	ori r3, r3, 0x1ad4
 	subi r4, r25, 0x1
 	stw r4, 0x0(r3)
 	addi r25, r25, 0x18
 	lis r31, 0x804e
 	lwz r28, 0x4(r31)
-	addi r31, r31, 0x7d8
+	addi r31, r31, 0x7e4
 	cmplw r31, r28
 	bne loc_0x429
 	lis r28, 0x804e
-	lwz r28, 0xec0(r28)
+	lwz r28, 0xed0(r28)
 	cmpwi r28, 0x0
 	bne loc_0x0D2
 	lis r28, 0x804e
@@ -756,7 +761,7 @@ loc_0x145:
 	cmpwi r19, 0x2
 	bne loc_0x151
 	lis r30, 0x804e
-	lwz r30, 0xc2c(r30)
+	lwz r30, 0xc3c(r30)
 	cmplwi cr1, r30, 0x1
 	blt cr1, loc_0x151
 	lis r30, 0x804e
@@ -781,7 +786,7 @@ loc_0x151:
 	ori r30, r30, 0x44
 	stw r15, 0x0(r30)
 	li r4, 0x5
-	bl 0x2d50
+	bl 0x2d68
 loc_0x161:
 	lis r29, 0x804e
 	lwzu r30, 0x44(r29)
@@ -955,7 +960,7 @@ loc_0x1E5:
 	andi. r6, r6, 0x2
 	bne loc_0x1D9
 	li r4, 0x0
-	bl 0x2b04
+	bl 0x2b1c
 loc_0x1F4:
 	li r6, 0x0
 	cmplwi r14, 0x5
@@ -976,7 +981,7 @@ loc_0x1F4:
 	lis r6, 0x804e
 	stw r7, 0x0(r6)
 	li r4, 0x23
-	bl 0x2ab4
+	bl 0x2acc
 loc_0x208:
 	cmpwi r14, 0x4
 	bne loc_0x221
@@ -1003,7 +1008,7 @@ loc_0x21A:
 	or r8, r8, r11
 	stb r8, 0x4(r6)
 	li r4, 0x14
-	bl 0x2a50
+	bl 0x2a68
 loc_0x221:
 	cmpwi r14, 0x7
 	bne loc_0x22E
@@ -1017,14 +1022,14 @@ loc_0x221:
 	ori r4, r4, 0x8a08
 	stw r3, 0x0(r4)
 	li r4, 0x8
-	bl 0x2a1c
+	bl 0x2a34
 loc_0x22E:
 	lis r7, 0x804e
 	ori r7, r7, 0x94
 	li r31, 0x0
 	cmplwi r14, 0x8
 	li r6, 0x0
-	beql loc_0x468
+	beql loc_0x46B
 	cmpwi r14, 0x9
 	bne loc_0x239
 	lwz r8, 0x0(r7)
@@ -1045,7 +1050,7 @@ loc_0x23A:
 	beq loc_0x249
 loc_0x244:
 	lbz r4, 0x2(r3)
-	bl loc_0x468
+	bl loc_0x46B
 	lhzux r12, r3, r12
 	cmpwi r12, 0x0
 	bne+ loc_0x244
@@ -1054,7 +1059,7 @@ loc_0x249:
 loc_0x24A:
 	cmplwi r31, 0x0
 	li r4, 0x2
-	bnel 0x29a0
+	bnel 0x29b8
 loc_0x24D:
 	lis r31, 0x805b
 	ori r31, r31, 0xacc4
@@ -1097,7 +1102,7 @@ loc_0x26D:
 	cmpwi r30, 0x1
 	bne loc_0x27A
 	lis r30, 0x804e
-	lwz r30, 0xc2c(r30)
+	lwz r30, 0xc3c(r30)
 	cmpwi r30, 0x1
 	bne loc_0x27A
 	lis r30, 0x804e
@@ -1163,27 +1168,27 @@ loc_0x2A3:
 	bne+ loc_0x2A3
 loc_0x2A9:
 	lis r31, 0x804e
-	lwz r31, 0xd30(r31)
+	lwz r31, 0xd40(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3fff
 	stb r31, 0x0(r30)
 	lis r31, 0x804e
-	lwz r31, 0xd5c(r31)
+	lwz r31, 0xd6c(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3ffd
 	stb r31, 0x0(r30)
 	lis r31, 0x804e
-	lwz r31, 0xde0(r31)
+	lwz r31, 0xdf0(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3ff9
 	stb r31, 0x0(r30)
 	lis r31, 0x804e
-	lwz r31, 0xdac(r31)
+	lwz r31, 0xdbc(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3ff7
 	stb r31, 0x0(r30)
 	lis r31, 0x804e
-	lwz r31, 0xe34(r31)
+	lwz r31, 0xe44(r31)
 	lis r30, 0x8058
 	ori r30, r30, 0x3ffb
 	stb r31, 0x0(r30)
@@ -1336,7 +1341,7 @@ loc_0x346:
 	stw r29, 0x0(r30)
 loc_0x34D:
 	lis r31, 0x804e
-	lwz r31, 0xa68(r31)
+	lwz r31, 0xa78(r31)
 	cmpwi r31, 0x1
 	beq loc_0x353
 	li r31, 0x0
@@ -1345,7 +1350,7 @@ loc_0x353:
 	cmpwi r19, 0x3
 	bne loc_0x3FA
 	lis r30, 0x804e
-	ori r30, r30, 0xa94
+	ori r30, r30, 0xaa4
 	lwz r31, 0x8(r30)
 	cmpwi r31, 0x1
 	bne loc_0x3FA
@@ -1391,7 +1396,7 @@ loc_0x353:
 	li r4, 0x2a
 	bla 0x152b5c
 	lis r4, 0x804e
-	lwz r4, 0x7cc(r4)
+	lwz r4, 0x7d8(r4)
 	addi r4, r4, 0x100
 	bla 0x152c4c
 	addi r3, r30, 0x0
@@ -1562,7 +1567,7 @@ loc_0x421:
 	cmpwi r31, 0x5
 	ble+ loc_0x421
 loc_0x429:
-	bl 0x21f0
+	bl 0x2208
 	lmw r3, 0x8(r1)
 	lwz r0, 0x104(r1)
 	mtlr r0
@@ -1573,52 +1578,55 @@ loc_0x429:
 	blr
 loc_0x432:
 	cmplwi r4, 0x2
-	bgt loc_0x467
+	bgt loc_0x46A
+	lbz r12, 0x3(r3)
+	andi. r12, r12, 0x4
+	bne loc_0x46A
 	cmplwi cr7, r6, 0x0
 	cmpwi r4, 0x2
-	bne loc_0x446
+	bne loc_0x449
 	lfs f1, 0x8(r3)
 	lfs f2, 0x1c(r3)
-	beq cr7, loc_0x43B
+	beq cr7, loc_0x43E
 	fneg f2, f2
-loc_0x43B:
+loc_0x43E:
 	fadds f3, f1, f2
 	lfs f1, 0x18(r3)
 	lfs f2, 0x14(r3)
 	fcmpu cr1, f3, f1
-	bge cr1, loc_0x441
+	bge cr1, loc_0x444
 	fmr f3, f2
-loc_0x441:
-	fcmpu cr1, f3, f2
-	ble cr1, loc_0x444
-	fmr f3, f1
 loc_0x444:
+	fcmpu cr1, f3, f2
+	ble cr1, loc_0x447
+	fmr f3, f1
+loc_0x447:
 	stfs f3, 0x8(r3)
-	b loc_0x458
-loc_0x446:
+	b loc_0x45B
+loc_0x449:
 	lwz r12, 0x8(r3)
 	li r11, 0x1
 	li r10, 0x0
 	cmplwi r4, 0x0
-	beq loc_0x44D
+	beq loc_0x450
 	lwz r11, 0x1c(r3)
 	lwz r10, 0x18(r3)
-loc_0x44D:
-	beq cr7, loc_0x44F
+loc_0x450:
+	beq cr7, loc_0x452
 	neg r11, r11
-loc_0x44F:
+loc_0x452:
 	add r12, r12, r11
 	lwz r11, 0x14(r3)
 	cmpw r12, r10
-	bge loc_0x454
+	bge loc_0x457
 	mr r12, r11
-loc_0x454:
-	cmpw r12, r11
-	ble loc_0x457
-	mr r12, r10
 loc_0x457:
+	cmpw r12, r11
+	ble loc_0x45A
+	mr r12, r10
+loc_0x45A:
 	stw r12, 0x8(r3)
-loc_0x458:
+loc_0x45B:
 	lwz r12, 0x8(r3)
 	lbz r11, 0x4(r3)
 	lwz r10, 0x10(r3)
@@ -1626,25 +1634,27 @@ loc_0x458:
 	rlwinm r9, r11, 29, 31, 31      # (Mask: 0x00000008)
 	andi. r11, r11, 0xfff7
 	cmpw r12, r10
-	beq loc_0x462
+	beq loc_0x465
 	addi r8, r8, 0x1
 	ori r11, r11, 0x8
-loc_0x462:
+loc_0x465:
 	subf r8, r9, r8
 	stb r11, 0x4(r3)
 	stw r8, 0x8(r5)
 	li r4, 0x25
-	b 0x2138
-loc_0x467:
+	b 0x2144
+loc_0x46A:
 	blr
-loc_0x468:
+loc_0x46B:
 	lbz r9, 0x4(r3)
-	cmplwi r6, 0x1
-	bne loc_0x46E
 	lbz r10, 0x3(r3)
-	andi. r10, r10, 0x1
-	bne loc_0x481
-loc_0x46E:
+	andi. r8, r10, 0x4
+	bne loc_0x486
+	cmplwi r6, 0x1
+	bne loc_0x473
+	andi. r8, r10, 0x1
+	bne loc_0x486
+loc_0x473:
 	lwz r8, 0x8(r5)
 	rlwinm r10, r9, 29, 31, 31      # (Mask: 0x00000008)
 	andi. r9, r9, 0xfff7
@@ -1652,20 +1662,20 @@ loc_0x46E:
 	stb r9, 0x4(r3)
 	stw r8, 0x8(r5)
 	cmpwi r4, 0x2
-	bgt loc_0x47A
+	bgt loc_0x47F
 	add r31, r31, r10
 	lwz r8, 0x10(r3)
 	stw r8, 0x8(r3)
-	b loc_0x481
-loc_0x47A:
+	b loc_0x486
+loc_0x47F:
 	cmpwi r4, 0x3
-	bne loc_0x481
+	bne loc_0x486
 	lhz r8, 0x10(r3)
 	add r8, r8, r5
 	lwz r10, 0x0(r7)
 	stwu r8, 0x4(r10)
 	stw r10, 0x0(r7)
-loc_0x481:
+loc_0x486:
 	lwz r10, 0x10(r5)
 	cmpwi r10, -0x1
 	beqlr
@@ -1674,6 +1684,7 @@ loc_0x481:
 	or r8, r8, r9
 	stb r8, 0x4(r10)
 	blr
+	nop
 }
 
 ##############################
@@ -1682,7 +1693,7 @@ loc_0x481:
 HOOK @ $809580B4                # Address = $(ba + 0x009580B4)
 {
 	lis r4, 0x804e
-	lwz r4, 0x904(r4)
+	lwz r4, 0x914(r4)
 	cmpwi r4, 0x2
 	blt loc_0x005
 	blr
@@ -1706,7 +1717,7 @@ HOOK @ $809489EC                # Address = $(ba + 0x009489EC)
 	lis r25, 0xffff
 	ori r25, r25, 0xffff
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x914(r31)
 	cmpwi r31, 0x2
 	blt loc_0x02E
 	lis r31, 0x804e
@@ -2219,38 +2230,38 @@ loc_0x09E:
 HOOK @ $80023D60                # Address = $(ba + 0x00023D60)
 {
 	lis r11, 0x804e
-	lwz r10, 0x1e1c(r11)
+	lwz r10, 0x1e2c(r11)
 	lis r12, 0x80b8
 	stw r10, 0x7aa8(r12)
-	lwz r10, 0x1e58(r11)
-	stw r10, 0x7aec(r12)
-	lwz r10, 0x1e94(r11)
+	lwz r10, 0x1ea4(r11)
 	stw r10, 0x7ae8(r12)
-	lwz r10, 0x1ecc(r11)
+	lwz r10, 0x1e68(r11)
+	stw r10, 0x7aec(r12)
+	lwz r10, 0x1edc(r11)
 	stw r10, 0x7b10(r12)
-	lwz r10, 0x1f10(r11)
+	lwz r10, 0x1f20(r11)
 	lis r12, 0x80b9
 	stw r10, -0x7cac(r12)
-	lwz r10, 0x1f44(r11)
+	lwz r10, 0x1f54(r11)
 	stw r10, -0x7ca8(r12)
-	lwz r10, 0x1f7c(r11)
+	lwz r10, 0x1f8c(r11)
 	stw r10, -0x7be0(r12)
-	lwz r10, 0x1fc4(r11)
+	lwz r10, 0x1fd4(r11)
 	stw r10, -0x7bbc(r12)
-	lwz r10, 0x2008(r11)
+	lwz r10, 0x2018(r11)
 	stw r10, -0x7ba4(r12)
-	lwz r10, 0x2048(r11)
+	lwz r10, 0x2058(r11)
 	stw r10, -0x7ba0(r12)
-	lwz r10, 0x2084(r11)
+	lwz r10, 0x2094(r11)
 	stw r10, -0x7b88(r12)
-	lwz r10, 0x20c4(r11)
+	lwz r10, 0x20d4(r11)
 	stw r10, -0x7b7c(r12)
-	lwz r10, 0x2104(r11)
+	lwz r10, 0x2114(r11)
 	stw r10, -0x7af0(r12)
-	lwz r10, 0x214c(r11)
+	lwz r10, 0x215c(r11)
 	stw r10, -0x7acc(r12)
 	lwz r12, 0x4(r11)
-	addi r10, r11, 0x7d8
+	addi r10, r11, 0x7e4
 	cmplw r10, r12
 	bne loc_0x03E
 	lwz r12, 0x31c(r11)
@@ -2300,7 +2311,7 @@ HOOK @ $807C1A20                # Address = $(ba + 0x007C1A20)
 	stmw r3, 0x8(r1)
 	bl 0x1798
 	lis r31, 0x804e
-	lwz r31, 0x23b0(r31)
+	lwz r31, 0x23c0(r31)
 	cmpwi r31, 0x1
 	bne loc_0x038
 	lwz r27, 0xd8(r27)
@@ -2313,12 +2324,12 @@ HOOK @ $807C1A20                # Address = $(ba + 0x007C1A20)
 	lwz r31, 0x64(r26)
 	lfs f2, 0x8(r31)
 	lis r30, 0x804e
-	ori r30, r30, 0x248c
+	ori r30, r30, 0x249c
 	lfs f0, 0x8(r30)
 	fmuls f1, f1, f0
 	fadds f1, f1, f2
 	lis r30, 0x804e
-	ori r30, r30, 0x23d8
+	ori r30, r30, 0x23e8
 	lfs f2, 0x8(r30)
 	fneg f0, f2
 	fcmpu cr0, f1, f0
@@ -2334,12 +2345,12 @@ loc_0x024:
 	lwz r31, 0x58(r26)
 	lfs f2, 0xc(r31)
 	lis r30, 0x804e
-	ori r30, r30, 0x24cc
+	ori r30, r30, 0x24dc
 	lfs f0, 0x8(r30)
 	fmuls f1, f1, f0
 	fadds f1, f1, f2
 	lis r30, 0x804e
-	ori r30, r30, 0x2414
+	ori r30, r30, 0x2424
 	lfs f2, 0x8(r30)
 	fneg f0, f2
 	fcmpu cr0, f1, f0
@@ -2369,7 +2380,7 @@ loc_0x038:
 HOOK @ $8083ADE0                # Address = $(ba + 0x0083ADE0)
 {
 	lis r4, 0x804e
-	lwz r4, 0x23b0(r4)
+	lwz r4, 0x23c0(r4)
 	cmpwi r4, 0x1
 	bne loc_0x01C
 	cmpwi r3, -0x1
@@ -2414,7 +2425,7 @@ HOOK @ $8010F990                # Address = $(ba + 0x0010F990)
 	stw r0, 0x94(r1)
 	stmw r3, 0x8(r1)
 	lis r3, 0x804e
-	lwz r3, 0x9d8(r3)
+	lwz r3, 0x9e8(r3)
 	cmpwi r3, 0x2
 	bne loc_0x013
 	li r3, 0x0
@@ -2496,7 +2507,7 @@ HOOK @ $8081AD54                # Address = $(ba + 0x0081AD54)
 	stw r0, 0x94(r1)
 	stmw r3, 0x8(r1)
 	lis r31, 0x804e
-	lwz r31, 0xbfc(r31)
+	lwz r31, 0xc0c(r31)
 	cmpwi r31, 0x0
 	bne loc_0x014
 	lmw r3, 0x8(r1)
@@ -2526,7 +2537,7 @@ loc_0x014:
 HOOK @ $808E00A4                # Address = $(ba + 0x008E00A4)
 {
 	lis r6, 0x804e
-	lwz r6, 0x2188(r6)
+	lwz r6, 0x2198(r6)
 	cmpwi r6, 0x1
 	bne loc_0x005
 	li r0, 0x8
@@ -2561,7 +2572,7 @@ loc_0x009:
 	lis r3, 0x804e
 	lwz r3, 0x13c(r3)
 	lis r4, 0x804e
-	lwz r4, 0x7cc(r4)
+	lwz r4, 0x7d8(r4)
 	stw r3, 0x454(r4)
 loc_0x010:
 	blr
@@ -2593,7 +2604,7 @@ loc_0x010:
 	cmpwi r31, 0x6
 	bne loc_0x019
 	lis r31, 0x804e
-	lwz r31, 0x7cc(r31)
+	lwz r31, 0x7d8(r31)
 	lwz r31, 0x454(r31)
 	lis r30, 0x804e
 	ori r30, r30, 0x13c
@@ -2601,7 +2612,7 @@ loc_0x010:
 	b loc_0x051
 loc_0x019:
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x914(r31)
 	cmpwi r31, 0x1
 	blt loc_0x04D
 	lis r14, 0x9018
@@ -2688,7 +2699,7 @@ loc_0x051:
 	lwz r30, 0xe0(r30)
 	lwz r30, 0x8(r30)
 	lis r31, 0x804e
-	lwz r31, 0x980(r31)
+	lwz r31, 0x990(r31)
 	cmpwi r31, 0x0
 	bne loc_0x087
 	lis r26, 0x8043
@@ -2773,7 +2784,7 @@ loc_0x011:
 	cmpwi r31, 0xa
 	bne loc_0x092
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x914(r31)
 	cmpwi r31, 0x4
 	bne loc_0x02F
 	li r30, 0x0
@@ -2841,7 +2852,7 @@ loc_0x036:
 	bla 0x81c540
 	neg r16, r3
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x914(r31)
 	cmpwi r31, 0x2
 	bne loc_0x05B
 	stb r16, 0x0(r18)
@@ -2998,14 +3009,14 @@ loc_0x037:
 	lis r29, 0x8058
 	lwzu r28, 0x4084(r29)
 	lis r31, 0x804e
-	lwz r31, 0xa2c(r31)
+	lwz r31, 0xa3c(r31)
 	cmpwi r31, 0x1
 	bne loc_0x042
 	li r28, 0x0
 	li r16, 0xd
 loc_0x042:
 	lis r31, 0x804e
-	lwz r31, 0x904(r31)
+	lwz r31, 0x914(r31)
 	cmpwi r31, 0x0
 	ble loc_0x054
 	lwz r31, 0x24(r3)
@@ -3143,7 +3154,7 @@ loc_0x094:
 	li r4, 0x2a
 	bla 0x152b5c
 	lis r4, 0x804e
-	lwz r4, 0x7cc(r4)
+	lwz r4, 0x7d8(r4)
 	addi r4, r4, 0x100
 	bla 0x152c4c
 	addi r3, r30, 0x0
@@ -3290,7 +3301,7 @@ HOOK @ $8000E588                # Address = $(ba + 0x0000E588)
 	cmpwi r31, 0x1
 	bne loc_0x09E
 	lis r31, 0x804e
-	lwz r31, 0xe64(r31)
+	lwz r31, 0xe74(r31)
 	cmpwi r31, 0x1
 	bne loc_0x09E
 	li r31, 0x14
@@ -3524,7 +3535,7 @@ HOOK @ $8002D4F4                # Address = $(ba + 0x0002D4F4)
 HOOK @ $806BE080                # Address = $(ba + 0x006BE080)
 {
 	lis r11, 0x804e
-	ori r11, r11, 0x7cc
+	ori r11, r11, 0x7d8
 	li r12, 0x4
 	addi r10, r11, 0x5
 loc_0x004:
@@ -3956,7 +3967,7 @@ loc_0x033:
 #############################################
 [CM: _UtilitySubroutines v1.1.0]  [QuickLava]
 #############################################
-HOOK @ $804E07D4                # Address = $(ba + 0x004E07D4)
+HOOK @ $804E07E0                # Address = $(ba + 0x004E07E0)
 {
 	stfd f29, 0x16c(r1)
 	stfd f28, 0x164(r1)
@@ -4079,7 +4090,7 @@ HOOK @ $8084D0D4                # Address = $(ba + 0x0084D0D4)
 	stw r0, 0x94(r1)
 	stmw r3, 0x8(r1)
 	lis r31, 0x804e
-	lwz r31, 0xad4(r31)
+	lwz r31, 0xae4(r31)
 	cmpwi r31, 0x2
 	beq loc_0x07A
 	cmpwi r31, 0x0
@@ -4259,7 +4270,7 @@ HOOK @ $8001735C                # Address = $(ba + 0x0001735C)
 	lis r28, 0x804e
 	lwz r28, 0x260(r28)
 	lis r27, 0x804e
-	lwz r27, 0xad4(r27)
+	lwz r27, 0xae4(r27)
 	cmpw r28, r27
 	beq loc_0x014
 	lis r30, 0x804e
@@ -4273,7 +4284,7 @@ loc_0x014:
 	lis r28, 0x804e
 	ori r28, r28, 0x260
 	lis r27, 0x804e
-	lwz r27, 0xad4(r27)
+	lwz r27, 0xae4(r27)
 	stw r27, 0x0(r28)
 	lmw r3, 0x8(r1)
 	lwz r0, 0x94(r1)
@@ -4698,6 +4709,7 @@ loc_0x00A:
 * 66200002 00000000             # Goto: Jump to Next Line, then forward 2 more Line(s) Regardless of Execution Status
 * A1830000 398C0080             # ....9...      | DATA_EMBED (0x10 bytes)
 * B1830000 4E800020             # ....N.. 
+* 44000000 00FFFFFF             # Store Base Address: Val @ $(0x00FFFFFF) = ba
 * 48000000 804E031C             # Load Pointer Offset: po = Val @ $(0x804E031C)
 * 54010000 00000000             # Store Base Address: Val @ $(po + 0x00000000) = ba
 * E0000000 80008000             # Full Terminator: ba = 0x80000000, po = 0x80000000
@@ -4918,7 +4930,7 @@ HOOK @ $808E0094                # Address = $(ba + 0x008E0094)
 	word 0x00000000                 # ....
 data_0x00D:
 	lis r30, 0x804e
-	lwz r30, 0x21d4(r30)
+	lwz r30, 0x21e4(r30)
 	cmplwi r30, 0x0
 	lis r11, 0x2
 	li r12, 0x0
@@ -4945,11 +4957,11 @@ loc_0x018:
 HOOK @ $808734F8                # Address = $(ba + 0x008734F8)
 {
 	lis r11, 0x804e
-	lwz r12, 0x221c(r11)
+	lwz r12, 0x222c(r11)
 	cmplwi r12, 0x0
 	beq loc_0x022
 	mtctr r12
-	lwz r11, 0x22cc(r11)
+	lwz r11, 0x22dc(r11)
 	mr r0, r11
 	bdz loc_0x018
 	add r0, r11, r3
@@ -4971,12 +4983,12 @@ loc_0x013:
 	subf r0, r0, r3
 loc_0x018:
 	lis r11, 0x804e
-	lwz r12, 0x230c(r11)
+	lwz r12, 0x231c(r11)
 	cmpw r0, r12
 	bge loc_0x01D
 	mr r0, r12
 loc_0x01D:
-	lwz r12, 0x2354(r11)
+	lwz r12, 0x2364(r11)
 	cmpw r0, r12
 	ble loc_0x021
 	mr r0, r12
