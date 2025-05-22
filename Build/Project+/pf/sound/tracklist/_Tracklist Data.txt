@@ -2513,7 +2513,17 @@ Peachs_Castle_Melee.tlst - 3 tracks
 	Frequency: 40
 
 ################
-Phendrana.tlst - 3 tracks
+Phendrana.tlst - 6 tracks
+
+	Phendrana Drifts Depths
+	Metroid/Phendrana Drifts Depths.brstm
+	Volume: 80
+	Frequency: 40
+
+	Vs. Serris
+	Metroid/Vs. Serris.brstm
+	Volume: 65
+	Frequency: 40
 
 	Vs. Parasite Queen
 	D08.brstm (0x274D)
@@ -2526,6 +2536,11 @@ Phendrana.tlst - 3 tracks
 
 	Data Selection Screen
 	Y11.brstm (0x2829)
+	Frequency: 40
+
+	Skytown
+	Metroid/Skytown.brstm
+	Volume: 85
 	Frequency: 40
 
 ################
@@ -3782,7 +3797,17 @@ Temple_of_Time_DPAD.tlst - 8 tracks
 	Frequency: 40
 
 ################
-Temple_of_Time_OoT.tlst - 6 tracks
+Temple_of_Time_OoT.tlst - 8 tracks
+
+	Main Theme (The Legend of Zelda)
+	Zelda/Main Theme (Melee).brstm
+	Volume: 80
+	Frequency: 40
+
+	Saria's Song
+	Zelda/Saria's Song.brstm
+	Volume: 80
+	Frequency: 40
 
 	Hyrule Field
 	C08.brstm (0x273A)
