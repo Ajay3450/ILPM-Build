@@ -121,7 +121,7 @@ GANONDORF
 
 META KNIGHT
 06 - NorCal MK by FingerStripes
-07 - Indy MK by DIce
+10 - Indy MK by DIce
 
 PIT
 40 - Star Red Pit by SJS, Star, ilikepizza107
@@ -179,7 +179,7 @@ IKE
 
 R.O.B.
 07 - Comb ROB by Wyld
-08 - Kendrick ROB by Hannah
+08 - Kendrick ROB by Hannah, ilikepizza107
 36 - Sneez ROB by ???, with credit to ilikepizza107
 
 JIGGLYPUFF
