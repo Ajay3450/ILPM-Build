@@ -24,15 +24,18 @@ MARIO
 DONKEY KONG
 
 LINK
+10 - Zushi Link by GKO
 27 - Maofever Link by SOULLY
 28 - SgtPingwen Link by ilikepizza107
 
 SAMUS
 40 - Brawl Fake Samus by SJS [https://gamebanana.com/mods/247126]
+45 - Morsecode Samus by DHS7
 50 - GooSluj Samus by ilikepizza107
 51 - Autumn Samus by Autumn, ilikepizza107
 
 YOSHI
+40 - Whoratio Yoshi by Z-Stick + ilikepizza107
 
 KIRBY
 25 - influenza Kirby by influenza
@@ -52,6 +55,7 @@ FOX
 PIKACHU
 
 LUIGI
+40 - E-Gadd Luigi by Sylv, RapM
 
 CAPTAIN FALCON
 07 - influenza Falcon by influenza
@@ -60,6 +64,7 @@ CAPTAIN FALCON
 36 - SoulOfficer Falcon by influenza
 
 NESS
+25 - Rooster Ness by ilikepizza107
 30 - Not Chris Ness by ilikepizza107
 
 BOWSER
@@ -76,12 +81,14 @@ ZELDA
 30 - Tuck Zelda by Tuck, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 31 - Evil Lesbian Zelda by Evil Lesbian, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 32 - KWAM Zelda by ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
+35 - jankie Zelda by ilikepizza107
 
 SHEIK
 09 - Sabrina Sheik by influenza
 30 - RoSheik by jetfantastic [http://forums.kc-mm.com/Gallery/BrawlView.php?Number=213577]
 31 - Evil Lesbian Sheik by Evil Lesbian, ilikepizza107
 32 - KWAM Sheik by ilikepizza107
+35 - jankie Sheik by ilikepizza107
 
 ICE CLIMBERS
 
@@ -110,6 +117,7 @@ GANONDORF
 
 META KNIGHT
 06 - NorCal MK by FingerStripes
+07 - Indy MK by DIce
 
 PIT
 40 - Star Red Pit by SJS, Star, ilikepizza107
@@ -118,6 +126,7 @@ PIT
 
 ZERO SUIT SAMUS
 40 - RosiYY ZSS by ilikepizza107
+45 - Dread Suit ZSS by ilikepizza107
 50 - GooSluj ZSS by ilikepizza107
 51 - Autumn ZSS by Autumn, ilikepizza107
 
@@ -145,6 +154,7 @@ CHARIZARD
 
 SQUIRTLE
 30 - Dbylan Squirtle by ilikepizza107
+35 - Hannah Squirtle by Hannah
 
 IVYSAUR
 08 - Maofever Ivy by Maofever
@@ -165,6 +175,7 @@ IKE
 
 R.O.B.
 07 - Comb ROB by Wyld
+08 - Kendrick ROB by Hannah
 36 - Sneez ROB by ???, with credit to ilikepizza107
 
 JIGGLYPUFF
