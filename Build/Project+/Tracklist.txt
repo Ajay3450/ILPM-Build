@@ -2,10 +2,12 @@ To access default P+ tracklists, simply press any DPAD button when selecting a s
 
 BATTLEFIELD
 	Blue Water Blue Sky (Guilty Gear X2)
-	Gogeta (SSJ4) Theme (Dragon Ball FighterZ)
+	E.S. Cinder (OCRemix)
 	Golden Spirit (JoJo's Bizzare Adventure All Star Battle)
+	Nefertiti (Atelier Meruru)
 	Rebellion (BlazBlue Calamity Trigger)
 	Rushing Heart II (Under Night In-Birth II SysCeles)
+	The Man Who Made a Monster (Dance with the Dead)
 
 DEAD LINE
 	Luck & Pluck (JoJo's Bizzare Adventure All Star Battle)
@@ -13,10 +15,12 @@ DEAD LINE
 	Theme of Megaman Volnutt (Tatsunoko Vs Capcom).brstm
 
 DREAM LAND
+	Bob-Omb Battlefield (Mario Kart World)
+	Fight and Flight (Rivals of Aether 2)
 	Hierophant Green (JoJo's Bizzare Adventure All Star Battle)
 	Precious Heart (Street Fighter EX3)
 	Strange Dreamer (Melty Blood Actress Again Current Code)
-	Zeppeli The Eccentric (JoJo's Bizzare Adventure All Star Battle)
+	Windmill Isle Day (Sonic Unleashed)
 
 FINAL DESTINATION
 	Calamity Is Coming (JoJo's Bizzare Adventure All Star Battle R)
@@ -24,45 +28,60 @@ FINAL DESTINATION
 	Zappa Theme (Guilty Gear XX #Reload)
 
 FOUNTAIN OF DREAMS
-	Theme of Chun-Li (Marvel Vs Capcom 3)
-	Theme of Magneto (Marvel Vs Capcom 3)
-	Theme of Spider-Man (Marvel Super Heroes Vs Street Fighter)
+	Big Arms (Sonic Generations)
+	Chemical Plant Zone (Sonic 2 HD)
+	Gusty Garden Galaxy (Mario Kart World)
+	Hidden Base (Persona 4)
 	Theme of Zero (Marvel Vs Capcom 3)
 
 FRIGATE ORPHEON (PHENDRANA)
-	Aensland Castle (Tatsunoko Vs Capcom Ultimate All-Stars)
+	Broken Vessel Lost Kin (Hollow Knight)
+	Fódlan Winds - Thunder (Fire Emblem Three Houses)
+	Frozen Hillside (Kirby Air Ride)
 	Icefield White Knight II (Under Night In-Birth II SysCeles)
+	Phendrana Drifts Depths (Metroid Prime)
 	Purity and Strictly II (Under Night In-Birth II SysCeles)
 	Theme of Dr. Doom (Marvel Vs Capcom 3)
 
 GREEN HILL ZONE
-	Death Egg's Hangar (Sonic the Fighters)
-	Fighting In The Street (Streets of Rage)
+	Coconut Mall (Mario Kart World)
+	Katina (Star Fox Assault)
+	Moonlit Melee (Skullgirls)
 	Stimulation (Capcom vs SNK 2)
-	Theme of Gambit (Marvel Vs Capcom)
+	Twinkle Star (Persona 4 Arena)
 
 LUIGI'S MANSION
 	Haunted House (Pokken Tournament)
+	Luigi's Mansion (Mario Kart World)
+	Mystic Mansion (Sonic Heroes)
+	Remnant of Twilight (Hyrule Warriors)
 	Theme of Dr. Strange (Ultimate Marvel Vs Capcom 3)
-	Theme of Ghost Rider (Ultimate Marvel Vs Capcom 3)
 	Theme of Juri (Super Street Fighter IV)
+	Your Contract Has Expired (A Hat in Time)
 
 MENU
 	Clock Tower (Marvel Vs Capcom 2)
 	Character Select (Naruto Ultimate Ninja Storm 2)
 	Character Select Theme (Marvel Vs Capcom 3)
+	Dead Bird Studio (A Hat in Time)
+	Figure 8 Circuit (Mario Kart World)
+	File Select (Mario Kart World)
+	Gentle Breeze (Trauma Center 2)
 	Get Into the Wave (Sonic the Fighters)
+	Hundred Days (The Hundred Line: Last Defense Academy)
 	Redemption (Guilty Gear XX #Reload)
+	Scootin' Through Clocktowers Beneath The Sea (A Hat in Time)
 	Swamp Stage (Marvel Vs Capcom 2)
+	Traverse Town (Kingdom Hearts)
+	Zero Hour (Dead or Alive 4)
 
 POKEMON STADIUM 2
-	Baile de Batalla (Tekken Tag Tournament 2)
-	Gold Experience (JoJo's Bizzare Adventure All Star Battle)
-	Soy Sauce for Geese (Tekken 7) 
-	[PINCH TRACK: Soy Sauce for Geese Final Round (Tekken 7)]
-	Theme of Captain America (Marvel Vs Capcom 3)
-	Theme of Hulk (Marvel Vs Capcom 3)
-	Theme of K' Team (King of Fighters XIII)
+	Blinded by the Light (Final Fantasy XIII)
+	Diabolic (Dance With the Dead)
+	Mega Man 2 Medley (Super Smash Bros for 3DS)
+	Normal Battle - City (Shin Megami Tensei III Nocturne)
+	Sophisticated Fight - Command (Trails in the Sky 1st Chapter)
+	Theme of Captain America (MvC3)
 
 RESULTS
 	Results Screen (Street Fighter IV)
@@ -71,14 +90,20 @@ RESULTS
 
 SMASHVILLE
 	Actions in the Lower World (Melty Blood Type Lumina)
+	Athletic BGM (Mario Kart World)
+	Evolution (Dead or Alive 4)
+	Furries in a Blender (Twilite Funk EP)
 	Jazzy NYC '99 (Street Fighter III Third Strike) 
 	[PINCH TRACK: Jazzy NYC '99 Mix 2 (Street Fighter III Third Strike)]
+	Mantis Lords (Hollow Knight)
 	Rhythmical Bustle (Melty Blood Actress Again)
-	Theme of Vega (Super Street Fighter IV)
-	This is True Love Makin (Capcom vs SNK 2)
+	Ricco Harbor (Mario Kart World)
 
 TEMPLE OF TIME
+	Ballad of the Goddess (The Legend of Zelda Skyward Sword)
+	City Trial - Backside (Kirby Air Ride)
+	Confrontation (SC2)
 	Eternal Struggle (Soulcalibur II)
+	False Knight (Hollow Knight)
+	Fire Emblem (Super Smash Bros Melee)
 	Regi Ruins (Pokken Tournament)
-	Smoking Hot (SAMURAI SHODOWN)
-	Theme of Akuma (Capcom vs SNK 2)
