@@ -3,10 +3,10 @@ PSA
 ################
 
 PSA edits for SipMastah, Wyld, & DHS7 Sonic trails by ilikepizza107
- -PSA Edited: Sub Routine 0x2E5AC
+ - PSA Edited: Sub Routine 0x2E5AC
 
 PSA edits for Shrug Toon Link by ilikepizza107
- -PSA Edited: Sub Action 1DB, GFX; Sub Action 1DD, GFX
+ - PSA Edited: Sub Action 1DB, GFX; Sub Action 1DD, GFX
 
 PSA edits for Crona Marth & Artemis Marth by SSK and KingJigglypuff, ilikepizza107
  - PSA Added: Subroutine 2x79B0, 2x79F0, 2x7A30
@@ -14,6 +14,9 @@ PSA edits for Crona Marth & Artemis Marth by SSK and KingJigglypuff, ilikepizza1
 
 PSA edits for GooSluj/Autumn ZSS SFX by ilikepizza107
  - PSA Edited (All SFX Tab): Sub Actions A, B, C, E, F, 10, 11, 12, 2A, 30, 31, 32, 33, 36, 43, 44, 45, 48, 4E, 53, 54, 55, 63, 64, 65, 66, 67, 68, 69, 6A, 6B, AF, B0, B1, B2, B8, B9, BA, BB, BE, BF, C0, C1, C3, D7, D8, D9, DC, DD, DE, E6, E7, E8, E9, FC, FD, 151, 152, 153, 154, 155, 156, 157, 158, 159, 15A, 15C, 1C2, 1C3, 1C6, 1E2, 1E5, 1E6
+
+PSA edits for Artemis Fox by ilikepizza107
+ - PSA Edited: Sub Action 1E1, GFX; Sub Action 1E5, GFX
 
 ################
 SKINS
@@ -24,15 +27,18 @@ MARIO
 DONKEY KONG
 
 LINK
+10 - Zushi Link by GKO
 27 - Maofever Link by SOULLY
 28 - SgtPingwen Link by ilikepizza107
 
 SAMUS
 40 - Brawl Fake Samus by SJS [https://gamebanana.com/mods/247126]
+45 - Morsecode Samus by DHS7
 50 - GooSluj Samus by ilikepizza107
 51 - Autumn Samus by Autumn, ilikepizza107
 
 YOSHI
+40 - Whoratio Yoshi by Z-Stick + ilikepizza107
 
 KIRBY
 25 - influenza Kirby by influenza
@@ -48,10 +54,12 @@ FOX
 31 - SOULLY Blue Fox by SOULLY, ilikepizza107
 32 - SOULLY Green Fox by SOULLY, ilikepizza107
 40 - Drip Fox by DHS7, ilikepizza107
+45 - Artemis Fox by ilikepizza107
 
 PIKACHU
 
 LUIGI
+40 - E-Gadd Luigi by Sylv, RapM
 
 CAPTAIN FALCON
 07 - influenza Falcon by influenza
@@ -60,6 +68,7 @@ CAPTAIN FALCON
 36 - SoulOfficer Falcon by influenza
 
 NESS
+25 - Rooster Ness by ilikepizza107
 30 - Not Chris Ness by ilikepizza107
 
 BOWSER
@@ -76,12 +85,14 @@ ZELDA
 30 - Tuck Zelda by Tuck, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 31 - Evil Lesbian Zelda by Evil Lesbian, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 32 - KWAM Zelda by ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
+35 - jankie Zelda by ilikepizza107
 
 SHEIK
 09 - Sabrina Sheik by influenza
 30 - RoSheik by jetfantastic [http://forums.kc-mm.com/Gallery/BrawlView.php?Number=213577]
 31 - Evil Lesbian Sheik by Evil Lesbian, ilikepizza107
 32 - KWAM Sheik by ilikepizza107
+35 - jankie Sheik by ilikepizza107
 
 ICE CLIMBERS
 
@@ -110,6 +121,7 @@ GANONDORF
 
 META KNIGHT
 06 - NorCal MK by FingerStripes
+10 - Indy MK by DIce
 
 PIT
 40 - Star Red Pit by SJS, Star, ilikepizza107
@@ -118,6 +130,7 @@ PIT
 
 ZERO SUIT SAMUS
 40 - RosiYY ZSS by ilikepizza107
+45 - Dread Suit ZSS by ilikepizza107
 50 - GooSluj ZSS by ilikepizza107
 51 - Autumn ZSS by Autumn, ilikepizza107
 
@@ -145,6 +158,7 @@ CHARIZARD
 
 SQUIRTLE
 30 - Dbylan Squirtle by ilikepizza107
+35 - Hannah Squirtle by Hannah
 
 IVYSAUR
 08 - Maofever Ivy by Maofever
@@ -165,6 +179,7 @@ IKE
 
 R.O.B.
 07 - Comb ROB by Wyld
+08 - Kendrick ROB by Hannah, ilikepizza107
 36 - Sneez ROB by ???, with credit to ilikepizza107
 
 JIGGLYPUFF
@@ -211,7 +226,7 @@ R+Start - Pirate Husk by Legacy MP
 R+Start - Hyrule Meadows FH by Motobug, mawwwk, with credit to Dranakar, Scout, davidvkimball, DukeItOut, soopercool101, PMDT
 
 POKEMON STADIUM 2
-Base - Super TPS PS2 by ilikepizza107
+Base - BOT PS2 by ilikepizza107
 
 SMASHVILLE
 Base - Gardenville by Red98, with updates by ilikepizza107
