@@ -104,6 +104,7 @@ MARTH
 MR. GAME & WATCH
 16 - Rise GnW
 17 - Danphibia GnW
+24 - Rise Judge GnW
 
 FALCO
 
