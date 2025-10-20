@@ -94,6 +94,7 @@ ZELDA
 30 - Tuck Zelda by Tuck, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 31 - Evil Lesbian Zelda by Evil Lesbian, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 32 - KWAM Zelda by ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
+33 - meecrobs Zelda by ilikepizza107
 35 - jankie Zelda by ilikepizza107
 
 SHEIK
@@ -101,6 +102,7 @@ SHEIK
 30 - RoSheik by jetfantastic [http://forums.kc-mm.com/Gallery/BrawlView.php?Number=213577]
 31 - Evil Lesbian Sheik by Evil Lesbian, ilikepizza107
 32 - KWAM Sheik by ilikepizza107
+33 - meecrobs Sheik by ilikepizza107
 35 - jankie Sheik by ilikepizza107
 
 ICE CLIMBERS
@@ -134,6 +136,7 @@ GANONDORF
 META KNIGHT
 06 - NorCal MK by FingerStripes
 10 - Indy MK by DIce
+40 - Yuko MK by DHS7, with credit to ilikepizza107
 
 PIT
 40 - Star Red Pit by SJS, Star, ilikepizza107
