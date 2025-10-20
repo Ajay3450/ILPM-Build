@@ -18,6 +18,9 @@ PSA edits for GooSluj/Autumn ZSS SFX by ilikepizza107
 PSA edits for Artemis Fox by ilikepizza107
  - PSA Edited: Sub Action 1E1, GFX; Sub Action 1E5, GFX
 
+PSA edits for Rongunshu Ike silver sword trails by ilikepizza107
+ - PSA Edited: Sub Action 0x1E2, GFX; Sub Routine 0x9758; Sub Routine 0x96C8; Sub Routine 0x97A0; Sub Routine 0x8730; Article 0, Sub Action 0x2, GFX; Article 0, Sub Action 0x3, GFX
+
 ################
 SKINS
 ################
@@ -100,6 +103,7 @@ ICE CLIMBERS
 MARTH
 07 - Gunther Marth by ilikepizza107
 34 - Crona Marth by influenza
+35 - Rongunshu Marth by Cyxx, DHS7
 45 - Artemis Marth by ilikepizza107
 
 MR. GAME & WATCH
@@ -179,6 +183,7 @@ LUCARIO
 IKE
 24 - influenza Ike by influenza
 25 - Gunther Ike by ilikepizza107
+26 - Rongunshu Ike by the Cobalt team
 
 R.O.B.
 07 - Comb ROB by Wyld
