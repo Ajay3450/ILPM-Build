@@ -21,6 +21,10 @@ PSA edits for Artemis Fox by ilikepizza107
 PSA edits for Rongunshu Ike silver sword trails by ilikepizza107
  - PSA Edited: Sub Action 0x1E2, GFX; Sub Routine 0x9758; Sub Routine 0x96C8; Sub Routine 0x97A0; Sub Routine 0x8730; Article 0, Sub Action 0x2, GFX; Article 0, Sub Action 0x3, GFX
 
+PSA Edits for Meecrobs Pit Arrows by ilikepizza107
+ - PSA Edited: Article 0x1, Sub Action 0x0, GFX; Article 0x1, Sub Action 0x1, GFX; Article 0x1, Sub Action 0x2, GFX
+ - Edited ef_Pit, ef_custom17
+
 ################
 SKINS
 ################
@@ -135,6 +139,7 @@ PIT
 40 - Star Red Pit by SJS, Star, ilikepizza107
 41 - Star Blue Pit by SJS, Star, ilikepizza107
 42 - Star Green Pit by SJS, Star, ilikepizza107
+50 - Meecrobs Pit by ilikepizza107
 
 ZERO SUIT SAMUS
 40 - RosiYY ZSS by ilikepizza107
