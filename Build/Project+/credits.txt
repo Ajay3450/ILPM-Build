@@ -30,6 +30,7 @@ SKINS
 ################
 
 MARIO
+35 - Sebas Mario by RapMonster
 
 DONKEY KONG
 
@@ -230,6 +231,7 @@ WARIO MAN
 BOWSER
 
 KNUCKLES
+13 - Apathy Knuckles by SOULLY
 
 ########################
 STAGES
