@@ -115,8 +115,8 @@ R: Frigate_Husk_R.param
 L: Frigate_Husk_L.param
 Z: Frigate_Husk_Z.param
 0x8000: Frigate_Husk_ML_00.param
-0x4000: Frigate_Husk_MR_00.param
-0x4001: Frigate_Husk_MR_01.param
+0x8001: Frigate_Husk_ML_01.param
+0x4000: Frigate_Husk_MR_01.param
 Up+Down+Right+Left: Frigate_Husk_DPAD.param
 R+Up+Down+Right+Left: Frigate_Husk_RDPAD.param
 
