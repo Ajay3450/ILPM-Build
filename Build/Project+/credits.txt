@@ -18,11 +18,19 @@ PSA edits for GooSluj/Autumn ZSS SFX by ilikepizza107
 PSA edits for Artemis Fox by ilikepizza107
  - PSA Edited: Sub Action 1E1, GFX; Sub Action 1E5, GFX
 
+PSA edits for Rongunshu Ike silver sword trails by ilikepizza107
+ - PSA Edited: Sub Action 0x1E2, GFX; Sub Routine 0x9758; Sub Routine 0x96C8; Sub Routine 0x97A0; Sub Routine 0x8730; Article 0, Sub Action 0x2, GFX; Article 0, Sub Action 0x3, GFX
+
+PSA Edits for Meecrobs Pit Arrows by ilikepizza107
+ - PSA Edited: Article 0x1, Sub Action 0x0, GFX; Article 0x1, Sub Action 0x1, GFX; Article 0x1, Sub Action 0x2, GFX
+ - Edited ef_Pit, ef_custom17
+
 ################
 SKINS
 ################
 
 MARIO
+35 - Sebas Mario by RapMonster
 
 DONKEY KONG
 
@@ -39,6 +47,7 @@ SAMUS
 
 YOSHI
 40 - Whoratio Yoshi by Z-Stick + ilikepizza107
+45 - Shiny Zubat Yoshi by SJS
 
 KIRBY
 25 - influenza Kirby by influenza
@@ -86,6 +95,7 @@ ZELDA
 30 - Tuck Zelda by Tuck, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 31 - Evil Lesbian Zelda by Evil Lesbian, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 32 - KWAM Zelda by ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
+33 - meecrobs Zelda by ilikepizza107
 35 - jankie Zelda by ilikepizza107
 
 SHEIK
@@ -93,17 +103,21 @@ SHEIK
 30 - RoSheik by jetfantastic [http://forums.kc-mm.com/Gallery/BrawlView.php?Number=213577]
 31 - Evil Lesbian Sheik by Evil Lesbian, ilikepizza107
 32 - KWAM Sheik by ilikepizza107
+33 - meecrobs Sheik by ilikepizza107
 35 - jankie Sheik by ilikepizza107
 
 ICE CLIMBERS
 
 MARTH
+07 - Gunther Marth by ilikepizza107
 34 - Crona Marth by influenza
+35 - Rongunshu Marth by Cyxx, DHS7
 45 - Artemis Marth by ilikepizza107
 
 MR. GAME & WATCH
 16 - Rise GnW
 17 - Danphibia GnW
+24 - Rise Judge GnW
 
 FALCO
 
@@ -123,11 +137,13 @@ GANONDORF
 META KNIGHT
 06 - NorCal MK by FingerStripes
 10 - Indy MK by DIce
+40 - Yuko MK by DHS7, with credit to ilikepizza107
 
 PIT
 40 - Star Red Pit by SJS, Star, ilikepizza107
 41 - Star Blue Pit by SJS, Star, ilikepizza107
 42 - Star Green Pit by SJS, Star, ilikepizza107
+50 - Meecrobs Pit by ilikepizza107
 
 ZERO SUIT SAMUS
 40 - RosiYY ZSS by ilikepizza107
@@ -153,6 +169,7 @@ DIDDY KONG
 35 - Sneez Diddy Kong by Theytah, with credit to Ryztiq
 
 MEWTWO
+26 - Iris Mewtwo by Motobug
 
 CHARIZARD
 10 - Rise Charizard by SOULLY
@@ -177,6 +194,7 @@ LUCARIO
 IKE
 24 - influenza Ike by influenza
 25 - Gunther Ike by ilikepizza107
+26 - Rongunshu Ike by the Cobalt team
 
 R.O.B.
 07 - Comb ROB by Wyld
@@ -185,6 +203,7 @@ R.O.B.
 
 JIGGLYPUFF
 15 - SgtPingwen Jigglypuff by ilikepizza107
+16 - May Jigglypuff by MarioDox
 
 WARIO
 
@@ -201,6 +220,7 @@ SNAKE
 06 - Autumn Snake by Autumn
 07 - MVZY Snake by Wyld
 25 - influenza Snake by influenza
+34 - Leo Luster Snake by SkratchPost
 40 - SoulOfficer Snake by ilikepizza107, with credit to Autumn
 
 SONIC
@@ -213,7 +233,7 @@ WARIO MAN
 BOWSER
 
 KNUCKLES
-
+13 - Apathy Knuckles by SOULLY
 
 ########################
 STAGES
@@ -223,11 +243,11 @@ BATTLEFIELD
 Base - Daytime BF by ilikepizza107
 
 FRIGATE HUSK
+Base - Hyrule Meadows FH by Motobug, mawwwk, with credit to Dranakar, Scout, davidvkimball, DukeItOut, soopercool101, PMDT
 R+Start - Pirate Husk by Legacy MP
-R+Start - Hyrule Meadows FH by Motobug, mawwwk, with credit to Dranakar, Scout, davidvkimball, DukeItOut, soopercool101, PMDT
 
 POKEMON STADIUM 2
-Base - BOT PS2 by ilikepizza107
+Base - DST PS2 by ilikepizza107
 
 SMASHVILLE
 Base - Gardenville by Red98, with updates by ilikepizza107
