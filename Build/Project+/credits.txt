@@ -203,6 +203,7 @@ R.O.B.
 
 JIGGLYPUFF
 15 - SgtPingwen Jigglypuff by ilikepizza107
+16 - May Jigglypuff by MarioDox
 
 WARIO
 
@@ -242,8 +243,8 @@ BATTLEFIELD
 Base - Daytime BF by ilikepizza107
 
 FRIGATE HUSK
+Base - Hyrule Meadows FH by Motobug, mawwwk, with credit to Dranakar, Scout, davidvkimball, DukeItOut, soopercool101, PMDT
 R+Start - Pirate Husk by Legacy MP
-R+Start - Hyrule Meadows FH by Motobug, mawwwk, with credit to Dranakar, Scout, davidvkimball, DukeItOut, soopercool101, PMDT
 
 POKEMON STADIUM 2
 Base - DST PS2 by ilikepizza107
