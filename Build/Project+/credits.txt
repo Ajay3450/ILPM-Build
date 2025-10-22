@@ -2,7 +2,7 @@
 PSA
 ################
 
-PSA edits for SipMastah, Wyld, & DHS7 Sonic trails by ilikepizza107
+PSA edits for SipMastah, Motobug, Wyld, & DHS7 Sonic trails by ilikepizza107
  - PSA Edited: Sub Routine 0x2E5AC
 
 PSA edits for Shrug Toon Link by ilikepizza107
@@ -112,7 +112,8 @@ MARTH
 07 - Gunther Marth by ilikepizza107
 34 - Crona Marth by influenza
 35 - Rongunshu Marth by Cyxx, DHS7
-45 - Artemis Marth by ilikepizza107
+40 - Artemis Marth by ilikepizza107
+45 - Jagz$ Marth by Shmoo, Fingy
 
 MR. GAME & WATCH
 16 - Rise GnW
@@ -137,6 +138,7 @@ GANONDORF
 META KNIGHT
 06 - NorCal MK by FingerStripes
 10 - Indy MK by DIce
+25 - Ktana MK by ilikepizza107
 40 - Yuko MK by DHS7, with credit to ilikepizza107
 
 PIT
@@ -225,6 +227,7 @@ SNAKE
 
 SONIC
 25 - SipMastah Sonic v2 by ilikpizza107
+26 - Motobug Sonic by Motobug
 40 - Wyld Sonic by Wyld
 45 - DHS7 Sonic by DHS7
 
