@@ -25,6 +25,10 @@ PSA Edits for Meecrobs Pit Arrows by ilikepizza107
  - PSA Edited: Article 0x1, Sub Action 0x0, GFX; Article 0x1, Sub Action 0x1, GFX; Article 0x1, Sub Action 0x2, GFX
  - Edited ef_Pit, ef_custom17
 
+PSA Edits for tia Ike sword trails by ilikepizza107
+ - PSA Edited: Sub Routine 0x9758 (now 0x15118), Sub Routine 0x96C8 (now 0x152A8), Sub Routine 0x97A0 (now 0x153A8), Sub Routine 0x8730 (now 0x9758), Sub Action 0x1E2, GFX; Article 0x0, Sub Action 0x2, GFX; Article 0x0, Sub Action 0x3, GFX
+ - Added ef_custom23
+
 ################
 SKINS
 ################
@@ -200,6 +204,7 @@ IKE
 25 - Gunther Ike by ilikepizza107
 26 - Rongunshu Ike by the Cobalt team
 34 - Blitz Ike by Erg
+40 - Trans Ike by Kurukato
 
 R.O.B.
 07 - Comb ROB by Wyld
