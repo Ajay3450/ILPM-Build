@@ -170,6 +170,10 @@ OLIMAR
 40 - joey Olimar by SJS and DHS7
 41 - sfy bees Olimar by Motobug, with credit to SJS and DHS7
 45 - Duck Olimar by MarioDox
+50 - Chef Olimar v2 by Windhunter, Motobug, Guttey
+51 - Red Chef Olimar v2 by Windhunter, Motobug, Guttey
+52 - Green Chef Olimar v2 by Windhunter, Motobug, Guttey
+53 - Blue Chef Olimar v2 by Windhunter, Motobug, Guttey
 
 LUCAS
 40 - Star Red Lucas by Star, SJS
