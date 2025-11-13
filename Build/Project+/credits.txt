@@ -25,6 +25,10 @@ PSA Edits for Meecrobs Pit Arrows by ilikepizza107
  - PSA Edited: Article 0x1, Sub Action 0x0, GFX; Article 0x1, Sub Action 0x1, GFX; Article 0x1, Sub Action 0x2, GFX
  - Edited ef_Pit, ef_custom17
 
+PSA Edits for tia Ike sword trails by ilikepizza107
+ - PSA Edited: Sub Routine 0x9758 (now 0x15118), Sub Routine 0x96C8 (now 0x152A8), Sub Routine 0x97A0 (now 0x153A8), Sub Routine 0x8730 (now 0x9758), Sub Action 0x1E2, GFX; Article 0x0, Sub Action 0x2, GFX; Article 0x0, Sub Action 0x3, GFX
+ - Added ef_custom23
+
 ################
 SKINS
 ################
@@ -46,10 +50,12 @@ SAMUS
 51 - Autumn Samus by Autumn, ilikepizza107
 
 YOSHI
+12 - Moist Yoshi by SOULLY
 40 - Whoratio Yoshi by Z-Stick + ilikepizza107
 45 - Shiny Zubat Yoshi by SJS
 
 KIRBY
+08 - Vv Kirby by SkratchPost
 25 - influenza Kirby by influenza
 40 - Star Red Kirby by influenza, ilikepizza107
 41 - Star Blue Kirby by influenza, ilikepizza107
@@ -59,6 +65,7 @@ FOX
 10 - Silver Fox by Baka
 11 - Star Blue Fox by ilikepizza107
 12 - Star Green Fox by ilikepizza107
+26 - Fury Fox by SOULLY
 30 - SOULLY Fox by SOULLY, ilikepizza107
 31 - SOULLY Blue Fox by SOULLY, ilikepizza107
 32 - SOULLY Green Fox by SOULLY, ilikepizza107
@@ -72,12 +79,16 @@ LUIGI
 
 CAPTAIN FALCON
 07 - influenza Falcon by influenza
+08 - Fury Falcon by SOULLY
 25 - shad Falcon by influenza, ilikepizza107
 35 - ORLY Falcon by Wyld
 36 - SoulOfficer Falcon by influenza
+37 - Stude Falcon by Motobug
+45 - pawjobtyler Falcon by SkratchPost
 
 NESS
 25 - Rooster Ness by ilikepizza107
+26 - Ntire Ness by ilikepizza107
 30 - Not Chris Ness v3 by ilikepizza107
 31 - Not Chris Ness v3 Purple by ilikepizza107
 
@@ -89,6 +100,7 @@ PEACH
 09 - Cyphr Peach by ilikepizza107
 10 - Cyphr Green Peach by ilikepizza107
 11 - Cyphr Blue Peach by ilikepizza107
+12 - Tuck Peach by Tuck, ilikepizza107
 
 ZELDA
 09 - Sabrina Zelda by influenza
@@ -97,6 +109,7 @@ ZELDA
 32 - KWAM Zelda by ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 33 - meecrobs Zelda by ilikepizza107
 35 - jankie Zelda by ilikepizza107
+40 - Vaporeon Zelda by ???
 
 SHEIK
 09 - Sabrina Sheik by influenza
@@ -105,6 +118,7 @@ SHEIK
 32 - KWAM Sheik by ilikepizza107
 33 - meecrobs Sheik by ilikepizza107
 35 - jankie Sheik by ilikepizza107
+40 - Vaporeon Sheik by ???
 
 ICE CLIMBERS
 
@@ -121,6 +135,7 @@ MR. GAME & WATCH
 24 - Rise Judge GnW
 
 FALCO
+30 - Cardinal Falco by Kathrarg
 
 GANONDORF
 26 - Che Ganondorf by DHS7
@@ -156,6 +171,11 @@ ZERO SUIT SAMUS
 OLIMAR
 40 - joey Olimar by SJS and DHS7
 41 - sfy bees Olimar by Motobug, with credit to SJS and DHS7
+45 - Duck Olimar by MarioDox
+50 - Chef Olimar v2 by Windhunter, Motobug, Guttey
+51 - Red Chef Olimar v2 by Windhunter, Motobug, Guttey
+52 - Green Chef Olimar v2 by Windhunter, Motobug, Guttey
+53 - Blue Chef Olimar v2 by Windhunter, Motobug, Guttey
 
 LUCAS
 40 - Star Red Lucas by Star, SJS
@@ -197,10 +217,13 @@ IKE
 24 - influenza Ike by influenza
 25 - Gunther Ike by ilikepizza107
 26 - Rongunshu Ike by the Cobalt team
+34 - Blitz Ike by Erg
+40 - Trans Ike by Kurukato
 
 R.O.B.
 07 - Comb ROB by Wyld
 08 - Kendrick ROB by Hannah, ilikepizza107
+09 - Xtreme ROB by ilikepizza107
 36 - Sneez ROB by ???, with credit to ilikepizza107
 
 JIGGLYPUFF
@@ -233,7 +256,7 @@ SONIC
 
 WARIO MAN
 
-BOWSER
+GIGA BOWSER
 
 KNUCKLES
 13 - Apathy Knuckles by SOULLY
