@@ -135,9 +135,12 @@ skip:
   li r0, 2				# Original operation
 }
 
-############################################################
-Stock Icons Are Universally Stored in a New Heap [DukeItOut]
-############################################################
+###########################################################################
+Stock Icons Are Universally Stored in a New Heap 1.1 [DukeItOut]
+###########################################################################
+#
+# 1.1: Made it so selmap, like stgresult, does not require a PAT animation
+###########################################################################
 .macro stockResourcePointer(<reg>) # Currently, info is stored at 8053EEC0.
 {
 	lis <reg>, 0x8054			# \ StockResource
@@ -285,7 +288,29 @@ HOOK @ $806CAB2C
 	lwz r3, 8(r1)	# Restore r3
 	lis r5, 0x8070	# Original operation
 }
+### This part handles the SSS
+HOOK @ $806B3068
+{
+	add r4, r3, r26			# Cosmetic ID * 50 + Costume Index
+	addi r4, r4, 1
+	mr r3, r29
+	cmpwi r25, 41			# Check if random
+	bne+ normal
+	li r4, 2500				# ? symbol
+normal:
+	bla 0x0E20C8			# Set the texture frame!
+	lwz r3, 0x14(r29)		# Original operation
+}
+HOOK @ $806B3084
+{
+	cmpwi r24, 3; beq- %END%	# Check if slot should be disabled
+	lfs f1, 0x18(r13)		# 1.0. f1 will always be 0.0 entering this hook.
 
+}
+op NOP @ $806B301C # Normally diverges if in teams? Why? You already have the costume!
+op lwz r3, 0x8(r3) @ $806B3070	# 0x8 = VIS, 0x10 = PAT. Used to set the animation speed for the toggle.
+op bl -0x5FB840 @ $806B308C	# Forces it to frame 0 (off) or frame 1 (on) based on if the slot is filled
+###
 .BA<-TexHeapName
 .BA->$8053EF00
 .GOTO->SkipHeaps
