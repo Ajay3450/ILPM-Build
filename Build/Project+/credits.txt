@@ -6,6 +6,7 @@ PSA edits for SipMastah, Motobug, Wyld, & DHS7 Sonic trails by ilikepizza107
  - PSA Edited: Sub Routine 0x2E5AC
 
 PSA edits for Shrug Toon Link by ilikepizza107
+ - Edited ef_toonlink
  - PSA Edited: Sub Action 1DB, GFX; Sub Action 1DD, GFX
 
 PSA edits for Crona Marth & Artemis Marth by SSK and KingJigglypuff, ilikepizza107
