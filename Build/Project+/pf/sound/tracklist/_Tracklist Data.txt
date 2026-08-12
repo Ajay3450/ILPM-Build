@@ -3127,42 +3127,81 @@ Mario_Paint.tlst - 1 track
 	Frequency: 40
 
 ################
-Menu.tlst - 8 tracks
+Menu.tlst - 15 tracks
 
-	Menu 1
-	X02.brstm (0x26FA)
+	Aether Paradise (SM)
+	Pokemon/Aether Paradise (SM).brstm
+	Volume: 65
 	Frequency: 40
 
-	Menu 2
-	X03.brstm (0x26FB)
+	Afternoon of Konoha (Naruto)
+	Naruto/Afternoon of Konoha (Naruto).brstm
+	Volume: 68
 	Frequency: 40
 
-	Menu (Super Smash Bros. Melee)
-	W30.brstm (0x281C)
+	Boutique (XY)
+	Pokemon/Boutique (XY).brstm
+	Volume: 80
 	Frequency: 40
 
-	Main Theme (Super Smash Bros. Brawl)
-	X01.brstm (0x26F9)
+	Cyber Battle (Solo) (DELTARUNE)
+	DELTARUNE/Cyber Battle (Solo) (DELTARUNE).brstm
+	Volume: 77
 	Frequency: 40
 
-	Menu (Project M)
-	Project M/Menu.brstm
-	Volume: 60
+	Honeyhive Galaxy (Super Mario Galaxy)
+	Mario Galaxy/Honeyhive Galaxy (Super Mario Galaxy).brstm
+	Volume: 75
 	Frequency: 40
 
-	Trophy Tussle
-	Melee/Trophy.brstm
-	Volume: 50
+	Main Menu (LEGO Racers)
+	LEGO Racers/Main Menu (LEGO Racers).brstm
+	Volume: 75
 	Frequency: 40
 
-	Wii Shop Channel
-	Modern/Wii Shop Channel.brstm
-	Volume: 50
+	Outer Space (Super Paper Mario)
+	Paper Mario/Outer Space (Super Paper Mario).brstm
+	Volume: 68
 	Frequency: 40
 
-	All-Star Rest Area
-	Project M/Rest Area.brstm
-	Volume: 91
+	Slinger's Song (Bastion)
+	Bastion/Slinger's Song (Bastion).brstm
+	Volume: 65
+	Frequency: 40
+
+	Space Land (Mario Party 2)
+	Mario/Space Land (Mario Party 2).brstm
+	Volume: 80
+	Frequency: 40
+
+	Space Trip Steps ... for Meteor Herd (SA2)
+	Sonic/Space Trip Steps ... for Meteor Herd (Sonic Adventure 2).brstm
+	Volume: 80
+	Frequency: 40
+
+	The Egg And You (Cowboy Bebop)
+	Cowboy Bebop/The Egg And You (Cowboy Bebop).brstm
+	Volume: 80
+	Frequency: 40
+
+	The Rain Formerly Known as Purple (RoR 2)
+	Risk of Rain/The Rain Formerly Known as Purple (Risk of Rain 2).brstm
+	Volume: 82
+	Frequency: 40
+
+	The Third Sanctuary (DELTARUNE)
+	DELTARUNE/The Third Sanctuary (DELTARUNE).brstm
+	Volume: 82
+	Frequency: 40
+
+	Versus Simple Map 2 (Star Fox Assault)
+	Star Fox/Versus Simple Map 2 (Star Fox Assault).brstm
+	Volume: 88
+	Frequency: 40
+
+	What planet is this! (Cowboy Bebop)
+	Cowboy Bebop/What planet is this! (Cowboy Bebop).brstm
+	Volume: 72
 	Frequency: 40
 
 ################
