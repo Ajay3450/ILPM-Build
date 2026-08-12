@@ -257,7 +257,7 @@ CODE @ $80545150
 	word 5; IC_Basic 20001
 	word 0; word 3
 	word 1; scalar 190.0
-	word 0; word 1
+	word 0; word 8
 	word 2; word PSA_Off+0x50
 	word 2; word PSA_Off+0x68
 	word 2; word PSA_Off+0x80
@@ -884,7 +884,6 @@ CODE @ $80FAC624
 	word 0x00070100; word PSA_Off2+0x30
 }
 
-
 ################################################################
 Shield Break Getup is 30 Frames and Ending Interruptible [Magus]
 ################################################################
@@ -961,7 +960,7 @@ Team Colour Shade Modifier [ds22]
 * FFFFFF80 00000000
 
 ###################################
-No Autosweetspot Ledges v2.0 [Eon]
+No Autosweetspot Ledges v2.2 [Eon]
 #
 # converted to PSA
 ###################################
@@ -969,10 +968,10 @@ No Autosweetspot Ledges v2.0 [Eon]
 CODE @ $80546EE8
 {
     word 2; word PSA_Off+0x28
-    word 6; word 7      #if compare
-    word 5; IC_Basic 23 #vertical character velocity
-    word 0; word 0      #<
-    word 1; scalar 0    #0
+    word 6; word 7               #if compare
+    word 5; IC_Basic 23          #vertical character velocity
+    word 0; word 1               #<=
+    word 1; scalar -0.0001       #-0.0001
     word 0x02040400; word PSA_Off+0x8
     word 0x02040400; word 0x80FAA3DC
     word 0; word 0
@@ -980,4 +979,22 @@ CODE @ $80546EE8
 CODE @ $80FC1458
 {
     word 0x00070100; word PSA_Off
+}
+
+#############################################
+Special Landing is Teeter-Capable [DukeItOut]
+#############################################
+.alias PSA_Off = 0x80540068
+CODE @ $80540068
+{
+	word 2; word PSA_Off+8
+	word 0x08000100; word PSA_Off+0x28	# Air/Ground State: Can't go off ledges moving forwards.
+	word 0x02010200; word 0x80FAF454	# Change Action E (Fall). Requirement: In Air (adddress for the original that was overwritten below.)
+	word 0x00070100; word 0x80FABBB4	# Subroutine in walking that determines if the stick position allows teetering.	
+	word 0x00080000; word 0				# Return
+	word 0; word 8						# Collision Type 8 (Don't go off ledges while moving forwards)
+}
+CODE @ $80FC1CA0 # 80F9FC20 + 22080
+{
+	word 0x00070100; word PSA_Off	# Go to the above
 }
