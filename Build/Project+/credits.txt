@@ -3,6 +3,7 @@ PSA
 ################
 
 PSA edits for SipMastah, Motobug, Wyld, & DHS7 Sonic trails by ilikepizza107
+ - Edited ef_sonic (Added EffSphere_Ghost (8).clr0 in Model Data [2])
  - PSA Edited: Sub Routine 0x2E5AC
 
 PSA edits for Shrug Toon Link by ilikepizza107
@@ -10,25 +11,28 @@ PSA edits for Shrug Toon Link by ilikepizza107
  - PSA Edited: Sub Action 1DB, GFX; Sub Action 1DD, GFX
 
 PSA edits for Crona Marth & Artemis Marth by SSK and KingJigglypuff, ilikepizza107
- - PSA Added: Subroutine 2x79B0, 2x79F0, 2x7A30
- - PSA Edited: Sub Actions 48, GFX; 49, GFX; 4E, GFX; 50, GFX; 54, GFX; 55, GFX; 58, GFX; 5D, GFX; 60, GFX; 62, GFX; 63, GFX; 64, GFX; 65, GFX; 66, GFX; B0, GFX; B9, GFX; D7, GFX; DC, GFX; E7, GFX; 1D0, GFX; 1D1, GFX; 1D6, GFX; 1D7, GFX; 1D8, GFX; 1D9, GFX; 1DA, GFX; 1DB, GFX; 1DC, GFX; 1DD, GFX; 1DE, GFX; 1E8, GFX; 1EB, GFX; 1EE, GFX; 1EF, GFX; 1F0, GFX; 1F1, GFX; 1F2, GFX; 1F3, GFX; 1F4, GFX
+ - Edited ef_marth (Added an entry to the EFLS, eff_marth_sword_flare_custom texture and Model Data [3]) 
+ - Added ef_custom44 (Crona) and ef_custom45 (Artemis)
+ - PSA Added: Subroutine 2x78F8 (Blur 3), 2x7C98 (Blur 4), 2x8230 (Blur 5)
+ - PSA Edited (All GFX Tab): Sub Actions 48, 49, 4E, 50, 54, 55, 58, 5D, 60, 62, 63, 64, 65, 66, B0, B9, D7, DC, E7, 1D0, 1D1, 1D6, 1D7, 1D8, 1D9, 1DA, 1DB, 1DC, 1DD, 1DE, 1E8, 1EB, 1EE, 1EF, 1F0, 1F1, 1F2, 1F3, 1F4
 
 PSA edits for GooSluj/Autumn ZSS SFX by ilikepizza107
  - PSA Edited (All SFX Tab): Sub Actions A, B, C, E, F, 10, 11, 12, 2A, 30, 31, 32, 33, 36, 43, 44, 45, 48, 4E, 53, 54, 55, 63, 64, 65, 66, 67, 68, 69, 6A, 6B, AF, B0, B1, B2, B8, B9, BA, BB, BE, BF, C0, C1, C3, D7, D8, D9, DC, DD, DE, E6, E7, E8, E9, FC, FD, 151, 152, 153, 154, 155, 156, 157, 158, 159, 15A, 15C, 1C2, 1C3, 1C6, 1E2, 1E5, 1E6
 
 PSA edits for Artemis Fox by ilikepizza107
+ - Edited ef_fox (Added an entry to the ELFS, Model Data [9])
  - PSA Edited: Sub Action 1E1, GFX; Sub Action 1E5, GFX
 
-PSA edits for Rongunshu Ike silver sword trails by ilikepizza107
- - PSA Edited: Sub Action 0x1E2, GFX; Sub Routine 0x9758; Sub Routine 0x96C8; Sub Routine 0x97A0; Sub Routine 0x8730; Article 0, Sub Action 0x2, GFX; Article 0, Sub Action 0x3, GFX
+PSA edits for Rongunshu Ike silver sword trails by ilikepizza107 (uses existing trails + glow models, but changed costume IDs)
+ - PSA Edited: Sub Action 0x1E2, GFX; Sub Routine 0x9758 (Blur 3, now 0x6160); Sub Routine 0x96C8 (Blur 4, now 0x14300); Sub Routine 0x97A0 (Blur 5, now 0x8978); Sub Routine 0x8730 (Graphic Effect 2/B, now 0x8600); Article 0, Sub Action 0x2, GFX; Article 0, Sub Action 0x3, GFX
 
 PSA Edits for Meecrobs Pit Arrows by ilikepizza107
+ - Edited ef_Pit (Added3 entries to the ELFS, as well as some entries to the REFF), ef_custom17 (Added TexCustom17Trace03 texture)
  - PSA Edited: Article 0x1, Sub Action 0x0, GFX; Article 0x1, Sub Action 0x1, GFX; Article 0x1, Sub Action 0x2, GFX
- - Edited ef_Pit, ef_custom17
 
-PSA Edits for tia Ike sword trails by ilikepizza107
- - PSA Edited: Sub Routine 0x9758 (now 0x15118), Sub Routine 0x96C8 (now 0x152A8), Sub Routine 0x97A0 (now 0x153A8), Sub Routine 0x8730 (now 0x9758), Sub Action 0x1E2, GFX; Article 0x0, Sub Action 0x2, GFX; Article 0x0, Sub Action 0x3, GFX
+PSA Edits for tia Ike sword trails by ilikepizza107 (uses existing glow models but different trail IDs)
  - Added ef_custom23
+ - PSA Edited: Sub Routine 0x9758 (now 0x15118), Sub Routine 0x96C8 (now 0x152A8), Sub Routine 0x97A0 (now 0x153A8), Sub Routine 0x8730 (now 0x9758), Sub Action 0x1E2, GFX; Article 0x0, Sub Action 0x2, GFX; Article 0x0, Sub Action 0x3, GFX
 
 ################
 SKINS
