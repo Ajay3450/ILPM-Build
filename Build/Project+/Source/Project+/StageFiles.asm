@@ -898,8 +898,15 @@ PS2_Results:
 PS2_Z_Alt:
 	mr r12, r11				# restore what r12 was
 	andi. r12, r12, 0x0010	# Check if Z alt was used
-	beq StoreString			#
+	beq PS2_L_Alt			#
 	li r5, 0x505A			# If so, use "PZ"
+	b StoreString
+
+PS2_L_Alt:
+	mr r12, r11				# restore what r12 was
+	andi. r12, r12, 0x0040	# Check if L alt was used
+	beq StoreString			#
+	li r5, 0x504C			# If so, use "PL"
 	b StoreString
 
 Training_Results:
