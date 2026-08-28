@@ -95,8 +95,9 @@ CAPTAIN FALCON
 NESS
 25 - Rooster Ness by ilikepizza107
 26 - Ntire Ness by ilikepizza107
-30 - Not Chris Ness v3 by ilikepizza107
-31 - Not Chris Ness v3 Purple by ilikepizza107
+30 - Not Chris Ness v4 by yogi
+31 - Not Chris Ness v4 Yellow by yogi, ilikepizza107
+32 - Not Chris Ness v4 Purple by yogi, ilikepizza107
 
 BOWSER
 25 - Sabrina Bowser by influenza
@@ -283,6 +284,8 @@ Base - DST PS2 by ilikepizza107
 
 SMASHVILLE
 Base - Gardenville by Red98, with updates by ilikepizza107
+
+Stage Specific Results Screens by ilikepizza107 + mawwwk
 
 ################
 MENUS
