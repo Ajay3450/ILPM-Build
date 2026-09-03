@@ -165,8 +165,8 @@ META KNIGHT
 
 PIT
 40 - Star Red Pit by SJS, Star, ilikepizza107
-41 - Star Blue Pit by SJS, Star, ilikepizza107
-42 - Star Green Pit by SJS, Star, ilikepizza107
+41 - Star Green Pit by SJS, Star, ilikepizza107
+42 - Star Blue Pit by SJS, Star, ilikepizza107
 50 - Meecrobs Pit by ilikepizza107
 
 ZERO SUIT SAMUS
