@@ -1,47 +1,5 @@
 ################
-Battlefield.tlst - 8 tracks
-
-	The Blessing (Gundam TWFM)
-	Gundam/The Blessing (Gundam The Witch From Mercury).brstm
-	Volume: 100
-	Frequency: 40
-
-	Emperor's Time (Hunter x Hunter)
-	Hunter x Hunter/Emperor's Time (Hunter x Hunter).brstm
-	Volume: 80
-	Frequency: 40
-	Song delay: 65
-
-	Digital Ignition (SFEX2+)
-	Street Fighter/Digital Ignition (Street Fighter EX 2 Plus).brstm
-	Volume: 80
-	Frequency: 40
-
-	Kessen no Toki Kitari (Gundam)
-	Gundam/Kessen no Toki Kitari (Gundam).brstm
-	Volume: 110
-	Frequency: 40
-
-	My Mind Is Clear & Serene (Gundam TWFM)
-	Gundam/My Mind Is Clear & Serene (Gundam The Witch From Mercury).brstm
-	Volume: 120
-	Frequency: 40
-
-	Paper Engine (F-Zero GX)
-	F-Zero/Paper Engine (F-Zero GX).brstm
-	Volume: 80
-	Frequency: 40
-
-	Shisyunki wo Koroshita (Gundam)
-	Gundam/Shisyunki wo Koroshita Syonen no Tsubasa (Gundam).brstm
-	Volume: 95
-	Frequency: 40
-
-	Warsong (Castle Crashers)
-	Castle Crashers/Warsong (Castle Crashers).brstm
-	Volume: 83
-	Frequency: 40
-	Song delay: -1
+Battlefield.tlst - 0 tracks
 
 ################
 Battlefield_64.tlst - 1 track
@@ -621,36 +579,15 @@ Credits.tlst - 4 tracks
 	Frequency: 40
 
 	<null>
-	None.brstm
+	None.brstm [BRSTM FILE MISSING]
 	Frequency: 40
 
 	<null>
-	None.brstm
+	None.brstm [BRSTM FILE MISSING]
 	Frequency: 40
 
 ################
-Dead_Line.tlst - 4 tracks
-
-	Deep Inside Of... (SA2)
-	Sonic/Deep Inside Of... (Sonic Adventure 2).brstm
-	Volume: 75
-	Frequency: 40
-
-	Scramble for the Core (SA2)
-	Sonic/Scramble for the Core (Sonic Adventure 2).brstm
-	Volume: 77
-	Frequency: 40
-	Song delay: 60
-
-	Theme of Taskmaster (Marvel vs Capcom 3)
-	Marvel vs Capcom/Theme of Taskmaster (Marvel vs Capcom 3).brstm
-	Volume: 107
-	Frequency: 40
-
-	War Without Reason (ULTRAKILL)
-	ULTRAKILL/War Without Reason (ULTRAKILL).brstm
-	Volume: 80
-	Frequency: 40
+Dead_Line.tlst - 0 tracks
 
 ################
 Dead_Line_DPAD.tlst - 10 tracks
@@ -862,54 +799,7 @@ Draculas_Castle.tlst - 1 track
 	Frequency: 40
 
 ################
-Dream_Land.tlst - 9 tracks
-
-	City Trial (Kirby Air Ride)
-	Kirby/City Trial (Kirby Air Ride).brstm
-	Volume: 92
-	Frequency: 40
-
-	Farewell (Celeste)
-	Celeste/Farewell (Celeste).brstm
-	Volume: 80
-	Frequency: 40
-	Song delay: 110
-
-	Pandora Palace (DELTARUNE)
-	DELTARUNE/Pandora Palace (DELTARUNE).brstm
-	Volume: 127
-	Frequency: 40
-	Song delay: 120
-
-	The True Mirror (Baten Kaitos)
-	Baten Kaitos/The True Mirror (Baten Kaitos).brstm
-	Volume: 80
-	Frequency: 40
-
-	Rigged Game (Neon White)
-	Neon White/Rigged Game (Neon White).brstm
-	Volume: 78
-	Frequency: 40
-
-	Starfall Village (Mushihimesama)
-	Mushihimesama/Starfall Village (Mushihimesama).brstm
-	Volume: 68
-	Frequency: 40
-
-	Starview Peak (Mario Kart World)
-	Mario Kart/Starview Peak (Mario Kart World).brstm
-	Volume: 84
-	Frequency: 40
-
-	Trust You Forever (Gundam)
-	Gundam/Trust You Forever (Gundam).brstm
-	Volume: 92
-	Frequency: 40
-
-	Weirdo Haste (Haikyuu!!)
-	Haikyuu/Weirdo Haste (Haikyuu!!).brstm
-	Volume: 100
-	Frequency: 40
+Dream_Land.tlst - 0 tracks
 
 ################
 Dream_Land_64.tlst - 1 track
@@ -1037,27 +927,7 @@ Electroplankton.tlst - 1 track
 	Frequency: 40
 
 ################
-Final_Destination.tlst - 4 tracks
-
-	Catacecaumene (FFXVI)
-	Final Fantasy/Catacecaumene (Final Fantasy XVI).brstm
-	Volume: 75
-	Frequency: 40
-
-	Having Fallen, It Was Blood (RoR 2)
-	Risk of Rain/Having Fallen, It Was Blood (Risk of Rain 2).brstm
-	Volume: 107
-	Frequency: 40
-
-	Mine, Windbag, Mine (Bastion)
-	Bastion/Mine, Windbag, Mine (Bastion).brstm
-	Volume: 76
-	Frequency: 40
-
-	Piercing Lazer (Castle Crashers)
-	Castle Crashers/Piercing Lazer (Castle Crashers).brstm
-	Volume: 65
-	Frequency: 40
+Final_Destination.tlst - 0 tracks
 
 ################
 Final_Destination_64.tlst - 1 track
@@ -1146,42 +1016,7 @@ Flat_Zone.tlst - 2 tracks
 	Frequency: 40
 
 ################
-Fountain_Of_Dreams.tlst - 7 tracks
-
-	Blinded By Light (FF XIII)
-	Final Fantasy/Blinded By Light (Final Fantasy XIII).brstm
-	Volume: 75
-	Frequency: 40
-
-	Danger Room (MvC 3)
-	Marvel vs Capcom/Danger Room (Marvel vs Capcom 3).brstm
-	Volume: 107
-	Frequency: 40
-
-	Eyes Of Flame (Cave Story)
-	Cave Story/Eyes Of Flame (Cave Story).brstm
-	Volume: 77
-	Frequency: 40
-
-	Foregone Destruction (Unreal Tournament)
-	Unreal Tournament/Foregone Destruction (Unreal Tournament).brstm
-	Volume: 112
-	Frequency: 40
-
-	From Now On (DELTARUNE)
-	DELTARUNE/From Now On (DELTARUNE).brstm
-	Volume: 117
-	Frequency: 40
-
-	Orbital Ring Systems Cargo Bay (TvC UAS)
-	Tatsunoko vs Capcom/Orbital Ring Systems Cargo Bay (Tatsunoko vs. Capcom Ultimate All-Stars).brstm
-	Volume: 50
-	Frequency: 40
-
-	Vainglorious Chorus (Neon White)
-	Neon White/Vainglorious Chorus (Neon White).brstm
-	Volume: 70
-	Frequency: 40
+Fountain_Of_Dreams.tlst - 0 tracks
 
 ################
 Fountain_Of_Dreams_DPAD.tlst - 12 tracks
@@ -1258,48 +1093,7 @@ Fourside.tlst - 2 tracks
 	Frequency: 40
 
 ################
-Frigate_Orpheon.tlst - 8 tracks
-
-	Attack-a of the Whacka! (Paper Mario TTYD Remake)
-	Paper Mario/Attack-a of the Whacka! (Paper Mario The Thousand-Year Door Remake).brstm
-	Volume: 95
-	Frequency: 40
-
-	Battle! Academy Ace Tournament (SV)
-	Pokemon/Battle! Academy Ace Tournament (SV).brstm
-	Volume: 120
-	Frequency: 40
-
-	Battle at the Big Bridge Ver.2 (FFRK)
-	Final Fantasy/Battle at the Big Bridge ~Ver.2~ (Final Fantasy Record Keeper).brstm
-	Volume: 52
-	Frequency: 40
-
-	Battle Scherzo (FMAB)
-	Fullmetal Alchemist/Battle Scherzo (Fullmetal Alchemist Brotherhood).brstm
-	Volume: 107
-	Frequency: 40
-
-	Beautiful Green Wild Beast (Naruto)
-	Naruto/Beautiful Green Wild Beast (Naruto).brstm
-	Volume: 75
-	Frequency: 40
-	Song delay: 100
-
-	Glass Ocean (Neon White)
-	Neon White/Glass Ocean (Neon White).brstm
-	Volume: 75
-	Frequency: 40
-
-	JENOVA (FF VII)
-	Final Fantasy/JENOVA (Final Fantasy VII).brstm
-	Volume: 80
-	Frequency: 40
-
-	Magnus von Grapple (Paper Mario TTYD Remake)
-	Paper Mario/Magnus von Grapple (Paper Mario The Thousand Year Door Remake).brstm
-	Volume: 52
-	Frequency: 40
+Frigate_Orpheon.tlst - 0 tracks
 
 ################
 Frigate_Orpheon_Brawl.tlst - 6 tracks
@@ -1454,48 +1248,7 @@ Green_Greens.tlst - 4 tracks
 	Song delay: -1
 
 ################
-Green_Hill_Zone.tlst - 8 tracks
-
-	34N, 12E ... for Mad Space (SA 2)
-	Sonic/34N, 12E ... for Mad Space (Sonic Adventure 2).brstm
-	Volume: 78
-	Frequency: 40
-
-	Cosmic Highway (DK Barrel Blast)
-	Donkey Kong/Cosmic Highway (Donkey Kong Barrel Blast).brstm
-	Volume: 72
-	Frequency: 40
-	Song delay: -1
-
-	Cyberspace (Sonic Racing CrossWorlds)
-	Sonic/Cyberspace (Sonic Racing CrossWorlds).brstm
-	Volume: 80
-	Frequency: 40
-
-	Its TV Time! (DELTARUNE)
-	DELTARUNE/Its TV Time! (DELTARUNE).brstm
-	Volume: 97
-	Frequency: 40
-
-	Market Street (Sonic Racing CrossWorlds)
-	Sonic/Market Street (Sonic Racing CrossWorlds).brstm
-	Volume: 72
-	Frequency: 40
-
-	Metal Harbor (Sonic Racing CrossWorlds)
-	Sonic/Metal Harbor (Sonic Racing CrossWorlds).brstm
-	Volume: 75
-	Frequency: 40
-
-	Radical Highway (Sonic Racing CrossWorlds)
-	Sonic/Radical Highway (Sonic Racing CrossWorlds).brstm
-	Volume: 74
-	Frequency: 40
-
-	Soarin' Over the Space (SA 2)
-	Sonic/Soarin' Over the Space (Sonic Adventure 2).brstm
-	Volume: 80
-	Frequency: 40
+Green_Hill_Zone.tlst - 0 tracks
 
 ################
 Green_Hill_Zone_Brawl.tlst - 4 tracks
@@ -1782,53 +1535,7 @@ Kongo_Jungle_64.tlst - 1 track
 	Frequency: 40
 
 ################
-Luigis_Mansion.tlst - 9 tracks
-
-	A DARK ZONE (DELTARUNE)
-	DELTARUNE/A DARK ZONE (DELTARUNE).brstm
-	Volume: 92
-	Frequency: 40
-
-	Black Knife (DELTARUNE)
-	DELTARUNE/Black Knife (DELTARUNE).brstm
-	Volume: 88
-	Frequency: 40
-
-	Boss 2 (Spelunky)
-	Spelunky/Boss 2 (Spelunky).brstm
-	Volume: 110
-	Frequency: 40
-
-	Brobot Battle (Super Paper Mario)
-	Paper Mario/Brobot Battle (Super Paper Mario).brstm
-	Volume: 85
-	Frequency: 40
-
-	BURNING EYES (DELTARUNE)
-	DELTARUNE/BURNING EYES (DELTARUNE).brstm
-	Volume: 92
-	Frequency: 40
-
-	Gravity (Cave Story)
-	Cave Story/Gravity (Cave Story).brstm
-	Volume: 110
-	Frequency: 40
-
-	GUARDIAN (DELTARUNE)
-	DELTARUNE/GUARDIAN (DELTARUNE).brstm
-	Volume: 95
-	Frequency: 40
-
-	Last Battle (Cave Story)
-	Cave Story/Last Battle (Cave Story).brstm
-	Volume: 120
-	Frequency: 40
-	Song delay: 100
-
-	Three Shadows (Paper Mario TTYD Remake)
-	Paper Mario/Three Shadows (Paper Mario The Thousand Year Door Remake).brstm
-	Volume: 65
-	Frequency: 40
+Luigis_Mansion.tlst - 0 tracks
 
 ################
 Luigis_Mansion_DPAD.tlst - 7 tracks
@@ -1994,82 +1701,7 @@ Mario_Paint.tlst - 1 track
 	Frequency: 40
 
 ################
-Menu.tlst - 15 tracks
-
-	Aether Paradise (SM)
-	Pokemon/Aether Paradise (SM).brstm
-	Volume: 65
-	Frequency: 40
-
-	Afternoon of Konoha (Naruto)
-	Naruto/Afternoon of Konoha (Naruto).brstm
-	Volume: 68
-	Frequency: 40
-
-	Boutique (XY)
-	Pokemon/Boutique (XY).brstm
-	Volume: 80
-	Frequency: 40
-
-	Cyber Battle (Solo) (DELTARUNE)
-	DELTARUNE/Cyber Battle (Solo) (DELTARUNE).brstm
-	Volume: 77
-	Frequency: 40
-
-	Honeyhive Galaxy (Super Mario Galaxy)
-	Mario Galaxy/Honeyhive Galaxy (Super Mario Galaxy).brstm
-	Volume: 75
-	Frequency: 40
-
-	Main Menu (LEGO Racers)
-	LEGO Racers/Main Menu (LEGO Racers).brstm
-	Volume: 75
-	Frequency: 40
-
-	Outer Space (Super Paper Mario)
-	Paper Mario/Outer Space (Super Paper Mario).brstm
-	Volume: 68
-	Frequency: 40
-
-	Slinger's Song (Bastion)
-	Bastion/Slinger's Song (Bastion).brstm
-	Volume: 65
-	Frequency: 40
-
-	Space Land (Mario Party 2)
-	Mario/Space Land (Mario Party 2).brstm
-	Volume: 80
-	Frequency: 40
-
-	Space Trip Steps ... for Meteor Herd (SA2)
-	Sonic/Space Trip Steps ... for Meteor Herd (Sonic Adventure 2).brstm
-	Volume: 80
-	Frequency: 40
-
-	The Egg And You (Cowboy Bebop)
-	Cowboy Bebop/The Egg And You (Cowboy Bebop).brstm
-	Volume: 80
-	Frequency: 40
-
-	The Rain Formerly Known as Purple (RoR 2)
-	Risk of Rain/The Rain Formerly Known as Purple (Risk of Rain 2).brstm
-	Volume: 82
-	Frequency: 40
-
-	The Third Sanctuary (DELTARUNE)
-	DELTARUNE/The Third Sanctuary (DELTARUNE).brstm
-	Volume: 82
-	Frequency: 40
-
-	Versus Simple Map 2 (Star Fox Assault)
-	Star Fox/Versus Simple Map 2 (Star Fox Assault).brstm
-	Volume: 88
-	Frequency: 40
-
-	What planet is this! (Cowboy Bebop)
-	Cowboy Bebop/What planet is this! (Cowboy Bebop).brstm
-	Volume: 72
-	Frequency: 40
+Menu.tlst - 0 tracks
 
 ################
 Mercury_Lighthouse.tlst - 2 tracks
@@ -2527,52 +2159,7 @@ Pokemon_Stadium.tlst - 3 tracks
 	Song delay: -1
 
 ################
-Pokemon_Stadium_2.tlst - 9 tracks
-
-	Battle! AI Sada AI Turo (SV)
-	Pokemon/Battle! AI Sada AI Turo (SV).brstm
-	Volume: 55
-	Frequency: 40
-
-	Battle! BBA Elite Four (SV)
-	Pokemon/Battle! BBA Elite Four (SV).brstm
-	Volume: 98
-	Frequency: 40
-
-	Battle! Colress (B2W2)
-	Pokemon/Battle! Colress (B2W2).brstm
-	Volume: 77
-	Frequency: 40
-
-	Battle! Deoxys (ORAS)
-	Pokemon/Battle! Deoxys (ORAS).brstm
-	Volume: 80
-	Frequency: 40
-
-	Battle! Frontier Brain (ORAS)
-	Pokemon/Battle! Frontier Brain (ORAS).brstm
-	Volume: 85
-	Frequency: 40
-
-	Battle! Palkia & Dialga Origin Form (Legends Arceus)
-	Pokemon/Battle! Palkia & Dialga Origin Form (Legends Arceus).brstm
-	Volume: 85
-	Frequency: 40
-
-	Battle! Ultra Beast (SM)
-	Pokemon/Battle! Ultra Beast (SM).brstm
-	Volume: 78
-	Frequency: 40
-
-	Battle! Ultra Necrozma (USUM)
-	Pokemon/Battle! Ultra Necrozma (USUM).brstm
-	Volume: 85
-	Frequency: 40
-
-	Stargazer Colosseum (Battle Revolution)
-	Pokemon/Stargazer Colosseum (Battle Revolution).brstm
-	Volume: 80
-	Frequency: 40
+Pokemon_Stadium_2.tlst - 0 tracks
 
 ################
 Pokemon_Stadium_2_Brawl.tlst - 5 tracks
@@ -2819,19 +2406,16 @@ Rest_Area.tlst - 1 track
 ################
 Results.tlst - 53 tracks
 
-	File Info (Super Mario Galaxy)
-	Mario Galaxy/File Info (Super Mario Galaxy).brstm
-	Volume: 65
+	Song 1
+	None.brstm [BRSTM FILE MISSING]
 	Frequency: 40
 
-	MIKE the BOARD please! (DELTARUNE)
-	DELTARUNE/MIKE the BOARD please! (DELTARUNE).brstm
-	Volume: 75
+	Song 2
+	None.brstm [BRSTM FILE MISSING]
 	Frequency: 40
 
-	The Fire's Respite (Capcom Fighting Collection 2)
-	Capcom vs SNK/The Fire's Respite (Capcom Fighting Collection 2).brstm
-	Volume: 88
+	Song 3
+	None.brstm [BRSTM FILE MISSING]
 	Frequency: 40
 
 	Mario
@@ -3269,52 +2853,7 @@ Sky_Sanctuary.tlst - 1 track
 	Frequency: 40
 
 ################
-Smashville.tlst - 9 tracks
-
-	Battle 2 (FFIV)
-	Final Fantasy/Battle 2 (Final Fantasy IV).brstm
-	Volume: 95
-	Frequency: 40
-
-	The Man with the Machine Gun (FFRK)
-	Final Fantasy/The Man with the Machine Gun (Final Fantasy Record Keeper).brstm
-	Volume: 80
-	Frequency: 40
-
-	Meltdown 2 (Cave Story)
-	Cave Story/Meltdown 2 (Cave Story).brstm
-	Volume: 107
-	Frequency: 40
-
-	Moon Theme (Ducktales Remastered)
-	Ducktales/Moon Theme (Ducktales Remastered).brstm
-	Volume: 75
-	Frequency: 10
-
-	NOW'S YOUR CHANCE TO BE A (DELTARUNE)
-	DELTARUNE/NOW'S YOUR CHANCE TO BE A (DELTARUNE).brstm
-	Volume: 90
-	Frequency: 40
-
-	Percy's Escape (Bastion)
-	Bastion/Percy's Escape (Bastion).brstm
-	Volume: 73
-	Frequency: 40
-
-	N.Y. Rush (Cowboy Bebop)
-	Cowboy Bebop/N.Y. Rush (Cowboy Bebop).brstm
-	Volume: 100
-	Frequency: 40
-
-	Space Pirates (Castle Crashers)
-	Castle Crashers/Space Pirates (Castle Crashers).brstm
-	Volume: 110
-	Frequency: 40
-
-	Sorairo Days (Tokyo Brass Style)
-	Tokyo Brass Style/Sorairo Days (Tokyo Brass Style).brstm
-	Volume: 65
-	Frequency: 40
+Smashville.tlst - 0 tracks
 
 ################
 Smashville_Concert.tlst - 6 tracks
@@ -3549,49 +3088,7 @@ Temple.tlst - 5 tracks
 	Frequency: 40
 
 ################
-Temple_of_Time.tlst - 8 tracks
-
-	Battle! Legendary Quartet (SV)
-	Pokemon/Battle! Legendary Quartet (SV).brstm
-	Volume: 80
-	Frequency: 40
-
-	Bloodlines (Getter Robo Arc)
-	Gundam/Bloodlines (Getter Robo Arc).brstm
-	Volume: 85
-	Frequency: 40
-
-	Boss 1 (Spelunky)
-	Spelunky/Boss 1 (Spelunky).brstm
-	Volume: 80
-	Frequency: 40
-
-	Bowser Battle Theme (Super Mario Galaxy)
-	Mario Galaxy/Bowser Battle Theme (Super Mario Galaxy).brstm
-	Volume: 80
-	Frequency: 40
-
-	Find the Flame (FF XVI)
-	Final Fantasy/Find the Flame (Final Fantasy XVI).brstm
-	Volume: 68
-	Frequency: 40
-	Song delay: 160
-
-	Fracktail Battle (Super Paper Mario)
-	Paper Mario/Fracktail Battle (Super Paper Mario).brstm
-	Volume: 72
-	Frequency: 40
-	Song delay: -1
-
-	Labyrinth Fight (Cave Story)
-	Cave Story/Labyrinth Fight (Cave Story).brstm
-	Volume: 80
-	Frequency: 40
-
-	Running Hell (Cave Story)
-	Cave Story/Running Hell (Cave Story).brstm
-	Volume: 110
-	Frequency: 40
+Temple_of_Time.tlst - 0 tracks
 
 ################
 Temple_of_Time_DPAD.tlst - 8 tracks
