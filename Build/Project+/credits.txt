@@ -34,6 +34,10 @@ PSA Edits for tia Ike sword trails by ilikepizza107 (uses existing glow models b
  - Added ef_custom23
  - PSA Edited: Sub Routine 0x9758 (now 0x15118), Sub Routine 0x96C8 (now 0x152A8), Sub Routine 0x97A0 (now 0x153A8), Sub Routine 0x8730 (now 0x9758), Sub Action 0x1E2, GFX; Article 0x0, Sub Action 0x2, GFX; Article 0x0, Sub Action 0x3, GFX
 
+PSA Edits for Sicle Charizard Pink fire by ilikepizza107, with credit to extreme
+ - Edited ef_pokelizardon (Added eff_pokelizardon_pfire texture, Model Data [6], 8 entries into the EFLS, 35 entries into the REFT)
+ - PSA Edited: Sub Action 0x1, GFX; Sub Action 0x19, Main; Sub Action 0x19, GFX; Sub Action 0x3C, Main; Sub Action 0x3C, GFX; Sub Action 0x55, Main; Sub Action 0x58, Main; Sub Action 0x58, GFX; Sub Action 0x62, Main; Sub Action 0x62, GFX; Sub Action 0x63, Main; Sub Action 0x63, GFX; Sub Action 0x64, Main; Sub Action 0x74, Main; Sub Action 0x74, GFX; Sub Action 0x75, Main; Sub Action 0x75, GFX; Sub Action 0xDC, Main; Sub Action 0x1C2, GFX; Sub Action 0x1C4, GFX; Sub Action 0x1D5, Main; Sub Action 0x1D5, GFX; Sub Action 0x1D7, Main; Sub Action 0x1D8, Main; Sub Action 0x1D8, GFX; Sub Action 0x1D9, GFX; Sub Action 1DA, GFX; Sub Routine 0xF850 (Now 0x23D18) Sub Routine 0x23E68 (Now 0x266D8); Sub Routine 0x6A70 (Now 0xFD88)
+
 ################
 SKINS
 ################
@@ -201,7 +205,8 @@ MEWTWO
 26 - Iris Mewtwo by Motobug
 
 CHARIZARD
-10 - Rise Charizard by SOULLY
+30 - Rise Charizard by SOULLY
+31 - Sicle Charizard by ilikepizza107
 
 SQUIRTLE
 30 - Dbylan Squirtle by ilikepizza107
