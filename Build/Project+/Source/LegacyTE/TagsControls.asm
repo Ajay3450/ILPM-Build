@@ -4,9 +4,9 @@
 #Logic to find if rumble on for tag from `CSS Tags with Rumble are teal, X To toggle V1.2 [ChaseMcDizzle, Fracture, Yohan1044]`
 #Logic to find if rumble on for port from `[Project+] Customize Controls on CSS V9.1 + C-stick taunts renamed [Fracture]`
 
-.alias selectedTagColor = 0x009090      # Currently selected tag in menu
-.alias transitionColor = 0x088888       # Moving from selected to unselected
-.alias unselectedTagColor = 0x108080	# Unselected tag in menu
+.alias selectedTagColor = 0x065ABE      # Currently selected tag in menu
+.alias transitionColor = 0x165ABE       # Moving from selected to unselected
+.alias unselectedTagColor = 0x005ABE 	# Unselected tag in menu
 
 HOOK @ $8069F9FC
 {

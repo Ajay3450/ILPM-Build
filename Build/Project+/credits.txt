@@ -303,3 +303,5 @@ CSS + SSS by ilikepizza107, with credit to Nezha
 CODESET CHANGES
 #######################
 Multiple Results Screen Tracks - Commented out a section of MyMusic.asm, added a code in ResultsMusic.asm
+
+Different CSS Tags Colors - Edited .aliases in CSS Tags with Rumble are Coloured, at the top of TagsControls.asm
