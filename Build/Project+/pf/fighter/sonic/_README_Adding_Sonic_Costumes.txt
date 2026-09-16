@@ -19,7 +19,7 @@ eff_sonic_runtrace stripes should always match the corresponding costume, and fo
 New steps for Project+ v3.0+
 =====================================
 
-Firstly, there are new GFX on side special that have colored orbs follow Sonic. These are located in FitSonic.pac and use clr0 files to adjust their colors.
+Firstly, there are new GFX on side special that have colored orbs follow Sonic. These are located in FitSonic.pac and use clr0 files to adjust their colors. You can assign different colors to added costumes by editing Sub Routine 0x2E5AC in PSAC.
 
 Sonic's spin trail models, particle effects, and smoke effects (for Jet Set costumes) have been moved to his Etc files! This allows for colored spin trails for each costume.
 

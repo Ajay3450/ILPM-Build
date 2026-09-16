@@ -2,8 +2,8 @@
 PSA
 ################
 
-PSA edits for SipMastah, Motobug, Wyld, & DHS7 Sonic trails by ilikepizza107
- - Edited ef_sonic (Added EffSphere_Ghost (8).clr0 in Model Data [2])
+PSA edits for SipMastah, Motobug (x2), Wyld, & DHS7 Sonic trails by ilikepizza107
+ - Edited ef_sonic (Added EffSphere_Ghost (8).clr0 in Model Data [1])
  - PSA Edited: Sub Routine 0x2E5AC
 
 PSA edits for Shrug Toon Link by ilikepizza107
@@ -31,9 +31,9 @@ PSA Edits for Rongunshu Ike sword trails + tia Ike sword trails by ilikepizza107
  - Added ef_custom23
  - PSA Edited: Sub Action 0x1E2, GFX; Sub Routine 0x9758 (Blur 3, now 0x152F8), Sub Routine 0x96C8 (Blur 4, now 0x15448), Sub Routine 0x97A0 (Blur 5, now 0x15598), Sub Routine 0x8730 (Graphic Effect 2/B, now 0x9778), Article 0x0, Sub Action 0x2, GFX; Article 0x0, Sub Action 0x3, GFX
 
-PSA Edits for Sicle Charizard Pink fire by ilikepizza107, with credit to extreme
+PSA Edits for Sicle Charizard Pink fire & Rise Knicks Charizard Blue fire by ilikepizza107, with credit to extreme
  - Edited ef_pokelizardon (Added eff_pokelizardon_pfire texture, Model Data [6], 8 entries into the EFLS, 35 entries into the REFT)
- - PSA Edited: Sub Action 0x1, GFX; Sub Action 0x19, Main; Sub Action 0x19, GFX; Sub Action 0x3C, Main; Sub Action 0x3C, GFX; Sub Action 0x55, Main; Sub Action 0x58, Main; Sub Action 0x58, GFX; Sub Action 0x62, Main; Sub Action 0x62, GFX; Sub Action 0x63, Main; Sub Action 0x63, GFX; Sub Action 0x64, Main; Sub Action 0x74, Main; Sub Action 0x74, GFX; Sub Action 0x75, Main; Sub Action 0x75, GFX; Sub Action 0xDC, Main; Sub Action 0x1C2, GFX; Sub Action 0x1C4, GFX; Sub Action 0x1D5, Main; Sub Action 0x1D5, GFX; Sub Action 0x1D7, Main; Sub Action 0x1D8, Main; Sub Action 0x1D8, GFX; Sub Action 0x1D9, GFX; Sub Action 1DA, GFX; Sub Routine 0xF850 (Now 0x23D18) Sub Routine 0x23E68 (Now 0x266D8); Sub Routine 0x6A70 (Now 0xFD88)
+ - PSA Edited: Sub Action 0x1, GFX; Sub Action 0x19, Main; Sub Action 0x19, GFX; Sub Action 0x3C, Main; Sub Action 0x3C, GFX; Sub Action 0x55, Main; Sub Action 0x58, Main; Sub Action 0x58, GFX; Sub Action 0x62, Main; Sub Action 0x62, GFX; Sub Action 0x63, Main; Sub Action 0x63, GFX; Sub Action 0x64, Main; Sub Action 0x74, Main; Sub Action 0x74, GFX; Sub Action 0x75, Main; Sub Action 0x75, GFX; Sub Action 0xDC, Main; Sub Action 0x1C2, GFX; Sub Action 0x1C4, GFX; Sub Action 0x1D5, Main; Sub Action 0x1D5, GFX; Sub Action 0x1D7, Main; Sub Action 0x1D8, Main; Sub Action 0x1D8, GFX; Sub Action 0x1D9, GFX; Sub Action 1DA, GFX; Sub Routine 0xF850 (Now 0x23D18) Sub Routine 0x23E68 (Now 0x25E98); Sub Routine 0x6A70 (Now 0x262B0)
 
 PSA Edits for Maofever Ivysaur by ilikepizza107
  - PSA Edited: Sub Action 0x50, GFX; Sub Action 0x5D, GFX; Sub Action 0x65, GFX; Sub Action 0x1C2, GFX; Sub Action 0x1D7 (GFX); Sub Routine 0x14590 (Now 0x255F4); Sub Routine 0x13B20 (Now 0x267BC); Sub Routine 0x146F8 (Now 0x23454); Sub Routine 0x17690; Sub Routine 0x14610; Sub Routine 0x1FE9C; Sub Routine 0x203CC; Sub Routine 0x17EA8 (Now 0x18678); Sub Routine 0x2625C; Article 0, Sub Action 0, GFX;
@@ -205,6 +205,7 @@ MEWTWO
 26 - Iris Mewtwo by Motobug
 
 CHARIZARD
+10 - Rise Knicks Charizard by SOULLY
 30 - Rise Charizard by SOULLY
 31 - Sicle Charizard by ilikepizza107
 
@@ -262,6 +263,7 @@ SNAKE
 SONIC
 25 - SipMastah Sonic v2 by ilikpizza107
 26 - Motobug Sonic by Motobug
+35 - Motobug Sonic Sega Kid by Motobug
 40 - Wyld Sonic by Wyld
 45 - DHS7 Sonic by DHS7
 
