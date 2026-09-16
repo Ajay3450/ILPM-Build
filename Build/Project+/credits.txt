@@ -3,7 +3,7 @@ PSA
 ################
 
 PSA edits for SipMastah, Motobug (x2), Wyld, & DHS7 Sonic trails by ilikepizza107
- - Edited ef_sonic (Added EffSphere_Ghost (8).clr0 in Model Data [1])
+ - Edited ef_sonic (Added Model Data [3], edited efls)
  - PSA Edited: Sub Routine 0x2E5AC
 
 PSA edits for Shrug Toon Link by ilikepizza107
@@ -279,7 +279,7 @@ STAGES
 ########################
 
 BATTLEFIELD
-Base - Daytime BF by ilikepizza107
+Base - Daytime BF v2 by ilikepizza107
 
 FRIGATE HUSK
 Base - Hyrule Meadows FH by Motobug, mawwwk, with credit to Dranakar, Scout, davidvkimball, DukeItOut, soopercool101, PMDT
