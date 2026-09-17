@@ -313,3 +313,5 @@ Multiple Results Screen Tracks - Commented out a section of MyMusic.asm, added a
 Different CSS Tags Colors - Edited .aliases in CSS Tags with Rumble are Coloured, at the top of TagsControls.asm
 
 Stage preset changes - Edited .alias NUM_PRESETS in Random.asm, changed the .rss files in pf/stage/switch
+
+Stock display on the SSS - Edited 50CC.asm, changes to sc_selmap.pac
