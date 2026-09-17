@@ -304,6 +304,10 @@ CSS + SSS by ilikepizza107, with credit to Nezha
 #######################
 CODESET CHANGES
 #######################
+Hold Pause Default - Edited Default Settings Modifier in RSBE01.txt, specifically at line 0417F368
+
 Multiple Results Screen Tracks - Commented out a section of MyMusic.asm, added a code in ResultsMusic.asm
 
 Different CSS Tags Colors - Edited .aliases in CSS Tags with Rumble are Coloured, at the top of TagsControls.asm
+
+Stage preset changes - Edited .alias NUM_PRESETS in Random.asm, changed the .rss files in pf/stage/switch
