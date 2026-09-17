@@ -304,6 +304,8 @@ CSS + SSS by ilikepizza107, with credit to Nezha
 #######################
 CODESET CHANGES
 #######################
+Autosave Replays ON Default - Renamed provided data.cmnus
+
 Hold Pause Default - Edited Default Settings Modifier in RSBE01.txt, specifically at line 0417F368
 
 Multiple Results Screen Tracks - Commented out a section of MyMusic.asm, added a code in ResultsMusic.asm
