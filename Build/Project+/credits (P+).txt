@@ -447,7 +447,7 @@ Model optimizations by Layell
 24 - Classic OoT Zelda by SJ, tyleto, Layell, ART+, with credit to the PMDT for the original
 25 - Hilda OoT Zelda by SJ, tyleto, Layell, ART+, with credit to the PMDT for the original
 AltR - Zelda (Hyrule Warriors) by iwantgames with credit to Xenthos, Shy, Crazz, Popthekirby, Layell, Snoe
-AltZ - Young Zelda by AlGeorgeRomo, Mach 7
+AltZ - Young Zelda by AlGeorgeRomo, Mach 7, fixes and optimizations by Layell
 
 
 SHEIK
@@ -982,29 +982,29 @@ Stage changes from PM 3.6 listed, with corresponding button combination
 
 BATTLEFIELD
 Base - Battlefield by PMDT, lighting fixes by DukeItOut, mawwwk
-L - Battlefield (Melee) by the PMDT, with texture fixes by sporksparks, DukeItOut
-R - Lunar Battlefield by Nezha, Kapedani, GRAND AZEL, Puzzled, soopercool101, Layell, DukeItOut
-Z - Torn Sky Battlefield by Dranakar, Nezha, WorseDoughnut, MarioDox, davidvkimball, soopercool101
+L    - Battlefield (Melee) by the PMDT, with texture fixes by sporksparks, DukeItOut
+R    - Lunar Battlefield by Nezha, Kapedani, GRAND AZEL, Puzzled, soopercool101, Layell, DukeItOut
+Z    - Torn Sky Battlefield by Dranakar, Nezha, WorseDoughnut, MarioDox, davidvkimball, soopercool101
 R+Start - Battlefield (N64) by Mewtwo2000, Yohan1044, mawwwk
 
 FINAL DESTINATION
 Base - Final Destination by PMDT, substage edits by Kapedani
-L   - Melee-Brawl FD by MarioDox, Xerom, Mewtwo2000, PMDT
-Z   - Legacy Final Destination by WorseDoughnut, Nezha, davidvkimball, Moblin, DukeItOut with credit to soopercool101
-R   - Project M Final Destination by Ryztiq, WorseDoughnut, Dranakar, Nezha, davidvkimball with credit to Diego Leal for the concept
+L    - Melee-Brawl FD by MarioDox, Xerom, Mewtwo2000, PMDT
+Z    - Legacy Final Destination by WorseDoughnut, Nezha, davidvkimball, Moblin, DukeItOut with credit to soopercool101
+R    - Project M Final Destination by Ryztiq, WorseDoughnut, Dranakar, Nezha, davidvkimball with credit to Diego Leal for the concept
 R+Start - 20XX Rainbow FD by Ryztiq with credit to the PMDT for original FD stage, substage edits by Kapedani
 L+Start - 64 Destination by Mewtwo2000
 
 DELFINO'S SECRET
 Base - Delfino's Secret by PMDT, additional edits by DukeItOut
-R - Delfino's Secret Plaza by davidvkimball, WorseDoughnut, MarioDox with credit to SOJ, DukeItOut for the idea
-Z - Shy Guy's Toy Box by Nezha, Wario358, Survivian, mawwwk with credit to WorseDoughnut, Ca$ino Wolf, Pleasant250, Moosehunter, PAVGN, zelda23, Goldtex, InkxtheSquid
+R    - Delfino's Secret Plaza by davidvkimball, WorseDoughnut, MarioDox with credit to SOJ, DukeItOut for the idea
+Z    - Shy Guy's Toy Box by Nezha, Wario358, Survivian, mawwwk with credit to WorseDoughnut, Ca$ino Wolf, Pleasant250, Moosehunter, PAVGN, zelda23, Goldtex, InkxtheSquid
 R+Start - World 2-3 by Ryztiq with additional edits by TEITO
 
 LUIGI'S MANSION
-Base - Luigi's Mansion '23 by Motobug, ilikepizza107, Yorch, mawwwk with credit to WorseDoughnut, Edwguard Flows, MetalLegacy, tyleto, Survivian
-L - King Boo's Illusion by Nezha, soopercool101, Cahalan, DukeItOut
-R - Deck Dry Bones '23 by Motobug, mawwwk, Layell, Yorch with credit to Electropolitan
+Base - Luigi's Mansion '23 by ART+, Motobug, mawwwk, ilikepizza107, Yorch, nnebf with credit to WorseDoughnut, Edwguard Flows, MetalLegacy, tyleto, Survivian
+L    - King Boo's Illusion by Nezha, soopercool101, Cahalan, DukeItOut
+R    - Deck Dry Bones '23 by Motobug, mawwwk, Layell, Yorch with credit to Electropolitan
 
 METAL CAVERN
 Base - Metal Cavern by P+DT, DukeItOut, Ryztiq, substage edits by mawwwk; original stage by PMDT
@@ -1016,9 +1016,9 @@ L+Start - Metal Cavern 64 by PMDT
 
 BOWSER'S CASTLE
 Base - Bowser's Castle Revamp by ART+: Yorch, Fireball, Kirbeast, Motobug, tyleto, GRAND AZEL, nnebf, mawwwk, Link Tahuterasu Spirit; original stage by PMDT
-L - Bowser's Castle: Thwomps Revamp by ART+: Yorch, Kirbeast, tyleto, GRAND AZEL, mawwwk, Link Tahuterasu Spirit; original stage by PMDT
-R - NES Bowser's Castle by WorseDoughnut, davidvkimball, Dranakar with credit to Xenozoa425, Mewtwo2000, GotHunch, LlamaJuice for some of the stage's assets, optimizations by Layell, layout update by Yorch, GRAND AZEL
-Z - World Bowser Legal v3 by Yorch, Nezha, soopercool101, Snoe with credit to Nick, Pyro, ThatTrueStruggle, Carter, Electropolitan, Soopercool, Sub, FancyEX, UberGruvin, Car, DemKnuckles, Dapperman, Peardian, LegacyTE for their Base stage, Legacy XP, PMDT
+L    - Bowser's Castle: Thwomps Revamp by ART+: Yorch, Kirbeast, tyleto, GRAND AZEL, mawwwk, Link Tahuterasu Spirit; original stage by PMDT
+R    - NES Bowser's Castle by WorseDoughnut, davidvkimball, Dranakar with credit to Xenozoa425, Mewtwo2000, GotHunch, LlamaJuice for some of the stage's assets, optimizations by Layell, layout update by Yorch, GRAND AZEL
+Z    - World Bowser Legal v3 by Yorch, Nezha, soopercool101, Snoe with credit to Nick, Pyro, ThatTrueStruggle, Carter, Electropolitan, Soopercool, Sub, FancyEX, UberGruvin, Car, DemKnuckles, Dapperman, Peardian, LegacyTE for their Base stage, Legacy XP, PMDT
 R+Start - Dry Bowser's Castle by ART+: Yorch, Fireball, Kirbeast, Motobug, tyleto, GRAND AZEL, nnebf, mawwwk, Link Tahuterasu Spirit; original stage by PMDT
 
 KONGO JUNGLE
@@ -1028,60 +1028,60 @@ R    - Hornet Hole Zone by Dranakar, davidvkimball, Nezha, Yohan1044, mawwwk
 Z    - Sunset Shore V2 [DKC:R] by Kuro, Ryztiq, soopercool101, Dranakar with credit to Nezha, HyperLink, Drazerg, TheCoolGuy
 
 RUMBLE FALLS
-L - 75M Jungle by davidvkimball, soopercool101, DukeItOut, Yohan1044, MarioDox with credit to Mewtwo2000, the PMDT for the original stage
-R - Rumble Falls Castle by Motobug, with credit to MarioDox, mnnaz05, Dranakar, Nezha, Ryztiq, davidvkimball, Puzzled, PMDT, optimizations by Layell
-Z - Construction Site by MarioDox with credit to davidvkimball, optimizations by Layell
+L    - 75M Jungle by davidvkimball, soopercool101, DukeItOut, Yohan1044, MarioDox with credit to Mewtwo2000, the PMDT for the original stage
+R    - Rumble Falls Castle by Motobug, with credit to MarioDox, mnnaz05, Dranakar, Nezha, Ryztiq, davidvkimball, Puzzled, PMDT, optimizations by Layell
+Z    - Construction Site by MarioDox with credit to davidvkimball, optimizations by Layell
 
 TEMPLE OF TIME
 Base - Twilight Princess Temple of Time by Yorch, GRAND AZEL, mawwwk, Link Tahuterasu Spirit, Skilar the Creative Caveman, SJ, nnebf, Kirbeast, DukeItOut, Layell, Motobug
-L - Bridge of Eldin with platforms by Yorch with credit to Edwguard Flows
-R - OoT Temple of Time by ART+, GRAND AZEL, Motobug, Kapedani, SJ, Yorch, Layell, King Draco, with credit to Dranakar, davidvkimball, Yohan1044
+L    - Bridge of Eldin with platforms by Yorch with credit to Edwguard Flows
+R    - OoT Temple of Time by ART+, GRAND AZEL, Motobug, Kapedani, SJ, Yorch, Layell, King Draco, with credit to Dranakar, davidvkimball, Yohan1044
 L+Start - Castle Throne by Yorch, mawwwk with credit to GRAND AZEL, Link Tahuterasu Spirit, Skilar the Creative Caveman, SJ, nnebf, Kirbeast, DukeItOut, Motobug
 
 HYRULE CASTLE
-L - Ganon's Castle (OoT 3D) by DukeItOut, ALM5252 with credit to MidnightXS, Mewtwo2000, optimizations by Layell
-R - Hyrule Castle Ware by DukeItOut, MarioDox with credit to Dranakar, davidvkimball, WorseDoughnut, Yohan1044, Kirbeast, Puzzled, DukeItOut, mawwwk with credit to the PMDT, optimizations by Layell
-Z - Kakariko Village by Yorch
+L    - Ganon's Castle (OoT 3D) by DukeItOut, ALM5252 with credit to MidnightXS, Mewtwo2000, optimizations by Layell
+R    - Hyrule Castle Ware by DukeItOut, MarioDox with credit to Dranakar, davidvkimball, WorseDoughnut, Yohan1044, Kirbeast, Puzzled, DukeItOut, mawwwk with credit to the PMDT, optimizations by Layell
+Z    - Kakariko Village by Yorch
 
 NORFAIR
-L - Planet Zebes: Landing Site by MarioDox with credit to PMDT
-R - Norfair Lab by TEITO, DukeItOut, WorseDoughnut, MarioDox with credit to the PMDT
-Z - Crateria by Nezha with credit to PMDT
+L    - Planet Zebes: Landing Site by MarioDox with credit to PMDT
+R    - Norfair Lab by TEITO, DukeItOut, WorseDoughnut, MarioDox with credit to the PMDT
+Z    - Crateria by Nezha with credit to PMDT
 
 FRIGATE HUSK
 Base - Frigate Husk by ART+, Yorch, GRAND AZEL, SJ, mawwwk, Motobug
-Z - Drowned Frigate by Yorch, ART+, Motobug
-R - Phendrana Drifts (Husk) by Nezha, KingDraco, Kirbeast, Xerneis, Layell, Potato, Kapedani, Pikamaxi, GoldenNick, GRAND AZEL, KingJigglypuff, with credit to DukeItOut, Coolguy, PMDT
+Z    - Drowned Frigate by Yorch, ART+, Motobug
+R    - Phendrana Drifts (Husk) by Nezha, KingDraco, Kirbeast, Xerneis, Layell, Potato, Kapedani, Pikamaxi, GoldenNick, GRAND AZEL, KingJigglypuff, with credit to DukeItOut, Coolguy, PMDT
 
 YOSHI'S ISLAND
 Base - Yoshi's Island '23 by Motobug, mawwwk, with credit to MarioDox
-L - Yoshi's New Island by Ebola16, secretchaos1, ALM5252, Wingedkoopa67, mawwwk
-R - Yoshi's New Island '23 by Motobug; original WL retweak by Nezha, Dranakar, MarioDox with credit to davidvkimball, Llama Juice, Wingedkoopa67, ALM5252, TheUltimateKoopa
-Z - Yoshi's Island PM by the PMDT
+L    - Yoshi's New Island by Ebola16, secretchaos1, ALM5252, Wingedkoopa67, mawwwk
+R    - Yoshi's New Island '23 by Motobug; original WL retweak by Nezha, Dranakar, MarioDox with credit to davidvkimball, Llama Juice, Wingedkoopa67, ALM5252, TheUltimateKoopa
+Z    - Yoshi's Island PM by the PMDT
 
 HALBERD
-L - Halberd: X (Complete) by Xerom with credit to mew2ds, Ike_Lawliet, Snoopy, Nah, mawwwk with credit to _Data_Drain_
-R - Halberdland by davidvkimball, WorseDoughnut, Yohan1044, DukeItOut, Snoe with credit to jlclpepe, Mewtwo2000, Ryztiq, the PMDT.
-Z - Halberd Daytime Airborne by davidvkimball, DukeItOut, Snoe, mawwwk with credit to Pipapopa12, jlclpepe, rihuganon, LordNOaH, SSBBAdam, ~Frozen
+L    - Halberd: X (Complete) by Xerom with credit to mew2ds, Ike_Lawliet, Snoopy, Nah, mawwwk with credit to _Data_Drain_
+R    - Halberdland by davidvkimball, WorseDoughnut, Yohan1044, DukeItOut, Snoe with credit to jlclpepe, Mewtwo2000, Ryztiq, the PMDT.
+Z    - Halberd Daytime Airborne by davidvkimball, DukeItOut, Snoe, mawwwk with credit to Pipapopa12, jlclpepe, rihuganon, LordNOaH, SSBBAdam, ~Frozen
 
 LYLAT CRUISE
-R - Lylat Destination by davidvkimball with credit to Yohan1044, Dranakar for the base stage model
-Z - Flatlat Cruise by WorseDoughnut, soopercool101 with credit to Syvkal & SuperGuzzi (for the Calm Lylat base)
+R    - Lylat Destination by davidvkimball with credit to Yohan1044, Dranakar for the base stage model
+Z    - Flatlat Cruise by WorseDoughnut, soopercool101 with credit to Syvkal & SuperGuzzi (for the Calm Lylat base)
 
 SAFFRON CITY
-L - Magnet Train V2 by DukeItOut, davidvkimball, soopercool101 with credit to Frof for the original stage and fixes by mawwwk, optimizations by Layell
-R - Saffron Siege by mawwwk, with credit to MarioDox, DukeItOut, Dranakar, davidvkimball, Nezha, Yohan1044, Ryztiq, PMDT, optimizations by Layell
-Z - Radiant Stadium vN (Light) by Nezha, soopercool101, Layell, Dranakar with credit to Hallow, ZugZug, MarioDox, mawwwk
+L    - Magnet Train V2 by DukeItOut, davidvkimball, soopercool101 with credit to Frof for the original stage and fixes by mawwwk, optimizations by Layell
+R    - Saffron Siege by mawwwk, with credit to MarioDox, DukeItOut, Dranakar, davidvkimball, Nezha, Yohan1044, Ryztiq, PMDT, optimizations by Layell
+Z    - Radiant Stadium vN (Light) by Nezha, soopercool101, Layell, Dranakar with credit to Hallow, ZugZug, MarioDox, mawwwk
 
 SPEAR PILLAR
-L - Mewtwo's Lab Destination by Dranakar, davidvkimball, Yohan1044, mawwwk, with credit to Blazerrr, Muhsoce, mariokart64n, wilttilt, flamegoop
-R - Speartlefield by MarioDox, E-scope12 with credit to SmashBroski Tybis for caveless spear pillar, PMDT, Syvkal, RandomTBush
-Z - Ultra Space by Edwguard Flows
+L    - Mewtwo's Lab Destination by Dranakar, davidvkimball, Yohan1044, mawwwk, with credit to Blazerrr, Muhsoce, mariokart64n, wilttilt, flamegoop
+R    - Speartlefield by MarioDox, E-scope12 with credit to SmashBroski Tybis for caveless spear pillar, PMDT, Syvkal, RandomTBush
+Z    - Ultra Space by Edwguard Flows
 
 PORT TOWN AERO DIVE
-L - Melee Mute City by Mewtwo2000, DukeItOut, Alonzo
-R - Death Race Stadium by davidvkimball, DukeItOut, WorseDoughnut, mawwwk, Kirbeast
-Z - Big Blue Speedway by davidvkimball with credit to mawwwk
+L    - Melee Mute City by Mewtwo2000, DukeItOut, Alonzo
+R    - Death Race Stadium by davidvkimball, DukeItOut, WorseDoughnut, mawwwk, Kirbeast
+Z    - Big Blue Speedway by davidvkimball with credit to mawwwk
 
 INFINITE GLACIER
 Base  - Infinite Glacier by the PMDT, always set in water by DukeItOut with fixes by malistaticy
@@ -1089,46 +1089,46 @@ R     - Glacier of Dreams by MarioDox, soopercool101
 Z     - Icicle Mountain port by the Smash 2 dev team, optimizations by Layell
 
 FLAT ZONE 2
-L - Flat Zone (Melee) by davidvkimball, Nezha, optimizations by Layell
-R - Flat Destination by davidvkimball, MarioDox, Yohan1044 with credit to the PMDT for the stage upon which it's based.
-Z - Flat Zone Stadium by MarioDox, Yohan1044
+L    - Flat Zone (Melee) by davidvkimball, Nezha, optimizations by Layell
+R    - Flat Destination by davidvkimball, MarioDox, Yohan1044 with credit to the PMDT for the stage upon which it's based.
+Z    - Flat Zone Stadium by MarioDox, Yohan1044
 
 CASTLE SIEGE
-L - Tower of Guidance - Rebirth 1 (Fire Emblem: Radiant Dawn) V3 by DukeItOut, ART+ with credit to Albafika, SJ, Dragonrage, mariokart64n, BlackJax96, Mewtwo2000
-R - Castle Siege ToT by DukeItOut, MarioDox, mawwwk, Sandfall
-Z - Castlefield by davidvkimball, Dranakar, DukeItOut, Layell
+L    - Tower of Guidance - Rebirth 1 (Fire Emblem: Radiant Dawn) V3 by DukeItOut, ART+ with credit to Albafika, SJ, Dragonrage, mariokart64n, BlackJax96, Mewtwo2000
+R    - Castle Siege ToT by DukeItOut, MarioDox, mawwwk, Sandfall
+Z    - Castlefield by davidvkimball, Dranakar, DukeItOut, Layell
 
 WARIO LAND
-L - Wario's Castle by MarioDox, soopercool101 with credit to HeroTechne, AlGeorgeRomo, Smash 2 dev team
-R - Wario's Castleware by MarioDox with credit to HeroTechne, AlGeorgeRomo, Smash 2 dev team, WorseDoughnut, Nezha, PMDT
-Z - Waluigi Stadium by nnebf with credit to mawwwk, davidvkimball, Yohan1044
+L    - Wario's Castle by MarioDox, soopercool101 with credit to HeroTechne, AlGeorgeRomo, Smash 2 dev team
+R    - Wario's Castleware by MarioDox with credit to HeroTechne, AlGeorgeRomo, Smash 2 dev team, WorseDoughnut, Nezha, PMDT
+Z    - Waluigi Stadium by nnebf with credit to mawwwk, davidvkimball, Yohan1044
 
 DISTANT PLANET
-R - Valley of Repose by nnebf with credit to Mewtwo2000, edits by mawwwk, Layell
-Z - Distant Cave Secret by davidvkimball, WorseDoughnut, Dranakar, MarioDox, mawwwk
+R    - Valley of Repose by nnebf with credit to Mewtwo2000, edits by mawwwk, Layell
+Z    - Distant Cave Secret by davidvkimball, WorseDoughnut, Dranakar, MarioDox, mawwwk
 
 SKYWORLD
-R - Skyfield by MarioDox, Yohan1044, DukeItOut with credit to ImNotJavin, ClipArtPanda, PMDT
-Z - Underworld v2 by nnebf
+R    - Skyfield by MarioDox, Yohan1044, DukeItOut with credit to ImNotJavin, ClipArtPanda, PMDT
+Z    - Underworld v2 by nnebf
 
 FOUNTAIN OF DREAMS
 Base - Fountain of Dreams Rework by ART+, GRAND AZEL, SJ, Kirbeast, Kapedani, Layell, tyleto, nnebf, mawwwk, Link Tahuterasu Spirit, DukeItOut for module edits and particle effects, Mewtwo2000 for the original stage port
-L - Sectonia's Gem by Nezha, WorseDoughnut, Dranakar, Moblin, Ryztiq, optimizations by Layell
-R - Crystal Cave of Dreams by Moblin, Dranakar, Nezha, WorseDoughnut, with fixes by DukeItOut, mawwwk
+L    - Sectonia's Gem by Nezha, WorseDoughnut, Dranakar, Moblin, Ryztiq, optimizations by Layell
+R    - Crystal Cave of Dreams by Moblin, Dranakar, Nezha, WorseDoughnut, with fixes by DukeItOut, mawwwk
 
 FOURSIDE
-R - New Pork Zone by Yohan1044, WorseDoughnut
-Z - Fourside Planet by davidvkimball, Yohan1044 with credit to ALM5252, Zant532 for the Fourside Omega Stage
+R    - New Pork Zone by Yohan1044, WorseDoughnut
+Z    - Fourside Planet by davidvkimball, Yohan1044 with credit to ALM5252, Zant532 for the Fourside Omega Stage
 
 SMASHVILLE
-L - Sakuraville by t_Mistico_t with credit to rihuganon, davidvkimball, DukeItOut
-R - Beachville by pharaohfawcett, rihuganon, Moblin
-Z - Oceanville by t_Mistico_t with credit to Xenozoa425
+L    - Sakuraville by t_Mistico_t with credit to rihuganon, davidvkimball, DukeItOut
+R    - Beachville by pharaohfawcett, rihuganon, Moblin
+Z    - Oceanville by t_Mistico_t with credit to Xenozoa425
 
 SHADOW MOSES ISLAND
-L - Neutral Big Shell by davidvkimball, DukeItOut with credit to Eternal Yoshi for the original stage, ledgerewskie for working codecs
-R - Shadow Moses Stadium by MarioDox, davidvkimball, Kirbeast with credit to Olimario1892, mawwwk, WorseDoughnut, PMDT
-Z - Shadow Colony by WorseDoughnut, davidvkimball, DukeItOut, mawwwk, Purpa, with credit to PMDT
+L    - Neutral Big Shell by davidvkimball, DukeItOut with credit to Eternal Yoshi for the original stage, ledgerewskie for working codecs
+R    - Shadow Moses Stadium by MarioDox, davidvkimball, Kirbeast with credit to Olimario1892, mawwwk, WorseDoughnut, PMDT
+Z    - Shadow Colony by WorseDoughnut, davidvkimball, DukeItOut, mawwwk, Purpa, with credit to PMDT
 
 GREEN HILL ZONE
 Base  - Green Hill Zone Revamp by ART+, nnebf, Kirbeast, GRAND AZEL, mawwwk, tyleto, credit to the PMDT
@@ -1140,60 +1140,60 @@ R+Start    - Green Hill Zone PM by the PMDT, DukeItOut, mawwwk, WorseDoughnut, s
 
 PICTOCHAT
 Base stage displays "Zero Suit Samus" using module edit by DukeItOut.
-L - Mario Paint REDUX by MarioDox with credit to Nezha, AlGeorgeRomo
-R - PictoChat of Time by ART+, Motobug, Yorch, Kapedani, Puzzled, davidvkimball, MarioDox, mawwwk with credit to WorseDoughnut, soopercool101
-Z - Pictochat Medley by Electropolitan
+L    - Mario Paint REDUX by MarioDox with credit to Nezha, AlGeorgeRomo
+R    - PictoChat of Time by ART+, Motobug, Yorch, Kapedani, Puzzled, davidvkimball, MarioDox, mawwwk with credit to WorseDoughnut, soopercool101
+Z    - Pictochat Medley by Electropolitan
 
 HANENBOW
-R - Yoshi's Island-bow by Motobug, mawwwk, davidvkimball, WorseDoughnut, Yohan1044 with credit to Electropolitan, Mewtwo2000, PMDT
-Z - Hanenbow Destination by Layell with credit to davidvkimball, jlclpepe, Sandfall
+R    - Yoshi's Island-bow by Motobug, mawwwk, davidvkimball, WorseDoughnut, Yohan1044 with credit to Electropolitan, Mewtwo2000, PMDT
+Z    - Hanenbow Destination by Layell with credit to davidvkimball, jlclpepe, Sandfall
 
 HYRULE TEMPLE
-R - Hyrule Courtyard's Mansion by Motobug with credit to Dranakar, davidvkimball, Nezha, WorseDoughnut, Yohan1044, CutterKirby64, Black Boo, SmashHackers, Snoopy
-Z - Skyloftville V2 by Dranakar, Nezha, davidvkimball, DukeItOut, soopercool101
+R    - Hyrule Courtyard's Mansion by Motobug with credit to Dranakar, davidvkimball, Nezha, WorseDoughnut, Yohan1044, CutterKirby64, Black Boo, SmashHackers, Snoopy
+Z    - Skyloftville V2 by Dranakar, Nezha, davidvkimball, DukeItOut, soopercool101
 
 YOSHI'S STORY
-R - Yoshi's Sanctuary 64 by WorseDoughnut, Nezha with credit to HyperL!nk, Mewtwo2000, optimizations by Layell
-Z - Yoshi's Cookie by MarioDox, optimizations by Layell
+R    - Yoshi's Sanctuary 64 by WorseDoughnut, Nezha with credit to HyperL!nk, Mewtwo2000, optimizations by Layell
+Z    - Yoshi's Cookie by MarioDox, optimizations by Layell
 
 JUNGLE JAPES
-L - Kongo Jungle Melee Upgrades + Barrel Hazard by MarioDox, Wario358 with credit to Dr., Elliot, optimizations by Layell
-R - KongoWare by Dranakar, Nezha, Ryztiq, davidvkimball, Puzzled, optimizations by Layell
-Z - Kongo Island by Ubergruvin, MarioDox with credit to WorseDoughnut, Dranakar, davidvkimball, DukeItOut, MarioDox with credit to the PMDT, for the stage upon which it's based, the Smash 2 team for the Kongo Jungle BG. Optimizations by Layell
+L    - Kongo Jungle Melee Upgrades + Barrel Hazard by MarioDox, Wario358 with credit to Dr., Elliot, optimizations by Layell
+R    - KongoWare by Dranakar, Nezha, Ryztiq, davidvkimball, Puzzled, optimizations by Layell
+Z    - Kongo Island by Ubergruvin, MarioDox with credit to WorseDoughnut, Dranakar, davidvkimball, DukeItOut, MarioDox with credit to the PMDT, for the stage upon which it's based, the Smash 2 team for the Kongo Jungle BG. Optimizations by Layell
 L+Start - Swimless Jungle Japes using the swimless module by DukeItOut
 
 ONETT
-L - Hazardless Onett by davidvkimball, soopercool101, WorseDoughnut
-R - Onettville by davidvkimball, WorseDoughnut, soopercool101, DukeItOut, mawwwk with credit to the PMDT for the stage parameter data, collisions, etc.
-Z - Neutral Onett by soopercool101 with credit to Ryztiq, optimizations by Layell
+L    - Hazardless Onett by davidvkimball, soopercool101, WorseDoughnut
+R    - Onettville by davidvkimball, WorseDoughnut, soopercool101, DukeItOut, mawwwk with credit to the PMDT for the stage parameter data, collisions, etc.
+Z    - Neutral Onett by soopercool101 with credit to Ryztiq, optimizations by Layell
 
 DREAM LAND
-L - Winter Dream Land by Kirbeast with credit to Ryztiq, AZPM, t_Místico_t
-R - Dream Land Nighttime by Ryztiq, mawwwk
-Z - Autumn Dream Land (Gray Sky) by mawwwk with credit to Ryztiq, MetalLegacy, XtremeDragon
+L    - Winter Dream Land by Kirbeast with credit to Ryztiq, AZPM, t_Místico_t
+R    - Dream Land Nighttime by Ryztiq, mawwwk
+Z    - Autumn Dream Land (Gray Sky) by mawwwk with credit to Ryztiq, MetalLegacy, XtremeDragon
 R+Start - Dream Land 64 by PMDT, sfx edits by Purpa, optimizations by mawwwk
 
 PEACH'S CASTLE
 Base - Texture optimizations by Cahalan.
-R - Peach's Battlefield by Dranakar, davidvkimball with credit to mawwwk
-Z - Piranha Plant Heights by MarioDox with credit to Hallow, Peardian, PMDT
+R    - Peach's Battlefield by Dranakar, davidvkimball with credit to mawwwk
+Z    - Piranha Plant Heights by MarioDox with credit to Hallow, Peardian, PMDT
 
 CORNERIA
-L   - Sector Z - Star Fox 64 3D-styled by Allav866, Mewtwo2000
+L   - Sector Z    - Star Fox 64 3D-styled by Allav866, Mewtwo2000
 R   - Fountain of Sauria v2 by Yorch, credit to CrashWaffleCat, davidvkimball, MarioDox, Edwguard Flows. Misc edits by KingJigglypuff, Survivian.
 Z   - Star Fox (SNES) by Ambipom with credit to Wario358 for Model Rips (WarioWare Smooth Moves)
 L+Start - Sector Z 64 by PMDT, sfx edits by Purpa
 
 BIG BLUE
-L - Big Blue Speedway by davidvkimball
-R - Big Blueville by Dranakar, davidvkimball with credit to WorseDoughnut, DukeItOut, Yohan1044, Ca$inoWolf, mawwwk
-Z - Falcon Flyer by davidvkimball, WorseDoughnut, Yohan1044, soopercool101, mawwwk with credit to Mewtwo2000, Ryztiq, Hope4NeWDaY, optimizations by Layell
+L    - Big Blue Speedway by davidvkimball
+R    - Big Blueville by Dranakar, davidvkimball with credit to WorseDoughnut, DukeItOut, Yohan1044, Ca$inoWolf, mawwwk
+Z    - Falcon Flyer by davidvkimball, WorseDoughnut, Yohan1044, soopercool101, mawwwk with credit to Mewtwo2000, Ryztiq, Hope4NeWDaY, optimizations by Layell
 
 BRINSTAR
 Base - Planet Zebes 64 Remake by Yorch
-L - Brinstar Depths by Mewtwo2000, the Smash 2 dev team
-R - Brinstarfield by davidvkimball, Nezha, Yohan1044, mawwwk, soopercool101 with credit to Edwguard Flows, LenSho, Ca$ino Wolf, the PMDT.
-Z - RidleyLand by Yohan1044, Nezha, Dranakar, DukeItOut
+L    - Brinstar Depths by Mewtwo2000, the Smash 2 dev team
+R    - Brinstarfield by davidvkimball, Nezha, Yohan1044, mawwwk, soopercool101 with credit to Edwguard Flows, LenSho, Ca$ino Wolf, the PMDT.
+Z    - RidleyLand by Yohan1044, Nezha, Dranakar, DukeItOut
 L+Start - Planet Zebes 64 by PMDT, mawwwk
 
 POKEMON STADIUM 2
@@ -1220,14 +1220,14 @@ L+Start  - Mushroomy Kingdom Underground, with stamina wrap-around fixes by Mari
 L+Start	 - Mushroom Kingdom Melee by the Smash 2 dev team
 
 MARIO CIRCUIT
-L - Mario Circuit Light by Cahalan, CaliburZx, MarioDox
-R - Mario Circuit Secret by DukeItOut, ART+ with credit to PMDT
-Z - Rainbow Road by DukeItOut, MarioDox, mawwwk
+L    - Mario Circuit Light by Cahalan, CaliburZx, MarioDox
+R    - Mario Circuit Secret by DukeItOut, ART+ with credit to PMDT
+Z    - Rainbow Road by DukeItOut, MarioDox, mawwwk
 
 DINOSAUR LAND
-L - SMW Bowser's Castle by Yorch, davidvkimball, DukeItOut, MarioDox, soopercool101 with credit to ART+ for most of the models, stage assets; Nezha, LlamaJuice, PMDT for the lava model, fire enemies, Thwomp models, and Dry Bones model
-R - Yoshi's Island (Melee) Zone by Puzzled, Ryztiq, Dranakar with credit to DukeItOut, davidvkimball, the PMDT
-Z - Cheese Bridge by Peardian, Kapadani, GRAND AZEL
+L    - SMW Bowser's Castle by Yorch, davidvkimball, DukeItOut, MarioDox, soopercool101 with credit to ART+ for most of the models, stage assets; Nezha, LlamaJuice, PMDT for the lava model, fire enemies, Thwomp models, and Dry Bones model
+R    - Yoshi's Island (Melee) Zone by Puzzled, Ryztiq, Dranakar with credit to DukeItOut, davidvkimball, the PMDT
+Z    - Cheese Bridge by Peardian, Kapadani, GRAND AZEL
 
 BELL TOWER
 Base - Bell Tower by LenSho, fixes by MarioFan63, mawwwk
@@ -1239,7 +1239,7 @@ CLOCK TOWN
 Base - Clock Town by davidvkimball, Nezha, Dranakar, DukeItOut, mawwwk, Layell; Clock Town import by KTH; Skull Kid import by Lunoz; re-used animations by PMDT; stage concept by the SSF2 team
 L    - Majora's Room by Electropolitan with credit to DSX8, LlamaJuice, Mewtwo2000, Ryztiq, soopercool101
 R    - Clock Town by davidvkimball, Nezha, Dranakar, DukeItOut, mawwwk, Layell; Clock Town import by KTH; Skull Kid import by Lunoz; re-used animations by PMDT; stage concept by the SSF2 team
-Z - Great Bay by Ryan, Mewtwo2000 with fixes by Nezha, Eon, MarioDox
+Z    - Great Bay by Ryan, Mewtwo2000 with fixes by Nezha, Eon, MarioDox
 L+Start - Great Bay (no swimming) by Ryan, Mewtwo2000 with fixes by Nezha, Eon, MarioDox; module by DukeItOut
 
 WARIOWARE, INC.
@@ -1303,9 +1303,9 @@ R    - Subspace Battlefield by t_Místico_t with credit to sporksparks, nikeru, 
 Z    - SSE Forest by PMDT with optimizations by Layell, mawwwk
 
 RAINBOW CRUISE
-L - Bob-Omb Battlefield by Nezha, Flambo237, MarioDox, Puzzled, Survivian, Electropolitan with credit to Flambo, KingJigglypuff, Kirbeast, Layell, CBM Discord server
-R - Rainbow Cruiseware by MarioDox with credit to GBC, Nezha, PMDT
-Z - Mushroom Gorge by MarioDox
+L    - Bob-Omb Battlefield by Nezha, Flambo237, MarioDox, Puzzled, Survivian, Electropolitan with credit to Flambo, KingJigglypuff, Kirbeast, Layell, CBM Discord server
+R    - Rainbow Cruiseware by MarioDox with credit to GBC, Nezha, PMDT
+Z    - Mushroom Gorge by MarioDox
 L+Start - Dr. Mario's Office by ALM5252, TroyAnthony
 
 POKE FLOATS
@@ -1316,15 +1316,15 @@ Z    - Treasure Town (Variant B) by Frof
 L+Start - Frozen Pokemon Stadium by soopercool101 with credit to PMDT
 
 PIRATE SHIP
-L - Ganon's Tower by Nezha, DSX8, LegacyWolf with credit to NotZac, RARWRzilla22, Cynapse, Kurukato, Modding Workshop, Smash3c, Smash3, Brawl Vault Vigilantes, KCMM's Discord
-R - Ancient Castle [Yoshi's Island '23 1:1] by Electropolitan with credit to iwantgames, DukeItOut, Mewtwo2000, Akeno/Archer, Super Smash Bros., Legend of Jesse, Bluebreon, xxWutzMercyxx, Dranakar. Converted to YI 1:1 by Layell
-Z - Molgera's Castle by WorseDoughnut, mawwwk with credit to Ryztiq, LlamaJuice, Nezha, soopercool101
+L    - Ganon's Tower by Nezha, DSX8, LegacyWolf with credit to NotZac, RARWRzilla22, Cynapse, Kurukato, Modding Workshop, Smash3c, Smash3, Brawl Vault Vigilantes, KCMM's Discord
+R    - Ancient Castle [Yoshi's Island '23 1:1] by Electropolitan with credit to iwantgames, DukeItOut, Mewtwo2000, Akeno/Archer, Super Smash Bros., Legend of Jesse, Bluebreon, xxWutzMercyxx, Dranakar. Converted to YI 1:1 by Layell
+Z    - Molgera's Castle by WorseDoughnut, mawwwk with credit to Ryztiq, LlamaJuice, Nezha, soopercool101
 
 VENOM
 Base - Venom port by MarioDox, fixes by Cahalan
-L - Krazoa Palace by Nezha with credit to Kapedani, KingJigglypuff, Theqmayn, Models124717
-R - Venom Smashville by Yorch with credit to MarioDox
-Z - Planet Papetoon by MarioDox with credit to Eon, Layell, Ryztiq, Dranakar, Wingedkoopa67, <X> / ALM5252, Mewtwo2000, PMDT
+L    - Krazoa Palace by Nezha with credit to Kapedani, KingJigglypuff, Theqmayn, Models124717
+R    - Venom Smashville by Yorch with credit to MarioDox
+Z    - Planet Papetoon by MarioDox with credit to Eon, Layell, Ryztiq, Dranakar, Wingedkoopa67, <X> / ALM5252, Mewtwo2000, PMDT
 
 RESULTS SCREEN
 Project+ Result Screen by Motobug, denz with credit to the PMDT
