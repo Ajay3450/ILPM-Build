@@ -19,13 +19,22 @@ HOOK @ $80132B9C
 # Mode 3 - Update Corrections and state, too!
 HOOK @ $80132BA0
 {
-	stwu r1, -0x60(r1)
+	stwu r1, -0x70(r1)
 	stw r31, 0x08(r1)
 	stw r30, 0x0C(r1)
 	stw r4, 0x10(r1)
 	mflr r0
-	stw r0, 0x64(r1)
-	mr r31, r3
+	stw r0, 0x74(r1)
+	mr r31, r3	
+	lwz r3, 0x70(r31)
+	lwz r3, 0x20(r3)
+	lwz r3, 0x0C(r3)
+	lwz r3, 0x2D0(r3)
+	lwz r0, 0x10(r3)	# Frames airborne
+	stw r0, 0x14(r1)
+	lwz r0, 0x14(r3)	# Frames grounded
+	stw r0, 0x18(r1)
+	stw r3, 0x1C(r1)
 	cmpwi r4, 0
 	beq noModelUpdate	# If we set it to non-zero, we want to update the 
 modelUpdate:
@@ -52,7 +61,7 @@ noModelUpdate:
 	lwz r30, 0x28(r30)
 	lwz r30, 0x10(r30)
 	lwz r4, 0x5C(r30)	# Prev Diamond
-	addi r3, r1, 0x14	# Scratch
+	addi r3, r1, 0x20	# Scratch
 	lwz r12, 0(r4)
 	lwz r12, 0x40(r12)
 	mtctr r12
@@ -74,6 +83,7 @@ noModelUpdate:
 	lwz r4, 0x10(r1)
 	cmpwi r4, 3
 	bne noProcess
+	
 	lwz r3, 0x8(r31)
 	lwz r12, 0x3C(r3)
 	lwz r12, 0x18(r12)
@@ -95,17 +105,22 @@ noModelUpdate:
 
 noProcess:
 	lwz r3, 0x5C(r30)	# Prev Diamond that we are going to restore
-	addi r4, r1, 0x14
+	addi r4, r1, 0x1C
 	lwz r12, 0(r3)
 	lwz r12, 0x40(r12)
 	mtctr r12
 	bctrl				# Copy ECB back!
 modelsOnly:
+	lwz r3, 0x1C(r1)
+	lwz r0, 0x14(r1)
+	stw r0, 0x10(r3)	# Frames airborne
+	lwz r0, 0x18(r1)
+	stw r0, 0x14(r3)	# Frames Grounded
 	lwz r31, 0x08(r1)
 	lwz r30, 0x0C(r1)
-	lwz r0, 0x64(r1)
+	lwz r0, 0x74(r1)
 	mtlr r0
-	addi r1, r1, 0x60 
+	addi r1, r1, 0x70 
 	blr
 }
 
@@ -300,6 +315,62 @@ HOOK @ $8089D368
 	fadds f2, f2, f1	# Add force speed for this frame
 	stfs f2, 0x10(r12)	# Update the position!
 }
+
+#########################################
+Ledge Release Applies Gravity [DukeItOut]
+#########################################
+HOOK @ $80867AE4
+{
+	# uses cr1 instead of cr0 due to comparison before hook!
+	lwz r3, 0x7C(r29)
+	lhz r5, 0x06(r3)	# Previous action
+	cmpwi cr1, r5, 0x75	# was it hanging from a ledge?
+	bne+ cr1, normal
+	lhz r5, 0x3A(r3)	# Current action
+	cmpwi cr1, r5, 0x49		# is it tumbling from holding ledge?
+	beq- cr1, addGravity
+	cmpwi cr1, r5, 0xE		# is it falling?
+	bne+ cr1, normal
+addGravity:
+	lfs f0, 0x10(r31)	# Gravity to apply
+	lwz r3, 0x18(r29)	# \
+	lfs f2, 0x10(r3)	# | Apply gravity to Y position!
+	fadds f2, f2, f0	# |
+	stfs f2, 0x10(r3)	# /
+normal:
+	stfs f0, 0xC(r31)	# Set Y speed. Original operaton
+}
+HOOK @ $80867F5C
+{
+	lwz r3, 0x7C(r30)
+	lhz r4, 0x3A(r3)	# Current action
+	cmpwi r4, 0xE; bne+ normal
+	lhz r4, 0x06(r3)
+	cmpwi r4, 0x75; beq- normalFall_check
+	cmpwi r4, 0x0B; blt- normalFall_check # Common grounded actions
+	cmpwi r4, 0x11; blt- normal			  # Jumping/Falling
+	cmpwi r4, 0x1D; bgt+ normal			  # Most things
+normalFall_check: # Don't FF first frame falling airborne from the ledge
+	lwz r3, 0x70(r30) #
+	lwz r4, 0x24(r3) # RA
+	lwz r3, 0x0C(r4) # Basic
+	lwz r3, 0x28(r3) # 10 (Customized to increment every frame while falling)
+	cmpwi r3, 1
+	bge+ normal		# The first frame of falling normally won't allow this
+						# Done on purpose to match Melee and prevent ledge drops from instantly fastfalling when pressing downwards!
+	lwz r3, 0x1C(r4) # Bit
+	lbz r5, 0x03(r3)
+	andi. r5, r5, 0xFB # Clear the FF bit!
+	stb r5, 0x03(r3)
+	lis r12, 0x8086
+	ori r12, r12, 0x7F84
+	mtctr r12
+	bctr				# Don't FF!
+	
+normal:
+	mr r3, r30			# Original operation
+}
+
 ####################################################################
 Air Dodges Calculate One Frame Earlier [DukeItOut, Fudgepop01, Eon]
 ####################################################################
@@ -317,27 +388,30 @@ Air Dodges Calculate One Frame Earlier [DukeItOut, Fudgepop01, Eon]
 #	that this code change reduces the range
 # V2.1: Different initial frame raytrace math tested for consistency
 # V2.2: Altered based on airtime to better improve feel
+# V2.3: Uses ledge intangibiliity counter instead of airborne frames
+# V2.4: Disabled Alloys doing this due to related crash
+# V2.5: Altered feel again to not be dependent on either.
 ####################################################################
 op b 0x70 @ $80884F68	# \
 op b 0x64 @ $80884F74	# |
 op b 0x40 @ $80884F98	# |
 HOOK @ $80884FD8		# / Air Dodges
 {
+	lwz r5, 0x8(r30)
+	lwz r5, 0x110(r5)	# Character ID
+	cmpwi r5, 0x32; blt+ RealChar
+	cmpwi r5, 0x35; bgt+ RealChar
+Alloy:
+	ba 0x885024	# Finish behavior
+RealChar:
 	#### Rayscan to fix glitch where the below will clip through stage corners. Very annoying!
 	stwu r1, -0x80(r1)
 	lwz r5, 0x88(r30)	# speed
 	lwz r4, 0x4C(r5)
 	psq_l f1, 0x8(r4), 0, 0	# XY speed of air dodge
 	psq_st f1, 0x8(r1), 0, 0
-	lwz r4, 0x70(r30)	# \
-	lwz r4, 0x20(r4)	# | Frames airborne
-	lwz r4, 0x0C(r4)	# |
-	lwz r4, 0x2D0(r4)	# |
-	lwz r4, 0x10(r4)	# /
-	cmpwi r4, 2			# Check if airborne for 2 frames or less
+
 	lwz r3, 0x18(r30)
-	psq_l f2, 0x0C(r3), 0, 0 # current XY positon (previous position at 0x18, used in earlier versions)
-	ble+ 0x08			# skip if under 3 frames!
 	psq_l f2, 0x18(r3), 0, 0 # prev XY positon (current position at 0x0C), uses for snappier movement but tends to make WDs shorter if not skipped.
 	lis r3, 128		# 0.5, 0.0 aka 128/256 & 0
 	stw r3, 0x10(r1)
@@ -557,19 +631,23 @@ Jumps Calculate One Frame Earlier [DukeItOut]
 #
 # Also makes jumping out of water easier
 # by increasing jump height in that context
+#
+# V1.1: No longer affects footstools
 #############################################
 HOOK @ $8086BD34	# Grounded or Swimming
 {
-	lfs f0, 0x24(r1)	 # Desired movement Y speed. Some branches don't have this set.
     lwz r29, 0xD0(r30)   # \ Retrieve the gravity for the character
     lfs f31, 0x70(r29)   # /
 	
 	lwz r29, 0x7C(r30)	 # \ Get previous action
 	lhz r29, 0x06(r29)	 # /
+	cmpwi r29, 0x6D		 # Check if footstooling
+	beq- normal			 # Avoid messing with footstool heights!
+	
+	lfs f0, 0x24(r1)	 # Desired movement Y speed. Some branches don't have this set.
 
 	cmpwi r29, 0xBA		 # Check if we are trying to leap out of water
 
-	
     lwz r29, 0x18(r30)   # \
     lfs f1, 0x1C(r29)    # | Simulate one frame of vertical movement
     fadds f1, f0, f1     # |
@@ -584,6 +662,7 @@ notSwimming:			 # |
 	mr r3, r30
 	li r4, 2
 	bla 0x132BA0		# Update model and collisions!
+normal:
     lis r29, 0x80AE     # Original operation
 }
 
@@ -654,11 +733,8 @@ normal:
     bctrl # Original Op. Set shield tilt animation speed (yes, speed, not frame)
 }
 
-
-
-
 ###################################################################
-Windbox Stacking For Fighter Hitboxes [DukeItOut]
+!Windbox Stacking For Fighter Hitboxes [DukeItOut]
 ###################################################################
 #
 # Still not treated as standard knockback, but doesn't
@@ -795,6 +871,15 @@ HOOK @ $80837B3C
 #########################################
 Instant Fastfalls [Fudgepop01, DukeItOut]
 #########################################
+HOOK @ $80871DF0		# Falling
+{
+	lwz r3, 0x64(r3)	# Original operation
+	lwz r5, 0x24(r3)	# RA
+	lwz r5, 0x0C(r5)	# Basic
+	lwz r6, 0x28(r5)	# 10
+	addi r6, r6, 1		# Increment every frame!
+	stw r6, 0x28(r5)	#
+}
 HOOK @ $8083A328
 {
 	lis r4, 0x2200		# \ RA-Bit 2
@@ -802,15 +887,19 @@ HOOK @ $8083A328
 	lwz r3, 0xD8(r28)
 	lwz r3, 0x64(r3)
 	lwz r12, 0(r3)
-	lwz r12, 0x4C(r12)
+	lwz r12, 0x4C(r12)	# Get Bit
 	mtctr r12
 	bctrl				# Check for if RA-Bit 2 is set. This is the fastfall flag!
 	cmplwi r3, 1
 	bne+ noFastfall
 
+	lwz r5, 0xD8(r28)
+	lwz r6, 0x70(r5)	#
+	lhz r4, 0x3A(r6)	# Current action. Some "falling" actions still go through this when not expected to!
+	cmpwi r4, 0x75; beq- noFastfall	# Grabbing a ledge
+	
 	mr r4, r28
-	lwz r3, 0xD8(r28)
-	lwz r3, 0x7C(r3)	# Speed
+	lwz r3, 0x7C(r5)	# Speed
 	lwz r25, 0x58(r3)	# Gravity
 	mr r3, r25
 	lfs f31, 0x0C(r25)	# Y speed of gravity

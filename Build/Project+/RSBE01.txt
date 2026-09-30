@@ -316,7 +316,7 @@ Allow 2x Speed Setting in Training [Magus]
 ##########################################
 op cmpwi r30, 6 @ $801058C8
 op li r30, 5    @ $801058E4
-op b 0x8        @ $809629E8
+op bge 0x8      @ $809629E8
 
 HOOK @ $809629F4
 {
@@ -1157,39 +1157,79 @@ Slopes do not Affect Landing Velocity [Magus]
 op fneg	f2,f2 	@ $80794634
 op fmr	f0,f2 	@ $8079463C
 
-######################################################################
-Traction 2x on Non-Dash Character Momentum > Max Walking Speed [Magus]
-######################################################################
+##################################################################################################
+Traction 2x on Non-Dash Character Momentum > Max Walking Speed 1.2 [Magus, DukeItOut, White Sheep]
+##################################################################################################
+# 1.1: Only applies to more common actions instead of all grounded
+# 1.2: Landing now is given its own traction modifier instead of 2X
+##################################################################################################
 HOOK @ $80794D3C
 { 
-  lwz r12, 0x8(r31)			# \
-  lwz r12, 0x3C(r12)		# |
-  lwz r12, 0xA4(r12)		# |
-  mtctr r12					# |
-  bctrl						# |
-  cmpwi r3, 0; bne+ normal	# /	
+  lwz r12, 0x8(r31)            # \
+  lwz r12, 0x3C(r12)        # |
+  lwz r12, 0xA4(r12)        # |
+  mtctr r12                    # |
+  bctrl                        # |
+  cmpwi r3, 0; bne+ normal    # /    
   
-  lwz r4, 0x4C(r26)				# \ Check of unknown current application.
-  cmpw r4, r30;  bne- normal	# / Please document reasoning. Related to knockback on the ground.
-  lwz r4, 0x1C(r26)	# Get to the character properties.
-  lwz r4, 0xD0(r4)	# Attributes Table
-  lfs f0, 0x24(r4)	# Ground Friction 
+  lwz r4, 0x7C(r31)
+  lwz r5, 0x38(r4)    # Current action
+  lhz r6, 0x06(r4)	  # Previous action
+  cmpwi r5, 3; beq- normal # Dash
+  cmpwi r5, 5; beq- normal # Braking from a run
+
+calc2xTraction:
+  lwz r4, 0x4C(r26)                # \ Check of unknown current application.
+  cmpw r4, r30;  bne- normal    # / Please document reasoning. Related to knockback on the ground.
+  lwz r4, 0x1C(r26)    # Get to the character properties.
+  lwz r4, 0xD0(r4)    # Attributes Table
+  lfs f4, 0x24(r4)    # Ground Friction 
   
-  fabs f1, f3;  fcmpo cr0, f0, f1;  bne- normal # Compare absolute friction with ground friction attribute
-  lfs f1, 0x20(r4)	# Max Walk Speed
-  lfs f0, 0x08(r30)	# X Movement Speed  
+  fabs f1, f3;  fcmpo cr0, f4, f1;  bne- normal # Compare absolute friction with ground friction attribute
+  lfs f1, 0x20(r4)    # Max Walk Speed
+  lfs f0, 0x08(r30)    # X Movement Speed  
   fabs f0, f0;  fcmpo cr0, f0, f1;  ble- normal # Compare absolute X Speed with max walk speed
-  lfs f0, 0x08(r30)	# X Movement Speed (again!)
-  fadds f1, f3, f3	# 2x directional friction placed into f1
-  fadds f0, f0, f1	# Original operation modified. Apply ground friction!
-  lfs f1, 0x0C(r30)	# Y Movement Speed
+  lfs f0, 0x08(r30)    # X Movement Speed (again!)
+  
+  
+  cmpwi r6, 0x21; bne+ notAirDodgeLanding # \
+  cmpwi r5, 0x19; bne+ notAirDodgeLanding # /
+
+landing:
+  lis r12, 0xBF19	# \
+  ori r12, r12, 0x999A	# | -0.6
+  stw r12, 0x8(r1)	# /
+  lfs f1, 0x8(r1)	# /
+  fmuls f1, f1, f4 	# 0 * Friction
+  
+  lis r12, 0x3FEA		# \
+  ori r12, r12, 0x7EFA	# | 1.832
+  stw r12, 0x8(r1)		# /
+  lfs f5, 0x8(r1)
+  fadds f1, f1, f5		# + 1.832
+  
+  # 0.07 Ganon
+  # 0.14 2X Ganon normally
+  # 0.119 1.7X Ganon felt accurate
+  
+  b calcTract
+
+notAirDodgeLanding: 
+  li r3, 512			# 512 / 256 (2.0)
+  sth r3, 0x8(r1)
+  psq_l f1, 0x8(r1), 0, 7 # Signed 16-bit to Paired Single Float Conversion  (type 7: value / 256)
+
+calcTract:  
+  fmuls f1, f3, f1	  # 2x directional friction placed in f1 (1.5x for landing animations)
+  fadds f0, f0, f1    # Original operation modified. Apply ground friction!
+  lfs f1, 0x0C(r30)    # Y Movement Speed
   b %END%
 
 normal:
-  lfs f0, 0x08(r30)	# X Movement Speed
-  lfs f1, 0x0C(r30)	# Y Movement Speed
-  fadds f0, f0, f3	# Original operation, apply ground friction!! 
-} 
+  lfs f0, 0x08(r30)    # X Movement Speed
+  lfs f1, 0x0C(r30)    # Y Movement Speed
+  fadds f0, f0, f3    # Original operation, apply ground friction!! 
+}
 
 ###############################################################
 Dash Exit into Wait, Dash, and Taunt Keep Full Velocity [Magus]

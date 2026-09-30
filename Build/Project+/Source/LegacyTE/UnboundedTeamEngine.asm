@@ -1,13 +1,14 @@
-################################################################################################
-[Legacy TE] Unbounded Team Color Engine P+ Variant v1.4 [DukeItOut, DesiacX, QuickLava, Squidgy]
+#################################################################################################
+[Legacy TE] Unbounded Team Color Engine P+ Variant v1.41 [DukeItOut, DesiacX, QuickLava, Squidgy]
 #
-# v1.1 - Adjusted to accomodate Mdl+Tex splitting
-# v1.2 - Reimplemented findCharTeamColorNo override to not affect teamSet.
-#      - Split iterating and wrapping teamSet into incTeamColor and decTeamColor hooks.
-# v1.3 - Additional code optimization and cleanup.
-# v1.4 - Fixed default loading instead of team color sometimes when random was selected
-#      - Randomize teamSet when fighter is random
-################################################################################################
+# v1.10 - Adjusted to accomodate Mdl+Tex splitting
+# v1.20 - Reimplemented findCharTeamColorNo override to not affect teamSet
+#       - Split iterating and wrapping teamSet into incTeamColor and decTeamColor hooks
+# v1.30 - Additional code optimization and cleanup.
+# v1.40 - Fixed default loading instead of team color sometimes when random was selected
+#       - Randomize teamSet when fighter is random
+# v1.41 - Fixed enabling Team Mode after returning to CSS with some costumes breaking team color
+#################################################################################################
 .alias maxTeamIndex = 0x2
 .alias CharDataTable_Hi = 0x8058
 .alias CharDataTable_Lo = 0x5B00
@@ -180,4 +181,7 @@ loopStart:
 notMatch:
     cmplwi r10, 0xC                            # If we need to keep looking, compare the loaded color code to the terminator code (0xC)...
     bc+ 0, 2 loopStart                         # ... and if it was not the terminator, restart the loop.
+	cmpwi r0, 0x00                             # \
+	bge+ %END%                                 # | If we didn't find any matches iterating up to this costume though, default to 0!
+	li r0, 0                                   # /
 }

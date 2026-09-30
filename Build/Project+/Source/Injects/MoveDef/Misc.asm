@@ -959,42 +959,47 @@ Team Colour Shade Modifier [ds22]
 * 00000080 80808080
 * FFFFFF80 00000000
 
-###################################
-No Autosweetspot Ledges v2.2 [Eon]
-#
-# converted to PSA
-###################################
-.alias PSA_Off = 0x80546EE8
-CODE @ $80546EE8
+########################################
+Remove grabbing Items with Aerials [Eon]
+########################################
+CODE @ $80FC2798
 {
-    word 2; word PSA_Off+0x28
-    word 6; word 7               #if compare
-    word 5; IC_Basic 23          #vertical character velocity
-    word 0; word 1               #<=
-    word 1; scalar -0.0001       #-0.0001
-    word 0x02040400; word PSA_Off+0x8
-    word 0x02040400; word 0x80FAA3DC
-    word 0; word 0
-}
-CODE @ $80FC1458
-{
-    word 0x00070100; word PSA_Off
+  word 0x00020000; word 0
+  word 0x00020000; word 0
+  word 0x00020000; word 0
 }
 
 #############################################
-Special Landing is Teeter-Capable [DukeItOut]
+Aerial Staling Set before Subaction Set [Eon]
 #############################################
-.alias PSA_Off = 0x80540068
-CODE @ $80540068
+#nair
+CODE @ $80FC2820
 {
-	word 2; word PSA_Off+8
-	word 0x08000100; word PSA_Off+0x28	# Air/Ground State: Can't go off ledges moving forwards.
-	word 0x02010200; word 0x80FAF454	# Change Action E (Fall). Requirement: In Air (adddress for the original that was overwritten below.)
-	word 0x00070100; word 0x80FABBB4	# Subroutine in walking that determines if the stick position allows teetering.	
-	word 0x00080000; word 0				# Return
-	word 0; word 8						# Collision Type 8 (Don't go off ledges while moving forwards)
+  word 0x0C1C0200; word 0x80FB2EC4
+  word 0x04000100; word 0x80FB2EBC
 }
-CODE @ $80FC1CA0 # 80F9FC20 + 22080
+#fair
+CODE @ $80FC2848
 {
-	word 0x00070100; word PSA_Off	# Go to the above
+  word 0x0C1C0200; word 0x80FB2F04
+  word 0x04000100; word 0x80FB2EFC
 }
+#bair
+CODE @ $80FC2860
+{
+  word 0x0C1C0200; word 0x80FB2F1C
+  word 0x04000100; word 0x80FB2F14
+}
+#uair
+CODE @ $80FC2888
+{
+  word 0x0C1C0200; word 0x80FB2F54
+  word 0x04000100; word 0x80FB2F4C
+}
+#dair
+CODE @ $80FC28A0
+{
+  word 0x0C1C0200; word 0x80FB2F6C
+  word 0x04000100; word 0x80FB2F64
+}
+

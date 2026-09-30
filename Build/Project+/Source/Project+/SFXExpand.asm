@@ -142,7 +142,7 @@ Table_Skip:
 	.RESET
 
 ###########################################################################################################################################################
-[Project+] SoundBank Expansion System (RSBE.Ver) v2.5 [codes, DukeItOut, JOJI]
+[Project+] SoundBank Expansion System (RSBE.Ver) v2.5b [codes, DukeItOut, JOJI]
 # v1.1 - Kirbycide Fix + Voice clips volume fix + CSS Hiccup Fix
 # v1.2 - Fixes Mr. Resetti's brsar conflicts
 # v2.0 - Removed Sound Resource table occupation and made dynamic to better support resource size changes
@@ -152,6 +152,7 @@ Table_Skip:
 # v2.3 - Added a safety to prevent crashing when attempting to load a custom soundbank that failed to be found.
 # v2.4 - Fixed issue where sounds could be paired with the wrong soundbanks if not played the moment they are called.
 # v2.5 - Increased stability of sample check to avoid introduced error where the wrong bank was accessed sometimes.
+# v2.5b- Fixed oversight related to the Home Menu
 #
 # 90432134 references -> Sound Resource + 0x298934-to-0x29897F
 # 901A3090 references -> Written to CodeFlag+0x4
@@ -421,6 +422,9 @@ Normal:
 ### More Sound Info Data
 HOOK @ $801C73CC
 {  
+  lwz r0, 0(r3) # Sound Count in entire RSAR (i.e. the Wii Menu has 16 and NTSC-U's main brsar has 10348)
+  cmplwi r0, 0x1000 # 
+  blt- %END%	# Don't do anything to the smaller RSARs for Mr. Resetti and the Home Menu!
   mr r6, r3 # We need to keep this
   lwz r5, 0x28(r29)
   lbz r3, 0x20(r5)

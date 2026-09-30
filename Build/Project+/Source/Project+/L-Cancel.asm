@@ -300,67 +300,6 @@ Disable Aerial Attack Landing Lag IASA [Magus]
 ##############################################
 op lwz r0, 0xFF(r0) @ $80FAF168
 
-########################################
-Remove grabbing Items with Aerials [Eon]
-########################################
-CODE @ $80FC2798
-{
-  word 0x00020000; word 0
-  word 0x00020000; word 0
-  word 0x00020000; word 0
-}
-
-#############################################
-Aerial Staling Set before Subaction Set [Eon]
-#############################################
-#nair
-CODE @ $80FC2820
-{
-  word 0x0C1C0200; word 0x80FB2EC4
-  word 0x04000100; word 0x80FB2EBC
-}
-#fair
-CODE @ $80FC2848
-{
-  word 0x0C1C0200; word 0x80FB2F04
-  word 0x04000100; word 0x80FB2EFC
-}
-#bair
-CODE @ $80FC2860
-{
-  word 0x0C1C0200; word 0x80FB2F1C
-  word 0x04000100; word 0x80FB2F14
-}
-#uair
-CODE @ $80FC2888
-{
-  word 0x0C1C0200; word 0x80FB2F54
-  word 0x04000100; word 0x80FB2F4C
-}
-#dair
-CODE @ $80FC28A0
-{
-  word 0x0C1C0200; word 0x80FB2F6C
-  word 0x04000100; word 0x80FB2F64
-}
-
-#############################################################
-Teeter Cancelling [Shanus, Yeroc, Dantarion, Wind Owl, Magus]
-#############################################################
-.alias Teeter_Loc = 0x80546120
-
-CODE @ $80546120
-{
-  word 2; word Teeter_Loc+0x8
-  word 0x02010200; word 0x80FAF3EC
-  word 0x00070100; word 0x80FABBB4
-  word 0x00080000; word 0;
-}
-CODE @ $80FC1C58
-{
-  word 0x00070100; word Teeter_Loc
-}
-
 ##############################################
 Ignore Damage Gauge Setting [InternetExplorer]
 ##############################################
