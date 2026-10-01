@@ -3191,7 +3191,7 @@ Mario_Paint.tlst - 1 track
 	Frequency: 40
 
 ################
-Menu.tlst - 15 tracks
+Menu.tlst - 18 tracks
 
 	Aether Paradise (SM)
 	Pokemon/Aether Paradise (SM).brstm
@@ -3208,6 +3208,11 @@ Menu.tlst - 15 tracks
 	Volume: 80
 	Frequency: 40
 
+	Character Select Theme (Under Night In-Birth II)
+	Under Night/Character Select Theme (Under Night In-Birth II).brstm
+	Volume: 80
+	Frequency: 40
+
 	Cyber Battle (Solo) (DELTARUNE)
 	DELTARUNE/Cyber Battle (Solo) (DELTARUNE).brstm
 	Volume: 77
@@ -3215,6 +3220,11 @@ Menu.tlst - 15 tracks
 
 	The Egg And You (Cowboy Bebop)
 	Cowboy Bebop/The Egg And You (Cowboy Bebop).brstm
+	Volume: 80
+	Frequency: 40
+
+	Gator Gambol (OMORI)
+	OMORI/Gator Gambol (OMORI).brstm
 	Volume: 80
 	Frequency: 40
 
@@ -3231,6 +3241,11 @@ Menu.tlst - 15 tracks
 	Outer Space (Super Paper Mario)
 	Paper Mario/Outer Space (Super Paper Mario).brstm
 	Volume: 68
+	Frequency: 40
+
+	Pick of the Litter (Skullgirls)
+	Skullgirls/Pick of the Litter (Skullgirls).brstm
+	Volume: 80
 	Frequency: 40
 
 	The Rain Formerly Known as Purple (RoR 2)
