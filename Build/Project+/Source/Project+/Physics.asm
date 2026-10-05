@@ -391,6 +391,7 @@ Air Dodges Calculate One Frame Earlier [DukeItOut, Fudgepop01, Eon]
 # V2.3: Uses ledge intangibiliity counter instead of airborne frames
 # V2.4: Disabled Alloys doing this due to related crash
 # V2.5: Altered feel again to not be dependent on either.
+# V2.6: Further stability adjustments.
 ####################################################################
 op b 0x70 @ $80884F68	# \
 op b 0x64 @ $80884F74	# |
@@ -538,6 +539,10 @@ HOOK @ $80885040 # Reset air item grab box to normal when leaving the air dodge 
 	stw r29, 0x10(r1)
 	
 	lwz r31, 8(r4)
+	lwz r3, 0x110(r31)	# Character ID
+	cmpwi r3, 0x32; blt+ normalFighter  # Alloys can't tolerate item search changes, they have less detection boxes than normal fighters!
+	cmpwi r3, 0x35; ble- finish			#
+normalFighter:	
 	lwz r30, 0x60(r31)
 	lwz r30, 0x9C(r30)
 	
