@@ -41,6 +41,9 @@ PSA Edits for Maofever Ivysaur by ilikepizza107
 PSA Edits for Star Lucas FSmash on-hit sfx by ilikepizza107 
  - PSA Edited: Sub Action 0x58, Main; Sub Action 0x58, Other
 
+PSA Edits for Sabrina Link Final Smash by ilikepizza107
+ - PSA Edited: Sub Routine 0x9028 (now 0x9408)
+
 ################
 SKINS
 ################
@@ -54,6 +57,7 @@ LINK
 10 - Zushi Link by GKO
 27 - Maofever Link by SOULLY
 28 - SgtPingwen Link by ilikepizza107
+29 - sabrina Link by sabrina, ilikepizza107
 
 SAMUS
 40 - Brawl Fake Samus by SJS [https://gamebanana.com/mods/247126]
