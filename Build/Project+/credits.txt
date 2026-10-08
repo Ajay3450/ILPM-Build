@@ -63,6 +63,7 @@ LINK
 29 - sabrina Link by sabrina, ilikepizza107
 
 SAMUS
+25 - Dread Suit Purple by SJS [https://gamebanana.com/mods/320432]
 40 - Brawl Fake Samus by SJS [https://gamebanana.com/mods/247126]
 45 - Morsecode Samus by DHS7
 50 - GooSluj Samus by ilikepizza107
@@ -186,6 +187,7 @@ PIT
 50 - Meecrobs Pit by ilikepizza107
 
 ZERO SUIT SAMUS
+25 - Ellie ZSS by Skratchpost
 40 - RosiYY ZSS by ilikepizza107
 45 - Dread Suit ZSS by ilikepizza107
 50 - GooSluj ZSS by ilikepizza107
