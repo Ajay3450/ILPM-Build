@@ -44,6 +44,9 @@ PSA Edits for Star Lucas FSmash on-hit sfx by ilikepizza107
 PSA Edits for Sabrina Link Final Smash by ilikepizza107
  - PSA Edited: Sub Routine 0x9028 (now 0x9408)
 
+PSA Edits for Meecrobs & Star Pit feather jump effects by ilikepizza107
+ - PSA Edited: Sub Routine 0x13EA0
+
 ################
 SKINS
 ################
@@ -175,6 +178,7 @@ META KNIGHT
 40 - Yuko MK by DHS7, with credit to ilikepizza107
 
 PIT
+21 - Star Classic Pit by ilikepizza107
 40 - Star Red Pit by SJS, Star, ilikepizza107
 41 - Star Green Pit by SJS, Star, ilikepizza107
 42 - Star Blue Pit by SJS, Star, ilikepizza107
