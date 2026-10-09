@@ -273,6 +273,11 @@ HOOK @ $80792F24        # When done inside of a PSA script
 	cmpwi r3, 0
 	bne- normal
 	
+	lwz r3, 0x7C(r31)
+	lhz r3, 0x3A(r3)
+	cmpwi r3, 0x73		# Grabbing a ledge
+	beq- normal			# Don't accidentally mess up cliff detection!
+	
 	lwz r3, 0x1C(r31)	# \
 	lwz r3, 0x28(r3)	# | Get collision info
 	lwz r3, 0x10(r3)	# /
@@ -369,6 +374,33 @@ normalFall_check: # Don't FF first frame falling airborne from the ledge
 	
 normal:
 	mr r3, r30			# Original operation
+}
+HOOK @ $80871DF0		# Falling. We want a counter for how long we've been in this state!
+{
+	lwz r3, 0x64(r3)	# Original operation
+	lwz r5, 0x24(r3)	# \ RA
+	lwz r5, 0x0C(r5)	# | Basic
+	lwz r6, 0x28(r5)	# / 10
+	addi r6, r6, 1		# Increment every frame!
+	stw r6, 0x28(r5)	#
+}
+HOOK @ $80868034		# Workaround for Brawl not expecting gravity to apply frame 1
+{
+	lwz r4, 0x7C(r30)
+	lhz r3, 0x3A(r4)	# Current Action
+	lhz r4, 0x06(r4)	# Previous Action
+	cmpwi r3, 0xE;  bne+ normal	# Falling    \ We're only modifying the frame of ledge release!
+	cmpwi r4, 0x75; bne+ normal # Ledge Hold /
+	
+	lwz r3, 0x70(r30)	# \
+	lwz r3, 0x24(r3)	# | RA
+	lwz r3, 0x0C(r3)	# | Basic
+	lwz r3, 0x28(r3)	# / 10
+	cmpwi r3, 1			# 
+	blt- %END%			# We already applied gravity on the first frame
+						# of falling from holding a ledge elsewhere!
+normal:
+	fadds f0, f0, f30 	# Apply gravity! Original operation
 }
 
 ####################################################################
@@ -594,8 +626,12 @@ HOOK @ $8077F21C
 	bctrl
 	cmpwi r3, 0
 	bne normal				# Only do the following to a fighter!
-	
-	lwz r4, 0x10(r1)	# Action to change to 
+	lwz r3, 0x7C(r31)
+	lhz r4, 0x3A(r3)	# Action to change to 
+	lhz r3, 0x06(r3)	# Action to change from
+	cmpwi r3, 0xE7; blt+ notGanonChoke # \ Don't do anything to victims of Ganon's side special!
+	cmpwi r3, 0xEA; ble- normal		   # /
+notGanonChoke:
 	cmpwi r4, 0xE; blt+ normal	# Falling while having jumps left
 	cmpwi r4, 0x10; ble- fall	# Falling after using all mid-air jumps or into freefall after a recovery
 	cmpwi r4, 0x49; bne+ normal # Falling while damaged
@@ -876,15 +912,6 @@ HOOK @ $80837B3C
 #########################################
 Instant Fastfalls [Fudgepop01, DukeItOut]
 #########################################
-HOOK @ $80871DF0		# Falling
-{
-	lwz r3, 0x64(r3)	# Original operation
-	lwz r5, 0x24(r3)	# RA
-	lwz r5, 0x0C(r5)	# Basic
-	lwz r6, 0x28(r5)	# 10
-	addi r6, r6, 1		# Increment every frame!
-	stw r6, 0x28(r5)	#
-}
 HOOK @ $8083A328
 {
 	lis r4, 0x2200		# \ RA-Bit 2

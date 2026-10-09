@@ -1,7 +1,6 @@
-=======================================================================================
+========================================
 Guide for Adding Ivysaur Costumes
-=======================================================================================
-
+========================================
 Ivysaur uses custom motion trails for certain attacks involving her vines, custom gfx depending on leaf color, and custom gfx depending on bulb explosion.
 All costumes will default to the colors that the default Ivysaur costume uses.
 
@@ -28,4 +27,5 @@ Hex Maniac Ivysaur costumes use Darkness on-hit effects for certain hitboxes, lo
 Sub Actions 0x5D, 0x65, and 0x66 (Main Tab)
 Article 1, Sub Action 0 (Main Tab)
 
+========================================
 If you have any questions, please feel free to ask in the #modding-discussion channel of the Project+ Discord server.

@@ -86,7 +86,7 @@ CODE @ $8053FF00
 	word 2; word PSA_Off+8
 	word 0x02010200; word 0x80FAF454	# Change Action E (Fall). Requirement: In Air (adddress for the original that was overwritten below.)
 	word 0x000A0400; word PSA_Off+0x80	# If IC-Basic 20009 == 0 (Holding Item of Type 0: Assist Trophy)
-	word 0x000C0400; word PSA_Off+0xE0	# Or IC_Basic 1000 <= 0.05 (Relative X Movement)
+	word 0x000C0400; word PSA_Off+0xE0	# Or IC_Basic 1102 <= 0.05 (Relative X Force Speed Movement)
 	word 0x000C0400; word PSA_Off+0xA0	# Or RA-Basic 10 == 1
 	word 0x08000100; word PSA_Off+0x78  #	 Air/Ground State: Go off ledges
 	word 0x000D0400; word PSA_Off+0xC0	# Else If RA-Basic 10 == 2
@@ -117,7 +117,7 @@ CODE @ $8053FF00
 	word 0; word 2			#
 	
 	word 6; word 7	# Comparison
-	word 5; IC_Basic 1000 	# IC Basic 1000 (Relative X Movement) <= 0.05
+	word 5; IC_Basic 1102 	# IC Basic 1102 (Relative X Force Speed Movement) <= 0.05
 	word 0; word 1			#
 	word 1; scalar 0.05		#
 	
