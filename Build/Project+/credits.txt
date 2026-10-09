@@ -102,6 +102,7 @@ LUIGI
 CAPTAIN FALCON
 07 - influenza Falcon by influenza
 08 - Fury Falcon by SOULLY
+09 - Salt Falcon by ilikepizza107, influenza
 25 - shad Falcon by influenza, ilikepizza107
 35 - ORLY Falcon by Wyld
 36 - SoulOfficer Falcon by influenza
