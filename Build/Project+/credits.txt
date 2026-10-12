@@ -47,6 +47,11 @@ PSA Edits for Sabrina Link Final Smash by ilikepizza107
 PSA Edits for Meecrobs & Star Pit feather jump effects by ilikepizza107
  - PSA Edited: Sub Routine 0x13EA0
 
+PSA Edits for Izi Link Wood Shield Clank SFX by ilikepizza107
+ - PSA Edited: Sub Action 0x0, Main
+ - Module Edits required
+ - Sawnd file edited (added sound 0x21F for clank sfx)
+
 ################
 SKINS
 ################
@@ -61,6 +66,7 @@ LINK
 27 - Maofever Link by SOULLY
 28 - SgtPingwen Link by ilikepizza107
 29 - sabrina Link by sabrina, ilikepizza107
+30 - Izi Link by ilikepizza107
 
 SAMUS
 25 - Dread Suit Purple by SJS [https://gamebanana.com/mods/320432]
