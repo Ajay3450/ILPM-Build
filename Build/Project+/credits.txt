@@ -184,6 +184,7 @@ GANONDORF
 
 META KNIGHT
 06 - NorCal MK by FingerStripes
+07 - Blade Knight colored Meta Knight by MetalLegacy
 10 - Indy MK by DIce
 25 - Ktana MK by ilikepizza107
 40 - Yuko MK by DHS7, with credit to ilikepizza107
