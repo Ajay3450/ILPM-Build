@@ -85,8 +85,8 @@ KIRBY
 25 - Shenanigans Kirby by ilikepizza107
 26 - influenza Kirby by influenza
 40 - Star Red Kirby by influenza, ilikepizza107
-41 - Star Blue Kirby by influenza, ilikepizza107
-42 - Star Green Kirby by influenza, ilikepizza107
+41 - Star Green Kirby by influenza, ilikepizza107
+42 - Star Blue Kirby by influenza, ilikepizza107
 
 FOX
 10 - Silver Fox by Baka
