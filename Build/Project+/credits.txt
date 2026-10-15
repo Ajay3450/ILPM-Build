@@ -57,6 +57,7 @@ SKINS
 ################
 
 MARIO
+10 - The Doctor Mario v2 by ilikepizza107
 35 - Sebas Mario by RapMonster
 
 DONKEY KONG
