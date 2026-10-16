@@ -143,6 +143,7 @@ HOOK @ $8089D314		# Adjust double jumps entering an aerial attack to address an 
 	lfs f1, 0x18(r13)	# 1.0
 	fsubs f1, f27, f1	# Subtract 1 frame. # Original operation: fmr f1, f27 (animation frame of double jump)
 }
+
 HOOK @ $8089D450		# Used by double jumps to properly double jump cancel
 {
 	cmpwi r3, 0			# Original operation
@@ -261,6 +262,7 @@ HOOK @ $8089D450		# Used by double jumps to properly double jump cancel
 forceDJC:
 	crclr 2				# cleared eq register = ne
 }
+
 HOOK @ $80792F24        # When done inside of a PSA script
 {						# Command 0E020100 set to a parameter value of 1 triggers.
 						# "Prevent Vertical Movement"
@@ -297,6 +299,7 @@ normal:
 	lwz r3, 0x18(r1)	# Restore!
     lwz r12, 0x0(r3)    # Original operation
 }
+
 ##############################
 Rising Aerial Fix [DukeItOut]
 ##############################
@@ -345,6 +348,7 @@ addGravity:
 normal:
 	stfs f0, 0xC(r31)	# Set Y speed. Original operaton
 }
+
 HOOK @ $80867F5C
 {
 	lwz r3, 0x7C(r30)
@@ -375,6 +379,7 @@ normalFall_check: # Don't FF first frame falling airborne from the ledge
 normal:
 	mr r3, r30			# Original operation
 }
+
 HOOK @ $80871DF0		# Falling. We want a counter for how long we've been in this state!
 {
 	lwz r3, 0x64(r3)	# Original operation
@@ -384,6 +389,7 @@ HOOK @ $80871DF0		# Falling. We want a counter for how long we've been in this s
 	addi r6, r6, 1		# Increment every frame!
 	stw r6, 0x28(r5)	#
 }
+
 HOOK @ $80868034		# Workaround for Brawl not expecting gravity to apply frame 1
 {
 	lwz r4, 0x7C(r30)
@@ -424,7 +430,8 @@ Air Dodges Calculate One Frame Earlier [DukeItOut, Fudgepop01, Eon]
 # V2.4: Disabled Alloys doing this due to related crash
 # V2.5: Altered feel again to not be dependent on either.
 # V2.6: Further stability adjustments.
-####################################################################
+# V2.7: Addressed oversight that could prevent landing being detected.
+######################################################################
 op b 0x70 @ $80884F68	# \
 op b 0x64 @ $80884F74	# |
 op b 0x40 @ $80884F98	# |
@@ -454,7 +461,13 @@ RealChar:
 	lwz r3, 0x1C(r30)
 	lwz r3, 0x28(r3)
 	lwz r3, 0x10(r3)
-	lwz r3, 0x5C(r3)	# Prev Diamond (Current at 0x60)
+	lwz r4, 0x60(r3)	# Current Diamond
+	lfs f4, 0x14(r4)	#	Diamond Bottom X
+	fadds f4, f1, f4	
+	stfs f4, 0x20(r1)	# Test 3
+	lfs f4, 0x18(r4)	#	Diamond Bottom Y
+	stfs f4, 0x24(r1)	# Test 3
+	lwz r3, 0x5C(r3)	# Prev Diamond
 	lfs f3, 0x14(r3)	# 	Diamond Bottom X
 	stfs f3, 0x18(r1)	# Test 2
 	fadds f3, f1, f3
@@ -485,17 +498,34 @@ RealChar:
 	li r10, 1			# 1 = Test for Platforms at all
 	bla 0x9326d8		# Test for Collision!
 	cmpwi r3, 0
+	bne- contactFound
+	addi r3, r1, 0x20	# Test 3
+	addi r4, r1, 0x8	# XY speed
+	addi r5, r1, 0x30	# Collision Intersection Point (if any)
+	addi r6, r1, 0x3C	# Collision Normal Vector
+	li r7, 1			# 1 = Check Soft Platforms
+	li r8, 0
+	li r9, 0
+	li r10, 1			# 1 = Test for Platforms at all
+	bla 0x9326d8		# Test for Collision!
+	cmpwi r3, 0
 	beq+ noContact	
 contactFound:
 	lwz r3, 0x18(r30)	# Position info
 	psq_l f1, 0x30(r1), 0, 0	# Collision Point
 	psq_st f1, 0x0C(r3), 0, 0	# XY
+	lwz r3, 0x70(r30)
+	lwz r3, 0x20(r3)
+	lwz r3, 0x0C(r3)
+	lwz r3, 0x2D0(r3)
+	li r4, 0			# Clear frames airborne!
+	stw r4, 0x10(r3)	# Frames airborne (I am forcing the collision diamond to match the position)
+	stw r4, 0x14(r3)	# Frames grounded
+
 	lwz r3, 0x1C(r30)
-	lwz r12, 8(r3)
-	li r4, 0
-	lwz r12, 0x1C8(r12)		# ground attach
-	mtctr r12
-	bctrl
+	lwz r3, 0x28(r3)
+	lwz r3, 0x10(r3)
+	bla 0x134CA0		# collision test (see 80112BE4)
 	addi r1, r1, 0x80
 	lwz r5, 0x88(r30)	# speed
 	lfs f2, 0x10(r13)	# 0.0
@@ -565,6 +595,7 @@ noItemInterpolation:
 	mtctr r12
 	bctr				# Force air dodge execStatus to calculate next air dodge frame.
 }
+
 HOOK @ $80885040 # Reset air item grab box to normal when leaving the air dodge state.
 {
 	stwu r1, -0x20(r1)
@@ -667,6 +698,7 @@ processLoop:
 normal:
 	li r3, 1			# Original operaton
 }
+
 #############################################
 Jumps Calculate One Frame Earlier [DukeItOut]
 #############################################
@@ -732,6 +764,7 @@ HOOK @ $8086BE60	# Mid-Air Jump
 	lfs f1, 0x1C(r1)	 # Restore
     lis r31, 0x80AE      # Original operation
 }
+
 HOOK @ $8086C28C	# Multi-Jump
 {
     lwz r5, 0xD0(r31)   # \ Retrieve the gravity for the character
@@ -746,6 +779,7 @@ HOOK @ $8086C28C	# Multi-Jump
 	fsubs f1, f1, f31	 # Jump/Hop "Velocity" now calculates as if it is the second frame
 	li r3, 1			 # Original operation
 }
+
 HOOK @ $8086C2E8	# For unknown reasons, multi-jumps don't move the first frame
 {					# This is an attempt to rectify that visually.
 	mr r3, r31
@@ -776,109 +810,6 @@ HOOK @ $80874BBC
     lfs f1, 0(r30) # 0.0
 normal:
     bctrl # Original Op. Set shield tilt animation speed (yes, speed, not frame)
-}
-
-###################################################################
-!Windbox Stacking For Fighter Hitboxes [DukeItOut]
-###################################################################
-#
-# Still not treated as standard knockback, but doesn't
-# remove existing knockback in normal conditions.
-#
-# Treated as knockback stack avoidance in the first 12 frames
-# of knockback an opponent is in with an extra 3 frames of leniency
-# if the opponent is moving downwards.
-#
-# Does not stack if the windbox is appreciably moving downwards.
-#
-###################################################################
-HOOK @ $8076C988
-{
-	lwz r12, 0x8(r28)	# \
-	lwz r12, 0x3C(r12)	# | Get the object type!
-	lwz r12, 0xA4(r12)	# |
-	mtctr r12			# |
-	bctrl				# |
-	mr r7, r3			# /
-	lwz r12, 0(r27) 	# Original operation
-}
-HOOK @ $8076C9A4
-{
-	cmpwi r7, 0; bne- skip		# This stuff is ONLY supposed to be for fighters!
-								# Interestingly, items don't have this bug anyway.
-
-	lwz r12, 0x44(r28)			# \
-	lwz r12, 0x40(r12)			# | Hitbox Angle
-	lwz r12, 0x5C(r12)			# /
-	cmpwi r12, 0; beq- skip		# Brawl's non-fighter windboxes use angle 0
-
-	stwu r1, -0x20(r1)
-	
-
-	lfs f1, 0x90(r29)	# Y Speed of Hitbox
-	lfs f2, -0x90(r13)	# -1.0
-	fcmpu cr1, f1, f2	# Checking if hitbox is moving downwards
-
-	lwz r12, 0x7C(r28)	#
-	lhz r7, 0x3A(r12)	# Current Action
-	cmpwi r7, 0x45; bne+ normal	# Knockback Action
-calculate:	
-	lwz r12, 0x70(r28)
-	lwz r12, 0x20(r12)
-	lwz r12, 0x0C(r12)
-	lwz r3, 0x14C(r12)	# LA-Basic[83] (KB Stacking timer. Also used for Up Special timings outside of this action's context)
-	bge cr1, notDownwards	# They're falling at a rate that even is lenient enough for what
-							# you are at after pausing in mid-air from charging Offense Up (-1.25)	
-	cmpwi r3, -5
-	bge normal			# Allow for stacking under 15 frames if moving downwards!
-notDownwards:
-	cmpwi r3, -2
-	bge normal			# Allow for stacking under 12 frames otherwise!
-	
-	lwz r12, 0x88(r28)	# \
-	lwz r12, 0x14(r12)	# | Knockback Info
-	lwz r12, 0x4C(r12)	# /
-gotKnockbackPointer:
-	stw r12, 0x10(r1)	# Pointer will come in handy in a bit.
-	psq_l f1, 0x8(r12), 0, 1 # \ X&Y Knockback
-	psq_st f1, 0x8(r1), 0, 1 # /
-	bctrl				# Original operation. Reset knockback
-				
-	# This formula progressively weakens the windbox the stronger
-	# the original knockback is
-	
-	lwz r12, 0x10(r1)
-	
-	psq_l f1, 0x8(r12), 0, 1	# New X&Y
-	psq_l f0, 0x8(r1), 0, 1		# Old X&Y
-	
-	ps_add f2, f1, f0			# sum of new and old
-	
-	ps_abs f3, f2				# \ Get the sign
-	ps_div f3, f2, f3			# / We have a safety if this result is NaN below.
-	
-	ps_abs f4, f1		# \
-	ps_abs f5, f0		# |
-	ps_mul f1, f1, f4	# | New X&Y squared (retaining sign)
-	ps_mul f2, f0, f5	# | Old X&Y squared (retaining sign)
-	ps_add f1, f1, f2	# / merged
-	
-	ps_abs f1, f1
-	ps_rsqrte f1, f1	# \ reciprocal of reciprocal square root is
-	ps_res f1, f1		# / square root
-	ps_mul f1, f1, f3	# Restore sign
-	
-	lfs f3, -0xDC8(r13)	# \ 0.85 for calibration of result
-	ps_mul f1, f1, f3	# /
-	ps_abs f3, f1		# NaN tester
-	
-	ps_sel f1, f3, f1, f0 # Sets f1 to a default of f0 if NaN, otherwise proceeds to use f1 
-	
-	psq_st f1, 0x8(r12), 0, 1 # store X and Y	
-normal:
-	addi r1, r1, 0x20
-skip:	
-	bctrl				# Original operation. Reset knockback.
 }
 
 #################################
@@ -1017,4 +948,107 @@ HOOK @ $80782648
     fcmpu cr0, f1, f2    # \
     bge+ 0x8            # | If relative X Speed is over 1.5, use that instead!
     fmr f1, f2            # /
+}
+
+###################################################################
+!Windbox Stacking For Fighter Hitboxes [DukeItOut]
+###################################################################
+#
+# Still not treated as standard knockback, but doesn't
+# remove existing knockback in normal conditions.
+#
+# Treated as knockback stack avoidance in the first 12 frames
+# of knockback an opponent is in with an extra 3 frames of leniency
+# if the opponent is moving downwards.
+#
+# Does not stack if the windbox is appreciably moving downwards.
+#
+###################################################################
+HOOK @ $8076C988
+{
+	lwz r12, 0x8(r28)	# \
+	lwz r12, 0x3C(r12)	# | Get the object type!
+	lwz r12, 0xA4(r12)	# |
+	mtctr r12			# |
+	bctrl				# |
+	mr r7, r3			# /
+	lwz r12, 0(r27) 	# Original operation
+}
+HOOK @ $8076C9A4
+{
+	cmpwi r7, 0; bne- skip		# This stuff is ONLY supposed to be for fighters!
+								# Interestingly, items don't have this bug anyway.
+
+	lwz r12, 0x44(r28)			# \
+	lwz r12, 0x40(r12)			# | Hitbox Angle
+	lwz r12, 0x5C(r12)			# /
+	cmpwi r12, 0; beq- skip		# Brawl's non-fighter windboxes use angle 0
+
+	stwu r1, -0x20(r1)
+	
+
+	lfs f1, 0x90(r29)	# Y Speed of Hitbox
+	lfs f2, -0x90(r13)	# -1.0
+	fcmpu cr1, f1, f2	# Checking if hitbox is moving downwards
+
+	lwz r12, 0x7C(r28)	#
+	lhz r7, 0x3A(r12)	# Current Action
+	cmpwi r7, 0x45; bne+ normal	# Knockback Action
+calculate:	
+	lwz r12, 0x70(r28)
+	lwz r12, 0x20(r12)
+	lwz r12, 0x0C(r12)
+	lwz r3, 0x14C(r12)	# LA-Basic[83] (KB Stacking timer. Also used for Up Special timings outside of this action's context)
+	bge cr1, notDownwards	# They're falling at a rate that even is lenient enough for what
+							# you are at after pausing in mid-air from charging Offense Up (-1.25)	
+	cmpwi r3, -5
+	bge normal			# Allow for stacking under 15 frames if moving downwards!
+notDownwards:
+	cmpwi r3, -2
+	bge normal			# Allow for stacking under 12 frames otherwise!
+	
+	lwz r12, 0x88(r28)	# \
+	lwz r12, 0x14(r12)	# | Knockback Info
+	lwz r12, 0x4C(r12)	# /
+gotKnockbackPointer:
+	stw r12, 0x10(r1)	# Pointer will come in handy in a bit.
+	psq_l f1, 0x8(r12), 0, 1 # \ X&Y Knockback
+	psq_st f1, 0x8(r1), 0, 1 # /
+	bctrl				# Original operation. Reset knockback
+				
+	# This formula progressively weakens the windbox the stronger
+	# the original knockback is
+	
+	lwz r12, 0x10(r1)
+	
+	psq_l f1, 0x8(r12), 0, 1	# New X&Y
+	psq_l f0, 0x8(r1), 0, 1		# Old X&Y
+	
+	ps_add f2, f1, f0			# sum of new and old
+	
+	ps_abs f3, f2				# \ Get the sign
+	ps_div f3, f2, f3			# / We have a safety if this result is NaN below.
+	
+	ps_abs f4, f1		# \
+	ps_abs f5, f0		# |
+	ps_mul f1, f1, f4	# | New X&Y squared (retaining sign)
+	ps_mul f2, f0, f5	# | Old X&Y squared (retaining sign)
+	ps_add f1, f1, f2	# / merged
+	
+	ps_abs f1, f1
+	ps_rsqrte f1, f1	# \ reciprocal of reciprocal square root is
+	ps_res f1, f1		# / square root
+	ps_mul f1, f1, f3	# Restore sign
+	
+	lfs f3, -0xDC8(r13)	# \ 0.85 for calibration of result
+	ps_mul f1, f1, f3	# /
+	ps_abs f3, f1		# NaN tester
+	
+	ps_sel f1, f3, f1, f0 # Sets f1 to a default of f0 if NaN, otherwise proceeds to use f1 
+	
+	psq_st f1, 0x8(r12), 0, 1 # store X and Y	
+normal:
+	addi r1, r1, 0x20
+skip:	
+	bctrl				# Original operation. Reset knockback.
 }
