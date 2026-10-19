@@ -281,6 +281,7 @@ TOON LINK
 
 WOLF
 40 - Kakashi Wolf by Autumn
+45 - Sunnyknight Wolf by Autumn
 
 SNAKE
 08 - Autumn Snake by Autumn
