@@ -101,6 +101,7 @@ FOX
 35 - influenza Fox by influenza
 40 - Drip Fox by DHS7, ilikepizza107
 45 - Artemis Fox by ilikepizza107
+50 - manrey Fox by ilikepizza107
 
 PIKACHU
 26 - sabrina Pikachu by sabrina, cleo, heart tail default by ilikepizza107
