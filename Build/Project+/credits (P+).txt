@@ -43,7 +43,6 @@ Project+ Balance Team
 - Boiko
 - Captain Birdman
 - essy
-- kate
 - Pikmon
 - Ripple
 - shay
@@ -57,7 +56,6 @@ Project+ Playtesting Team
 - Kendrick
 - Purpa
 - rye
-- Sheecacaa3
 - Veka
 - white sheep
 - Zushi
@@ -80,6 +78,7 @@ Project+ Past/Inactive Members
 - Ish
 - Jolteon
 - Junebug
+- kate
 - Lunchables
 - Mach 7
 - Malachi
