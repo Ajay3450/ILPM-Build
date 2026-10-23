@@ -219,6 +219,11 @@ OLIMAR
 51 - Red Chef Olimar v2 by Windhunter, Motobug, Guttey
 52 - Green Chef Olimar v2 by Windhunter, Motobug, Guttey
 53 - Blue Chef Olimar v2 by Windhunter, Motobug, Guttey
+55 - CP9 Red Olimar by Fingerstripes, SOULLY, ilikepizza107
+56 - CP9 Green Olimar by Fingerstripes, ilikepizza107
+57 - CP9 Blue Olimar by Fingerstripes, SOULLY, ilikepizza107
+58 - CP9 Yellow Olimar by Fingerstripes, SOULLY, ilikepizza107
+59 - CP9 Black Olimar by Fingerstripes, SOULLY, ilikepizza107
 
 LUCAS
 40 - Star Red Lucas by Star, SJS
