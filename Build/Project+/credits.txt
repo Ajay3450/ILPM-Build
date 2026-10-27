@@ -89,6 +89,10 @@ KIRBY
 40 - Star Red Kirby by influenza, ilikepizza107
 41 - Star Green Kirby by influenza, ilikepizza107
 42 - Star Blue Kirby by influenza, ilikepizza107
+45 - SSK Kirby by SJ, ilikepizza107
+46 - SSK Red Kirby by SJ, ilikepizza107
+47 - SSK Green Kirby by SJ, ilikepizza107
+48 - SSK Blue Kirby by SJ, ilikepizza107
 
 FOX
 10 - Silver Fox by Baka
