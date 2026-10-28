@@ -52,6 +52,11 @@ PSA Edits for Izi Link Wood Shield Clank SFX by ilikepizza107
  - Module Edits required
  - Sawnd file edited (added sound 0x21F for clank sfx)
 
+PSA Edits for CSharp MK sword glow model + trails by ilikepizza107
+ - Edited ef_metaknight (Added an entry to the EFLS, Model Data [30])
+ - Added ef_custom16
+ - PSA Edited: 
+
 ################
 SKINS
 ################
@@ -197,6 +202,7 @@ META KNIGHT
 06 - NorCal MK by FingerStripes
 07 - Blade Knight colored Meta Knight by MetalLegacy
 10 - Indy MK by DIce
+11 - CSharp MK v2 by ilikepizza107, Wyld
 25 - Ktana MK by ilikepizza107
 40 - Yuko MK by DHS7, with credit to ilikepizza107
 
