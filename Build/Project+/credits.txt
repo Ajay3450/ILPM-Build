@@ -52,10 +52,9 @@ PSA Edits for Izi Link Wood Shield Clank SFX by ilikepizza107
  - Module Edits required
  - Sawnd file edited (added sound 0x21F for clank sfx)
 
-PSA Edits for CSharp MK sword glow model + trails by ilikepizza107
+PSA Edits for CSharp + Kulprit MK sword glow model by ilikepizza107
  - Edited ef_metaknight (Added an entry to the EFLS, Model Data [30])
- - Added ef_custom16
- - PSA Edited: 
+ - PSA Edited: Sub Action 0x4C, GFX; Sub Routine 0xF6A8 (Now 0x9F50)
 
 ################
 SKINS
