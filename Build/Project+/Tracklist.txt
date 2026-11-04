@@ -10,6 +10,7 @@ BATTLEFIELD
 	Sprinter (Super Hang-On)
 	Try Your Luck (Hunter x Hunter)
 	Your Battle is My Battle (Jujutsu Kaisen)
+	You Will Know Our Names Finale (Xenoblade Chronicles 3)
 
 DEAD LINE
 	Hyper Driver Ver. 4 (Splatoon 3)
@@ -102,6 +103,7 @@ MENU
 	Operation (Jujutsu Kaisen)
 	PBR Beta Track (Pokemon Battle Revolution)
 	The Power Of Love (Huey Lewis and the News)
+	Redacted (Comb)
 	Shop [Shrimp Kicks] (Splatoon)
 	Shop Radio 2 (Spelunky)
 	Soak & Stomp (Splatoon)
