@@ -372,7 +372,7 @@ Z: Onett_Z.param
 
 
 ################
-2D.asl - 8 entries
+2D.asl - 9 entries
 
 Base: Dream_Land.param
 R: Dream_Land_R.param
@@ -381,6 +381,7 @@ Z: Dream_Land_Z.param
 Down+Right+Left: Dream_Land_DPAD.param
 Up: Dream_Land_DPADUP.param
 0x4000: Dream_Land_MR_00.param
+0x4001: Dream_Land_MR_01.param
 0xC000: Event_20.param
 
 

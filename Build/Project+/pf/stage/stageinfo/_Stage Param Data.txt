@@ -589,6 +589,14 @@ Dream_Land_MR_00.param
 	SFX / GFX: 0x006C / 0x005E
 
 ################
+Dream_Land_MR_01.param
+
+	STGDREAMLAND_MR_DL_COSMIC.pac
+	st_dreamland64_ht.rel
+	Dream_Land.tlst
+	SFX / GFX: 0x006C / 0x005E
+
+################
 Dream_Land_R.param
 
 	STGDREAMLAND_R_DL_NIGHT.pac
@@ -1758,10 +1766,9 @@ Pokemon_Stadium_2_DPAD.param
 ################
 Pokemon_Stadium_2_L.param
 
-	STGPOKEMONSTADIUM_R_PS2_GATEWAY.pac
-	st_gateway.rel
+	STGPOKEMONSTADIUM_L_PS2_GATEWAY.pac
+	st_final.rel
 	Pokemon_Stadium_2.tlst
-	SFX / GFX: 0xFFFF / 0x0045
 
 ################
 Pokemon_Stadium_2_LDPAD.param
@@ -1790,7 +1797,7 @@ Pokemon_Stadium_2_ML_01.param
 ################
 Pokemon_Stadium_2_R.param
 
-	STGPOKEMONSTADIUM.pac
+	STGPOKEMONSTADIUM_R_PS2_DEFAULT.pac
 	st_stadium_static.rel
 	Pokemon_Stadium_2.tlst
 	SFX / GFX: 0x0059 / 0x0045
@@ -1799,7 +1806,7 @@ Pokemon_Stadium_2_R.param
 ################
 Pokemon_Stadium_2_RDPAD.param
 
-	STGPOKEMONSTADIUM.pac
+	STGPOKEMONSTADIUM_R_PS2_DEFAULT.pac
 	st_stadium_static.rel
 	Pokemon_Stadium_2_DPAD.tlst
 	SFX / GFX: 0x0059 / 0x0045
