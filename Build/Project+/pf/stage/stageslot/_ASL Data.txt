@@ -5,9 +5,9 @@ Base: Battlefield.param
 R: Battlefield_R.param
 L: Battlefield_L.param
 Z: Battlefield_Z.param
-0x4000: Battlefield_MR_00.param
-0xC000: Battlefield_MR_00.param
 Up+Down+Right+Left: Battlefield_DPAD.param
+0x4000: Battlefield_MR_00.param
+0xC000: Event_10.param
 
 
 ################
@@ -17,10 +17,10 @@ Base: Final_Destination.param
 R: Final_Destination_R.param
 L: Final_Destination_L.param
 Z: Final_Destination_Z.param
+Up+Down+Right+Left: Final_Destination_DPAD.param
 0x8000: Final_Destination_ML_00.param
 0x8001: Final_Destination_ML_01.param
 0x4000: Final_Destination_MR_00.param
-Up+Down+Right+Left: Final_Destination_DPAD.param
 
 
 ################
@@ -92,10 +92,10 @@ Base: Temple_of_Time.param
 R: Temple_of_Time_R.param
 L: Temple_of_Time_L.param
 Z: Temple_of_Time_Z.param
-0x8000: Temple_of_Time_ML_00.param
-0xC000: Event_31.param
 Up+Down+Right+Left: Temple_of_Time_DPAD.param
 R+Up+Down+Right+Left: Temple_of_Time_RDPAD.param
+0x8000: Temple_of_Time_ML_00.param
+0xC000: Event_31.param
 
 
 ################
@@ -108,17 +108,18 @@ Z: Norfair_Z.param
 
 
 ################
-0C.asl - 9 entries
+0C.asl - 10 entries
 
 Base: Frigate_Husk.param
 R: Frigate_Husk_R.param
 L: Frigate_Husk_L.param
 Z: Frigate_Husk_Z.param
-0x8000: Frigate_Husk_ML_00.param
-0x8001: Frigate_Husk_ML_01.param
-0x4000: Frigate_Husk_MR_01.param
 Up+Down+Right+Left: Frigate_Husk_DPAD.param
 R+Up+Down+Right+Left: Frigate_Husk_RDPAD.param
+L+Up+Down+Right+Left: Frigate_Husk_LDPAD.param
+0x4000: Frigate_Husk_MR_00.param
+0x8000: Frigate_Husk_ML_00.param
+0x8001: Frigate_Husk_ML_01.param
 
 
 ################
@@ -199,7 +200,7 @@ Z: Flat_Zone_Z.param
 
 
 ################
-19.asl - 7 entries
+19.asl - 8 entries
 
 Base: Castle_Siege.param
 R: Castle_Siege_R.param
@@ -208,6 +209,7 @@ Z: Castle_Siege_Z.param
 0x4000: Castle_Siege_MR_00.param
 0x8000: Castle_Siege_ML_00.param
 0x8001: Castle_Siege_ML_01.param
+0xC000: Event_09.param
 
 
 ################
@@ -258,12 +260,16 @@ Z: Fourside_Z.param
 
 
 ################
-21.asl - 13 entries
+21.asl - 18 entries
 
 Base: Smashville.param
 R: Smashville_R.param
 L: Smashville_L.param
 Z: Smashville_Z.param
+Up+Down+Right+Left: Smashville_DPAD.param
+R+Up+Down+Right+Left: Smashville_RDPAD.param
+Z+Up+Down+Right+Left: Smashville_ZDPAD.param
+L+Up+Down+Right+Left: Smashville_LDPAD.param
 0x4000: Smashville_MR_00.param
 0x4001: Smashville_MR_01.param
 0x4002: Smashville_MR_02.param
@@ -273,6 +279,7 @@ Z: Smashville_Z.param
 0x4006: Smashville_MR_06.param
 0x4007: Smashville_MR_07.param
 0x4008: Smashville_MR_08.param
+0x4009: Smashville_MR_09.param
 
 
 ################
@@ -291,9 +298,9 @@ Base: Green_Hill_Zone.param
 R: Green_Hill_Zone_R.param
 L: Green_Hill_Zone_L.param
 Z: Green_Hill_Zone_Z.param
+Up+Down+Right+Left: Green_Hill_Zone_DPAD.param
 0x4000: Green_Hill_Zone_MR_00.param
 0x8000: Green_Hill_Zone_ML_00.param
-Up+Down+Right+Left: Green_Hill_Zone_DPAD.param
 
 
 ################
@@ -330,10 +337,10 @@ Base: Results_DF.param
 ################
 29.asl - 4 entries
 
-Base: Temple.param
-R: Temple_R.param
-L: Temple_L.param
-Z: Temple_Z.param
+Base: Hyrule_Temple.param
+R: Hyrule_Temple_R.param
+L: Hyrule_Temple_L.param
+Z: Hyrule_Temple_Z.param
 
 
 ################
@@ -346,12 +353,13 @@ Z: Yoshis_Story_Z.param
 
 
 ################
-2B.asl - 4 entries
+2B.asl - 5 entries
 
 Base: Jungle_Japes.param
 R: Jungle_Japes_R.param
 L: Jungle_Japes_L.param
 Z: Jungle_Japes_Z.param
+0x8000: Jungle_Japes_ML_00.param
 
 
 ################
@@ -364,28 +372,31 @@ Z: Onett_Z.param
 
 
 ################
-2D.asl - 8 entries
+2D.asl - 9 entries
 
 Base: Dream_Land.param
 R: Dream_Land_R.param
 L: Dream_Land_L.param
 Z: Dream_Land_Z.param
-0x4000: Dream_Land_MR_00.param
-0xC000: Dream_Land_MR_00.param
 Down+Right+Left: Dream_Land_DPAD.param
 Up: Dream_Land_DPADUP.param
+0x4000: Dream_Land_MR_00.param
+0x4001: Dream_Land_MR_01.param
+0xC000: Event_20.param
 
 
 ################
-2E.asl - 7 entries
+2E.asl - 9 entries
 
 Base: Pokemon_Stadium_2.param
 R: Pokemon_Stadium_2_R.param
 L: Pokemon_Stadium_2_L.param
 Z: Pokemon_Stadium_2_Z.param
-0x8000: Pokemon_Stadium_2_ML_00.param
 Up+Down+Right+Left: Pokemon_Stadium_2_DPAD.param
 R+Up+Down+Right+Left: Pokemon_Stadium_2_RDPAD.param
+L+Up+Down+Right+Left: Pokemon_Stadium_2_LDPAD.param
+0x8000: Pokemon_Stadium_2_ML_00.param
+0x8001: Pokemon_Stadium_2_ML_01.param
 
 
 ################
@@ -426,7 +437,7 @@ L: Planet_Zebes_L.param
 Z: Planet_Zebes_Z.param
 0x8000: Planet_Zebes_ML_00.param
 0x8001: Planet_Zebes_ML_01.param
-0xC000: Planet_Zebes_ML_01.param
+0xC000: Event_06.param
 
 
 ################
@@ -511,13 +522,12 @@ Z: Clock_Town_Z.param
 
 
 ################
-43.asl - 5 entries
+43.asl - 4 entries
 
 Base: Sky_Sanctuary.param
 R: Sky_Sanctuary_R.param
 L: Sky_Sanctuary_L.param
 Z: Sky_Sanctuary_Z.param
-0x4000: Sky_Sanctuary_MR_00.param
 
 
 ################
@@ -594,7 +604,7 @@ Z: Venus_Lighthouse_Z.param
 
 
 ################
-4C.asl - 6 entries
+4C.asl - 7 entries
 
 Base: Mushroom_Kingdom.param
 R: Mushroom_Kingdom_R.param
@@ -602,6 +612,7 @@ L: Mushroom_Kingdom_L.param
 Z: Mushroom_Kingdom_Z.param
 0x8000: Mushroom_Kingdom_ML_00.param
 0x8001: Mushroom_Kingdom_ML_01.param
+0x8002: Mushroom_Kingdom_ML_02.param
 
 
 ################

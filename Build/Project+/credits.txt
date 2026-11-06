@@ -2,38 +2,66 @@
 PSA
 ################
 
-PSA edits for SipMastah, Motobug, Wyld, & DHS7 Sonic trails by ilikepizza107
+PSA edits for SipMastah, Motobug (x2), Wyld, & DHS7 Sonic trails by ilikepizza107
+ - Edited ef_sonic (Added Model Data [3], edited efls)
  - PSA Edited: Sub Routine 0x2E5AC
 
 PSA edits for Shrug Toon Link by ilikepizza107
- - PSA Edited: Sub Action 1DB, GFX; Sub Action 1DD, GFX
+ - Edited ef_toonlink
+ - PSA Edited: Sub Action 0x1DB, GFX; Sub Action 0x1DD, GFX
 
 PSA edits for Crona Marth & Artemis Marth by SSK and KingJigglypuff, ilikepizza107
- - PSA Added: Subroutine 2x79B0, 2x79F0, 2x7A30
- - PSA Edited: Sub Actions 48, GFX; 49, GFX; 4E, GFX; 50, GFX; 54, GFX; 55, GFX; 58, GFX; 5D, GFX; 60, GFX; 62, GFX; 63, GFX; 64, GFX; 65, GFX; 66, GFX; B0, GFX; B9, GFX; D7, GFX; DC, GFX; E7, GFX; 1D0, GFX; 1D1, GFX; 1D6, GFX; 1D7, GFX; 1D8, GFX; 1D9, GFX; 1DA, GFX; 1DB, GFX; 1DC, GFX; 1DD, GFX; 1DE, GFX; 1E8, GFX; 1EB, GFX; 1EE, GFX; 1EF, GFX; 1F0, GFX; 1F1, GFX; 1F2, GFX; 1F3, GFX; 1F4, GFX
+ - Edited ef_marth (Added an entry to the EFLS, eff_marth_sword_flare_custom texture and Model Data [3]) 
+ - Added ef_custom44 (Crona) and ef_custom45 (Artemis)
+ - PSA Added: Subroutine 0x78F8 (Blur 3), 0x7C98 (Blur 4), 0x8230 (Blur 5)
+ - PSA Edited (All GFX Tab): Sub Actions 0x48, 0x49, 0x4E, 0x50, 0x54, 0x55, 0x58, 0x5D, 0x60, 0x62, 0x63, 0x64, 0x65, 0x66, 0xB0, 0xB9, 0xD7, 0xDC, 0xE7, 0x1D0, 0x1D1, 0x1D6, 0x1D7, 0x1D8, 0x1D9, 0x1DA, 0x1DB, 0x1DC, 0x1DD, 0x1DE, 0x1E8, 0x1EB, 0x1EE, 0x1EF, 0x1F0, 0x1F1, 0x1F2, 0x1F3, 0x1F4
 
 PSA edits for GooSluj/Autumn ZSS SFX by ilikepizza107
- - PSA Edited (All SFX Tab): Sub Actions A, B, C, E, F, 10, 11, 12, 2A, 30, 31, 32, 33, 36, 43, 44, 45, 48, 4E, 53, 54, 55, 63, 64, 65, 66, 67, 68, 69, 6A, 6B, AF, B0, B1, B2, B8, B9, BA, BB, BE, BF, C0, C1, C3, D7, D8, D9, DC, DD, DE, E6, E7, E8, E9, FC, FD, 151, 152, 153, 154, 155, 156, 157, 158, 159, 15A, 15C, 1C2, 1C3, 1C6, 1E2, 1E5, 1E6
+ - PSA Edited (All SFX Tab): Sub Actions 0xA, 0xB, 0xC, 0xE, 0xF, 0x10, 0x11, 0x12, 0x2A, 0x30, 0x31, 0x32, 0x33, 0x36, 0x43, 0x44, 0x45, 0x48, 0x4E, 0x53, 0x54, 0x55, 0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x6A, 0x6B, 0xAF, 0xB0, 0xB1, 0xB2, 0xB8, 0xB9, 0xBA, 0xBB, 0xBE, 0xBF, 0xC0, 0xC1, 0xC3, 0xD7, 0xD8, 0xD9, 0xDC, 0xDD, 0xDE, 0xE6, 0xE7, 0xE8, 0xE9, 0xFC, 0xFD, 0x151, 0x152, 0x153, 0x154, 0x155, 0x156, 0x157, 0x158, 0x159, 0x15A, 0x15C, 0x1C2, 0x1C3, 0x1C6, 0x1E2, 0x1E5, 0x1E6
 
 PSA edits for Artemis Fox by ilikepizza107
- - PSA Edited: Sub Action 1E1, GFX; Sub Action 1E5, GFX
-
-PSA edits for Rongunshu Ike silver sword trails by ilikepizza107
- - PSA Edited: Sub Action 0x1E2, GFX; Sub Routine 0x9758; Sub Routine 0x96C8; Sub Routine 0x97A0; Sub Routine 0x8730; Article 0, Sub Action 0x2, GFX; Article 0, Sub Action 0x3, GFX
+ - Edited ef_fox (Added an entry to the ELFS, Model Data [9])
+ - PSA Edited: Sub Action 0x1E1, GFX; Sub Action 0x1E5, GFX
 
 PSA Edits for Meecrobs Pit Arrows by ilikepizza107
+ - Edited ef_Pit (Added 3 entries to the ELFS, as well as some entries to the REFF), ef_custom17 (Added TexCustom17Trace03 texture)
  - PSA Edited: Article 0x1, Sub Action 0x0, GFX; Article 0x1, Sub Action 0x1, GFX; Article 0x1, Sub Action 0x2, GFX
- - Edited ef_Pit, ef_custom17
 
-PSA Edits for tia Ike sword trails by ilikepizza107
- - PSA Edited: Sub Routine 0x9758 (now 0x15118), Sub Routine 0x96C8 (now 0x152A8), Sub Routine 0x97A0 (now 0x153A8), Sub Routine 0x8730 (now 0x9758), Sub Action 0x1E2, GFX; Article 0x0, Sub Action 0x2, GFX; Article 0x0, Sub Action 0x3, GFX
+PSA Edits for Rongunshu Ike sword trails + tia Ike sword trails by ilikepizza107 (uses existing glow models but different trail IDs + changes some costume IDs in the arguments)
  - Added ef_custom23
+ - PSA Edited: Sub Action 0x1E2, GFX; Sub Routine 0x9758 (Blur 3, now 0x152F8), Sub Routine 0x96C8 (Blur 4, now 0x15448), Sub Routine 0x97A0 (Blur 5, now 0x15598), Sub Routine 0x8730 (Graphic Effect 2/B, now 0x9778), Article 0x0, Sub Action 0x2, GFX; Article 0x0, Sub Action 0x3, GFX
+
+PSA Edits for Sicle Charizard Pink fire & Rise Knicks Charizard Blue fire by ilikepizza107, with credit to extreme
+ - Edited ef_pokelizardon (Added eff_pokelizardon_pfire texture, Model Data [6], 8 entries into the EFLS, 35 entries into the REFT)
+ - PSA Edited: Sub Action 0x1, GFX; Sub Action 0x19, Main; Sub Action 0x19, GFX; Sub Action 0x3C, Main; Sub Action 0x3C, GFX; Sub Action 0x55, Main; Sub Action 0x58, Main; Sub Action 0x58, GFX; Sub Action 0x62, Main; Sub Action 0x62, GFX; Sub Action 0x63, Main; Sub Action 0x63, GFX; Sub Action 0x64, Main; Sub Action 0x74, Main; Sub Action 0x74, GFX; Sub Action 0x75, Main; Sub Action 0x75, GFX; Sub Action 0xDC, Main; Sub Action 0x1C2, GFX; Sub Action 0x1C4, GFX; Sub Action 0x1D5, Main; Sub Action 0x1D5, GFX; Sub Action 0x1D7, Main; Sub Action 0x1D8, Main; Sub Action 0x1D8, GFX; Sub Action 0x1D9, GFX; Sub Action 1DA, GFX; Sub Routine 0xF850 (Now 0x23D18) Sub Routine 0x23E68 (Now 0x25E98); Sub Routine 0x6A70 (Now 0x262B0)
+
+PSA Edits for Maofever Ivysaur by ilikepizza107
+ - PSA Edited: Sub Action 0x50, GFX; Sub Action 0x5D, GFX; Sub Action 0x65, GFX; Sub Action 0x1C2, GFX; Sub Action 0x1D7 (GFX); Sub Routine 0x14590 (Now 0x255F4); Sub Routine 0x13B20 (Now 0x267BC); Sub Routine 0x146F8 (Now 0x23454); Sub Routine 0x17690; Sub Routine 0x14610; Sub Routine 0x1FE9C; Sub Routine 0x203CC; Sub Routine 0x17EA8 (Now 0x18678); Sub Routine 0x2625C; Article 0, Sub Action 0, GFX;
+
+PSA Edits for Star Lucas FSmash on-hit sfx by ilikepizza107 
+ - PSA Edited: Sub Action 0x58, Main; Sub Action 0x58, Other
+
+PSA Edits for Sabrina Link Final Smash by ilikepizza107
+ - PSA Edited: Sub Routine 0x9028 (now 0x9408)
+
+PSA Edits for Meecrobs & Star Pit feather jump effects by ilikepizza107
+ - PSA Edited: Sub Routine 0x13EA0
+
+PSA Edits for Izi Link Wood Shield Clank SFX by ilikepizza107
+ - PSA Edited: Sub Action 0x0, Main
+ - Module Edits required
+ - Sawnd file edited (added sound 0x21F for clank sfx)
+
+PSA Edits for CSharp + Kulprit MK sword glow model by ilikepizza107
+ - Edited ef_metaknight (Added an entry to the EFLS, Model Data [30])
+ - PSA Edited: Sub Action 0x4C, GFX; Sub Routine 0xF6A8 (Now 0x9F50)
 
 ################
 SKINS
 ################
 
 MARIO
+10 - The Doctor Mario v2 by ilikepizza107
 35 - Sebas Mario by RapMonster
 
 DONKEY KONG
@@ -42,8 +70,12 @@ LINK
 10 - Zushi Link by GKO
 27 - Maofever Link by SOULLY
 28 - SgtPingwen Link by ilikepizza107
+29 - sabrina Link by sabrina, ilikepizza107
+30 - Izi Link by ilikepizza107
 
 SAMUS
+07 - Blank Samus by ilikepizza107
+25 - Dread Suit Purple by SJS [https://gamebanana.com/mods/320432]
 40 - Brawl Fake Samus by SJS [https://gamebanana.com/mods/247126]
 45 - Morsecode Samus by DHS7
 50 - GooSluj Samus by ilikepizza107
@@ -55,11 +87,16 @@ YOSHI
 45 - Shiny Zubat Yoshi by SJS
 
 KIRBY
-08 - Vv Kirby by SkratchPost
-25 - influenza Kirby by influenza
+08 - Vv Kirby by SkratchPost, ilikepizza107
+25 - Shenanigans Kirby by ilikepizza107
+26 - influenza Kirby by influenza
 40 - Star Red Kirby by influenza, ilikepizza107
-41 - Star Blue Kirby by influenza, ilikepizza107
-42 - Star Green Kirby by influenza, ilikepizza107
+41 - Star Green Kirby by influenza, ilikepizza107
+42 - Star Blue Kirby by influenza, ilikepizza107
+45 - SSK Kirby by SJ, ilikepizza107
+46 - SSK Red Kirby by SJ, ilikepizza107
+47 - SSK Green Kirby by SJ, ilikepizza107
+48 - SSK Blue Kirby by SJ, ilikepizza107
 
 FOX
 10 - Silver Fox by Baka
@@ -67,12 +104,15 @@ FOX
 12 - Star Green Fox by ilikepizza107
 26 - Fury Fox by SOULLY
 30 - SOULLY Fox by SOULLY, ilikepizza107
-31 - SOULLY Blue Fox by SOULLY, ilikepizza107
-32 - SOULLY Green Fox by SOULLY, ilikepizza107
+31 - SOULLY Green Fox by SOULLY, ilikepizza107
+32 - SOULLY Blue Fox by SOULLY, ilikepizza107
+35 - influenza Fox by influenza
 40 - Drip Fox by DHS7, ilikepizza107
 45 - Artemis Fox by ilikepizza107
+50 - manrey Fox by ilikepizza107
 
 PIKACHU
+26 - sabrina Pikachu by sabrina, cleo, heart tail default by ilikepizza107
 
 LUIGI
 40 - E-Gadd Luigi by Sylv, RapM
@@ -80,17 +120,21 @@ LUIGI
 CAPTAIN FALCON
 07 - influenza Falcon by influenza
 08 - Fury Falcon by SOULLY
+09 - Salt Falcon by ilikepizza107, influenza
 25 - shad Falcon by influenza, ilikepizza107
-35 - ORLY Falcon by Wyld
-36 - SoulOfficer Falcon by influenza
-37 - Stude Falcon by Motobug
+35 - Zaza Falcon by Erg
+36 - ORLY Falcon by Wyld
+37 - SoulOfficer Falcon by influenza
+38 - Stude Falcon by Motobug
 45 - pawjobtyler Falcon by SkratchPost
+50 - Sunnyknight Falcon by Autumn, ilikepizza107
 
 NESS
 25 - Rooster Ness by ilikepizza107
 26 - Ntire Ness by ilikepizza107
-30 - Not Chris Ness v3 by ilikepizza107
-31 - Not Chris Ness v3 Purple by ilikepizza107
+30 - Not Chris Ness v4 by yogi
+31 - Not Chris Ness v4 Yellow by yogi, ilikepizza107
+32 - Not Chris Ness v4 Purple by yogi, ilikepizza107
 
 BOWSER
 25 - Sabrina Bowser by influenza
@@ -104,6 +148,7 @@ PEACH
 
 ZELDA
 09 - Sabrina Zelda by influenza
+26 - Fable Zelda by ilikepizza107
 30 - Tuck Zelda by Tuck, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 31 - Evil Lesbian Zelda by Evil Lesbian, ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
 32 - KWAM Zelda by ilikepizza107, using Hulkalex's Skyward Sword Zelda model [http://www.mediafire.com/file/1b0t0ned2djzmg2/Zelda+Skyloft.zip/file]
@@ -113,6 +158,7 @@ ZELDA
 
 SHEIK
 09 - Sabrina Sheik by influenza
+26 - Fable Sheik by ilikepizz107
 30 - RoSheik by jetfantastic [http://forums.kc-mm.com/Gallery/BrawlView.php?Number=213577]
 31 - Evil Lesbian Sheik by Evil Lesbian, ilikepizza107
 32 - KWAM Sheik by ilikepizza107
@@ -132,6 +178,7 @@ MARTH
 MR. GAME & WATCH
 16 - Rise GnW
 17 - Danphibia GnW
+18 - Ellipsis GnW
 24 - Rise Judge GnW
 
 FALCO
@@ -152,17 +199,22 @@ GANONDORF
 
 META KNIGHT
 06 - NorCal MK by FingerStripes
+07 - Blade Knight colored Meta Knight by MetalLegacy
 10 - Indy MK by DIce
+11 - CSharp MK v2 by ilikepizza107, Wyld
 25 - Ktana MK by ilikepizza107
 40 - Yuko MK by DHS7, with credit to ilikepizza107
 
 PIT
+21 - Star Classic Pit by ilikepizza107
 40 - Star Red Pit by SJS, Star, ilikepizza107
-41 - Star Blue Pit by SJS, Star, ilikepizza107
-42 - Star Green Pit by SJS, Star, ilikepizza107
+41 - Star Green Pit by SJS, Star, ilikepizza107
+42 - Star Blue Pit by SJS, Star, ilikepizza107
 50 - Meecrobs Pit by ilikepizza107
 
 ZERO SUIT SAMUS
+07 - Blank ZSS v2 by ilikepizza107
+25 - Ellie ZSS by Skratchpost
 40 - RosiYY ZSS by ilikepizza107
 45 - Dread Suit ZSS by ilikepizza107
 50 - GooSluj ZSS by ilikepizza107
@@ -176,11 +228,16 @@ OLIMAR
 51 - Red Chef Olimar v2 by Windhunter, Motobug, Guttey
 52 - Green Chef Olimar v2 by Windhunter, Motobug, Guttey
 53 - Blue Chef Olimar v2 by Windhunter, Motobug, Guttey
+55 - CP9 Red Olimar by Fingerstripes, SOULLY, ilikepizza107
+56 - CP9 Green Olimar by Fingerstripes, ilikepizza107
+57 - CP9 Blue Olimar by Fingerstripes, SOULLY, ilikepizza107
+58 - CP9 Yellow Olimar by Fingerstripes, SOULLY, ilikepizza107
+59 - CP9 Black Olimar by Fingerstripes, SOULLY, ilikepizza107
 
 LUCAS
 40 - Star Red Lucas by Star, SJS
-41 - Star Blue Lucas by Star, SJS
-42 - Star Green Lucas by Star, SJS
+41 - Star Green Lucas by Star, SJS
+42 - Star Blue Lucas by Star, SJS
 45 - Wyatt Lucas by ilikepizza107
 
 DIDDY KONG
@@ -194,7 +251,9 @@ MEWTWO
 26 - Iris Mewtwo by Motobug
 
 CHARIZARD
-10 - Rise Charizard by SOULLY
+10 - Rise Knicks Charizard by SOULLY
+30 - Rise Charizard by SOULLY
+31 - Sicle Charizard by ilikepizza107
 
 SQUIRTLE
 30 - Dbylan Squirtle by ilikepizza107
@@ -204,14 +263,14 @@ IVYSAUR
 08 - Maofever Ivy by Maofever
 
 DEDEDE
-11 - Apollo Ali D3 by FingerStripes
-12 - Ripple D3 by ???
+11 - Ripple D3 by ???
+12 - Apollo Ali D3 by FingerStripes
 13 - Mulldrifter D3 by Stutter Step Steven
-15 - Robo D3 by ShadowLuigi~NG~ [http://forums.kc-mm.com/Gallery/BrawlView.php?Number=207980 (Download link dead)]
+15 - Robo D3 by ShadowLuigi~NG~ [http://forums.kc-mm.com/Gallery/BrawlView.php?Number=207980 (Download link dead)], further optimizations by ilikepizza107
+30 - TopHatMatt D3 by ilikepizza107 
 
 LUCARIO
 25 - influenza Lucario by influenza
-26 - Zarked! Lucario by Zarked!
 
 IKE
 24 - influenza Ike by influenza
@@ -224,11 +283,12 @@ R.O.B.
 07 - Comb ROB by Wyld
 08 - Kendrick ROB by Hannah, ilikepizza107
 09 - Xtreme ROB by ilikepizza107
+24 - shwang ROB by Z-Stick
 36 - Sneez ROB by ???, with credit to ilikepizza107
 
 JIGGLYPUFF
 15 - SgtPingwen Jigglypuff by ilikepizza107
-16 - May Jigglypuff by MarioDox
+16 - May Wallace Cup Veil Jigglypuff by MarioDox [https://gamebanana.com/mods/290051]
 
 WARIO
 
@@ -239,18 +299,20 @@ TOON LINK
 40 - Shrug Toon Link by Shrug, ilikepizza107
 
 WOLF
-35 - Kakashi Wolf by Autumn
+40 - Kakashi Wolf by Autumn
+45 - Sunnyknight Wolf by Autumn
 
 SNAKE
-06 - Autumn Snake by Autumn
-07 - MVZY Snake by Wyld
+08 - Autumn Snake by Autumn
+09 - MVZY Snake by Wyld
 25 - influenza Snake by influenza
-34 - Leo Luster Snake by SkratchPost
+35 - Leo Luster Snake by SkratchPost
 40 - SoulOfficer Snake by ilikepizza107, with credit to Autumn
 
 SONIC
 25 - SipMastah Sonic v2 by ilikpizza107
 26 - Motobug Sonic by Motobug
+35 - Motobug Sonic Sega Kid by Motobug
 40 - Wyld Sonic by Wyld
 45 - DHS7 Sonic by DHS7
 
@@ -266,17 +328,22 @@ STAGES
 ########################
 
 BATTLEFIELD
-Base - Daytime BF by ilikepizza107
+Base - Daytime BF v2 by ilikepizza107
+
+DREAM LAND
+R+Start - Cosmic Dreamland by ilikepizza107
 
 FRIGATE HUSK
 Base - Hyrule Meadows FH by Motobug, mawwwk, with credit to Dranakar, Scout, davidvkimball, DukeItOut, soopercool101, PMDT
 R+Start - Pirate Husk by Legacy MP
 
 POKEMON STADIUM 2
-Base - DST PS2 by ilikepizza107
+Base - TTT PS2 by ilikepizza107
 
 SMASHVILLE
 Base - Gardenville by Red98, with updates by ilikepizza107
+
+Stage Specific Results Screens by ilikepizza107 + mawwwk
 
 ################
 MENUS
@@ -285,3 +352,18 @@ MENUS
 New "Ready To Fight!" Model by Xenthos
 
 CSS + SSS by ilikepizza107, with credit to Nezha
+
+#######################
+CODESET CHANGES
+#######################
+Autosave Replays ON Default - Renamed provided data.cmnus
+
+Hold Pause Default - Edited Default Settings Modifier in RSBE01.txt, specifically at line 0417F368
+
+Multiple Results Screen Tracks - Commented out a section of MyMusic.asm, added a code in ResultsMusic.asm
+
+Different CSS Tags Colors - Edited .aliases in CSS Tags with Rumble are Coloured, at the top of TagsControls.asm
+
+Stage preset changes - Edited .alias NUM_PRESETS in Random.asm, changed the .rss files in pf/stage/switch
+
+Stock display on the SSS - Edited 50CC.asm, changes to sc_selmap.pac

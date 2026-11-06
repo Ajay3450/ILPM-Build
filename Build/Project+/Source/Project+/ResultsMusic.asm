@@ -20,12 +20,11 @@ uint32_t[46] |
 # Unique IDs:
 # FF0B: Victory!/Bowser
 
-################################################
+#################################################
 Results Random Music Selector [mawwwk, DukeItOut]
-################################################
+#################################################
 .alias VSResultsID = 0xF400        # Base ID to play
-.alias ResultsTrackCount = 8
-
+.alias ResultsTrackCount = 6
 HOOK @ $800EB14C
 {
     mr r29, r3

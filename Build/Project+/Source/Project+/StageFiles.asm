@@ -467,7 +467,7 @@ unusual:				//Those two stage types demand hardcoded pointers
 }	
 	
 ########################################################
-Custom Stage SD File Loader [DukeItOut, Kapedani]
+Custom Stage SD File Loader [DukeItOut, Kapedani, bugfix by mawwwk]
 # 
 # This version forces stage reloading if a flag is set, as well as uses the flag to determine if it's a replay
 #
@@ -714,7 +714,11 @@ getCharacterKind:
 	addi r16, r16, 0x1		# /
 loop:	
 	# r29 - Most accurate choice, defaulting to the start
-	# r21 - How many inputs it shares
+	# r26 - Offset of currently-checked entry in ASL file
+	# r25 - Current button input in ASL list
+	# r23 - Address of list of inputs/titles
+	# r21 - Highest number of shared inputs across checked entries
+	# r7 - Count of matching bits between ASL entry and button input
 	lhzx r25, r23, r26
 	and. r25, r16, r25
 	beq- not_found
@@ -734,6 +738,13 @@ bitSet:
 	mtctr r0				# Return the stage loop
 	cmpw r7, r21			# \ If it doesn't match more than the previous best, skip
 	ble+ not_found			# /
+	lhzx r25, r23, r26
+	cmpwi r25, 0x1800		# If current ASL entry button is greater than 0x17FF,
+	blt storeOffset			# require an exact match from any button IDs greater than that
+checkExact:
+	cmpw r16, r25			# Check if button ID matches ASL entry,
+	bne not_found			# otherwise go next
+storeOffset:
 	mr r21, r7				# The amount of inputs shared by the new highest
 	mr r29, r26				# Most accurate input offset 
 not_found:	
@@ -760,7 +771,7 @@ DoNotSaveASL:
 	lhz r23, 6(r22)			# \ Get offset to param file names
 	add r23, r23, r22		# /
 	add r23, r23, r29		# Get the title address
-	
+
 ##########################
 # Stage-Specific Results #
 # [mawwk, ilikepizza107] #
@@ -836,7 +847,7 @@ Bowser_Z_Alt:
 	mr r12, r11				# restore what r12 was
 	andi. r12, r12, 0x0010	# Check if Z alt was used
 	beq StoreString			#
-	li r5, 0x425A			# If so, use "FZ"
+	li r5, 0x425A			# If so, use "BZ"
 	b StoreString
 
 Temple_of_Time_Results:
@@ -903,8 +914,15 @@ PS2_Results:
 PS2_Z_Alt:
 	mr r12, r11				# restore what r12 was
 	andi. r12, r12, 0x0010	# Check if Z alt was used
-	beq StoreString			#
+	beq PS2_L_Alt			#
 	li r5, 0x505A			# If so, use "PZ"
+	b StoreString
+
+PS2_L_Alt:
+	mr r12, r11				# restore what r12 was
+	andi. r12, r12, 0x0040	# Check if L alt was used
+	beq StoreString			#
+	li r5, 0x504C			# If so, use "PL"
 	b StoreString
 
 Training_Results:
@@ -1229,9 +1247,6 @@ setID:
 forceSkip:
 	mr r5, r29	# Restores song ID, original operation
 }
-	
-.include source/Project+/MyMusic.asm		# Integrated heavily into the above!
-.include source/Project+/Random.asm			# Custom random code to load expansion and non-striked slots, properly
 
 ##########################################################
 KK Concert Music Only Triggers Via TLST File [DukeItOut]
