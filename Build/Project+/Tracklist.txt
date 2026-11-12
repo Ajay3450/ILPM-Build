@@ -5,7 +5,6 @@ BATTLEFIELD
 	Battlefield - Storm (Etrian Odyssey IV)
 	Eternity (Blue Dragon)
 	Grow Stronger and Go For the Win! (Ace of the Diamond)
-	Hero Theme (Ping Pong the Animation)
 	Moonlit Wilderness (Tekken 5)
 	Sprinter (Super Hang-On)
 	Try Your Luck (Hunter x Hunter)
@@ -35,7 +34,6 @@ FINAL DESTINATION
 
 FOUNTAIN OF DREAMS
 	Amalgam (UNDERTALE)
-	China (Ping Pong the Animation)
 	Gravity (Cave Story Arranged)
 	I Am Octavio (Splatoon)
 	Les Vagas (Tatsunoko vs Capcom Ultimate All-Stars)
@@ -51,7 +49,6 @@ FRIGATE ORPHEON (HYRULE MEADOWS)
 	Full Speed Ahead (Final Fantasy XIII-2)
 	Glass Ocean (Neon White)
 	Go For Victory! (Ace of the Diamond)
-	Like a Dance (Ping Pong the Animation)
 	Moonlight Capital (Kirby Triple Deluxe)
 	Rakuichi Buster (DELTARUNE)
 	Sarutobi (Naruto)

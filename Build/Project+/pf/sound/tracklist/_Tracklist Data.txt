@@ -1,5 +1,5 @@
 ################
-Battlefield.tlst - 10 tracks
+Battlefield.tlst - 9 tracks
 
 	A Three-Cornered Fight (JJK)
 	Jujutsu Kaisen/A Three-Cornered Fight (Jujutsu Kaisen).brstm
@@ -21,12 +21,6 @@ Battlefield.tlst - 10 tracks
 	Ace of the Diamond/Grow Stronger and Go For the Win! (Ace of the Diamond).brstm
 	Volume: 80
 	Frequency: 40
-
-	Hero Theme (Ping Pong the Animation)
-	Ping Pong the Animation/Hero Theme (Ping Pong the Animation).brstm
-	Volume: 76
-	Frequency: 40
-	Song delay: -1
 
 	Moonlit Wilderness (Tekken 5)
 	Tekken/Moonlit Wilderness (Tekken 5).brstm
@@ -1914,18 +1908,12 @@ Flat_Zone.tlst - 4 tracks
 	Frequency: 40
 
 ################
-Fountain_Of_Dreams.tlst - 8 tracks
+Fountain_Of_Dreams.tlst - 7 tracks
 
 	Amalgam (aivi & surasshu)
 	Various Artists/Amalgam (aivi & surasshu).brstm
 	Volume: 77
 	Frequency: 40
-
-	China (Ping Pong the Animation)
-	Ping Pong the Animation/China (Ping Pong the Animation).brstm
-	Volume: 75
-	Frequency: 40
-	Song delay: 40
 
 	Gravity (Cave Story)
 	Cave Story/Gravity (Cave Story Arranged).brstm
@@ -2059,7 +2047,7 @@ Fourside.tlst - 7 tracks
 	Frequency: 40
 
 ################
-Frigate_Orpheon.tlst - 12 tracks
+Frigate_Orpheon.tlst - 11 tracks
 
 	Beats From Above (Klonoa DtP)
 	Klonoa/Beats From Above (Klonoa Door To Phantomile).brstm
@@ -2102,11 +2090,6 @@ Frigate_Orpheon.tlst - 12 tracks
 	Volume: 85
 	Frequency: 40
 	Song delay: 20
-
-	Like a Dance (Ping Pong the Animation)
-	Ping Pong the Animation/Like a Dance (Ping Pong the Animation).brstm
-	Volume: 83
-	Frequency: 40
 
 	Rakuichi Buster (DELTARUNE)
 	DELTARUNE/Rakuichi Buster (DELTARUNE).brstm
