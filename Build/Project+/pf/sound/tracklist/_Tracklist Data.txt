@@ -5297,7 +5297,7 @@ Smashville.tlst - 11 tracks
 	Quo Vadis (M2U)
 	Various Artists/Quo Vadis (M2U).brstm
 	Volume: 77
-	Frequency: 40
+	Frequency: 10
 
 	Redial (Bomberman Hero)
 	Bomberman/Redial (Bomberman Hero).brstm
